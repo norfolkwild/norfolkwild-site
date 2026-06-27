@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NorfolkWild — North Norfolk's Independent Outdoor Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --marsh: #1e3528;
+  --marsh2: #2d4a3e;
+  --reed: #4a6b5a;
+  --gold: #b8923a;
+  --gold2: #c9a84c;
+  --cream: #f4ede0;
+  --cream2: #ede4d4;
+  --paper: #faf6ef;
+  --ink: #161c18;
+  --ink2: #2a332d;
+  --sage: #7a9a82;
+  --sky: #a8c4b8;
+  --mist: #e4ede6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+/* ─── LOGO MARK SVG ─── */
+.logo-mark { flex-shrink: 0; }
+
+/* ─── TOP NAV ─── */
+.topnav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(250,246,239,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(30,53,40,0.08);
+  height: 52px;
+  display: flex; align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+.nav-brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.nav-wordmark { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 900; color: var(--marsh); letter-spacing: -0.5px; line-height: 1; }
+.nav-wordmark em { color: var(--gold); font-style: italic; }
+.nav-links { display: flex; gap: 1.4rem; align-items: center; }
+.nav-links a { font-size: 0.67rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink2); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--marsh); color: #fff; padding: 0.38rem 0.9rem; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: var(--marsh2); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(160deg, rgba(22,28,24,0.72) 0%, rgba(22,28,24,0.1) 50%, rgba(22,28,24,0.7) 100%),
+    url('https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=1600&q=85') center/cover no-repeat;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 2.5rem 3rem;
+  padding-top: 52px;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-size: 0.6rem; font-weight: 500;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold2);
+  display: flex; align-items: center; gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+.hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold2); }
+
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: end; }
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 0.93;
+  letter-spacing: -1.5px;
+  margin-bottom: 1.1rem;
+}
+.hero-title em { color: var(--gold2); font-style: italic; display: block; }
+
+.hero-deck {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  max-width: 420px;
+  margin-bottom: 1.6rem;
+}
+
+.hero-actions { display: flex; gap: 0.8rem; align-items: center; }
+.btn-solid { background: var(--gold2); color: var(--ink); padding: 0.65rem 1.5rem; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.06em; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: none; display: inline-block; transition: background 0.2s; }
+.btn-solid:hover { background: var(--gold); }
+.btn-ghost-link { font-size: 0.68rem; font-weight: 500; color: rgba(255,255,255,0.55); text-decoration: none; letter-spacing: 0.05em; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1px; }
+
+.hero-cards { display: flex; flex-direction: column; gap: 0; }
+.hcard {
+  background: rgba(250,246,239,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.hcard:hover { background: rgba(250,246,239,0.12); }
+.hcard + .hcard { border-top: none; }
+.hcard-tag { font-size: 0.57rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold2); margin-bottom: 0.4rem; }
+.hcard-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 0.35rem; }
+.hcard-meta { font-size: 0.6rem; color: rgba(255,255,255,0.35); display: flex; gap: 0.8rem; }
+
+.hero-scroll {
+  position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  color: rgba(255,255,255,0.25); font-size: 0.57rem; letter-spacing: 0.2em; text-transform: uppercase;
+}
+.scroll-line { width: 1px; height: 30px; background: linear-gradient(to bottom, rgba(255,255,255,0.25), transparent); }
+
+/* ─── TICKER ─── */
+.ticker {
+  background: var(--marsh);
+  padding: 0.6rem 2rem;
+  display: flex; gap: 1.5rem; align-items: center;
+  overflow: hidden;
+}
+.ticker-label { font-size: 0.57rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold2); flex-shrink: 0; }
+.ticker-sep { width: 1px; height: 10px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+.ticker-inner { display: flex; gap: 2rem; overflow: hidden; }
+.ticker-item { font-size: 0.68rem; color: rgba(255,255,255,0.45); white-space: nowrap; display: flex; align-items: center; gap: 0.4rem; }
+.ticker-dot { width: 3px; height: 3px; background: var(--gold2); border-radius: 50%; }
+
+/* ─── EDITORIAL ─── */
+.editorial { padding: 2.5rem 2rem; }
+.sec-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.8rem; padding-bottom: 0.9rem; border-bottom: 1px solid rgba(30,53,40,0.08); }
+.sec-eyebrow { font-size: 0.57rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.sec-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--marsh); letter-spacing: -0.5px; line-height: 1.05; }
+.sec-title em { font-style: italic; color: var(--reed); }
+.sec-all { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--marsh); text-decoration: none; border-bottom: 1px solid var(--marsh); padding-bottom: 1px; cursor: pointer; }
+
+/* ─── BENTO ─── */
+.bento { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: rgba(30,53,40,0.07); }
+.bc { background: var(--paper); cursor: pointer; overflow: hidden; transition: background 0.15s; }
+.bc:hover { background: #f0e7d5; }
+.bc:hover .bc-img { transform: scale(1.04); }
+.bc-imgw { overflow: hidden; }
+.bc-img { width: 100%; display: block; object-fit: cover; transition: transform 0.5s ease; }
+.bc-body { padding: 1rem; }
+.bc-tag { font-size: 0.57rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold); }
+.bc-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--marsh); line-height: 1.3; margin: 0.3rem 0 0.45rem; }
+.bc-title.lg { font-size: 1.15rem; }
+.bc-excerpt { font-size: 0.73rem; color: var(--reed); line-height: 1.55; }
+.bc-meta { font-size: 0.58rem; color: #7a8a7a; margin-top: 0.6rem; display: flex; gap: 0.7rem; }
+.bc-span2 { grid-column: span 2; }
+.bc-horiz { display: grid; grid-template-columns: 45% 55%; }
+.bc-horiz .bc-imgw { height: 100%; }
+.bc-horiz .bc-img { height: 100%; min-height: 200px; }
+.bc-horiz .bc-body { display: flex; flex-direction: column; justify-content: center; padding: 1.5rem; }
+.bc-dark { background: var(--marsh) !important; }
+.bc-dark:hover { background: var(--marsh2) !important; }
+.bc-dark .bc-tag { color: var(--gold2); }
+.bc-dark .bc-title { color: #fff; }
+.bc-dark .bc-excerpt { color: rgba(255,255,255,0.5); }
+.bc-dark .bc-meta { color: rgba(255,255,255,0.28); }
+
+/* ─── CATEGORIES ─── */
+.cats { background: var(--marsh); padding: 2rem; }
+.cats .sec-title { color: #fff; }
+.cats .sec-eyebrow { color: var(--sage); }
+.cats .sec-head { border-bottom-color: rgba(255,255,255,0.07); }
+.cat-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 1px; background: rgba(255,255,255,0.04); margin-top: 1.2rem; }
+.cat { background: transparent; border: none; padding: 1.2rem 0.6rem; text-align: center; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; }
+.cat:hover { background: rgba(255,255,255,0.05); }
+.cat-i { font-size: 1.3rem; display: block; margin-bottom: 0.4rem; }
+.cat-n { font-size: 0.7rem; font-weight: 500; color: #fff; display: block; }
+.cat-c { font-size: 0.57rem; color: rgba(255,255,255,0.28); margin-top: 0.12rem; display: block; }
+
+/* ─── LIST ─── */
+.listsec { padding: 2.5rem 2rem; background: var(--cream2); }
+.litem {
+  display: grid; grid-template-columns: 52px 1fr 20px;
+  gap: 1rem; padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(30,53,40,0.07);
+  cursor: pointer; transition: opacity 0.15s;
+}
+.litem:hover { opacity: 0.75; }
+.litem:last-child { border-bottom: none; }
+.lnum { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: rgba(30,53,40,0.07); line-height: 1; text-align: right; padding-right: 0.6rem; border-right: 1px solid rgba(30,53,40,0.07); }
+.ltag { font-size: 0.57rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+.ltitle { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--marsh); line-height: 1.3; margin: 0.2rem 0 0.25rem; }
+.lmeta { font-size: 0.6rem; color: #7a8a7a; }
+.larr { color: rgba(30,53,40,0.18); font-size: 0.8rem; margin-top: 0.15rem; }
+
+/* ─── NEWSLETTER ─── */
+.nl { background: var(--ink); padding: 2.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.nl-ey { font-size: 0.57rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold2); margin-bottom: 0.6rem; }
+.nl-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -0.5px; margin-bottom: 0.8rem; }
+.nl-title em { color: var(--gold2); font-style: italic; }
+.nl-copy { font-size: 0.78rem; font-weight: 300; color: rgba(255,255,255,0.4); line-height: 1.7; }
+.nl-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.04); margin-top: 1.5rem; }
+.nl-stat { padding: 0.9rem; background: var(--ink); }
+.nl-sn { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--gold2); }
+.nl-sl { font-size: 0.57rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 0.12rem; }
+.nl-form { padding-top: 0.3rem; }
+.nl-in { width: 100%; padding: 0.7rem 0.9rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; outline: none; margin-bottom: 0.5rem; display: block; }
+.nl-in::placeholder { color: rgba(255,255,255,0.18); }
+.nl-in:focus { border-color: var(--gold2); }
+.nl-btn { width: 100%; background: var(--gold2); color: var(--ink); padding: 0.7rem; border: none; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.07em; cursor: pointer; font-family: 'DM Sans', sans-serif; display: block; transition: background 0.2s; }
+.nl-btn:hover { background: var(--gold); }
+.nl-note { font-size: 0.57rem; color: rgba(255,255,255,0.18); margin-top: 0.5rem; text-align: center; }
+
+/* ─── FOOTER ─── */
+.footer { background: #0d1410; padding: 2rem; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr; gap: 2rem; }
+.footer-wm { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 900; color: #fff; }
+.footer-wm em { color: var(--gold2); font-style: italic; }
+.footer-tag { font-size: 0.67rem; color: rgba(255,255,255,0.15); margin-top: 0.5rem; line-height: 1.6; max-width: 160px; }
+.footer-col h4 { font-size: 0.55rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.18); margin-bottom: 0.7rem; }
+.footer-col a { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.22); text-decoration: none; margin-bottom: 0.3rem; cursor: pointer; transition: color 0.15s; }
+.footer-col a:hover { color: rgba(255,255,255,0.55); }
+.footer-bottom { background: #07100a; padding: 0.7rem 2rem; display: flex; justify-content: space-between; font-size: 0.57rem; color: rgba(255,255,255,0.1); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-cards { display: none; }
+  .bento { grid-template-columns: 1fr; }
+  .bc-span2 { grid-column: span 1; }
+  .bc-horiz { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: repeat(3,1fr); }
+  .nl { grid-template-columns: 1fr; }
+  .footer { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .topnav .nav-links { display: none; }
+/* ─── MOBILE HAMBURGER MENU ─── */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--ink2); margin: 5px 0; transition: 0.3s; }
+.hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+@media (max-width: 600px) {
+  .hamburger { display: block; }
+  .nav-links { position: fixed; top: 52px; left: 0; right: 0; background: var(--paper); flex-direction: column; gap: 0; display: none; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+  .nav-links.active { display: flex; }
+  .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); }
+}
+
+  .hero { padding: 52px 1.5rem 2.5rem; }
+  .editorial, .listsec, .cats { padding: 2rem 1.5rem; }
+  .footer { grid-template-columns: 1fr; padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <a class="nav-brand" href="index.html">
+    <svg class="logo-mark" width="22" height="22" viewBox="0 0 22 22" fill="none">
+      <path d="M11 2C11 2 4 9 4 15C4 18.9 7.1 21 11 21C14.9 21 18 18.9 18 15C18 9 11 2 11 2Z" fill="none" stroke="#b8923a" stroke-width="1.3"/>
+      <path d="M11 5.5L7 14L11 11.5L15 14Z" fill="#b8923a"/>
+      <path d="M4 15Q11 12 18 15" stroke="#b8923a" stroke-width="0.7" fill="none" opacity="0.5"/>
+    </svg>
+    <div class="nav-wordmark">Norfolk<em>Wild</em></div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="shop.html">Shop</a>
+    <a href="walks.html">Walks</a>
+    <a href="article-7-marsh-harriers.html">Wildlife</a>
+    <a href="article-8-peddars-way.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="norfolk-wild-legal.html">About</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">North Norfolk's independent outdoor guide</div>
+  <div class="hero-grid">
+    <div>
+      <h1 class="hero-title">Wild walks &amp;<br><em>hidden Norfolk</em></h1>
+      <p class="hero-deck">From the grey seals of Blakeney Point to the ancient Roman straightness of the Peddars Way — authentic guides written from North Norfolk.</p>
+      <div class="hero-actions">
+        <a href="article-1-blakeney-point.html" class="btn-solid">Start exploring</a>
+        <a href="article-1-blakeney-point.html" class="btn-ghost-link">Browse all guides</a>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="hcard">
+        <div class="hcard-tag">Coastal Walk</div>
+        <div class="hcard-title">Blakeney Point: Seals, Salt Marshes and Solitude</div>
+        <div class="hcard-meta"><span>7 miles</span><span>3–4 hours</span><span>Easy</span></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-tag">Wildlife Guide</div>
+        <div class="hcard-title">Where to See Marsh Harriers in Norfolk: 6 Best Sites</div>
+        <div class="hcard-meta"><span>All year</span><span>Cley & Titchwell</span></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-tag">Gear Review</div>
+        <div class="hcard-title">Best Walking Boots for Norfolk's Coastal Paths: 6 Tested</div>
+        <div class="hcard-meta"><span>£50–£220</span><span>Updated 2026</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-label">Latest</span>
+  <div class="ticker-sep"></div>
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-dot"></span>Horsey seal pup season — best viewing right now</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Pink-footed geese arriving at Snettisham</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>New Coast Path guides — Cromer to Mundesley</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Best binoculars under £150 — updated 2026</span>
+  </div>
+</div>
+
+<!-- EDITORIAL -->
+<section class="editorial" id="editorial">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eyebrow">Latest from North Norfolk</div>
+      <div class="sec-title">Featured <em>stories</em></div>
+    </div>
+    <a class="sec-all">All guides →</a>
+  </div>
+  <div class="bento">
+    <div class="bc bc-span2 bc-horiz" onclick="window.location='article-1-blakeney-point.html'" style="cursor:pointer;">
+      <div class="bc-imgw"><img class="bc-img" src="https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=700&q=82" alt="Norfolk coast walk"></div>
+      <div class="bc-body">
+        <div class="bc-tag">Coastal Walk · Long read</div>
+        <div class="bc-title lg">Blakeney Point: Seals, Salt Marshes and Solitude on Norfolk's Greatest Walk</div>
+        <div class="bc-excerpt">Follow the shingle spit out to where England's largest grey seal colony hauls out year-round. A walk many describe as unforgettable long after you've left the coast.</div>
+        <div class="bc-meta"><span>7 miles</span><span>3–4 hours</span><span>Easy/Moderate</span></div>
+      </div>
+    </div>
+    <div class="bc bc-dark" onclick="window.location='article-7-marsh-harriers.html'" style="cursor:pointer;">
+      <div class="bc-imgw"><img class="bc-img" style="height:175px;" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=500&q=78" alt="Wildlife"></div>
+      <div class="bc-body">
+        <div class="bc-tag">Wildlife</div>
+        <div class="bc-title">Where to See Marsh Harriers: 6 Norfolk Sites</div>
+        <div class="bc-meta"><span>Spring guide</span><span>Cley & Titchwell</span></div>
+      </div>
+    </div>
+    <div class="bc">
+      <div class="bc-imgw"><img class="bc-img" style="height:145px;" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=400&q=75" alt="Seals"></div>
+      <div class="bc-body">
+        <div class="bc-tag">Wildlife</div>
+        <div class="bc-title">Horsey Gap Seal Pups: The Complete Guide</div>
+        <div class="bc-meta"><span>Nov–Jan</span><span>Free entry</span></div>
+      </div>
+    </div>
+    <div class="bc">
+      <div class="bc-imgw"><img class="bc-img" style="height:145px;" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=75" alt="Holkham"></div>
+      <div class="bc-body">
+        <div class="bc-tag">Beach Guide</div>
+        <div class="bc-title">Holkham Beach: Why It's Best Before 8am</div>
+        <div class="bc-meta"><span>All year</span><span>North Norfolk</span></div>
+      </div>
+    </div>
+    <div class="bc">
+      <div class="bc-imgw"><img class="bc-img" style="height:145px;" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=400&q=75" alt="Gear"></div>
+      <div class="bc-body">
+        <div class="bc-tag">Gear Review</div>
+        <div class="bc-title">Best Walking Boots for Norfolk: 6 Tested</div>
+        <div class="bc-meta"><span>£50–£220</span><span>Updated 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="cats">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eyebrow">Browse by topic</div>
+      <div class="sec-title">What are you <em>looking for?</em></div>
+    </div>
+  </div>
+  <div class="cat-grid">
+    <button class="cat"><span class="cat-i">🥾</span><span class="cat-n">Walks</span><span class="cat-c">24 guides</span></button>
+    <button class="cat"><span class="cat-i">🦅</span><span class="cat-n">Wildlife</span><span class="cat-c">18 guides</span></button>
+    <button class="cat"><span class="cat-i">🌊</span><span class="cat-n">Coast Path</span><span class="cat-c">8 stages</span></button>
+    <button class="cat"><span class="cat-i">🎒</span><span class="cat-n">Gear</span><span class="cat-c">10 reviews</span></button>
+    <button class="cat"><span class="cat-i">🏡</span><span class="cat-n">Villages</span><span class="cat-c">12 guides</span></button>
+    <button class="cat"><span class="cat-i">📅</span><span class="cat-n">Seasonal</span><span class="cat-c">8 guides</span></button>
+  </div>
+</section>
+
+<!-- LIST SECTION -->
+<section class="listsec">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eyebrow">Just published</div>
+      <div class="sec-title">More from <em>NorfolkWild</em></div>
+    </div>
+    <a class="sec-all">All articles →</a>
+  </div>
+  <div class="litem" style="cursor:pointer;"><div class="lnum">01</div><div><div class="ltag">Long Distance</div><div class="ltitle"><a href="article-8-peddars-way.html" style="text-decoration:none;color:inherit;">The Peddars Way: Complete Guide to Norfolk's Ancient Roman Road</div><div class="lmeta">15 min read · 46 miles · 3–4 days</div></div><div class="larr">→</div></div>
+  <div class="litem" style="cursor:pointer;"><div class="lnum">02</div><div><div class="ltag">Gear Review</div><div class="ltitle"><a href="article-5-binoculars.html" style="text-decoration:none;color:inherit;">Best Binoculars for Birdwatching: 7 Pairs assessed for Norfolk birdwatching and Titchwell</div><div class="lmeta">10 min read · £40–£500 tested</div></div><div class="larr">→</div></div>
+  <div class="litem" style="cursor:pointer;"><div class="lnum">03</div><div><div class="ltag">Wildlife</div><div class="ltitle"><a href="article-7-marsh-harriers.html" style="text-decoration:none;color:inherit;">Pink-Footed Geese at Snettisham: One of England's Great Wildlife Spectacles</div><div class="lmeta">8 min read · October–March</div></div><div class="larr">→</div></div>
+  <div class="litem" style="cursor:pointer;"><div class="lnum">04</div><div><div class="ltag">Gear Review</div><div class="ltitle"><a href="article-9-best-wellies.html" style="text-decoration:none;color:inherit;">Best Wellies for Dog Walking: 6 Pairs assessed for Norfolk's Muddiest Paths</div><div class="lmeta">7 min read · £25–£150</div></div><div class="larr">→</div></div>
+  <div class="litem" style="cursor:pointer;"><div class="lnum">05</div><div><div class="ltag">Coast Path</div><div class="ltitle"><a href="article-8-peddars-way.html" style="text-decoration:none;color:inherit;">Norfolk Coast Path Stage 7: Mundesley to Walcott to Happisburgh</div><div class="lmeta">12 min read · 8 miles · Easy</div></div><div class="larr">→</div></div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="nl" id="nl">
+  <div>
+    <div class="nl-ey">Free weekly guide</div>
+    <div class="nl-title">Never miss a<br><em>Norfolk adventure</em></div>
+    <div class="nl-copy" style="margin-top:1rem;">Every Friday — one walk, one wildlife tip, one local secret. Written from North Norfolk. No fluff, no spam, just Norfolk.</div>
+    <div class="nl-stats">
+      <div class="nl-stat"><div class="nl-sn">100%</div><div class="nl-sl">Independent</div></div>
+      <div class="nl-stat"><div class="nl-sn">Free</div><div class="nl-sl">Always free</div></div>
+      <div class="nl-stat"><div class="nl-sn">90mi</div><div class="nl-sl">Coast covered</div></div>
+      <div class="nl-stat"><div class="nl-sn">100%</div><div class="nl-sl">Independent</div></div>
+    </div>
+  </div>
+  <div class="nl-form">
+    <a href="https://norfolkwild.substack.com" target="_blank" style="display:block;width:100%;background:var(--gold2);color:var(--ink);padding:0.75rem;font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-align:center;text-decoration:none;font-family:'DM Sans',sans-serif;margin-bottom:0.5rem;">Subscribe free on Substack →</a>
+    <div class="nl-note">No home address. No spam. Unsubscribe any time.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Independent outdoor guides written from North Norfolk. No advertisers. No tourist board funding. Just honest local knowledge.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="article-1-blakeney-point.html">Coastal Walks</a>
+    <a href="article-7-marsh-harriers.html">Wildlife Guides</a>
+    <a href="article-8-peddars-way.html">Norfolk Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+    <a href="article-9-best-wellies.html">Dog Walking</a>
+  </div>
+  <div class="footer-col">
+    <h4>Seasons</h4>
+    <a href="article-7-marsh-harriers.html">Spring Wildlife</a>
+    <a href="article-4-holkham-beach.html">Summer Beaches</a>
+    <a href="article-1-blakeney-point.html">Autumn Walks</a>
+    <a href="article-3-horsey-seals.html">Winter Seals</a>
+  </div>
+      <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Walking Boots</a>
+    <a href="shop.html#optics">Binoculars</a>
+    <a href="shop.html#wildlife-tech">Trail Cams</a>
+    <a href="shop.html#nature-garden">Wildflower Seeds</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#affiliate">About NorfolkWild</a>
+    <a href="mailto:hello@norfolkwild.co.uk">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 NorfolkWild.co.uk — Independent & Norfolk-based</span>
+  <span>Written with care from North Norfolk</span>
+</div>
+
+<script>
+
+}
+document.querySelectorAll('.bc,.hcard,.litem,.cat').forEach(el=>{
+  el.style.cursor='pointer';
+});
+</script>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

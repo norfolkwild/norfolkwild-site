@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norfolk Walks — All Walking Guides | NorfolkWild</title>
+<meta name="description" content="All walking guides for North Norfolk — coastal walks, circular routes, the Coasthopper series and long distance paths.">
+<link rel="canonical" href="https://www.norfolkwild.co.uk/walks.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --marsh:#1e3528;--marsh2:#2d4a3e;--gold:#b8923a;--gold2:#c9a84c;--paper:#faf6ef;--ink:#1a2018;--reed:#4a6358; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);}
+
+  /* NAV */
+  .topnav{background:rgba(250,246,239,0.97);border-bottom:1px solid rgba(30,53,40,0.12);padding:0 2.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);}
+  .nav-links{display:flex;gap:1.4rem;align-items:center;}
+  .nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#4a6358;text-decoration:none;transition:color 0.15s;}
+  .nav-links a:hover,.nav-links a.active{color:#b8923a;}
+  .nav-cta{background:#1e3528;color:#fff !important;padding:0.38rem 0.9rem;}
+  .nav-cta:hover{background:#2d4a3e !important;}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+  .hamburger span{display:block;width:22px;height:2px;background:#1e3528;}
+
+  /* HERO */
+  .page-hero{background:var(--marsh);padding:3.5rem max(2rem,calc(50% - 620px + 2rem)) 3rem;}
+  .page-hero .eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+  .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1px;}
+  .page-hero h1 em{color:var(--gold2);font-style:italic;}
+  .page-hero p{color:rgba(255,255,255,0.6);font-size:0.95rem;margin-top:0.8rem;max-width:520px;}
+
+  /* TERRAIN KEY */
+  .terrain-key{background:#fff;border-bottom:1px solid rgba(30,53,40,0.08);padding:1rem max(2rem,calc(50% - 620px + 2rem));}
+  .terrain-key-inner{display:flex;flex-wrap:wrap;gap:0.6rem 1.4rem;align-items:center;}
+  .terrain-key-label{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--reed);margin-right:0.4rem;}
+  .tk-item{display:flex;align-items:center;gap:0.35rem;font-size:0.7rem;color:#3a5248;font-weight:500;}
+  .tk-icon{width:22px;height:22px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;}
+
+  /* SECTION */
+  .section{padding:2.5rem max(2rem,calc(50% - 620px + 2rem));}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--marsh);letter-spacing:-0.3px;margin-bottom:0.25rem;}
+  .section-sub{font-size:0.78rem;color:var(--reed);margin-bottom:1.5rem;}
+  .divider{border:none;border-top:1px solid rgba(30,53,40,0.1);margin:0 max(2rem,calc(50% - 620px + 2rem));}
+
+  /* WALK CARD — TERRAIN SYSTEM */
+  .walk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(30,53,40,0.08);}
+  .wcard{background:var(--paper);cursor:pointer;overflow:hidden;transition:background 0.15s;text-decoration:none;display:block;color:inherit;}
+  .wcard:hover{background:#f0e7d5;}
+
+  /* TERRAIN PANEL replaces the photo */
+  .wcard-terrain{
+    height:140px;
+    background:var(--marsh);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0.7rem;
+    padding:1rem;
+    position:relative;
+  }
+  .terrain-icons{display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;}
+  .ti{
+    display:flex;flex-direction:column;align-items:center;gap:0.2rem;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:6px;
+    padding:0.4rem 0.6rem;
+    min-width:52px;
+  }
+  .ti-emoji{font-size:1.4rem;line-height:1;}
+  .ti-label{font-size:0.45rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-align:center;}
+
+  /* Terrain colour coding on the panel top border */
+  .wcard-terrain.t-coastal{border-top:3px solid #4a9aba;}
+  .wcard-terrain.t-broads{border-top:3px solid #4aaa6a;}
+  .wcard-terrain.t-woodland{border-top:3px solid #7a9a4a;}
+  .wcard-terrain.t-village{border-top:3px solid var(--gold2);}
+  .wcard-terrain.t-hills{border-top:3px solid #ba8a4a;}
+  .wcard-terrain.t-mixed{border-top:3px solid #9a6aba;}
+
+  .wcard-body{padding:1rem;}
+  .wcard-tag{font-size:0.58rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);}
+  .wcard-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#1e3528;line-height:1.3;margin:0.3rem 0 0.4rem;}
+  .wcard-meta{font-size:0.62rem;color:#3d5c45;font-weight:600;display:flex;gap:0.8rem;flex-wrap:wrap;}
+
+  /* COASTHOPPER LIST */
+  .ch-list{display:flex;flex-direction:column;gap:1px;background:rgba(30,53,40,0.08);}
+  .ch-item{background:var(--paper);display:grid;grid-template-columns:56px 1fr auto;align-items:center;gap:1.2rem;padding:1rem 1.2rem;cursor:pointer;text-decoration:none;color:inherit;transition:background 0.15s;}
+  .ch-item:hover{background:#f0e7d5;}
+  .ch-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:rgba(30,53,40,0.12);line-height:1;text-align:center;}
+  .ch-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#1e3528;line-height:1.3;}
+  .ch-meta{font-size:0.62rem;color:#3d5c45;font-weight:600;margin-top:0.2rem;display:flex;gap:0.8rem;}
+  .ch-badge{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);background:rgba(185,146,58,0.12);padding:0.25rem 0.6rem;white-space:nowrap;}
+  .ch-hub{background:var(--marsh) !important;}
+  .ch-hub .ch-num{color:rgba(255,255,255,0.15);}
+  .ch-hub .ch-title{color:#fff;}
+  .ch-hub .ch-meta{color:rgba(255,255,255,0.5);}
+  .ch-hub .ch-badge{color:var(--gold2);background:rgba(201,168,76,0.15);}
+
+  @media(max-width:800px){
+    .walk-grid{grid-template-columns:repeat(2,1fr);}
+    .topnav{padding:0 1rem;}
+    .nav-links{display:none;flex-direction:column;gap:0;position:fixed;top:56px;left:0;right:0;background:#faf6ef;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}
+    .nav-links.active{display:flex !important;}
+    .nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);font-size:0.75rem;}
+    .hamburger{display:flex;}
+  }
+  @media(max-width:520px){
+    .walk-grid{grid-template-columns:1fr;}
+    .ch-item{grid-template-columns:40px 1fr;}
+    .ch-badge{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/><path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/><path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/></svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="walks.html" class="active">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">🥾 Walking Guides</div>
+  <h1>Norfolk walks &<br><em>coastal routes</em></h1>
+  <p>From gentle beach strolls to the full Norfolk Coast Path — every walk researched, walked, and written in North Norfolk.</p>
+</div>
+
+<!-- TERRAIN KEY -->
+<div class="terrain-key">
+  <div class="terrain-key-inner">
+    <span class="terrain-key-label">Terrain guide:</span>
+    <div class="tk-item"><div class="tk-icon" style="background:rgba(74,154,186,0.15);">🌊</div>Coastal</div>
+    <div class="tk-item"><div class="tk-icon" style="background:rgba(74,170,106,0.15);">🌿</div>Broads & Rivers</div>
+    <div class="tk-item"><div class="tk-icon" style="background:rgba(122,154,74,0.15);">🌳</div>Woodland</div>
+    <div class="tk-item"><div class="tk-icon" style="background:rgba(186,138,74,0.15);">⛪</div>Village & Historic</div>
+    <div class="tk-item"><div class="tk-icon" style="background:rgba(186,138,74,0.15);">⛰️</div>Hills & Heathland</div>
+    <div class="tk-item"><div class="tk-icon" style="background:rgba(139,90,43,0.15);">🪶</div>Wildlife</div>
+    <div class="tk-item"><div class="tk-icon" style="background:rgba(185,146,58,0.15);">🏖️</div>Beach & Dunes</div>
+  </div>
+</div>
+
+<!-- CIRCULAR WALKS -->
+<div class="section">
+  <div class="section-title">Circular Walks</div>
+  <div class="section-sub">Self-contained routes — park up, walk, return to your car</div>
+  <div class="walk-grid">
+
+    <a href="circular-walk-1-holkham.html" class="wcard">
+      <div class="wcard-terrain t-coastal">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🏖️</span><span class="ti-label">Beach</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+          <div class="ti"><span class="ti-emoji">🪶</span><span class="ti-label">Wildlife</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Circular Walk 1</div>
+        <div class="wcard-title">Holkham: Beach, Pinewoods and Lady Anne's Drive</div>
+        <div class="wcard-meta"><span>🥾 5 miles</span><span>⏱ 2–3 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="circular-walk-2-blakeney-friary.html" class="wcard">
+      <div class="wcard-terrain t-coastal">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌊</span><span class="ti-label">Coastal</span></div>
+          <div class="ti"><span class="ti-emoji">🪶</span><span class="ti-label">Wildlife</span></div>
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Circular Walk 2</div>
+        <div class="wcard-title">Blakeney: The Freshes and Friary Hills</div>
+        <div class="wcard-meta"><span>🥾 4 miles</span><span>⏱ 2 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="circular-walk-3-sheringham-park.html" class="wcard">
+      <div class="wcard-terrain t-woodland">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+          <div class="ti"><span class="ti-emoji">⛰️</span><span class="ti-label">Hills</span></div>
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Circular Walk 3</div>
+        <div class="wcard-title">Sheringham Park: Repton's Route and the Gazebo</div>
+        <div class="wcard-meta"><span>🥾 2.5 miles</span><span>⏱ 1.5 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- COASTHOPPER -->
+<div class="section">
+  <div class="section-title">Coasthopper Series</div>
+  <div class="section-sub">Walk the Norfolk Coast Path in 8 stages using the Coasthopper bus</div>
+  <div class="ch-list">
+    <a href="coasthopper-hub.html" class="ch-item ch-hub">
+      <div class="ch-num">★</div>
+      <div><div class="ch-title">Coasthopper Series — Complete Guide</div><div class="ch-meta"><span>All 8 walks</span><span>Wells to Walcott</span><span>40+ miles total</span></div></div>
+      <div class="ch-badge">Hub page</div>
+    </a>
+    <a href="coasthopper-walk-1-wells-blakeney.html" class="ch-item">
+      <div class="ch-num">1</div>
+      <div><div class="ch-title">Wells to Blakeney</div><div class="ch-meta"><span>8 miles</span><span>🌊 Salt marshes & creeks</span></div></div>
+      <div class="ch-badge">Stage 1</div>
+    </a>
+    <a href="coasthopper-walk-2-blakeney-salthouse.html" class="ch-item">
+      <div class="ch-num">2</div>
+      <div><div class="ch-title">Blakeney to Salthouse</div><div class="ch-meta"><span>6 miles</span><span>🌊 Cley Marshes & shingle</span></div></div>
+      <div class="ch-badge">Stage 2</div>
+    </a>
+    <a href="coasthopper-walk-3-salthouse-sheringham.html" class="ch-item">
+      <div class="ch-num">3</div>
+      <div><div class="ch-title">Salthouse to Sheringham</div><div class="ch-meta"><span>7 miles</span><span>🌊 Weybourne & cliffs</span></div></div>
+      <div class="ch-badge">Stage 3</div>
+    </a>
+    <a href="coasthopper-walk-4-sheringham-cromer.html" class="ch-item">
+      <div class="ch-num">4</div>
+      <div><div class="ch-title">Sheringham to Cromer</div><div class="ch-meta"><span>6 miles</span><span>⛰️ Beeston Bump & cliff tops</span></div></div>
+      <div class="ch-badge">Stage 4</div>
+    </a>
+    <a href="coasthopper-walk-5-cromer-overstrand.html" class="ch-item">
+      <div class="ch-num">5</div>
+      <div><div class="ch-title">Cromer to Overstrand</div><div class="ch-meta"><span>3 miles</span><span>🌊 Pier & lighthouse</span></div></div>
+      <div class="ch-badge">Stage 5</div>
+    </a>
+    <a href="coasthopper-walk-6-overstrand-trimingham.html" class="ch-item">
+      <div class="ch-num">6</div>
+      <div><div class="ch-title">Overstrand to Trimingham</div><div class="ch-meta"><span>4 miles</span><span>⛰️ Crumbling cliffs</span></div></div>
+      <div class="ch-badge">Stage 6</div>
+    </a>
+    <a href="coasthopper-walk-7-trimingham-mundesley.html" class="ch-item">
+      <div class="ch-num">7</div>
+      <div><div class="ch-title">Trimingham to Mundesley</div><div class="ch-meta"><span>3 miles</span><span>🌊 Village & beach</span></div></div>
+      <div class="ch-badge">Stage 7</div>
+    </a>
+    <a href="coasthopper-walk-8-mundesley-walcott.html" class="ch-item">
+      <div class="ch-num">8</div>
+      <div><div class="ch-title">Mundesley to Walcott</div><div class="ch-meta"><span>3.5 miles</span><span>🌊 Final stage</span></div></div>
+      <div class="ch-badge">Stage 8 ★</div>
+    </a>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- OTHER WALKS -->
+<div class="section">
+  <div class="section-title">Other Walks & Essential Guides</div>
+  <div class="section-sub">Village walks, long-distance routes and complete walking references for Norfolk</div>
+  <div class="walk-grid">
+
+    <a href="coltishall-walk.html" class="wcard">
+      <div class="wcard-terrain t-broads">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Broads</span></div>
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Riverside</span></div>
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Broads & Riverside</div>
+        <div class="wcard-title">Coltishall: Rivers, Railways & Historic Mills</div>
+        <div class="wcard-meta"><span>🥾 3–6 miles</span><span>⏱ 1.5–3 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="worstead-walk.html" class="wcard">
+      <div class="wcard-terrain t-village">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Riverside</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Historic Village Walk</div>
+        <div class="wcard-title">Worstead: Weavers' Way & Village History Walk</div>
+        <div class="wcard-meta"><span>🥾 5.6 miles</span><span>⏱ 2–3 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="north-walsham-walk.html" class="wcard">
+      <div class="wcard-terrain t-village">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Canal</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Canal & Market Town</div>
+        <div class="wcard-title">North Walsham: Hidden Waterways & Ancient Oaks</div>
+        <div class="wcard-meta"><span>🥾 3–6 miles</span><span>⏱ 1.5–2.5 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="holt-walk.html" class="wcard">
+      <div class="wcard-terrain t-woodland">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+          <div class="ti"><span class="ti-emoji">⛰️</span><span class="ti-label">Heathland</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Market Town & Woodland</div>
+        <div class="wcard-title">Holt: Georgian Charm & Ancient Woods</div>
+        <div class="wcard-meta"><span>🥾 2–7 miles</span><span>⏱ 1–3 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="sheringham-walk.html" class="wcard">
+      <div class="wcard-terrain t-mixed">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌊</span><span class="ti-label">Coastal</span></div>
+          <div class="ti"><span class="ti-emoji">⛰️</span><span class="ti-label">Hills</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Cliffs, Commons & Country Parks</div>
+        <div class="wcard-title">Sheringham: The Peak of North Norfolk</div>
+        <div class="wcard-meta"><span>🥾 2–8 miles</span><span>⏱ 1–4 hrs</span><span>🟡 Easy–Moderate</span></div>
+      </div>
+    </a>
+
+    <a href="article-8-peddars-way.html" class="wcard">
+      <div class="wcard-terrain t-hills">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">⛰️</span><span class="ti-label">Heathland</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+          <div class="ti"><span class="ti-emoji">🌊</span><span class="ti-label">Coastal</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Long Distance</div>
+        <div class="wcard-title">The Peddars Way: Complete Guide</div>
+        <div class="wcard-meta"><span>🥾 46 miles</span><span>⏱ 4–5 days</span><span>🟡 Moderate</span></div>
+      </div>
+    </a>
+
+    <a href="article-10-essential-walking-guide.html" class="wcard">
+      <div class="wcard-terrain t-coastal">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌊</span><span class="ti-label">Coastal</span></div>
+          <div class="ti"><span class="ti-emoji">🏖️</span><span class="ti-label">Beach</span></div>
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Broads</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Essential Guide</div>
+        <div class="wcard-title">The Essential Norfolk Walking Guide</div>
+        <div class="wcard-meta"><span>All terrain types</span><span>All seasons</span></div>
+      </div>
+    </a>
+
+    <a href="article-1-blakeney-point.html" class="wcard">
+      <div class="wcard-terrain t-coastal">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌊</span><span class="ti-label">Coastal</span></div>
+          <div class="ti"><span class="ti-emoji">🏖️</span><span class="ti-label">Shingle</span></div>
+          <div class="ti"><span class="ti-emoji">🪶</span><span class="ti-label">Wildlife</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Coastal Walk</div>
+        <div class="wcard-title">Blakeney Point: Seals, Salt Marshes and Solitude</div>
+        <div class="wcard-meta"><span>🥾 7 miles</span><span>⏱ 3–4 hrs</span><span>🟢 Easy/Mod</span></div>
+      </div>
+    </a>
+
+    <a href="overstrand-walk.html" class="wcard">
+      <div class="wcard-terrain t-coastal">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌊</span><span class="ti-label">Coastal</span></div>
+          <div class="ti"><span class="ti-emoji">🏖️</span><span class="ti-label">Beach</span></div>
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Coastal & Inland — 2 Walks</div>
+        <div class="wcard-title">Overstrand: Poppyland & the Village of Millionaires</div>
+        <div class="wcard-meta"><span>🥾 2.5 or 8.5 miles</span><span>🟢 Easy–Mod</span></div>
+      </div>
+    </a>
+
+    <a href="quiet-lanes.html" class="wcard">
+      <div class="wcard-terrain t-village">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+          <div class="ti"><span class="ti-emoji">🪶</span><span class="ti-label">Wildlife</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Lanes & Villages</div>
+        <div class="wcard-title">Norfolk Quiet Lanes: Walking the Hidden Back Roads</div>
+        <div class="wcard-meta"><span>🥾 2–8 miles</span><span>🟢 Easy</span><span>All year</span></div>
+      </div>
+    </a>
+
+    <a href="waxham-walk.html" class="wcard">
+      <div class="wcard-terrain t-coastal">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌊</span><span class="ti-label">Coastal</span></div>
+          <div class="ti"><span class="ti-emoji">🏖️</span><span class="ti-label">Beach</span></div>
+          <div class="ti"><span class="ti-emoji">🪶</span><span class="ti-label">Wildlife</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Wild Coast & Seals</div>
+        <div class="wcard-title">Waxham: Wild Dunes, Great Barn & the Open Sea</div>
+        <div class="wcard-meta"><span>🥾 0.5–6 miles</span><span>⏱ 30 min–3 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="wroxham-walk.html" class="wcard">
+      <div class="wcard-terrain t-broads">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Broads</span></div>
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Riverside</span></div>
+          <div class="ti"><span class="ti-emoji">🌳</span><span class="ti-label">Woodland</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">Broads & Riverside</div>
+        <div class="wcard-title">Wroxham: Gateway to the Broads</div>
+        <div class="wcard-meta"><span>🥾 1.5–9 miles</span><span>⏱ 1–4 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+    <a href="norwich-walk.html" class="wcard">
+      <div class="wcard-terrain t-village">
+        <div class="terrain-icons">
+          <div class="ti"><span class="ti-emoji">⛪</span><span class="ti-label">Historic</span></div>
+          <div class="ti"><span class="ti-emoji">🌿</span><span class="ti-label">Riverside</span></div>
+          <div class="ti"><span class="ti-emoji">🪶</span><span class="ti-label">Wildlife</span></div>
+        </div>
+      </div>
+      <div class="wcard-body">
+        <div class="wcard-tag">City Walk</div>
+        <div class="wcard-title">Norwich: England's Most Complete Medieval City</div>
+        <div class="wcard-meta"><span>🥾 1–5 miles</span><span>⏱ 1–3 hrs</span><span>🟢 Easy</span></div>
+      </div>
+    </a>
+
+  </div>
+</div>
+(function(){
+  var hamburger=document.querySelector('.hamburger');
+  var navLinks=document.querySelector('.nav-links');
+  if(hamburger&&navLinks){
+    hamburger.addEventListener('click',function(){navLinks.classList.toggle('active');});
+  }
+})();
+</script>
+</body>
+</html>

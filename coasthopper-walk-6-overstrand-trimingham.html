@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overstrand to Trimingham: Coasthopper Walk 6 | NorfolkWild</title>
+<meta name="description" content="Walk the Norfolk Coast Path from Overstrand through Sidestrand to Trimingham on the CH2 Coasthopper. Dramatic eroding cliffs, the church falling into the sea and the Deep History Coast. Full guide with map.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;--dusk:#c4956a;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1rem;align-items:center;}
+.nav-back{font-size:0.65rem;font-weight:500;color:var(--reed);text-decoration:none;}
+.nav-series{font-size:0.62rem;color:var(--sage);}
+.art-hero{position:relative;height:65vh;min-height:420px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=1600&q=85&auto=format&fit=crop') center 40%/cover no-repeat;filter:brightness(0.52);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.88));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.series-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--marsh2);padding:0.3rem 0.8rem;margin-bottom:0.8rem;}
+.sb-route{font-size:0.57rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);}
+.sb-num{font-size:0.57rem;font-weight:500;color:rgba(255,255,255,0.6);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.9rem);font-weight:900;color:#fff;line-height:1.05;max-width:700px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-h1 em{color:var(--gold2);font-style:italic;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+.art-layout{display:grid;grid-template-columns:1fr 270px;gap:2.5rem;max-width:1020px;margin:0 auto;padding:2.5rem 2rem;}
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(30,53,40,0.08);margin-bottom:2rem;}
+.info-cell{background:var(--paper);padding:0.9rem;text-align:center;}
+.info-icon{font-size:1.2rem;display:block;}
+.info-label{font-size:0.52rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.1rem;}
+.info-val{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);margin-top:0.1rem;}
+.map-wrap{margin:2rem 0;}
+.map-title{font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.6rem;}
+.map-title::after{content:'';flex:1;height:1px;background:rgba(30,53,40,0.12);}
+.map-container{width:100%;border:1px solid rgba(30,53,40,0.12);overflow:hidden;}
+.map-legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:0.8rem;padding:0.8rem;background:rgba(30,53,40,0.03);border:1px solid rgba(30,53,40,0.08);}
+.legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.68rem;color:var(--ink2);}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.legend-line{width:20px;height:3px;flex-shrink:0;}
+.art-h2{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--marsh);margin:2.2rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.5rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.92rem;line-height:1.88;color:var(--ink2);margin-bottom:1rem;font-weight:300;}
+.stage{border-left:3px solid var(--gold2);padding:1rem 1.2rem;margin:1.2rem 0;background:rgba(30,53,40,0.02);}
+.stage-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;flex-wrap:wrap;gap:0.5rem;}
+.stage-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--marsh);}
+.stage-dist{font-size:0.7rem;font-weight:600;color:var(--sage);background:var(--mist);padding:0.2rem 0.5rem;}
+.stage-desc{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--ink2);line-height:1.7;font-weight:300;}
+.poi-list{margin:1.5rem 0;}
+.poi-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(30,53,40,0.08);}
+.poi-item:last-child{border-bottom:none;}
+.poi-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:rgba(30,53,40,0.08);line-height:1;flex-shrink:0;min-width:32px;}
+.poi-icon{font-size:1.2rem;flex-shrink:0;margin-top:0.1rem;}
+.poi-name{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--marsh);margin-bottom:0.25rem;}
+.poi-desc{font-family:'Source Serif 4',serif;font-size:0.8rem;color:var(--ink2);line-height:1.65;font-weight:300;}
+.poi-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.3rem;}
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.2rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.82rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+.warning-block{background:#fffbf2;border-left:3px solid var(--dusk);padding:1rem 1.2rem;margin:1.2rem 0;}
+.warning-block p{font-size:0.82rem;color:#5a4a20;line-height:1.65;margin:0;font-family:'Source Serif 4',serif;}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin:1.2rem 0;}
+.food-card{background:var(--paper);padding:0.9rem;}
+.food-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.food-type{font-size:0.58rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin:0.2rem 0 0.3rem;}
+.food-desc{font-size:0.75rem;color:var(--reed);line-height:1.5;font-family:'Source Serif 4',serif;font-weight:300;}
+.food-loc{font-size:0.65rem;color:var(--sage);margin-top:0.3rem;}
+.bus-info{background:var(--marsh);padding:1.2rem 1.4rem;margin:1.5rem 0;}
+.bi-title{font-size:0.6rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+.bi-row{display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.78rem;}
+.bi-row:last-child{border-bottom:none;}
+.bi-label{color:rgba(255,255,255,0.55);font-family:'Source Serif 4',serif;}
+.bi-val{color:#fff;font-weight:500;}
+.bi-val a{color:var(--gold2);}
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:0.9rem 1rem;margin:0.7rem 0;display:flex;gap:0.8rem;align-items:flex-start;}
+.gear-icon{font-size:1.4rem;flex-shrink:0;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.gear-desc{font-size:0.73rem;color:var(--reed);line-height:1.5;margin:0.15rem 0 0.4rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.25rem 0.75rem;font-size:0.62rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-block;}
+.walk-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin-top:2rem;}
+.wn-link{background:var(--paper);padding:1rem 1.1rem;text-decoration:none;transition:background 0.15s;display:block;}
+.wn-link:hover{background:var(--cream2);}
+.wn-dir{font-size:0.52rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.25rem;}
+.wn-title{font-family:'Playfair Display',serif;font-size:0.82rem;font-weight:700;color:var(--marsh);line-height:1.3;}
+.art-author{background:var(--cream2);padding:1.1rem 1.3rem;display:flex;gap:0.8rem;align-items:center;margin-top:2rem;border-top:2px solid var(--marsh);}
+.author-av{width:38px;height:38px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.7rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+.aside-sticky{position:sticky;top:68px;}
+.aside-map-mini{background:var(--marsh);padding:1rem;margin-bottom:1rem;}
+.aside-map-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;}
+.aside-stops{display:flex;flex-direction:column;gap:0;}
+.aside-stop{display:flex;align-items:center;gap:0.6rem;padding:0.35rem 0;position:relative;}
+.aside-stop::before{content:'';position:absolute;left:7px;top:50%;bottom:-50%;width:1px;background:rgba(255,255,255,0.1);}
+.aside-stop:last-child::before{display:none;}
+.as-dot{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);background:var(--marsh);flex-shrink:0;z-index:1;}
+.as-dot.start{background:var(--gold2);border-color:var(--gold2);}
+.as-dot.end{background:#fff;border-color:#fff;}
+.as-dot.poi{background:var(--reed);border-color:var(--reed);}
+.as-name{font-size:0.72rem;color:rgba(255,255,255,0.7);}
+.as-name.bold{color:#fff;font-weight:500;}
+.aside-widget{background:var(--marsh);padding:1.1rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.7rem;}
+.aside-link{display:flex;gap:0.5rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.04);text-decoration:none;align-items:center;cursor:pointer;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:44px;height:32px;object-fit:cover;flex-shrink:0;}
+.aside-link-title{font-size:0.68rem;color:rgba(255,255,255,0.7);line-height:1.35;}
+.aside-nl{background:var(--gold2);padding:1.1rem;}
+.aside-nl-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.2;}
+.aside-nl-input{width:100%;padding:0.45rem 0.6rem;font-size:0.7rem;border:none;margin-bottom:0.35rem;display:block;font-family:'DM Sans',sans-serif;}
+.aside-nl-btn{width:100%;background:var(--marsh);color:#fff;padding:0.45rem;border:none;font-size:0.65rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.art-layout{grid-template-columns:1fr;}.art-aside{display:none;}.info-grid{grid-template-columns:repeat(2,1fr);}.food-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.art-hero{height:55vh;}.art-layout{padding:1.5rem;}.walk-nav{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;padding:1.5rem;}}
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/coasthopper-walk-6-overstrand-trimingham.html">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="series-badge"><span class="sb-route">🚌 CH2 Coasthopper</span> · <span class="sb-num">Walk 6 of 8</span></div>
+    <h1 class="art-h1">Overstrand to Sidestrand to Trimingham:<br><em>The Deep History Cliffs</em></h1>
+    <div class="art-pills">
+      <span class="art-pill">📍 Overstrand → Trimingham</span>
+      <span class="art-pill">📏 4 miles</span>
+      <span class="art-pill">⏱ 2 hours</span>
+      <span class="art-pill">🟡 Moderate</span>
+      <span class="art-pill">🚌 Bus back from Trimingham</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-layout">
+  <div class="art-main">
+
+        <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24 / OL25 for North Norfolk)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before any coastal or salt marsh walk</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Verify <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:#c9a84c;">bus timetables</a> directly with Sanders Coaches before travel</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, cliff erosion, tidal changes and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside and on coastal cliff paths involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong> — for coastal emergencies ask for the Coastguard.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+<div class="pull-intro">
+      <p>This is the most dramatic and unusual section of the entire Coasthopper walking series. The clay and chalk cliffs between Overstrand and Trimingham are among the fastest eroding in Europe — Sidestrand's medieval church tower once stood safely inland; it now teeters on the cliff edge, slowly claimed by the sea. A walk unlike anything else on the Norfolk coast, full of geological history, melancholy beauty and extraordinary views.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-cell"><span class="info-icon">📏</span><div class="info-label">Distance</div><div class="info-val">4 miles</div></div>
+      <div class="info-cell"><span class="info-icon">⏱</span><div class="info-label">Walking time</div><div class="info-val">2 hours</div></div>
+      <div class="info-cell"><span class="info-icon">🟡</span><div class="info-label">Difficulty</div><div class="info-val">Moderate</div></div>
+      <div class="info-cell"><span class="info-icon">🚌</span><div class="info-label">Bus back</div><div class="info-val">CH2 from Trimingham</div></div>
+    </div>
+
+    <div class="map-wrap">
+      <div class="map-title">Route map — Overstrand to Sidestrand to Trimingham</div>
+      <div class="map-container">
+        <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;background:#e8ede6;">
+          <rect x="0" y="0" width="760" height="82" fill="#b8d4e0" opacity="0.6"/>
+          <path d="M0 28 Q100 18 200 28 Q300 38 400 28 Q500 18 600 28 Q700 38 760 28" fill="none" stroke="#9abbc8" stroke-width="1" opacity="0.5"/>
+          <text x="380" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6a9aac" opacity="0.8">NORTH SEA</text>
+
+          <!-- Eroding cliffs - shown as ragged edge -->
+          <path d="M 80 82 Q 100 78 120 82 Q 140 86 165 80 Q 190 74 215 80 Q 240 86 270 78 Q 300 70 330 78 Q 360 86 390 76 Q 420 66 455 76 Q 490 86 520 74 Q 550 62 580 72 Q 610 82 640 70 Q 670 58 700 70" fill="none" stroke="#b89868" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+          <text x="380" y="68" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#8a6a3a" opacity="0.9">Actively eroding clay cliffs — Deep History Coast</text>
+
+          <!-- Sidestrand Church (on cliff edge) -->
+          <rect x="368" y="90" width="6" height="10" fill="#8a7a6a" opacity="0.9"/>
+          <polygon points="371,88 366,93 376,93" fill="#6a5a4a" opacity="0.9"/>
+          <rect x="370" y="84" width="2" height="5" fill="#6a5a4a" opacity="0.9"/>
+          <!-- Cliff crack near church -->
+          <path d="M 374 100 Q 376 110 372 118" fill="none" stroke="#c84a2a" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+          <text x="385" y="100" font-family="DM Sans,sans-serif" font-size="6.5" fill="#c84a2a">⚠ cliff edge</text>
+          <text x="350" y="114" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a3a">Sidestrand</text>
+          <text x="350" y="122" font-family="DM Sans,sans-serif" font-size="6.5" fill="#8a6a3a">Round Tower</text>
+
+          <!-- Farmland inland -->
+          <rect x="0" y="160" width="760" height="120" fill="#d4c9a8" opacity="0.3"/>
+          <text x="200" y="200" font-family="DM Sans,sans-serif" font-size="7" fill="#8a7a5a" opacity="0.7">Farmland</text>
+          <text x="500" y="200" font-family="DM Sans,sans-serif" font-size="7" fill="#8a7a5a" opacity="0.7">Farmland</text>
+
+          <!-- ROUTE LINE - follows clifftop closely -->
+          <path d="M 80 148 Q 150 142 210 138 Q 260 135 310 132 Q 360 130 400 128 Q 440 127 480 126 Q 530 126 580 128 Q 630 130 680 133"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 80 148 Q 150 142 210 138 Q 260 135 310 132 Q 360 130 400 128 Q 440 127 480 126 Q 530 126 580 128 Q 630 130 680 133"
+            fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.6"/>
+
+          <!-- Bus road -->
+          <path d="M 80 230 L 400 228 L 680 226" fill="none" stroke="#c4956a" stroke-width="2" stroke-dasharray="6 3" opacity="0.7"/>
+          <text x="380" y="242" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#8a6030" opacity="0.9">🚌 CH2 Coasthopper route</text>
+
+          <!-- OVERSTRAND START -->
+          <circle cx="80" cy="148" r="9" fill="#c9a84c" stroke="#1e3528" stroke-width="2"/>
+          <text x="80" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1e3528">S</text>
+          <text x="80" y="168" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Overstrand</text>
+
+          <!-- POI 1: Clifftop path -->
+          <circle cx="200" cy="140" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="200" y="143" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">1</text>
+          <text x="200" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">Deep History</text>
+          <text x="200" y="166" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">Coast path</text>
+
+          <!-- POI 2: Sidestrand church ruin -->
+          <circle cx="375" cy="128" r="6" fill="#c84a2a" stroke="#fff" stroke-width="1.5"/>
+          <text x="375" y="131" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#fff">2</text>
+          <text x="375" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" font-weight="600" fill="#1e3528">Sidestrand</text>
+
+          <!-- POI 3: Trimingham church -->
+          <rect x="658" y="108" width="6" height="10" fill="#8a7a6a" opacity="0.8"/>
+          <polygon points="661,106 656,111 666,111" fill="#6a5a4a" opacity="0.8"/>
+          <rect x="660" y="102" width="2" height="5" fill="#6a5a4a" opacity="0.8"/>
+          <text x="672" y="112" font-family="DM Sans,sans-serif" font-size="6.5" fill="#5a4a3a">St John</text>
+          <text x="672" y="120" font-family="DM Sans,sans-serif" font-size="6.5" fill="#5a4a3a">Baptist</text>
+
+          <!-- TRIMINGHAM END -->
+          <circle cx="680" cy="133" r="9" fill="#fff" stroke="#1e3528" stroke-width="2.5"/>
+          <text x="680" y="136" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1e3528">F</text>
+          <text x="680" y="153" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Trimingham</text>
+
+          <!-- Deep history label -->
+          <text x="100" y="168" font-family="DM Sans,sans-serif" font-size="7" fill="#6a5a3a" font-style="italic">Elephant bones · ancient sea creatures · 2 million years of history in the cliffs</text>
+
+          <g transform="translate(720,255)"><circle cx="0" cy="0" r="12" fill="rgba(250,246,239,0.9)" stroke="#2d4a3e" stroke-width="1"/><text x="0" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" font-weight="700" fill="#1e3528">N</text><line x1="0" y1="-3" x2="0" y2="-8" stroke="#1e3528" stroke-width="1.5"/></g>
+          <g transform="translate(30,262)"><line x1="0" y1="0" x2="38" y2="0" stroke="#2d4a3e" stroke-width="1.5"/><line x1="0" y1="-3" x2="0" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><line x1="38" y1="-3" x2="38" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><text x="19" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#2d4a3e">1 mile approx</text></g>
+          <circle cx="30" cy="276" r="4" fill="#c9a84c"/><text x="38" y="280" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Start (Overstrand)</text>
+          <circle cx="130" cy="276" r="4" fill="#fff" stroke="#1e3528" stroke-width="1.5"/><text x="138" y="280" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Finish (Trimingham)</text>
+          <circle cx="235" cy="276" r="4" fill="#c84a2a"/><text x="243" y="280" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Erosion POI</text>
+        </svg>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#c9a84c;"></div>Start (Overstrand)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#fff;border:1.5px solid #1e3528;"></div>Finish (Trimingham)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#c84a2a;"></div>Cliff erosion feature</div>
+        <div class="legend-item"><div class="legend-line" style="background:#1e3528;"></div>Walking route</div>
+      </div>
+    </div>
+
+    <div class="bus-info">
+      <div class="bi-title">🚌 Coasthopper CH2 — Practical Information</div>
+      <div class="bi-row"><span class="bi-label">Start point</span><span class="bi-val">Overstrand village stop (The Street)</span></div>
+      <div class="bi-row"><span class="bi-label">Finish point</span><span class="bi-val">Trimingham village stop (Coast Road)</span></div>
+      <div class="bi-row"><span class="bi-label">Bus back</span><span class="bi-val">CH2 Trimingham → Overstrand → Cromer</span></div>
+      <div class="bi-row"><span class="bi-label">Single fare</span><span class="bi-val">£3 (government fare cap, extended 2026)</span></div>
+      <div class="bi-row"><span class="bi-label">Explorer Day ticket</span><span class="bi-val">£12 adult · £10 age 5–19 · £25 group</span></div>
+      <div class="bi-row"><span class="bi-label">Timetables & tickets</span><span class="bi-val"><a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:var(--gold2);">sanderscoaches.com/coasthopper ↗</a></span></div>
+    </div>
+
+    <h2 class="art-h2">The Route</h2>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 1 — Overstrand to Sidestrand</div><span class="stage-dist">2 miles · 1 hour</span></div>
+      <p class="stage-desc">From the bus stop in Overstrand village, follow signs to the clifftop path heading south. The path almost immediately feels different from the western sections of the Coasthopper walks — narrower, quieter, more intimate. The cliffs are clay rather than chalk, deep brown and orange in colour, and clearly unstable in places. The path follows the cliff edge closely but diversions inland are necessary in places where the cliff has eroded across the original path line. The landscape is one of dramatic, slightly melancholy beauty — fields cut off by erosion, isolated trees left on cliff promontories, the constant sound of the sea below. After about 2 miles, the rounded tower of Sidestrand's old church comes into view.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 2 — Sidestrand to Trimingham</div><span class="stage-dist">2 miles · 1 hour</span></div>
+      <p class="stage-desc">The area around Sidestrand's old church tower is the most dramatic point of the walk. The site of the original St Michael's church tower marks the most dramatic point of the walk. The main church body was demolished in 1889 as erosion threatened it; the tower stood on until 1916 when it too finally fell into the sea — a fate that makes it one of the most vivid examples of this coastline's relentless change. From Sidestrand the path continues south along the clifftop through Trimingham — a small village that gives its name to the highest point on this section of coast at around 90 metres above sea level. The views from the clifftop above Trimingham on a clear day extend to Cromer in the north and Mundesley to the south.</p>
+    </div>
+
+    <div class="warning-block">
+      <p>⚠️ <strong>Important:</strong> The cliffs on this section are among the most actively eroding in Europe, losing on average around 1 metre per year. The Coast Path is regularly diverted inland as sections fall. Follow waymarks carefully, keep well back from the cliff edge and never attempt to descend the cliffs. The clay becomes extremely slippery when wet.</p>
+    </div>
+
+    <h2 class="art-h2">Points of Interest</h2>
+    <div class="poi-list">
+
+      <div class="poi-item">
+        <div class="poi-num">1</div><div class="poi-icon">🌊</div>
+        <div>
+          <div class="poi-name">The Deep History Coast</div>
+          <div class="poi-desc">This stretch of coastline from Weybourne to Happisburgh is designated the Deep History Coast — a remarkable 100-mile stretch of beach and cliff that has yielded some of the oldest evidence of human activity in northern Europe. The eroding cliffs constantly expose new material dating back up to 2 million years — bones of mammoths, sabre-toothed cats, hippos, ancient horses and rhinoceros have all been found along this beach. In 2013, the oldest human footprints found outside Africa were discovered at nearby Happisburgh, dating back 800,000 years. Look along the beach base for freshly exposed material but do not remove anything — report finds to the Museum of Norwich.</div>
+          <div class="poi-tag">📍 Entire section between Overstrand and Trimingham · deephistorycoast.org.uk</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">2</div><div class="poi-icon">⛪</div>
+        <div>
+          <div class="poi-name">Sidestrand Round Tower — the Church Claimed by the Sea</div>
+          <div class="poi-desc">The site of Sidestrand's medieval Church of St Michael is one of the most poignant on the Norfolk coast. As cliff erosion advanced, the main body of the church was carefully demolished in 1889 and rebuilt a safe distance inland. The round flint tower was left standing on the clifftop, considered too costly to move. It finally fell into the sea in 1916 — a vivid demonstration of just how relentlessly this coastline is claimed by erosion. Local legend holds that on quiet nights you can hear the bells ringing beneath the waves — bells that had already fallen long before the tower itself followed them.</div>
+          <div class="poi-tag">📍 Sidestrand clifftop · Visible from coast path · Free</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">3</div><div class="poi-icon">⛪</div>
+        <div>
+          <div class="poi-name">St John the Baptist Church, Trimingham</div>
+          <div class="poi-desc">The rebuilt church of St Michael at Sidestrand, and the nearby Church of St John the Baptist at Trimingham, both date partly from the medieval period. Trimingham church has a handsome round flint tower — a style distinctive to Norfolk, with over 120 surviving examples in the county, more than anywhere else in the world. The round tower is thought to relate to the lack of good building stone in Norfolk — round shapes require no cut stone corners. Worth a brief stop if the church is open.</div>
+          <div class="poi-tag">📍 Trimingham village, NR11 8AS</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">Fossil hunting on the beach</div>
+      <p>The beach below the cliffs between Overstrand and Trimingham is genuinely productive for fossil hunters after storms, when new cliff material has fallen. Common finds include belemnites (finger-shaped bullet fossils), bivalves and echinoids (sea urchins). Mammal bones are rarer but possible — if you find anything that looks like a large bone, photograph it and report it to the Deep History Coast team at deephistorycoast.org.uk rather than removing it. Access to the beach requires a scramble down where paths exist — check the tide and the condition of the cliff face before descending.</p>
+    </div>
+
+    <h2 class="art-h2">Food and Drink</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <div class="food-name">The White Horse, Overstrand</div>
+        <div class="food-type">Pub · Start of walk</div>
+        <div class="food-desc">Good food, reliable ales and a friendly welcome. Stock up before heading out on this more remote section of the coast path.</div>
+        <div class="food-loc">📍 The Street, Overstrand NR27 0PN</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">Trimingham Village Stores</div>
+        <div class="food-type">Village shop · End of walk</div>
+        <div class="food-desc">Small village shop with basic supplies. Worth checking opening times before relying on it. The bus stop is close by for the return to Overstrand or Cromer.</div>
+        <div class="food-loc">📍 Coast Road, Trimingham NR11 8AD</div>
+      </div>
+    </div>
+
+    <div class="art-author">
+      <div class="author-av">🌿</div>
+      <div>
+        <div class="author-name">NorfolkWild</div>
+        <div class="author-bio">Independent guide to this section of the Norfolk Coast Path. Updated May 2026.</div>
+      </div>
+    </div>
+
+    <div class="walk-nav">
+      <a class="wn-link" href="coasthopper-walk-5-cromer-overstrand.html"><div class="wn-dir">← Previous walk</div><div class="wn-title">Walk 5: Cromer to Overstrand</div></a>
+      <a class="wn-link" href="coasthopper-walk-7-trimingham-mundesley.html" style="text-align:right;"><div class="wn-dir">Next walk →</div><div class="wn-title">Walk 7: Trimingham to Mundesley</div></a>
+    </div>
+
+  </div>
+
+  <div class="art-aside">
+    <div class="aside-sticky">
+      <div class="aside-map-mini">
+        <div class="aside-map-label">Route stops</div>
+        <div class="aside-stops">
+          <div class="aside-stop"><div class="as-dot start"></div><span class="as-name bold">🚌 Overstrand</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Deep History Coast cliffs</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name bold">Sidestrand Round Tower ⛪</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Clifftop 90m viewpoint</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">St John Baptist Church</span></div>
+          <div class="aside-stop"><div class="as-dot end"></div><span class="as-name bold">🚌 Trimingham</span></div>
+        </div>
+      </div>
+      <div class="aside-widget">
+        <div class="aside-label">More Coasthopper walks</div>
+        <div class="aside-link" onclick="window.location='feature-deep-history-coast.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=90&q=60" alt=""><div class="aside-link-title">Feature: The Deep History Coast</div></div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-5-cromer-overstrand.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=90&q=60" alt=""><div class="aside-link-title">Walk 5: Cromer to Overstrand</div></div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-7-trimingham-mundesley.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1621532076337-db3b804ee109?w=90&q=60" alt=""><div class="aside-link-title">Walk 7: Trimingham to Mundesley</div></div>
+        <div class="aside-link" onclick="window.location='coasthopper-hub.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=90&q=60" alt=""><div class="aside-link-title">All 8 Coasthopper Walks →</div></div>
+      </div>
+      <div class="aside-nl">
+        <div class="aside-nl-title">New walks every week — free.</div>
+        <a href="https://norfolkwild.substack.com" target="_blank" style="display:block;width:100%;background:var(--marsh);color:#fff;padding:0.5rem;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.06em;text-align:center;text-decoration:none;">Subscribe free on Substack →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div><div class="footer-wm">Norfolk<em>Wild</em></div><div class="footer-tag">Independent outdoor guides from North Norfolk.</div></div>
+  <div class="footer-col"><h4>CH1 Walks</h4><a href="coasthopper-walk-1-wells-blakeney.html">Walk 1: Wells to Blakeney</a><a href="coasthopper-walk-2-blakeney-salthouse.html">Walk 2: Blakeney to Salthouse</a><a href="coasthopper-walk-3-salthouse-sheringham.html">Walk 3: Salthouse to Sheringham</a><a href="coasthopper-walk-4-sheringham-cromer.html">Walk 4: Sheringham to Cromer</a></div>
+  <div class="footer-col"><h4>CH2 Walks</h4><a href="coasthopper-walk-5-cromer-overstrand.html">Walk 5: Cromer to Overstrand</a><a href="coasthopper-walk-6-overstrand-trimingham.html">Walk 6: Overstrand to Trimingham</a><a href="coasthopper-walk-7-trimingham-mundesley.html">Walk 7: Trimingham to Mundesley</a><a href="coasthopper-walk-8-mundesley-walcott.html">Walk 8: Mundesley to Walcott</a></div>
+  <div class="footer-col"><h4>About</h4><a href="norfolk-wild-legal.html#privacy">Privacy Policy</a><a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a><a href="mailto:hello@norfolkwild.co.uk">Contact</a></div>
+</footer>
+<div class="footer-bottom"><span>© 2026 NorfolkWild.co.uk</span><span>Written in North Norfolk</span></div>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

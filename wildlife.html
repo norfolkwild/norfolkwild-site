@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norfolk Wildlife Guides — Birds, Seals & Wild Places | NorfolkWild</title>
+<meta name="description" content="Wildlife guides for North Norfolk — where to see marsh harriers, pink-footed geese, Horsey seals and more. Written by local naturalists.">
+<link rel="canonical" href="https://www.norfolkwild.co.uk/wildlife.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --marsh:#1e3528;--marsh2:#2d4a3e;--gold:#b8923a;--gold2:#c9a84c;--paper:#faf6ef;--ink:#1a2018;--reed:#4a6358; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);}
+
+  /* NAV */
+  .topnav{background:rgba(250,246,239,0.97);border-bottom:1px solid rgba(30,53,40,0.12);padding:0 2.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);}
+  .nav-links{display:flex;gap:1.4rem;align-items:center;}
+  .nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#4a6358;text-decoration:none;transition:color 0.15s;}
+  .nav-links a:hover,.nav-links a.active{color:#b8923a;}
+  .nav-cta{background:#1e3528;color:#fff !important;padding:0.38rem 0.9rem;}
+  .nav-cta:hover{background:#2d4a3e !important;}
+  .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+  .hamburger span{display:block;width:22px;height:2px;background:#1e3528;}
+
+  /* HERO */
+  .page-hero{background:var(--marsh);padding:3.5rem max(2rem,calc(50% - 620px + 2rem)) 3rem;}
+  .page-hero .eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+  .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1px;}
+  .page-hero h1 em{color:var(--gold2);font-style:italic;}
+  .page-hero p{color:rgba(255,255,255,0.6);font-size:0.95rem;margin-top:0.8rem;max-width:520px;}
+
+  /* SEASON FILTER */
+  .filter-bar{padding:1.5rem max(2rem,calc(50% - 620px + 2rem));display:flex;gap:0.5rem;flex-wrap:wrap;border-bottom:1px solid rgba(30,53,40,0.08);}
+  .filter-btn{font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border:1px solid rgba(30,53,40,0.2);background:none;cursor:pointer;color:#4a6358;transition:all 0.15s;}
+  .filter-btn:hover,.filter-btn.active{background:var(--marsh);color:#fff;border-color:var(--marsh);}
+
+  /* SECTIONS */
+  .section{padding:2.5rem max(2rem,calc(50% - 620px + 2rem));}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--marsh);letter-spacing:-0.3px;margin-bottom:0.25rem;}
+  .section-sub{font-size:0.78rem;color:var(--reed);margin-bottom:1.5rem;}
+  .divider{border:none;border-top:1px solid rgba(30,53,40,0.1);margin:0 max(2rem,calc(50% - 620px + 2rem));}
+
+  /* WILDLIFE CARDS */
+  .wl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(30,53,40,0.08);}
+  .wl-card{background:var(--paper);cursor:pointer;overflow:hidden;transition:background 0.15s;text-decoration:none;display:block;color:inherit;}
+  .wl-card:hover{background:#f0e7d5;}
+  .wl-card:hover .wl-img{transform:scale(1.04);}
+  .wl-imgw{overflow:hidden;aspect-ratio:16/9;}
+  .wl-img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;}
+  .wl-body{padding:1rem;}
+  .wl-tag{font-size:0.58rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);}
+  .wl-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#1e3528;line-height:1.3;margin:0.3rem 0 0.4rem;}
+  .wl-desc{font-size:0.78rem;color:#2a3d2e;line-height:1.6;}
+  .wl-meta{font-size:0.62rem;color:#3d5c45;font-weight:600;display:flex;gap:0.8rem;margin-top:0.6rem;flex-wrap:wrap;}
+
+  /* FEATURED (wide card) */
+  .wl-featured{grid-column:span 3;display:grid;grid-template-columns:55% 45%;}
+  .wl-featured .wl-imgw{aspect-ratio:auto;min-height:260px;}
+  .wl-featured .wl-body{display:flex;flex-direction:column;justify-content:center;padding:2rem;}
+  .wl-featured .wl-title{font-size:1.3rem;}
+  .wl-featured .wl-desc{font-size:0.85rem;}
+
+  /* SEASON BADGE */
+  .season-badge{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.2rem 0.6rem;margin-top:0.5rem;}
+  .badge-spring{background:rgba(107,178,107,0.15);color:#2a6a2a;}
+  .badge-summer{background:rgba(255,196,77,0.15);color:#7a5a00;}
+  .badge-autumn{background:rgba(200,120,40,0.15);color:#7a4000;}
+  .badge-winter{background:rgba(100,150,200,0.15);color:#1a3a6a;}
+  .badge-yearround{background:rgba(30,53,40,0.08);color:#1e3528;}
+
+  /* BEGINNERS BANNER */
+  .beginners-banner{background:var(--marsh);padding:2rem max(2rem,calc(50% - 620px + 2rem));display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+  .beginners-banner h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:900;color:#fff;}
+  .beginners-banner h3 em{color:var(--gold2);font-style:italic;}
+  .beginners-banner p{font-size:0.82rem;color:rgba(255,255,255,0.6);margin-top:0.4rem;max-width:500px;}
+  .beginners-banner a{background:var(--gold2);color:var(--ink);font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.7rem 1.4rem;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+
+  @media(max-width:900px){.wl-grid{grid-template-columns:repeat(2,1fr);}.wl-featured{grid-column:span 2;}.topnav{padding:0 1rem;}}
+  @media(max-width:600px){
+    .wl-grid{grid-template-columns:1fr;}.wl-featured{grid-column:span 1;grid-template-columns:1fr;}
+    .wl-featured .wl-imgw{min-height:200px;}
+    .nav-links{display:none;flex-direction:column;gap:0;position:fixed;top:56px;left:0;right:0;background:#faf6ef;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}
+    .nav-links.active{display:flex !important;}
+    .nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);font-size:0.75rem;}
+    .hamburger{display:flex;}
+    .beginners-banner{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/><path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/><path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/></svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html" class="active">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">🦅 Wildlife Guides</div>
+  <h1>North Norfolk<br><em>wildlife guides</em></h1>
+  <p>From marsh harriers drifting over Cley to ten thousand pink-feet dropping into Snettisham — everything you need to find and identify North Norfolk's remarkable wildlife.</p>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterSeason('all',this)">All seasons</button>
+  <button class="filter-btn" onclick="filterSeason('spring',this)">🌿 Spring</button>
+  <button class="filter-btn" onclick="filterSeason('summer',this)">☀️ Summer</button>
+  <button class="filter-btn" onclick="filterSeason('autumn',this)">🍂 Autumn</button>
+  <button class="filter-btn" onclick="filterSeason('winter',this)">❄️ Winter</button>
+  <button class="filter-btn" onclick="filterSeason('yearround',this)">📅 Year-round</button>
+</div>
+
+<!-- BEGINNERS -->
+<div class="beginners-banner">
+  <div>
+    <h3>New to birdwatching? <em>Start here.</em></h3>
+    <p>Our complete beginners' guide covers the best sites, what to look for in each season, and the kit you actually need — written for people who've never held a pair of binoculars.</p>
+  </div>
+  <a href="article-12-birdwatching-beginners.html">Birdwatching for Beginners →</a>
+</div>
+
+<!-- BIRDS -->
+<div class="section">
+  <div class="section-title">Birds</div>
+  <div class="section-sub">North Norfolk is one of the finest birdwatching counties in Britain — these guides cover the species and sites that make it exceptional</div>
+  <div class="wl-grid">
+
+    <a href="article-7-marsh-harriers.html" class="wl-card wl-featured" data-season="spring summer">
+      <div class="wl-imgw">
+        <img class="wl-img" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=800&q=80" alt="Marsh harrier over reed beds">
+      </div>
+      <div class="wl-body">
+        <div class="wl-tag">Birds — Raptors</div>
+        <div class="wl-title">Where to See Marsh Harriers in Norfolk: 6 Sites</div>
+        <div class="wl-desc">The marsh harrier is Norfolk's most iconic raptor — once near-extinct, now hunting over almost every reed bed on the coast. This guide covers the six best sites to watch them, and what to look for in each season.</div>
+        <div class="wl-meta"><span>🗓 Spring & Summer</span><span>📍 Cley, Titchwell, Hickling</span></div>
+        <span class="season-badge badge-spring">Spring best</span>
+      </div>
+    </a>
+
+    <a href="article-11-pink-footed-geese.html" class="wl-card" data-season="autumn winter">
+      <div class="wl-imgw">
+        <img class="wl-img" src="https://images.unsplash.com/photo-1551028150-54628f3b58c2?w=600&q=80" alt="Pink-footed geese at Snettisham">
+      </div>
+      <div class="wl-body">
+        <div class="wl-tag">Birds — Wildfowl</div>
+        <div class="wl-title">Pink-Footed Geese at Snettisham</div>
+        <div class="wl-desc">Up to 80,000 geese lifting off The Wash at dusk is one of Britain's greatest wildlife spectacles. How to time your visit to see the dawn and dusk flights.</div>
+        <div class="wl-meta"><span>🗓 Oct–Mar</span><span>📍 Snettisham RSPB</span></div>
+        <span class="season-badge badge-autumn">Autumn & Winter</span>
+      </div>
+    </a>
+
+    <a href="article-12-birdwatching-beginners.html" class="wl-card" data-season="yearround">
+      <div class="wl-imgw">
+        <img class="wl-img" src="https://images.unsplash.com/photo-1606567595334-d39972c85dbe?w=600&q=80" alt="Birdwatching with binoculars">
+      </div>
+      <div class="wl-body">
+        <div class="wl-tag">Beginners Guide</div>
+        <div class="wl-title">Birdwatching for Beginners: A Complete Norfolk Guide</div>
+        <div class="wl-desc">The best sites, seasons, and species for first-time birdwatchers in North Norfolk — plus honest advice on binoculars and field guides.</div>
+        <div class="wl-meta"><span>🗓 Year-round</span><span>📍 All North Norfolk</span></div>
+        <span class="season-badge badge-yearround">Year-round</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- MAMMALS -->
+<div class="section">
+  <div class="section-title">Mammals</div>
+  <div class="section-sub">Grey seals, hares, otters and more — North Norfolk's mammals reward patience and an early start</div>
+  <div class="wl-grid">
+
+    <a href="article-3-horsey-seals.html" class="wl-card wl-featured" data-season="winter">
+      <div class="wl-imgw">
+        <img class="wl-img" src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=800&q=80" alt="Grey seal pups on Horsey beach">
+      </div>
+      <div class="wl-body">
+        <div class="wl-tag">Mammals — Seals</div>
+        <div class="wl-title">Horsey Gap Seal Pups: The Complete Guide</div>
+        <div class="wl-desc">Every winter, over 3,000 grey seals haul out at Horsey to give birth. It's one of the most accessible and remarkable wildlife events in Britain. Here's everything you need to plan your visit — when to go, where to stand, and why the pups are cream-coloured.</div>
+        <div class="wl-meta"><span>🗓 Nov–Jan</span><span>📍 Horsey Gap</span><span>Free entry</span></div>
+        <span class="season-badge badge-winter">Winter only</span>
+      </div>
+    </a>
+
+    <a href="article-1-blakeney-point.html" class="wl-card" data-season="yearround">
+      <div class="wl-imgw">
+        <img class="wl-img" src="https://images.unsplash.com/photo-1598116374839-011402244431?w=600&q=80" alt="Blakeney Point seals">
+      </div>
+      <div class="wl-body">
+        <div class="wl-tag">Mammals — Seals</div>
+        <div class="wl-title">Blakeney Point: Seals, Salt Marshes and Solitude</div>
+        <div class="wl-desc">The UK's largest grey seal colony can be seen year-round at Blakeney Point — by boat from Morston or on foot along the shingle. The walk itself is one of Norfolk's finest.</div>
+        <div class="wl-meta"><span>🗓 Year-round</span><span>📍 Blakeney / Morston</span></div>
+        <span class="season-badge badge-yearround">Year-round</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- LANDSCAPE & FEATURES -->
+<div class="section">
+  <div class="section-title">Landscape & Natural History</div>
+  <div class="section-sub">The stories behind North Norfolk's extraordinary landscape — formed by ice, sea and two million years of time</div>
+  <div class="wl-grid">
+
+    <a href="feature-deep-history-coast.html" class="wl-card" data-season="yearround">
+      <div class="wl-imgw">
+        <img class="wl-img" src="https://images.unsplash.com/photo-1502657877623-f66bf489d236?w=600&q=80" alt="Norfolk cliffs Deep History Coast">
+      </div>
+      <div class="wl-body">
+        <div class="wl-tag">Natural History — Deep History Coast</div>
+        <div class="wl-title">The Deep History Coast: Norfolk's Window Into the Ice Age</div>
+        <div class="wl-desc">Happisburgh footprints. The West Runton Mammoth. Fossil hunting on the beach. A two-million-year timeline written in the crumbling cliffs along Norfolk's northeast coast.</div>
+        <div class="wl-meta"><span>🗓 Year-round</span><span>📍 Happisburgh to Weybourne</span></div>
+        <span class="season-badge badge-yearround">Year-round</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<script>
+function filterSeason(season, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.wl-card').forEach(card => {
+    if (season === 'all') {
+      card.style.display = '';
+    } else {
+      const cardSeason = card.dataset.season || '';
+      card.style.display = cardSeason.includes(season) ? '' : 'none';
+    }
+  });
+}
+(function(){
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+  if(hamburger && navLinks){
+    hamburger.addEventListener('click', function(){ navLinks.classList.toggle('active'); });
+  }
+})();
+</script>
+</body>
+</html>

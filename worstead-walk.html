@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worstead Walk: Weavers' Way & Historic Village | NorfolkWild</title>
+<meta name="description" content="Explore the historic village of Worstead, birthplace of worsted cloth, and enjoy a peaceful walk along the Weavers' Way. Discover medieval churches and tranquil Norfolk countryside.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;--dusk:#c4956a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-back{font-size:0.65rem;font-weight:500;letter-spacing:0.06em;color:var(--reed);text-decoration:none;}
+.art-hero{position:relative;height:68vh;min-height:440px;overflow:hidden;padding-top:52px;}
+.hero-bg{position:absolute;inset:0;background:url('worstead-church.jpg') center 60%/cover no-repeat;filter:brightness(0.52);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.88));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.breadcrumb{font-size:0.57rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.6rem;}
+.art-tag{font-size:0.57rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+.art-tag::before{content:'';width:16px;height:1px;background:var(--gold2);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.05;max-width:700px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+.art-layout{display:grid;grid-template-columns:1fr 256px;gap:3rem;max-width:1000px;margin:0 auto;padding:2.5rem 2rem;}
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2.2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+.art-h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--marsh);margin:2.5rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.6rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--reed);margin:1.5rem 0 0.5rem;font-style:italic;}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.93rem;line-height:1.88;color:var(--ink2);margin-bottom:1.1rem;font-weight:300;}
+.art-ul{padding-left:0;margin-bottom:1.1rem;list-style:none;}
+.art-ul li{font-family:'Source Serif 4',serif;font-size:0.9rem;line-height:1.8;color:var(--ink2);margin-bottom:0.5rem;font-weight:300;display:flex;gap:0.6rem;align-items:flex-start;}
+.art-ul li::before{content:'—';color:var(--gold);flex-shrink:0;margin-top:0.1rem;}
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.4rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.83rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+.pull-quote{padding:1.4rem 0;margin:2rem 0;border-top:2px solid var(--gold);border-bottom:1px solid rgba(30,53,40,0.08);}
+.pull-quote p{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--marsh);line-height:1.5;margin:0;}
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:1rem 1.1rem;margin:0.8rem 0;display:flex;gap:0.9rem;align-items:flex-start;}
+.gear-icon{font-size:1.5rem;flex-shrink:0;margin-top:0.1rem;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.93rem;font-weight:700;color:var(--marsh);}
+.gear-why{font-size:0.72rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);margin:0.1rem 0 0.2rem;}
+.gear-desc{font-size:0.75rem;color:var(--reed);line-height:1.55;margin:0 0 0.5rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.28rem 0.85rem;font-size:0.65rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.05em;text-decoration:none;display:inline-block;}
+.bird-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.1);margin:1.5rem 0;}
+.bird-card{background:var(--paper);padding:1rem;}
+.bird-name{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--marsh);margin-bottom:0.3rem;}
+.bird-latin{font-size:0.65rem;color:var(--sage);font-style:italic;margin-bottom:0.5rem;}
+.bird-desc{font-size:0.78rem;color:var(--ink2);line-height:1.6;font-family:'Source Serif 4',serif;font-weight:300;}
+.bird-where{font-size:0.68rem;font-weight:500;color:var(--gold);margin-top:0.4rem;letter-spacing:0.05em;}
+.site-card{border-left:3px solid var(--gold);padding:1rem 1.2rem;margin:1rem 0;background:rgba(30,53,40,0.03);}
+.site-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--marsh);margin-bottom:0.3rem;}
+.site-rating{font-size:0.85rem;margin-bottom:0.4rem;}
+.site-desc{font-size:0.83rem;color:var(--ink2);line-height:1.65;font-family:'Source Serif 4',serif;font-weight:300;}
+.site-species{font-size:0.7rem;color:var(--sage);margin-top:0.4rem;font-style:italic;}
+.steps{counter-reset:steps;margin:1.5rem 0;}
+.step{counter-increment:steps;display:flex;gap:1.2rem;padding:1.2rem 0;border-bottom:1px solid rgba(30,53,40,0.08);}
+.step:last-child{border-bottom:none;}
+.step-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--gold2);line-height:1;flex-shrink:0;min-width:40px;}
+.step-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--marsh);margin-bottom:0.3rem;}
+.step-desc{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--ink2);line-height:1.65;font-weight:300;}
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.1);margin:1.5rem 0;}
+.app-card{background:var(--paper);padding:1rem;}
+.app-name{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--marsh);}
+.app-type{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin:0.2rem 0 0.4rem;}
+.app-desc{font-size:0.78rem;color:var(--ink2);line-height:1.6;font-family:'Source Serif 4',serif;font-weight:300;}
+.app-cost{font-size:0.68rem;color:var(--sage);margin-top:0.4rem;font-weight:500;}
+.art-author{background:var(--cream2);padding:1.2rem 1.4rem;display:flex;gap:0.9rem;align-items:center;margin-top:2.5rem;border-top:2px solid var(--marsh);}
+.author-av{width:40px;height:40px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.72rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+.art-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin-top:2rem;}
+.art-nav-link{background:var(--paper);padding:1.1rem 1.2rem;cursor:pointer;transition:background 0.15s;text-decoration:none;display:block;}
+.art-nav-link:hover{background:var(--cream2);}
+.anl-dir{font-size:0.55rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.3rem;}
+.anl-title{font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--marsh);line-height:1.3;}
+.aside-widget{background:var(--marsh);padding:1.2rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+.aside-link{display:flex;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.04);text-decoration:none;align-items:center;cursor:pointer;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:50px;height:36px;object-fit:cover;flex-shrink:0;}
+.aside-title-sm{font-size:0.7rem;color:rgba(255,255,255,0.72);line-height:1.35;}
+.aside-nl{background:var(--gold2);padding:1.2rem;}
+.aside-nl-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.6rem;line-height:1.2;}
+.aside-nl-input{width:100%;padding:0.5rem 0.65rem;font-size:0.72rem;border:none;margin-bottom:0.4rem;display:block;font-family:'DM Sans',sans-serif;}
+.aside-nl-btn{width:100%;background:var(--marsh);color:#fff;padding:0.5rem;border:none;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink2);margin:5px 0;transition:0.3s;}
+.hamburger.active span:nth-child(1){transform:rotate(-45deg) translate(-5px,6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(45deg) translate(-5px,-6px);}
+.nav-links{display:flex;gap:1.4rem;align-items:center;}
+.nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--marsh);color:#fff;padding:0.38rem 0.9rem;font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--marsh2);}
+@media(max-width:600px){
+  .hamburger{display:block;}
+  .nav-links{position:fixed;top:52px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;display:none;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}
+  .nav-links.active{display:flex;}
+  .nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);}
+}
+
+@media(max-width:900px){.art-layout{grid-template-columns:1fr;}.art-aside{display:none;}.bird-grid,.app-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.art-hero{height:55vh;}.art-layout{padding:1.5rem;}.art-nav{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;padding:1.5rem;}}
+</style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/worstead-walk.html">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span class="nav-wm">Norfolk<em>Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">NorfolkWild / Walks</div>
+    <div class="art-tag">Historic Village Walk</div>
+    <h1 class="art-h1">Worstead: Weavers' Way & Village History Walk</h1>
+    <div class="art-pills">
+      <span class="art-pill">5.6 miles</span>
+      <span class="art-pill">Easy</span>
+      <span class="art-pill">Historic</span>
+      <span class="art-pill">Weavers' Way</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-layout">
+  <div class="art-main">
+
+        <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL40&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL40 The Broads)</div>
+          <div>✓ Check <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office forecast</a> on the day</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong>.
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:1rem;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">Wildlife Disturbance</strong> — Always keep a respectful distance from all wildlife. Dogs must be kept under close control, and on leads in designated areas. Never approach or feed wild animals.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+
+    <div class="pull-intro">
+      <p>Step back in time and explore the charming village of Worstead, the historic birthplace of the famous worsted cloth. This gentle walk combines rich history with tranquil Norfolk countryside, including a section of the long-distance Weavers' Way.</p>
+    </div>
+
+    <h2 class="art-h2">Worstead: A Village Forged in Wool</h2>
+    <p class="art-p">Worstead's name is synonymous with the fine woollen cloth that brought it immense prosperity in the Middle Ages. Flemish weavers, invited by Edward III, settled here in the 12th century, establishing an industry that would make Worstead famous across Europe. As you wander through the village, you'll still see many of the large, spacious houses that once housed the looms, some even retaining their medieval cellars used for storing wool at a cool, even temperature.</p>
+    <p class="art-p">The village's wealth is most evident in its magnificent 14th-century church, St Mary's. This impressive 'wool church' boasts stunning architecture and historic features, including a famous painted medieval rood screen. It's a testament to the skilled artisans and prosperous merchants who once called Worstead home.</p>
+
+    <h2 class="art-h2">The Walk: Worstead, Honing Bridge & The Weavers' Way</h2>
+    <p class="art-p">This 5.6-mile (9.1 km) circular walk begins at St Mary's Church (NR28 9AL) in Worstead. From the village, the route leads east along peaceful footpaths and farm tracks, offering glimpses of classic Norfolk scenery. You'll pass through open fields, often adorned with summer wildflowers like Campion and Hawkweed, before briefly joining the tranquil waters of the old North Walsham and Dilham Canal near Broad Fen, Dilham.</p>
+    <p class="art-p">The canal, opened in 1826, was once a vital waterway for transporting goods, though its shallow depths limited traffic to Norfolk wherries. The return journey to Worstead follows a section of the Weavers' Way, a 61-mile long-distance footpath that traces the route of a disused railway line. This path is a haven for wild plants and offers a different perspective on the landscape.</p>
+    <p class="art-p">As you re-enter Worstead, you'll once again be greeted by the imposing presence of St Mary's Church, a fitting end to a walk steeped in history and natural beauty.</p>
+
+    <h2 class="art-h2">Practical Information</h2>
+    <ul class="art-ul">
+      <li><strong>Starting Point:</strong> St Mary's Church, Worstead (NR28 9AL). Parking is available on Church Plain.</li>
+      <li><strong>Distance:</strong> 5.6 miles (9.1 km)</li>
+      <li><strong>Time:</strong> 2-3 hours</li>
+      <li><strong>Difficulty:</strong> Easy, with mostly flat terrain on footpaths and farm tracks.</li>
+      <li><strong>Ordnance Survey Map:</strong> <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL40&tag=norfolkwild-21" target="_blank">OS Explorer Map OL40 The Broads</a>. Essential for navigation.</li>
+      <li><strong>Refreshments:</strong> The White Lady pub in Worstead is a historic establishment, perfect for a post-walk drink or meal.</li>
+    </ul>
+
+    <div class="tip-block">
+      <div class="tip-label">Local Tip</div>
+      <p>Look out for the old weaving houses in Worstead village. Their unique architecture, with large windows and sometimes cellars, tells the story of the village's rich textile heritage.</p>
+    </div>
+
+    <h2 class="art-h2">Recommended Gear for this Walk</h2>
+    <div class="gear-item">
+      <span class="gear-icon">🥾</span>
+      <div>
+        <div class="gear-name">Salomon Quest 4D 3 GTX Hiking Boots</div>
+        <div class="gear-why">Comfort and support for varied terrain.</div>
+        <p class="gear-desc">These lightweight yet supportive boots are ideal for the mixed paths around Worstead and along the Weavers' Way. Their GORE-TEX lining ensures your feet stay dry.</p>
+        <a href="https://www.amazon.co.uk/Salomon-Quest-Gore-Tex-Hiking-Boots/dp/B07N1F5Q3Q?tag=norfolkwild-21" target="_blank" class="gear-btn">View on Amazon</a>
+      </div>
+    </div>
+    <div class="gear-item">
+      <span class="gear-icon">🗺️</span>
+      <div>
+        <div class="gear-name">OS Explorer Map OL40 The Broads</div>
+        <div class="gear-why">Essential for navigation and local discovery.</div>
+        <p class="gear-desc">While this walk is well-defined, an Ordnance Survey map is invaluable for exploring the surrounding area and understanding the landscape. The OL40 covers Worstead and the Broads.</p>
+        <a href="https://www.amazon.co.uk/Explorer-Map-OL40-Broads-Wroxham/dp/0319245240?tag=norfolkwild-21" target="_blank" class="gear-btn">View on Amazon</a>
+      </div>
+    </div>
+    <div class="gear-item">
+      <span class="gear-icon">🎒</span>
+      <div>
+        <div class="gear-name">Osprey Talon 22 Hiking Backpack</div>
+        <div class="gear-why">Comfortable daypack for essentials.</div>
+        <p class="gear-desc">A reliable daypack is crucial for carrying water, snacks, extra layers, and your map. The Osprey Talon 22 is lightweight and comfortable for day hikes.</p>
+        <a href="https://www.amazon.co.uk/dp/B07PQNLZJD?tag=norfolkwild-21?tag=norfolkwild-21" target="_blank" class="gear-btn">View on Amazon</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="art-aside">
+    <div class="aside-widget">
+      <div class="aside-label">More Walks</div>
+      <a href="article-1-blakeney-point.html" class="aside-link">
+        <img src="https://images.unsplash.com/photo-1598116374839-011402244431?w=1600&q=80&auto=format&fit=crop" class="aside-thumb">
+        <span class="aside-title-sm">Blakeney Point: Seals & Shingle</span>
+      </a>
+      <a href="article-8-peddars-way.html" class="aside-link">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&q=80" class="aside-thumb">
+        <span class="aside-title-sm">Peddars Way: Roman Road to Coast</span>
+      </a>
+      <a href="circular-walk-1-holkham.html" class="aside-link">
+        <img src="https://images.unsplash.com/photo-1598116374839-011402244431?w=1600&q=80&auto=format&fit=crop" class="aside-thumb">
+        <span class="aside-title-sm">Holkham Beach: Pines & Vast Sands</span>
+      </a>
+    </div>
+
+    <div class="aside-nl">
+      <div class="aside-nl-title">Get the NorfolkWild Newsletter</div>
+      <input type="email" placeholder="Your email address" class="aside-nl-input">
+      <button class="aside-nl-btn">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-col">
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Exploring the wild beauty and hidden gems of North Norfolk.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="index.html">Home</a>
+    <a href="walks.html">All Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Footwear</a>
+    <a href="shop.html#optics">Optics</a>
+    <a href="shop.html#wildlife-tech">Wildlife Tech</a>
+    <a href="shop.html#nature-garden">Nature & Garden</a>
+    <a href="shop.html#walking-aids">Walking Aids</a>
+    <a href="shop.html#foot-care">Foot Care</a>
+    <a href="shop.html#navigation">Navigation</a>
+    <a href="shop.html#essentials">Essentials</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#about">About NorfolkWild</a>
+    <a href="norfolk-wild-legal.html#contact">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://norfolkwild.substack.com" target="_blank">Newsletter</a>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>&copy; 2026 NorfolkWild. All rights reserved.</span>
+  <span>Written with care from North Norfolk</span>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

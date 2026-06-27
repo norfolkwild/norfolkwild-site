@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waxham Walking Guide — NorfolkWild</title>
+<meta name="description" content="Explore the wild beauty of Waxham. Discover the historic Great Barn, vast sandy beaches, and the famous grey seal colony on the Norfolk coast.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--sky:#a8c4b8;--mist:#e4ede6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.topnav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wordmark{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;line-height:1;}
+.nav-wordmark em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1.4rem;align-items:center;}
+.nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--marsh);color:#fff;padding:0.38rem 0.9rem;font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--marsh2);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink2);margin:5px 0;transition:0.3s;}
+.hamburger.active span:nth-child(1){transform:rotate(-45deg) translate(-5px, 6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(45deg) translate(-5px, -6px);}
+@media(max-width:600px){.hamburger{display:block;}.nav-links{position:fixed;top:52px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;display:none;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}.nav-links.active{display:flex;}.nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);}.topnav{padding:0 1rem;}}
+.article-hero{background:linear-gradient(160deg,rgba(22,28,24,0.72) 0%,rgba(22,28,24,0.1) 50%,rgba(22,28,24,0.7) 100%),url('https://images.unsplash.com/photo-1518107616985-bd48230d3b20?w=1600&q=85&auto=format&fit=crop') center 60%/cover no-repeat;min-height:50vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 2rem 3rem;padding-top:52px;position:relative;}
+.hero-content{max-width:900px;margin:0 auto;width:100%;}
+.hero-eyebrow{font-size:0.6rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:0.8rem;margin-bottom:0.9rem;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold2);}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1px;margin-bottom:1rem;}
+.hero-title em{color:var(--gold2);font-style:italic;}
+.article-body{max-width:900px;margin:0 auto;padding:3rem 2rem;}
+.article-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(30,53,40,0.08);font-size:0.8rem;color:var(--sage);}
+.meta-item{display:flex;gap:0.4rem;align-items:center;}
+.article-section{margin-bottom:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--marsh);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gold);}
+.article-text{font-size:0.95rem;line-height:1.8;color:var(--ink);margin-bottom:1.2rem;}
+.article-text strong{color:var(--marsh);}
+.walk-details{background:var(--cream2);padding:1.5rem;border-left:4px solid var(--gold);margin:1.5rem 0;}
+.walk-details h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.walk-details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;}
+.detail-item{font-size:0.8rem;}
+.detail-label{font-weight:600;color:var(--marsh);margin-bottom:0.2rem;}
+.detail-value{color:var(--reed);}
+.affiliate-box{background:#fff;border:1px solid rgba(30,53,40,0.08);padding:1.5rem;margin:2rem 0;border-radius:4px;}
+.affiliate-box h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:1rem;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
+.product-card{text-align:center;}
+.product-card img{width:100%;height:150px;object-fit:cover;margin-bottom:0.8rem;background:#eee;}
+.product-name{font-size:0.8rem;font-weight:600;color:var(--marsh);margin-bottom:0.5rem;line-height:1.3;}
+.product-link{background:var(--gold2);color:var(--ink);padding:0.5rem 1rem;font-size:0.65rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;transition:background 0.2s;display:inline-block;}
+.product-link:hover{background:var(--gold);}
+.safety-warning{background:rgba(184,146,58,0.1);border-left:4px solid var(--gold);padding:1.5rem;margin:2rem 0;border-radius:2px;}
+.safety-warning h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.safety-warning p{font-size:0.9rem;line-height:1.6;color:var(--reed);}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;transition:color 0.15s;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.walk-details-grid{grid-template-columns:repeat(2,1fr);}.product-grid{grid-template-columns:repeat(2,1fr);}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.walk-details-grid{grid-template-columns:1fr;}.product-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;}.article-body{padding:2rem 1rem;}}
+
+  .page-hero{background:#1e3528;padding:3.5rem max(2rem,calc(50% - 620px + 2rem)) 3rem;}
+  .page-hero .eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+  .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1px;}
+  .page-hero h1 em{color:var(--gold2);font-style:italic;}
+  .page-hero p{color:rgba(255,255,255,0.6);font-size:0.95rem;margin-top:0.8rem;max-width:520px;}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span class="nav-wordmark">Norfolk<em>Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="page-hero" style="background:linear-gradient(to bottom,rgba(30,53,40,0.5),rgba(30,53,40,0.85)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=85') center/cover;">
+  <div class="eyebrow">🌊 Coastal Walk — Waxham</div>
+  <h1>Waxham: wild dunes<br><em>and the open sea</em></h1>
+  <p>A vast sandy beach, a 16th-century thatched barn, and the famous grey seal colony — Waxham is Norfolk's most unspoilt stretch of coast.</p>
+</div>
+<div class="article-hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Great Barns & Wild Sands</div>
+    <h1 class="hero-title">Waxham: <em>Where History Meets the Wild</em></h1>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="article-meta">
+    <div class="meta-item">📍 Waxham, Norfolk</div>
+    <div class="meta-item">📏 3-6 miles (various routes)</div>
+    <div class="meta-item">⏱️ 1.5-3 hours</div>
+    <div class="meta-item">🟢 Easy</div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Wildest Stretch of the East Coast</h2>
+    <p class="article-text">Waxham is one of the most atmospheric and unspoilt corners of the Norfolk coast. While many visitors flock to the nearby seaside resorts, Waxham remains a peaceful haven of vast sandy beaches, dramatic dunes, and deep history. It is a place where the landscape feels truly "wild," dominated by the sound of the North Sea and the sight of the grey seal colony that calls this stretch of sand home.</p>
+    <p class="article-text">This guide takes you through the heart of Waxham, from its remarkable 16th-century Great Barn to the windswept coastal paths that offer some of the best wildlife spotting in the county.</p>
+  </div>
+
+  <div class="walk-details">
+    <h4>Quick Facts</h4>
+    <div class="walk-details-grid">
+      <div class="detail-item">
+        <div class="detail-label">Parking</div>
+        <div class="detail-value">Waxham Great Barn (NR12 0DZ)</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Best Season</div>
+        <div class="detail-value">Winter (Seals) or Summer (Beach walks)</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Terrain</div>
+        <div class="detail-value">Sandy beaches, grassy dunes, and level tracks</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Dog Friendly</div>
+        <div class="detail-value">Yes, but keep on leads near seals and nesting birds</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Waxham Great Barn (0.5 miles)</h2>
+    <p class="article-text">Your journey should begin at the <strong>Waxham Great Barn</strong>. Built in the late 16th century by the Woodhouse family, this is the longest ancient barn in Norfolk, stretching an impressive 56 metres. It is a masterpiece of Elizabethan flint and brickwork, with a magnificent thatched roof that was recently restored by master thatchers.</p>
+    <p class="article-text">The barn was originally built to display the family's wealth and status, and today it houses a wonderful cafe (The Dunes Cafe) and serves as a unique wedding venue. Take a moment to admire the scale of the building before heading out towards the coast.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Beach & Seal Colony (3-5 miles)</h2>
+    <p class="article-text">From the Great Barn, a short walk through the dunes leads you to the vast expanse of <strong>Waxham Beach</strong>. This is one of the few places in Norfolk where you can enjoy miles of golden sand without the crowds. The beach is backed by high dunes that provide shelter and a sense of isolation.</p>
+    <p class="article-text">Waxham is famous for its <strong>grey seal colony</strong>. While the main pupping season is in the winter months (November to January), seals can often be seen basking on the sand or bobbing in the surf year-round. It is a magical experience to see these creatures in their natural habitat, but it is vital to follow safety guidelines to protect both the seals and yourself.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Waxham to Sea Palling Loop (6 miles)</h2>
+    <p class="article-text">For a longer walk, follow the <strong>Norfolk Coast Path</strong> northwards towards Sea Palling. This route takes you along the top of the dunes, offering constant sea views on one side and the rolling Norfolk farmland on the other. The path is level and easy to follow, making it a great choice for a relaxed afternoon hike.</p>
+    <p class="article-text">Once you reach Sea Palling, you can explore its unique reef-protected beaches before looping back along the shoreline (at low tide) or through the inland lanes. Look out for the numerous WWII coastal defences that are still visible along this stretch of the coast.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Wildlife & Nature</h2>
+    <p class="article-text">Beyond the seals, Waxham is a haven for birdlife. The dunes are home to <strong>skylarks</strong> and <strong>meadow pipits</strong>, while the nearby marshes attract <strong>marsh harriers</strong> and various species of wildfowl. In the summer, the dunes are alive with butterflies and the scent of sea lavender.</p>
+  </div>
+
+  <div class="safety-warning">
+    <h4>⚠️ Wildlife Safety: Protecting the Seals</h4>
+    <p>Waxham's seals are a precious part of our coastline. To ensure their safety and yours, please follow these rules:</p>
+    <ul style="margin-left:1.5rem;margin-top:0.8rem;line-height:1.8;font-size:0.9rem;">
+      <li><strong>Keep Your Distance</strong>: Stay at least <strong>100 metres</strong> away from the seals at all times. Use binoculars for a closer look.</li>
+      <li><strong>Dogs on Leads</strong>: Keep your dog on a short lead whenever you are near the seal colony. A dog's presence can cause seals to desert their pups.</li>
+      <li><strong>Don't Block Their Path</strong>: Never get between a seal and the sea. If a seal starts to move towards the water, you are too close.</li>
+      <li><strong>Quiet Please</strong>: Avoid making loud noises or sudden movements that might startle the colony.</li>
+      <li><strong>Follow Signage</strong>: During the winter pupping season, certain areas of the beach may be cordoned off. Please respect these boundaries.</li>
+    </ul>
+  </div>
+
+  <div class="affiliate-box">
+    <h4>Recommended Gear for Waxham Walks</h4>
+    <p style="font-size:0.85rem;margin-bottom:1.2rem;color:var(--reed);">Equip yourself for the wild sands and wildlife spotting:</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-name">High-Power Binoculars for Safe Seal Watching</div>
+        <a href="https://www.amazon.co.uk/s?k=high+power+birdwatching+binoculars&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">Waterproof Boots for Sandy & Muddy Trails</div>
+        <a href="https://www.amazon.co.uk/s?k=waterproof+hiking+boots+men+women&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">OS Explorer 252: Norfolk Coast Central</div>
+        <a href="https://www.amazon.co.uk/s?k=OS+Explorer+252+Norfolk+Coast+Central&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">Lightweight Daypack for Coastal Strolls</div>
+        <a href="https://www.amazon.co.uk/s?k=lightweight+hiking+daypack&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Getting There</h2>
+    <p class="article-text"><strong>By Car:</strong> Waxham is located on the B1159 Coast Road. Use the postcode NR12 0DZ for the Great Barn car park. Please note that parking can be limited during peak winter seal-watching months.</p>
+    <p class="article-text"><strong>By Public Transport:</strong> The nearest train stations are at North Walsham and Hoveton & Wroxham. The local bus services are limited, so a car or bicycle is recommended for visiting Waxham.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-col">
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Exploring the wild beauty and hidden gems of North Norfolk.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="index.html">Home</a>
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Footwear</a>
+    <a href="shop.html#optics">Optics</a>
+    <a href="shop.html#wildlife-tech">Wildlife Tech</a>
+    <a href="shop.html#nature-garden">Nature & Garden</a>
+    <a href="shop.html#walking-aids">Walking Aids</a>
+    <a href="shop.html#foot-care">Foot Care</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#about">About NorfolkWild</a>
+    <a href="norfolk-wild-legal.html#contact">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://norfolkwild.substack.com" target="_blank">Newsletter</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>&copy; 2026 NorfolkWild. All rights reserved.</span>
+  <span>Written in North Norfolk</span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+  
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

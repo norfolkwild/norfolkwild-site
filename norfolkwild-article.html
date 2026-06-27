@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blakeney Point Walk Guide | NorfolkWild</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --marsh:#1e3528; --marsh2:#2d4a3e; --reed:#4a6b5a;
+  --gold:#b8923a; --gold2:#c9a84c; --cream:#f4ede0;
+  --cream2:#ede4d4; --paper:#faf6ef; --ink:#161c18;
+  --ink2:#2a332d; --sage:#7a9a82; --mist:#e4ede6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.5rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-back{font-size:0.65rem;font-weight:500;letter-spacing:0.06em;color:var(--reed);text-decoration:none;display:flex;align-items:center;gap:0.4rem;}
+.nav-bc{font-size:0.62rem;color:var(--sage);letter-spacing:0.04em;}
+
+/* ── HERO ── */
+.art-hero{position:relative;height:72vh;min-height:480px;overflow:hidden;padding-top:52px;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=1600&q=85') center 35%/cover no-repeat;filter:brightness(0.58);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05) 0%,rgba(14,22,16,0.0) 30%,rgba(14,22,16,0.82) 100%);}
+.hero-ov2{position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,22,16,0.6) 0%,rgba(14,22,16,0) 55%);}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.breadcrumb{font-size:0.57rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.4rem;}
+.breadcrumb span{color:rgba(255,255,255,0.15);}
+.art-tag{font-size:0.57rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+.art-tag::before{content:'';width:16px;height:1px;background:var(--gold2);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.05;max-width:680px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;font-family:'DM Sans',sans-serif;}
+
+/* ── LAYOUT ── */
+.art-layout{display:grid;grid-template-columns:1fr 256px;gap:3rem;max-width:1000px;margin:0 auto;padding:2.5rem 2rem;}
+
+/* ── ARTICLE BODY ── */
+.art-main{}
+
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2.2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(30,53,40,0.08);margin-bottom:2.2rem;}
+.info-cell{background:var(--paper);padding:1rem;text-align:center;}
+.info-icon{font-size:1.2rem;display:block;}
+.info-label{font-size:0.55rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.12rem;}
+.info-val{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);margin-top:0.1rem;}
+
+.art-h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--marsh);margin:2.2rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.6rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--reed);margin:1.5rem 0 0.5rem;font-style:italic;}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.93rem;line-height:1.88;color:var(--ink2);margin-bottom:1.1rem;font-weight:300;}
+.art-ul{padding-left:1.5rem;margin-bottom:1.1rem;}
+.art-ul li{font-family:'Source Serif 4',serif;font-size:0.9rem;line-height:1.8;color:var(--ink2);margin-bottom:0.3rem;font-weight:300;}
+
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.4rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.83rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+
+.warning-block{background:#fffbf2;border-left:3px solid var(--gold);padding:1rem 1.2rem;margin:1.4rem 0;}
+.warning-block p{font-size:0.83rem;color:#5a4a20;line-height:1.65;margin:0;font-family:'Source Serif 4',serif;}
+
+.pull-quote{padding:1.4rem 0;margin:2rem 0;border-top:2px solid var(--gold);border-bottom:1px solid rgba(30,53,40,0.08);}
+.pull-quote p{font-family:'Playfair Display',serif;font-size:1.15rem;font-style:italic;color:var(--marsh);line-height:1.5;margin:0;}
+
+.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(30,53,40,0.08);margin:1.4rem 0;}
+.season-cell{background:var(--paper);padding:0.9rem;text-align:center;}
+.season-name{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);}
+.season-stars{font-size:0.9rem;margin:0.3rem 0;}
+.season-note{font-size:0.7rem;color:var(--reed);line-height:1.4;}
+
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:1rem 1.1rem;margin:0.8rem 0;display:flex;gap:0.9rem;align-items:flex-start;}
+.gear-icon{font-size:1.5rem;flex-shrink:0;margin-top:0.1rem;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.93rem;font-weight:700;color:var(--marsh);}
+.gear-desc{font-size:0.75rem;color:var(--reed);line-height:1.55;margin:0.2rem 0 0.5rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.28rem 0.85rem;font-size:0.65rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.05em;}
+
+.art-author{background:var(--cream2);padding:1.2rem 1.4rem;display:flex;gap:0.9rem;align-items:center;margin-top:2.5rem;border-top:2px solid var(--marsh);}
+.author-av{width:40px;height:40px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.72rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+
+.art-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin-top:2rem;}
+.art-nav-link{background:var(--paper);padding:1.1rem 1.2rem;cursor:pointer;transition:background 0.15s;text-decoration:none;}
+.art-nav-link:hover{background:var(--cream2);}
+.anl-dir{font-size:0.55rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.3rem;}
+.anl-title{font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--marsh);line-height:1.3;}
+
+/* ── ASIDE ── */
+.art-aside{}
+.aside-widget{background:var(--marsh);padding:1.2rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+.aside-link{display:flex;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.04);cursor:pointer;transition:opacity 0.15s;align-items:center;}
+.aside-link:hover{opacity:0.72;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:50px;height:36px;object-fit:cover;flex-shrink:0;}
+.aside-title{font-size:0.7rem;color:rgba(255,255,255,0.72);line-height:1.35;}
+
+.aside-nl{background:var(--gold2);padding:1.2rem;}
+.aside-nl-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.6rem;line-height:1.2;}
+.aside-nl-input{width:100%;padding:0.5rem 0.65rem;font-size:0.72rem;border:none;margin-bottom:0.4rem;display:block;font-family:'DM Sans',sans-serif;outline:none;}
+.aside-nl-btn{width:100%;background:var(--marsh);color:#fff;padding:0.5rem;border:none;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.06em;}
+
+.aside-info{background:var(--cream2);padding:1.1rem;margin-bottom:1rem;}
+.aside-info-title{font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--marsh);margin-bottom:0.7rem;}
+.aside-info-row{display:flex;justify-content:space-between;padding:0.35rem 0;border-bottom:1px solid rgba(30,53,40,0.08);font-size:0.7rem;}
+.aside-info-row:last-child{border-bottom:none;}
+.air-label{color:var(--reed);}
+.air-val{font-weight:500;color:var(--marsh);}
+
+/* ── FOOTER ── */
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;margin-top:0;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;cursor:pointer;transition:color 0.15s;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+
+@media(max-width:900px){
+  .art-layout{grid-template-columns:1fr;}
+  .art-aside{display:none;}
+  .season-grid{grid-template-columns:repeat(2,1fr);}
+  .footer{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .nav .nav-bc{display:none;}
+  .art-hero{height:60vh;}
+  .art-layout{padding:1.5rem;}
+  .art-nav{grid-template-columns:1fr;}
+  .footer{grid-template-columns:1fr;padding:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M10 2C10 2 4 7 4 13C4 16.9 6.7 19 10 19C13.3 19 16 16.9 16 13C16 7 10 2 10 2Z" fill="none" stroke="#b8923a" stroke-width="1.2"/>
+      <path d="M10 4.5L7 11L10 9L13 11Z" fill="#b8923a"/>
+    </svg>
+    <div class="nav-wm">Norfolk<em>Wild</em></div>
+  </a>
+  <div style="display:flex;align-items:center;gap:1.5rem;">
+    <a class="nav-back" href="index.html">← All guides</a>
+    <span class="nav-bc">Coastal Walks</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-ov2"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">NorfolkWild <span>/</span> Coastal Walks</div>
+    <div class="art-tag">Coastal Walk</div>
+    <h1 class="art-h1">Blakeney Point: The Complete Guide to Norfolk's Most Spectacular Walk</h1>
+    <div class="art-pills">
+      <span class="art-pill">Blakeney, North Norfolk</span>
+      <span class="art-pill">7 miles return</span>
+      <span class="art-pill">3–4 hours</span>
+      <span class="art-pill">Easy / Moderate</span>
+      <span class="art-pill">Dogs welcome</span>
+      <span class="art-pill">Free entry</span>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE LAYOUT -->
+<div class="art-layout">
+  <div class="art-main">
+
+    <div class="pull-intro">
+      <p>Blakeney Point is one of the finest coastal walks in England — a four-mile shingle spit stretching into the North Sea where hundreds of grey seals haul out year-round. This is the complete guide: the best route, exactly where to park, when to visit for different experiences, and what to bring.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-cell"><span class="info-icon">📏</span><div class="info-label">Distance</div><div class="info-val">7 miles</div></div>
+      <div class="info-cell"><span class="info-icon">⏱</span><div class="info-label">Duration</div><div class="info-val">3–4 hours</div></div>
+      <div class="info-cell"><span class="info-icon">🅿</span><div class="info-label">Parking</div><div class="info-val">Cley NR25 7RZ</div></div>
+    </div>
+
+    <h2 class="art-h2">Why Blakeney Point is Special</h2>
+    <p class="art-p">Blakeney Point is a four-mile shingle spit managed by the National Trust, stretching westward from Cley-next-the-Sea into the North Sea. It is one of the most important nature reserves on the Norfolk coast — home to the largest grey seal colony in England, a nationally significant tern nesting site in summer, and some of the most dramatic coastal scenery anywhere in the country.</p>
+    <p class="art-p">Unlike most "must-see" Norfolk destinations, Blakeney Point genuinely delivers. The walk out along the shingle is meditative and wild. The seals are extraordinary close up. The return along the landward edge through the salt marshes is quietly beautiful. It is, simply, one of the best days out Norfolk offers.</p>
+
+    <div class="pull-quote">
+      <p>"The moment you emerge from the salt marsh path onto the open shingle and see the seal colony ahead — that is one of the finest moments Norfolk offers any walker."</p>
+    </div>
+
+    <h2 class="art-h2">Getting There</h2>
+    <h3 class="art-h3">By Car</h3>
+    <p class="art-p">The best starting point is Cley Beach car park (NR25 7RZ) or Morston Quay (NR25 7BH) for a shorter version. Cley Beach car park sits right at the start of the shingle spit and is the classic starting point for the full walk. Parking costs a few pounds — bring change or use the PayByPhone app.</p>
+
+    <div class="tip-block">
+      <div class="tip-label">Local tip</div>
+      <p>Arrive before 9am in summer to get a parking space at Cley Beach. By 10am on a sunny weekend it is completely full. Alternatively, park in Blakeney village and walk the salt marsh path to Morston Quay — it adds a gorgeous 2 miles to the walk and avoids the car park altogether.</p>
+    </div>
+
+    <h2 class="art-h2">Best Time to Visit</h2>
+    <div class="season-grid">
+      <div class="season-cell"><div class="season-name">Spring</div><div class="season-stars">⭐⭐⭐⭐⭐</div><div class="season-note">Terns arrive, seals present, quieter crowds</div></div>
+      <div class="season-cell"><div class="season-name">Summer</div><div class="season-stars">⭐⭐⭐</div><div class="season-note">Busy but beautiful — go early</div></div>
+      <div class="season-cell"><div class="season-name">Autumn</div><div class="season-stars">⭐⭐⭐⭐⭐</div><div class="season-note">Golden light, migrating birds, quiet</div></div>
+      <div class="season-cell"><div class="season-name">Winter</div><div class="season-stars">⭐⭐⭐⭐⭐</div><div class="season-note">Seal pups! Wild and dramatic</div></div>
+    </div>
+
+    <h2 class="art-h2">The Seals</h2>
+    <p class="art-p">Grey seals haul out on the sand and shingle around the Point in large numbers year-round. In winter (November–January) it is pupping season — you will see tiny white seal pups being nursed by their mothers. In summer the adults are present in good numbers, lying about with magnificent indifference to passing walkers.</p>
+
+    <div class="warning-block">
+      <p>⚠️ <strong>Keep your distance:</strong> The National Trust recommends staying at least <strong>100 metres</strong> from seals at all times. Never approach pups — their mothers are close by and can be protective. Dogs must be on leads around the Point. National Trust wardens are present in season and the rules are there for good reason.</p>
+    </div>
+
+    <h2 class="art-h2">What to Bring</h2>
+
+    <div class="gear-item">
+      <span class="gear-icon">🥾</span>
+      <div>
+        <div class="gear-name">Waterproof Walking Boots</div>
+        <div class="gear-desc">Essential for the salt marsh return route. The shingle section is fine in trainers but the marsh path gets deep and sticky. Ankle support also helps on the shifting shingle ridge.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=outdoor+gear+norfolk+walking&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🔭</span>
+      <div>
+        <div class="gear-name">Binoculars</div>
+        <div class="gear-desc">Transforms the birdwatching along Cley Marshes. You will see marsh harriers, avocets and waders in the lagoons even from the shingle path. An 8x42 is ideal for this kind of coastal use.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=outdoor+gear+norfolk+walking&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🧥</span>
+      <div>
+        <div class="gear-name">Windproof Jacket</div>
+        <div class="gear-desc">The Point is fully exposed to the North Sea. Even on warm days the wind can be fierce. A packable windproof takes up no room and makes a significant difference to the experience.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=outdoor+gear+norfolk+walking&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <h2 class="art-h2">Nearby: Make a Day of It</h2>
+    <ul class="art-ul">
+      <li><strong>Cley Windmill</strong> — iconic North Norfolk landmark, lovely café inside, 5 minutes from the car park</li>
+      <li><strong>Blakeney village</strong> — excellent pubs, the White Horse is outstanding for lunch or dinner</li>
+      <li><strong>Cley Marshes Visitor Centre</strong> — Norfolk Wildlife Trust reserve, brilliant for birds</li>
+      <li><strong>Morston Quay boat trips</strong> — if you don't want the full walk, National Trust seal boat trips run from here</li>
+    </ul>
+
+    <div class="art-author">
+      <div class="author-av">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M9 2C9 2 4 6 4 11C4 14.3 6.2 17 9 17C11.8 17 14 14.3 14 11C14 6 9 2 9 2Z" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          <path d="M9 4.5L6.5 10L9 8.5L11.5 10Z" fill="rgba(201,168,76,0.8)"/>
+        </svg>
+      </div>
+      <div>
+        <div class="author-name">NorfolkWild</div>
+        <div class="author-bio">Written from North Norfolk. Independent guides to Norfolk walks and wildlife. Updated May 2026.</div>
+      </div>
+    </div>
+
+    <div class="art-nav">
+      <a class="art-nav-link" href="#">
+        <div class="anl-dir">← Previous</div>
+        <div class="anl-title">Horsey Gap Seal Pups: The Complete Visitor Guide</div>
+      </a>
+      <a class="art-nav-link" href="#" style="text-align:right;">
+        <div class="anl-dir">Next →</div>
+        <div class="anl-title">Where to See Marsh Harriers in Norfolk: 6 Best Sites</div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ASIDE -->
+  <div class="art-aside">
+    <div class="aside-info">
+      <div class="aside-info-title">At a glance</div>
+      <div class="aside-info-row"><span class="air-label">Distance</span><span class="air-val">7 miles</span></div>
+      <div class="aside-info-row"><span class="air-label">Duration</span><span class="air-val">3–4 hours</span></div>
+      <div class="aside-info-row"><span class="air-label">Difficulty</span><span class="air-val">Easy/Mod</span></div>
+      <div class="aside-info-row"><span class="air-label">Parking</span><span class="air-val">NR25 7RZ</span></div>
+      <div class="aside-info-row"><span class="air-label">Dogs</span><span class="air-val">On lead</span></div>
+      <div class="aside-info-row"><span class="air-label">Entry</span><span class="air-val">Free</span></div>
+      <div class="aside-info-row"><span class="air-label">Best season</span><span class="air-val">All year</span></div>
+    </div>
+
+    <div class="aside-widget">
+      <div class="aside-label">Related guides</div>
+      <div class="aside-link">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=100&q=60" alt="">
+        <div class="aside-title">Holkham Beach: The Complete Guide</div>
+      </div>
+      <div class="aside-link">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=100&q=60" alt="">
+        <div class="aside-title">Horsey Gap Seal Pups</div>
+      </div>
+      <div class="aside-link">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=100&q=60" alt="">
+        <div class="aside-title">Where to See Marsh Harriers</div>
+      </div>
+      <div class="aside-link">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=100&q=60" alt="">
+        <div class="aside-title">The Peddars Way Complete Guide</div>
+      </div>
+    </div>
+
+    <div class="aside-nl">
+      <div class="aside-nl-title">One walk. One wildlife tip. Every Friday.</div>
+      <a href="https://norfolkwild.substack.com" target="_blank" style="display:block;width:100%;background:var(--marsh);color:#fff;padding:0.5rem;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.06em;text-align:center;text-decoration:none;">Subscribe free on Substack →</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Independent outdoor guides from North Norfolk. No advertisers. No tourist board funding.</div>
+  </div>
+  <div class="footer-col"><h4>Explore</h4><a href="#">Coastal Walks</a><a href="#">Wildlife Guides</a><a href="#">Coast Path</a><a href="#">Gear Reviews</a></div>
+  <div class="footer-col"><h4>Seasons</h4><a href="#">Spring</a><a href="#">Summer</a><a href="#">Autumn</a><a href="#">Winter</a></div>
+  <div class="footer-col"><h4>About</h4><a href="#">About</a><a href="norfolk-wild-legal.html#privacy">Privacy Policy</a><a href="#">Affiliates</a><a href="#">Terms</a></div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 NorfolkWild.co.uk — Independent & Norfolk-based</span>
+  <span>Written from North Norfolk</span>
+</div>
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

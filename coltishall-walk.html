@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coltishall Walking Guide — NorfolkWild</title>
+<meta name="description" content="Explore the best walks around Coltishall, Norfolk. Discover riverside paths, the Bure Valley Railway, and historic mill routes through the Norfolk Broads.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--sky:#a8c4b8;--mist:#e4ede6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.topnav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wordmark{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;line-height:1;}
+.nav-wordmark em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1.4rem;align-items:center;}
+.nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--marsh);color:#fff;padding:0.38rem 0.9rem;font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--marsh2);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink2);margin:5px 0;transition:0.3s;}
+.hamburger.active span:nth-child(1){transform:rotate(-45deg) translate(-5px, 6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(45deg) translate(-5px, -6px);}
+@media(max-width:600px){.hamburger{display:block;}.nav-links{position:fixed;top:52px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;display:none;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}.nav-links.active{display:flex;}.nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);}.topnav{padding:0 1rem;}}
+.article-hero{background:linear-gradient(160deg,rgba(22,28,24,0.72) 0%,rgba(22,28,24,0.1) 50%,rgba(22,28,24,0.7) 100%),url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1600&q=85') center 50%/cover no-repeat;min-height:50vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 2rem 3rem;padding-top:52px;position:relative;}
+.hero-content{max-width:900px;margin:0 auto;width:100%;}
+.hero-eyebrow{font-size:0.6rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:0.8rem;margin-bottom:0.9rem;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold2);}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1px;margin-bottom:1rem;}
+.hero-title em{color:var(--gold2);font-style:italic;}
+.article-body{max-width:900px;margin:0 auto;padding:3rem 2rem;}
+.article-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(30,53,40,0.08);font-size:0.8rem;color:var(--sage);}
+.meta-item{display:flex;gap:0.4rem;align-items:center;}
+.article-section{margin-bottom:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--marsh);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gold);}
+.article-text{font-size:0.95rem;line-height:1.8;color:var(--ink);margin-bottom:1.2rem;}
+.article-text strong{color:var(--marsh);}
+.walk-details{background:var(--cream2);padding:1.5rem;border-left:4px solid var(--gold);margin:1.5rem 0;}
+.walk-details h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.walk-details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;}
+.detail-item{font-size:0.8rem;}
+.detail-label{font-weight:600;color:var(--marsh);margin-bottom:0.2rem;}
+.detail-value{color:var(--reed);}
+.affiliate-box{background:#fff;border:1px solid rgba(30,53,40,0.08);padding:1.5rem;margin:2rem 0;border-radius:4px;}
+.affiliate-box h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:1rem;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
+.product-card{text-align:center;}
+.product-card img{width:100%;height:150px;object-fit:cover;margin-bottom:0.8rem;background:#eee;}
+.product-name{font-size:0.8rem;font-weight:600;color:var(--marsh);margin-bottom:0.5rem;line-height:1.3;}
+.product-link{background:var(--gold2);color:var(--ink);padding:0.5rem 1rem;font-size:0.65rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;transition:background 0.2s;display:inline-block;}
+.product-link:hover{background:var(--gold);}
+.safety-warning{background:rgba(184,146,58,0.1);border-left:4px solid var(--gold);padding:1.5rem;margin:2rem 0;border-radius:2px;}
+.safety-warning h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.safety-warning p{font-size:0.9rem;line-height:1.6;color:var(--reed);}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;transition:color 0.15s;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.walk-details-grid{grid-template-columns:repeat(2,1fr);}.product-grid{grid-template-columns:repeat(2,1fr);}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.walk-details-grid{grid-template-columns:1fr;}.product-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;}.article-body{padding:2rem 1rem;}}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span class="nav-wordmark">Norfolk<em>Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Broads & Riverside Walks</div>
+    <h1 class="hero-title">Coltishall: <em>Rivers, Railways & Historic Mills</em></h1>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="article-meta">
+    <div class="meta-item">📍 Coltishall, Norfolk</div>
+    <div class="meta-item">📏 3-6 miles (various routes)</div>
+    <div class="meta-item">⏱️ 1.5-3 hours</div>
+    <div class="meta-item">🟢 Easy to Moderate</div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">About Coltishall</h2>
+    <p class="article-text">Coltishall is a charming riverside village nestled in the heart of the Norfolk Broads, where the River Bure winds through peaceful countryside dotted with historic mills and traditional boatyards. This is a place where Norfolk's maritime heritage comes alive—from the days when wherries (traditional Broads cargo boats) were built and sailed these waters to carry corn, coal, and timber across the region.</p>
+    <p class="article-text">The village sits at the heart of the Bure Valley, where the river was once navigable as far as Horstead Mill and was canalized to Aylsham using locks. <strong>Coltishall Lock, opened in 1779, remains a focal point of the village</strong>, and walking past it you'll see the site of the historic lock keeper's cottage and an ancient beech hedge that has stood for centuries.</p>
+    <p class="article-text">Today, Coltishall is a walker's paradise, offering a network of riverside paths, quiet country lanes, and waymarked trails that showcase the very best of the Norfolk Broads landscape. Whether you're a keen birdwatcher, history enthusiast, or simply seeking a peaceful riverside stroll, Coltishall has something to offer.</p>
+  </div>
+
+  <div class="walk-details">
+    <h4>Quick Facts</h4>
+    <div class="walk-details-grid">
+      <div class="detail-item">
+        <div class="detail-label">Parking</div>
+        <div class="detail-value">Coltishall village car park (NR12 7AA)</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Best Season</div>
+        <div class="detail-value">Spring to Autumn (year-round accessible)</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Terrain</div>
+        <div class="detail-value">Flat, easy walking on paths and lanes</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Dog Friendly</div>
+        <div class="detail-value">Yes, excellent for dog walking</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Coltishall Circular Walk (3.1 miles)</h2>
+    <p class="article-text">This is the perfect introduction to Coltishall and the Bure Valley. Starting from the old Coltishall Railway Station, you'll pick up the <strong>Bure Valley Path</strong>, a beautifully waymarked trail that follows the river northwest through rolling countryside.</p>
+    <p class="article-text">The route takes you past meadows where skylarks sing overhead and barn owls hunt over the grasslands. Keep your eyes peeled for the electric blue flash of a kingfisher darting along the water's edge, or grey wagtails perched on the mill pool. In spring and autumn, geese and ducks gather on the river, making this an excellent spot for birdwatching.</p>
+    <p class="article-text">The walk loops back through quiet country lanes, passing St John the Baptist's Church, which dates from 1284 and contains fascinating red bricks salvaged from Roman ruins, along with two rare Anglo-Saxon windows. This is a gentle, accessible walk perfect for families and those seeking a peaceful riverside experience.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Coltishall to Horstead Walk (4-5 miles)</h2>
+    <p class="article-text">For a slightly longer adventure, this route follows the River Bure downstream to the historic mill village of Horstead. The walk showcases the area's rich maritime heritage, passing the site of Coltishall Lock and following scenic riverside paths through peaceful countryside.</p>
+    <p class="article-text">Along the way, you'll discover Horstead Church and the atmospheric ruins of St Theobald's Church at Great Hautbois. The Bure Valley Railway runs alongside parts of this route—if you're lucky, you might spot a steam train chugging through the valley, adding to the nostalgic charm of the walk.</p>
+    <p class="article-text">This route is ideal for those wanting a more immersive experience of the Bure Valley's history and natural beauty, with plenty of opportunities for photography and wildlife spotting.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Coltishall & Belaugh Circular (6 miles)</h2>
+    <p class="article-text">For the more adventurous walker, this extended circular walk cuts through the countryside alongside the <strong>miniature Bure Valley Railway</strong>, offering a unique experience where you may see a steam train pass through the landscape. The route combines riverside walking with rural countryside paths, showcasing the full diversity of the Bure Valley.</p>
+    <p class="article-text">This walk takes approximately 2.5-3 hours at a steady pace and offers excellent opportunities for birdwatching, photography, and immersing yourself in Norfolk's natural heritage. The terrain is easy and flat throughout, making it accessible to most fitness levels despite the longer distance.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Wildlife & Nature</h2>
+    <p class="article-text">Coltishall is a haven for wildlife enthusiasts. The river and surrounding commons are excellent for spotting geese and ducks, particularly during migration seasons. <strong>Barn owls hunt over the meadows</strong> at dusk, their white faces ghostly against the darkening sky. Listen for the distinctive call of skylarks rising from the grasslands, and watch for the brilliant blue of kingfishers along the water's edge.</p>
+    <p class="article-text">Grey wagtails are common by the mill pool, and along the Bure Valley Railway, you may spot yellowhammers and jays. The riverside habitat supports a rich diversity of plant and animal life, making every season special for nature lovers.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Local History & Heritage</h2>
+    <p class="article-text">Coltishall's history is deeply intertwined with the River Bure and the Norfolk Broads. From the early 1800s onwards, the village was a thriving center for boat building. <strong>Allen's boatyard, located in Anchor Street, was famous for building wherries</strong>—the iconic Broads cargo boats with their distinctive shallow draught and single huge sail.</p>
+    <p class="article-text">The last trading wherry, the <em>Ella</em>, was built here in 1912, just months before a devastating flood on August 26, 1912, wrecked the locks and brought an end to the era of commercial wherry trading. Today, the village celebrates this heritage, and you can still see remnants of the old boatyard and lock keeper's cottage as you walk.</p>
+  </div>
+
+  <div class="safety-warning">
+    <h4>⚠️ Safety & Practical Information</h4>
+    <p>The Coltishall walks are generally easy and well-maintained, but please remember to:</p>
+    <ul style="margin-left:1.5rem;margin-top:0.8rem;line-height:1.8;font-size:0.9rem;">
+      <li>Wear appropriate footwear—the paths can be muddy after rain</li>
+      <li>Bring plenty of water and snacks, especially on longer walks</li>
+      <li>Check weather conditions before setting out</li>
+      <li>Keep dogs under control and respect wildlife</li>
+      <li>Take care on riverbanks — keep children and dogs away from unfenced edges</li>
+      <li>Use the downloadable route maps from Visit the Broads for navigation</li>
+    </ul>
+  </div>
+
+  <div class="affiliate-box">
+    <h4>Recommended Gear for Coltishall Walks</h4>
+    <p style="font-size:0.85rem;margin-bottom:1.2rem;color:var(--reed);">These walks are best enjoyed with the right equipment. Here are some products we recommend:</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <div style="background:#1e3528;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🥾</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Footwear</span>
+        </div>
+        <div class="product-name">Waterproof Walking Boots</div>
+        <a href="https://www.amazon.co.uk/s?k=waterproof+walking+boots+norfolk+broads&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div style="background:#2d4a3e;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🗺️</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Navigation</span>
+        </div>
+        <div class="product-name">OS Explorer Map OL40 — The Broads</div>
+        <a href="https://www.amazon.co.uk/s?k=OS+Explorer+OL40+Norfolk+Broads+map&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div style="background:#1e3528;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🔭</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Optics</span>
+        </div>
+        <div class="product-name">Binoculars for Birdwatching</div>
+        <a href="https://www.amazon.co.uk/s?k=binoculars+birdwatching+8x42&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div style="background:#2d4a3e;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🎒</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Essentials</span>
+        </div>
+        <div class="product-name">Osprey Talon 22 Daypack</div>
+        <a href="https://www.amazon.co.uk/s?k=osprey+talon+22+daypack&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div style="background:#1e3528;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🦟</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Essentials</span>
+        </div>
+        <div class="product-name">Insect Repellent — Essential for the Broads</div>
+        <a href="https://www.amazon.co.uk/s?k=jungle+formula+insect+repellent&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Getting There</h2>
+    <p class="article-text"><strong>By Car:</strong> Coltishall is easily accessible from Norwich (approximately 10 miles north on the B1150). Use postcode NR12 7AA for the village car park, which is free. The village is also signed from the A1151 Wroxham road.</p>
+    <p class="article-text"><strong>By Public Transport:</strong> Regular buses run from Norwich to Coltishall. The nearest railway station is at Hoveton and Wroxham, from where you can take a bus or taxi to Coltishall.</p>
+    <p class="article-text"><strong>By Bike:</strong> Coltishall is on the Bure Valley Path cycle route, making it an excellent destination for cyclists combining walking and cycling.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Where to Eat & Drink</h2>
+    <p class="article-text">Coltishall has options to refuel after your walk. The <strong>Rising Sun</strong> on the main street is a traditional village pub with riverside views, serving local ales and hearty food. Check opening hours before visiting, as rural Norfolk pubs can have limited weekday hours. There is also a village shop for picnic supplies if you're planning ahead.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-col">
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Exploring the wild beauty and hidden gems of North Norfolk.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="index.html">Home</a>
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Footwear</a>
+    <a href="shop.html#optics">Optics</a>
+    <a href="shop.html#wildlife-tech">Wildlife Tech</a>
+    <a href="shop.html#nature-garden">Nature & Garden</a>
+    <a href="shop.html#walking-aids">Walking Aids</a>
+    <a href="shop.html#foot-care">Foot Care</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#about">About NorfolkWild</a>
+    <a href="norfolk-wild-legal.html#contact">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://norfolkwild.substack.com" target="_blank">Newsletter</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>&copy; 2026 NorfolkWild. All rights reserved.</span>
+  <span>Written in North Norfolk</span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+  
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

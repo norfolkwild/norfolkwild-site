@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walk the Norfolk Coast by Bus: The Complete Coasthopper Walking Guide | NorfolkWild</title>
+<meta name="description" content="The complete guide to walking the Norfolk coast using the Coasthopper bus. 8 walks, two routes, 90 miles of coastline. No car needed. Linear walks, circular routes and everything in between.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;--dusk:#c4956a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-back{font-size:0.65rem;font-weight:500;letter-spacing:0.06em;color:var(--reed);text-decoration:none;}
+.art-hero{position:relative;height:72vh;min-height:480px;overflow:hidden;padding-top:52px;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=1600&q=85&auto=format&fit=crop') center 40%/cover no-repeat;filter:brightness(0.5);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.9));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.art-tag{font-size:0.57rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+.art-tag::before{content:'';width:16px;height:1px;background:var(--gold2);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.0;max-width:780px;letter-spacing:-1px;margin-bottom:1rem;}
+.art-h1 em{color:var(--gold2);font-style:italic;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+
+.body-wrap{max-width:900px;margin:0 auto;padding:2.5rem 2rem 5rem;}
+
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2.5rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+
+.art-h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--marsh);margin:2.5rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.6rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--reed);margin:1.5rem 0 0.5rem;font-style:italic;}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.93rem;line-height:1.88;color:var(--ink2);margin-bottom:1.1rem;font-weight:300;}
+.art-ul{padding-left:0;margin-bottom:1.1rem;list-style:none;}
+.art-ul li{font-family:'Source Serif 4',serif;font-size:0.9rem;line-height:1.8;color:var(--ink2);margin-bottom:0.5rem;font-weight:300;display:flex;gap:0.6rem;align-items:flex-start;}
+.art-ul li::before{content:'—';color:var(--gold);flex-shrink:0;margin-top:0.1rem;}
+
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.4rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.83rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+
+.info-strip{background:var(--marsh);padding:1.5rem 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin:2rem 0;}
+.info-strip-cell{background:var(--marsh2);padding:1rem;text-align:center;}
+.is-icon{font-size:1.4rem;display:block;margin-bottom:0.3rem;}
+.is-label{font-size:0.57rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);}
+.is-val{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-top:0.2rem;}
+
+/* ROUTE MAP VISUAL */
+.route-visual{margin:2rem 0;}
+.route-label{font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.6rem;}
+.route-label::after{content:'';flex:1;height:1px;background:rgba(30,53,40,0.15);}
+.route-stops{display:flex;flex-wrap:wrap;gap:0;background:rgba(30,53,40,0.06);padding:1rem;}
+.stop{display:flex;align-items:center;gap:0;}
+.stop-name{font-size:0.72rem;font-weight:500;color:var(--marsh);padding:0.3rem 0.6rem;background:var(--paper);border:1px solid rgba(30,53,40,0.12);white-space:nowrap;}
+.stop-name.major{background:var(--marsh);color:#fff;font-weight:600;}
+.stop-name.yours{background:var(--gold2);color:var(--ink);font-weight:700;}
+.stop-arrow{font-size:0.7rem;color:rgba(30,53,40,0.25);padding:0 0.2rem;}
+
+/* WALK CARDS */
+.walks-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(30,53,40,0.08);margin:1.5rem 0;}
+.walk-card{background:var(--paper);padding:0;overflow:hidden;cursor:pointer;transition:background 0.15s;text-decoration:none;display:block;}
+.walk-card:hover{background:var(--cream2);}
+.wc-img{width:100%;height:160px;object-fit:cover;display:block;transition:transform 0.4s ease;}
+.walk-card:hover .wc-img{transform:scale(1.03);}
+.wc-body{padding:1rem;}
+.wc-route{font-size:0.57rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+.wc-title{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--marsh);line-height:1.3;margin:0.3rem 0 0.5rem;}
+.wc-desc{font-size:0.75rem;color:var(--reed);line-height:1.5;font-family:'Source Serif 4',serif;font-weight:300;}
+.wc-meta{display:flex;gap:0.6rem;margin-top:0.6rem;flex-wrap:wrap;}
+.wc-pill{font-size:0.62rem;color:var(--ink2);background:var(--mist);padding:0.18rem 0.5rem;}
+.wc-yours{border-top:2px solid var(--gold2);}
+
+.ticket-box{background:var(--ink);padding:1.5rem;margin:2rem 0;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.tb-label{font-size:0.57rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--sage);margin-bottom:0.6rem;}
+.tb-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.3rem;}
+.tb-desc{font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.6;font-family:'Source Serif 4',serif;font-weight:300;}
+.tb-price{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--gold2);margin-top:0.4rem;}
+
+.practical-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin:1.5rem 0;}
+.pg-cell{background:var(--paper);padding:1rem;}
+.pg-title{font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.pg-item{font-size:0.78rem;color:var(--ink2);padding:0.25rem 0;border-bottom:1px solid rgba(30,53,40,0.06);font-family:'Source Serif 4',serif;font-weight:300;}
+.pg-item:last-child{border-bottom:none;}
+.pg-item strong{color:var(--marsh);font-weight:600;}
+
+.pull-quote{padding:1.4rem 0;margin:2rem 0;border-top:2px solid var(--gold);border-bottom:1px solid rgba(30,53,40,0.08);}
+.pull-quote p{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--marsh);line-height:1.5;margin:0;}
+
+.art-author{background:var(--cream2);padding:1.2rem 1.4rem;display:flex;gap:0.9rem;align-items:center;margin-top:2.5rem;border-top:2px solid var(--marsh);}
+.author-av{width:40px;height:40px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.72rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+
+@media(max-width:900px){.info-strip{grid-template-columns:repeat(2,1fr);}.walks-grid{grid-template-columns:1fr;}.ticket-box{grid-template-columns:1fr;}.practical-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.art-hero{height:60vh;}.body-wrap{padding:1.5rem;}.footer{grid-template-columns:1fr;padding:1.5rem;}.route-stops{flex-direction:column;}}
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/coasthopper-hub.html">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="art-tag">Coasthopper Walking Series</div>
+    <h1 class="art-h1">Walk the Norfolk Coast <em>by Bus</em> — The Complete Coasthopper Guide</h1>
+    <div class="art-pills">
+      <span class="art-pill">🚌 CH1 & CH2 routes</span>
+      <span class="art-pill">8 walks covered</span>
+      <span class="art-pill">No car needed</span>
+      <span class="art-pill">Wells to North Walsham</span>
+    </div>
+  </div>
+</div>
+
+<div class="body-wrap">
+
+      <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:\'Source Serif 4\',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24 / OL25 for North Norfolk)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before any coastal or salt marsh walk</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Verify <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:#c9a84c;">bus timetables</a> directly with Sanders Coaches before travel</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, cliff erosion, tidal changes and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside and on coastal cliff paths involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong> — for coastal emergencies ask for the Coastguard.
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:1rem;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">Wildlife Disturbance</strong> — Always keep a respectful distance from all wildlife, especially seals and nesting birds. Dogs must be kept under close control, and on leads in designated areas. Never approach or feed wild animals.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+<div class="pull-intro">
+    <p>The Coasthopper bus is one of the great secrets of Norfolk walking. Running seven days a week along the entire North Norfolk coast, it turns what would otherwise be a logistical puzzle — how do you walk a linear coastal route without two cars? — into something beautifully simple. Get on the bus at one end, walk back from the other.</p>
+  </div>
+
+  <div class="info-strip">
+    <div class="info-strip-cell"><span class="is-icon">🚌</span><div class="is-label">Routes</div><div class="is-val">CH1 + CH2</div></div>
+    <div class="info-strip-cell"><span class="is-icon">🗺</span><div class="is-label">Total coastline</div><div class="is-val">~90 miles</div></div>
+    <div class="info-strip-cell"><span class="is-icon">📅</span><div class="is-label">Runs</div><div class="is-val">7 days/week</div></div>
+    <div class="info-strip-cell"><span class="is-icon">🐕</span><div class="is-label">Dogs</div><div class="is-val">Welcome</div></div>
+  </div>
+
+  <h2 class="art-h2">About the Coasthopper</h2>
+  <p class="art-p">The Coasthopper is operated by Sanders Coaches and runs year-round along the North Norfolk coast. There are two routes that together cover the entire coastline from Wells-next-the-Sea in the west to North Walsham in the east — a stretch of around 90 miles. Sanders were named Top Independent Bus Operator at the UK Bus Awards in both 2023 and 2024, and the service genuinely lives up to the reputation — reliable, regular and run by people who clearly love the coast they serve.</p>
+  <p class="art-p">For walkers, the Coasthopper is transformative. It turns the Norfolk Coast Path from a demanding multi-day expedition requiring complex logistics into a series of brilliant day walks, each one doable on its own with a straightforward bus connection home. You can park your car once and spend days exploring the coast without moving it.</p>
+
+  <div class="pull-quote">
+    <p>"Park the car in Cromer, spend three days walking the coast in each direction, sleep in a different village each night, and never worry about getting back. That is what the Coasthopper makes possible."</p>
+  </div>
+
+  <h2 class="art-h2">The Two Routes</h2>
+
+  <h3 class="art-h3">CH1 — Wells-next-the-Sea to Cromer</h3>
+  <p class="art-p">The western and longer of the two routes, CH1 covers the most famous stretch of the North Norfolk coast — the salt marshes, seal colonies and nature reserves between Wells and Cromer. This is the route for big skies, birdwatching and some of the finest coastal scenery in England.</p>
+
+  <div class="route-visual">
+    <div class="route-label">CH1 stops (key stops shown)</div>
+    <div class="route-stops">
+      <div class="stop"><span class="stop-name major">Wells-next-the-Sea</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Stiffkey</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Morston</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name major">Blakeney</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name major">Cley-next-the-Sea</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Salthouse</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Weybourne</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name major">Sheringham</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">West Runton</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">East Runton</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name major">Cromer</span></div>
+    </div>
+  </div>
+
+  <h3 class="art-h3">CH2 — Cromer to North Walsham (via the coast)</h3>
+  <p class="art-p">The eastern route, CH2 follows the coast road from Cromer through the quieter villages of Overstrand, Sidestrand, Trimingham and Mundesley before heading inland to North Walsham. This is the less-visited, less-documented stretch of the Norfolk coast — the Deep History Coast — with dramatic chalk and clay cliffs, quieter beaches and some genuinely hidden walking.</p>
+
+  <div class="route-visual">
+    <div class="route-label">CH2 stops (key stops shown)</div>
+    <div class="route-stops">
+      <div class="stop"><span class="stop-name major">Cromer</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Suffield Park</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name major">Overstrand</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Sidestrand</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Trimingham</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name major">Mundesley</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name yours">Walcott ★</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Happisburgh</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name">Sea Palling</span><span class="stop-arrow">→</span></div>
+      <div class="stop"><span class="stop-name major">North Walsham</span></div>
+    </div>
+    <div style="font-size:0.62rem;color:var(--gold);margin-top:0.5rem;">★ NorfolkWild holiday let location</div>
+  </div>
+
+  <h2 class="art-h2">Tickets and Fares</h2>
+
+  <div class="ticket-box">
+    <div>
+      <div class="tb-label">Day Explorer Ticket</div>
+      <div class="tb-title">All-day unlimited travel</div>
+      <div class="tb-desc">Valid on the entire Sanders network including both CH1 and CH2. The best value option for a full day's walking — hop on and off as many times as you like.</div>
+      <div class="tb-price">£12 adult</div>
+    </div>
+    <div>
+      <div class="tb-label">Coastal Explorer Ticket</div>
+      <div class="tb-title">3-day or 7-day pass</div>
+      <div class="tb-desc">For multi-day walking trips. The 7-day pass works out at roughly £7/day — exceptional value if you're spending a week walking the coast section by section.</div>
+      <div class="tb-price">£25 (3-day Coastal) / £34 (Weekly Coastal)</div>
+    </div>
+  </div>
+
+  <div class="tip-block">
+    <div class="tip-label">Ticket tip</div>
+    <p>Single fares are capped at £3. Explorer Day and multi-day tickets can be bought online at <a href="https://www.sanderscoaches.com/coasthopper" target="_blank">sanderscoaches.com/coasthopper</a> or from the driver. Dogs travel free and are welcome on all Coasthopper services — though they must not sit on the seats. Bikes can travel if space permits — check with the driver.</p>
+  </div>
+
+  <h2 class="art-h2">Practical Information</h2>
+
+  <div class="practical-grid">
+    <div class="pg-cell">
+      <div class="pg-title">Getting there by train</div>
+      <div class="pg-item"><strong>From Norwich:</strong> Routes X40/X44 to Cromer or Sheringham, then Coasthopper</div>
+      <div class="pg-item"><strong>From London:</strong> Greater Anglia to Norwich, then as above</div>
+      <div class="pg-item"><strong>Bittern Line:</strong> Train from Norwich stops at Cromer, Sheringham, West Runton, Weybourne and Holt</div>
+      <div class="pg-item"><strong>North Walsham:</strong> Train from Norwich, then CH2 to the coast</div>
+    </div>
+    <div class="pg-cell">
+      <div class="pg-title">Parking if driving</div>
+      <div class="pg-item"><strong>Cromer:</strong> Runton Road Car Park on the clifftop — Coasthopper stops outside</div>
+      <div class="pg-item"><strong>Sheringham:</strong> Station Approach — large, free on Sundays</div>
+      <div class="pg-item"><strong>Wells:</strong> Holkham Road car park, 10 mins walk to Coasthopper stop</div>
+      <div class="pg-item"><strong>North Walsham:</strong> Town centre car parks — free after 3pm</div>
+    </div>
+    <div class="pg-cell">
+      <div class="pg-title">Frequency</div>
+      <div class="pg-item"><strong>CH1:</strong> Approx every 60 mins in summer, every 90 mins in winter</div>
+      <div class="pg-item"><strong>CH2:</strong> Approx every 60 mins daily</div>
+      <div class="pg-item"><strong>Last buses:</strong> Check Sanders website — typically 6pm or later in summer</div>
+      <div class="pg-item"><strong>Timetables & tickets:</strong> <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:var(--marsh);">sanderscoaches.com/coasthopper</a></div>
+    </div>
+    <div class="pg-cell">
+      <div class="pg-title">Good to know</div>
+      <div class="pg-item"><strong>Dogs:</strong> Welcome free of charge, not on seats</div>
+      <div class="pg-item"><strong>Bikes:</strong> Space permitting, ask driver</div>
+      <div class="pg-item"><strong>Pushchairs:</strong> Welcome, folded if possible</div>
+      <div class="pg-item"><strong>Real-time tracking:</strong> Sanders app available free</div>
+    </div>
+  </div>
+
+  <h2 class="art-h2">The 8 Coasthopper Walks</h2>
+  <p class="art-p">We've divided the route into 8 manageable day walks, each with its own dedicated guide. Every walk is designed so you can get off at one stop, walk to the next, and catch the bus back — or walk in the other direction if you prefer. Mix and match to create multi-day itineraries.</p>
+
+  <!-- CH1 WALKS -->
+  <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--marsh);margin:1.5rem 0 0.8rem;padding-bottom:0.5rem;border-bottom:2px solid rgba(30,53,40,0.1);">🚌 CH1 Walks — Wells to Cromer</div>
+
+  <div class="walks-grid">
+    <a class="walk-card" href="coasthopper-walk-1-wells-blakeney.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1621532076337-db3b804ee109?w=600&q=78&auto=format&fit=crop" alt="Wells to Blakeney walk">
+      <div class="wc-body">
+        <div class="wc-route">CH1 · Walk 1</div>
+        <div class="wc-title">Wells-next-the-Sea to Blakeney: Salt Marshes and the Stiffkey Coast</div>
+        <div class="wc-desc">Beach huts, ancient pines, purple salt marshes and the harbour at Blakeney. One of the finest coastal walks in Norfolk.</div>
+        <div class="wc-meta"><span class="wc-pill">8 miles</span><span class="wc-pill">3–4 hours</span><span class="wc-pill">🟢 Easy</span></div>
+      </div>
+    </a>
+    <a class="walk-card" href="coasthopper-walk-2-blakeney-salthouse.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=600&q=78&auto=format&fit=crop" alt="Blakeney to Salthouse">
+      <div class="wc-body">
+        <div class="wc-route">CH1 · Walk 2</div>
+        <div class="wc-title">Blakeney to Cley to Salthouse: The Heart of the North Norfolk Coast</div>
+        <div class="wc-desc">Blakeney Point views, Cley windmill, reed beds alive with marsh harriers and the shingle bank at Salthouse. The classic Norfolk coast walk.</div>
+        <div class="wc-meta"><span class="wc-pill">6 miles</span><span class="wc-pill">2.5–3 hours</span><span class="wc-pill">🟢 Easy</span></div>
+      </div>
+    </a>
+    <a class="walk-card" href="coasthopper-walk-3-salthouse-sheringham.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1557869240-c53059f36611?w=600&q=78&auto=format&fit=crop" alt="Salthouse to Sheringham">
+      <div class="wc-body">
+        <div class="wc-route">CH1 · Walk 3</div>
+        <div class="wc-title">Salthouse to Weybourne to Sheringham: Shingle, Heath and Sea</div>
+        <div class="wc-desc">Exposed shingle beach gives way to chalk heath above Weybourne, then the clifftop path into Sheringham with its famous independent shops and cafés.</div>
+        <div class="wc-meta"><span class="wc-pill">7 miles</span><span class="wc-pill">3–3.5 hours</span><span class="wc-pill">🟡 Moderate</span></div>
+      </div>
+    </a>
+    <a class="walk-card" href="coasthopper-walk-4-sheringham-cromer.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1624866181865-91b01ff7400a?w=600&q=78&auto=format&fit=crop" alt="Sheringham to Cromer">
+      <div class="wc-body">
+        <div class="wc-route">CH1 · Walk 4</div>
+        <div class="wc-title">Sheringham to East Runton to Cromer: Cliffs, Crabs and the Victorian Pier</div>
+        <div class="wc-desc">The clifftop path between Sheringham and Cromer is one of the finest short coastal walks in Norfolk. Ends with Cromer's Victorian pier and the county's finest crab.</div>
+        <div class="wc-meta"><span class="wc-pill">6 miles</span><span class="wc-pill">2.5–3 hours</span><span class="wc-pill">🟢 Easy</span></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- CH2 WALKS -->
+  <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--marsh);margin:1.5rem 0 0.8rem;padding-bottom:0.5rem;border-bottom:2px solid rgba(30,53,40,0.1);">🚌 CH2 Walks — Cromer to North Walsham</div>
+
+  <div class="walks-grid">
+    <a class="walk-card" href="coasthopper-walk-5-cromer-overstrand.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=600&q=78&auto=format&fit=crop" alt="Cromer to Overstrand">
+      <div class="wc-body">
+        <div class="wc-route">CH2 · Walk 5</div>
+        <div class="wc-title">Cromer to Overstrand: The Clifftop Path South</div>
+        <div class="wc-desc">A short, stunning clifftop walk from Cromer lighthouse to the quiet village of Overstrand — once known as the village of millionaires for its grand Edwardian villas.</div>
+        <div class="wc-meta"><span class="wc-pill">3 miles</span><span class="wc-pill">1.5 hours</span><span class="wc-pill">🟢 Easy</span></div>
+      </div>
+    </a>
+    <a class="walk-card" href="coasthopper-walk-6-overstrand-trimingham.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=600&q=78&auto=format&fit=crop" alt="Overstrand to Trimingham">
+      <div class="wc-body">
+        <div class="wc-route">CH2 · Walk 6</div>
+        <div class="wc-title">Overstrand to Sidestrand to Trimingham: The Deep History Cliffs</div>
+        <div class="wc-desc">Some of the most dramatic — and actively eroding — cliffs in Norfolk. Sidestrand's clifftop church is slowly being reclaimed by the sea. A walk unlike anywhere else on the Norfolk coast.</div>
+        <div class="wc-meta"><span class="wc-pill">4 miles</span><span class="wc-pill">2 hours</span><span class="wc-pill">🟡 Moderate</span></div>
+      </div>
+    </a>
+    <a class="walk-card" href="coasthopper-walk-7-trimingham-mundesley.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1621532076337-db3b804ee109?w=600&q=78&auto=format&fit=crop" alt="Trimingham to Mundesley">
+      <div class="wc-body">
+        <div class="wc-route">CH2 · Walk 7</div>
+        <div class="wc-title">Trimingham to Mundesley: Clifftop Village to Sandy Beach</div>
+        <div class="wc-desc">The clifftop path descends to Mundesley's wide sandy beach — one of the quietest and most underrated on the Norfolk coast. Finish with tea and cake at the beachfront café.</div>
+        <div class="wc-meta"><span class="wc-pill">3 miles</span><span class="wc-pill">1.5 hours</span><span class="wc-pill">🟢 Easy</span></div>
+      </div>
+    </a>
+    <a class="walk-card wc-yours" href="coasthopper-walk-8-mundesley-walcott.html">
+      <img class="wc-img" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=600&q=78&auto=format&fit=crop" alt="Mundesley to Walcott">
+      <div class="wc-body">
+        <div class="wc-route">CH2 · Walk 8 · ★ Local favourite</div>
+        <div class="wc-title">Mundesley to Walcott: The Coastal Road Walk</div>
+        <div class="wc-desc">The Norfolk Coast Path hugs the clifftop between Mundesley and Walcott — the only point on the Norfolk coast where the road runs right alongside the sea. A short walk with big drama.</div>
+        <div class="wc-meta"><span class="wc-pill">3 miles</span><span class="wc-pill">1.5 hours</span><span class="wc-pill">🟢 Easy</span></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="tip-block">
+    <div class="tip-label">Planning a multi-day trip</div>
+    <p>The Coasthopper makes a 2–3 day walking holiday along the Norfolk coast genuinely easy to arrange. Park at Cromer, walk west along CH1 on day one (Cromer to Sheringham — bus back), walk east along CH2 on day two (Cromer to Mundesley — bus back). On day three, connect both routes for a full day from Wells to Cromer or beyond. The 7-day Coastal Explorer ticket covers everything for around £30.</p>
+  </div>
+
+  <div class="art-author">
+    <div class="author-av">🌿</div>
+    <div>
+      <div class="author-name">NorfolkWild</div>
+      <div class="author-bio">Written from North Norfolk — on the Norfolk coast. Every section researched of this coast. Updated May 2026.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div><div class="footer-wm">Norfolk<em>Wild</em></div><div class="footer-tag">Independent outdoor guides from North Norfolk.</div></div>
+  <div class="footer-col">
+    <h4>CH1 Walks</h4>
+    <a href="coasthopper-walk-1-wells-blakeney.html">Wells to Blakeney</a>
+    <a href="coasthopper-walk-2-blakeney-salthouse.html">Blakeney to Salthouse</a>
+    <a href="coasthopper-hub.html">Salthouse to Sheringham</a>
+    <a href="coasthopper-hub.html">Sheringham to Cromer</a>
+  </div>
+  <div class="footer-col">
+    <h4>CH2 Walks</h4>
+    <a href="coasthopper-hub.html">Cromer to Overstrand</a>
+    <a href="coasthopper-hub.html">Overstrand to Trimingham</a>
+    <a href="coasthopper-hub.html">Trimingham to Mundesley</a>
+    <a href="coasthopper-hub.html">Mundesley to Walcott</a>
+  </div>
+      <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Walking Boots</a>
+    <a href="shop.html#optics">Binoculars</a>
+    <a href="shop.html#wildlife-tech">Trail Cams</a>
+    <a href="shop.html#nature-garden">Wildflower Seeds</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="mailto:hello@norfolkwild.co.uk">Contact</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 NorfolkWild.co.uk</span>
+  <span>Written from North Norfolk</span>
+</div>
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

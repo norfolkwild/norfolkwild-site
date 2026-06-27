@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norfolk Wild – Explore the Heart of Norfolk</title>
+<meta name="description" content="Your guide to walking, wildlife, coast and countryside in Norfolk. Discover hidden gems, local walks and outdoor adventures across North Norfolk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --marsh: #2d4a3e;
+    --reed: #5a7a5f;
+    --sky: #b8cfd4;
+    --sand: #e8d9c0;
+    --dusk: #c4956a;
+    --cream: #f7f2eb;
+    --ink: #1a2420;
+    --mist: #e2eaec;
+    --gold: #c9a84c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(247,242,235,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(45,74,62,0.15);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 900;
+    color: var(--marsh);
+    letter-spacing: -0.5px;
+  }
+  .nav-logo span { color: var(--gold); font-style: italic; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--marsh);
+    font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background:
+      linear-gradient(to bottom, rgba(26,36,32,0.3) 0%, rgba(26,36,32,0.05) 40%, rgba(26,36,32,0.5) 100%),
+      url('https://images.unsplash.com/photo-1624866181865-91b01ff7400a?w=1600&q=80') center/cover no-repeat;
+    display: flex; flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 4rem 6rem;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(45,74,62,0.4) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+    opacity: 0; animation: fadeUp 0.8s 0.3s forwards;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 900; line-height: 0.95;
+    color: #fff;
+    max-width: 800px;
+    opacity: 0; animation: fadeUp 0.8s 0.5s forwards;
+  }
+  .hero-title em { color: var(--gold); font-style: italic; }
+  .hero-sub {
+    margin-top: 1.5rem;
+    font-size: 1.1rem; font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    max-width: 480px; line-height: 1.6;
+    opacity: 0; animation: fadeUp 0.8s 0.7s forwards;
+  }
+  .hero-cta {
+    margin-top: 2.5rem;
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 0.8s 0.9s forwards;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--ink);
+    padding: 0.85rem 2rem; border: none;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.05em; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.4); }
+  .btn-outline {
+    background: transparent; color: #fff;
+    padding: 0.85rem 2rem;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.9rem; font-weight: 600;
+    letter-spacing: 0.05em; cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+  .hero-scroll {
+    position: absolute; bottom: 2rem; right: 4rem;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+    writing-mode: vertical-rl;
+    display: flex; align-items: center; gap: 0.8rem;
+    opacity: 0; animation: fadeUp 0.8s 1.2s forwards;
+  }
+  .hero-scroll::after {
+    content: '';
+    width: 1px; height: 60px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  }
+
+  /* ── INTRO STRIP ── */
+  .intro-strip {
+    background: var(--marsh);
+    padding: 2rem 4rem;
+    display: flex; gap: 3rem; align-items: center;
+    flex-wrap: wrap;
+  }
+  .strip-item {
+    display: flex; gap: 1rem; align-items: center;
+    color: var(--mist); flex: 1; min-width: 200px;
+  }
+  .strip-icon { font-size: 1.8rem; }
+  .strip-label { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky); }
+  .strip-val { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 6rem 4rem; }
+  .section-label {
+    font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900; line-height: 1.1;
+    color: var(--marsh);
+  }
+  .section-title em { font-style: italic; color: var(--reed); }
+
+  /* ── FEATURED ARTICLES ── */
+  .featured { background: var(--cream); }
+  .featured-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5px;
+    background: var(--marsh);
+  }
+  .card {
+    background: var(--cream);
+    position: relative; overflow: hidden;
+    cursor: pointer;
+  }
+  .card-img {
+    width: 100%; aspect-ratio: 16/10;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+  .card:hover .card-img { transform: scale(1.04); }
+  .card-body { padding: 1.5rem; }
+  .card-tag {
+    font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold);
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    line-height: 1.3; color: var(--marsh);
+    margin: 0.4rem 0 0.6rem;
+  }
+  .card-excerpt {
+    font-size: 0.88rem; color: #5a5a4a;
+    line-height: 1.6;
+  }
+  .card-meta {
+    margin-top: 1rem;
+    font-size: 0.75rem; color: #8a8a7a;
+    display: flex; gap: 1rem;
+  }
+  .card.large .card-title { font-size: 1.7rem; }
+  .card.large .card-body { padding: 2rem; }
+  .card.large .card-img { aspect-ratio: 16/8; }
+
+  .card.span2 { grid-column: span 2; }
+
+  /* ── CATEGORIES ── */
+  .categories { background: var(--marsh); }
+  .categories .section-title { color: var(--cream); }
+  .categories .section-label { color: var(--sky); }
+  .cat-grid {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .cat-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s;
+    text-decoration: none;
+  }
+  .cat-card:hover { background: rgba(255,255,255,0.13); transform: translateY(-4px); }
+  .cat-icon { font-size: 2.5rem; margin-bottom: 0.8rem; display: block; }
+  .cat-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count { font-size: 0.75rem; color: var(--sky); margin-top: 0.3rem; }
+
+  /* ── LATEST ARTICLES ── */
+  .latest { background: var(--mist); }
+  .latest-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 0; }
+  .article-row {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(45,74,62,0.15);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .article-row:hover { background: rgba(45,74,62,0.04); }
+  .article-thumb {
+    width: 120px; height: 80px;
+    object-fit: cover;
+  }
+  .article-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--marsh); line-height: 1.3;
+    margin: 0.3rem 0 0.5rem;
+  }
+  .article-meta { font-size: 0.75rem; color: #7a7a6a; }
+  .article-arrow { font-size: 1.2rem; color: var(--reed); opacity: 0.5; }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    background: linear-gradient(135deg, var(--dusk) 0%, #b07840 100%);
+    text-align: center;
+    padding: 5rem 4rem;
+  }
+  .newsletter .section-title { color: #fff; }
+  .newsletter .section-label { color: rgba(255,255,255,0.7); }
+  .newsletter p { color: rgba(255,255,255,0.85); max-width: 480px; margin: 1rem auto 2rem; line-height: 1.6; }
+  .email-form { display: flex; gap: 0; max-width: 440px; margin: 0 auto; }
+  .email-input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    border: none; outline: none;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.95);
+    color: var(--ink);
+  }
+  .email-btn {
+    background: var(--marsh); color: var(--cream);
+    padding: 0.9rem 1.5rem; border: none;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.05em; cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+  .email-btn:hover { background: var(--ink); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-brand .nav-logo { font-size: 1.6rem; }
+  .footer-brand p { color: #8a9a94; font-size: 0.85rem; line-height: 1.6; margin-top: 1rem; max-width: 220px; }
+  .footer-col h4 {
+    font-size: 0.7rem; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--sky); margin-bottom: 1.2rem;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a { color: #8a9a94; text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    background: rgba(0,0,0,0.3);
+    padding: 1.2rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.75rem; color: #5a6a64;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav .nav-links { display: none; }
+    .hero { padding: 0 2rem 4rem; }
+    section { padding: 4rem 2rem; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .card.span2 { grid-column: span 1; }
+    footer { grid-template-columns: 1fr 1fr; padding: 3rem 2rem; }
+    .intro-strip { padding: 2rem; }
+    .article-row { grid-template-columns: 80px 1fr; }
+    .article-arrow { display: none; }
+  }
+  @media (max-width: 600px) {
+    .email-form { flex-direction: column; }
+/* ─── MOBILE HAMBURGER MENU ─── */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--ink2); margin: 5px 0; transition: 0.3s; }
+.hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+@media (max-width: 600px) {
+  .hamburger { display: block; }
+  .nav-links { position: fixed; top: 52px; left: 0; right: 0; background: var(--paper); flex-direction: column; gap: 0; display: none; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+  .nav-links.active { display: flex; }
+  .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); }
+}
+
+    footer { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Norfolk<span>Wild</span></div>
+  <ul class="nav-links">
+    <li><a href="#walks">Walks</a></li>
+    <li><a href="#wildlife">Wildlife</a></li>
+    <li><a href="#coast">Coast</a></li>
+    <li><a href="#villages">Villages</a></li>
+    <li><a href="#gear">Gear</a></li>
+    <li><a href="#newsletter">Newsletter</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <p class="hero-eyebrow">North Norfolk's Outdoor Guide</p>
+  <h1 class="hero-title">Wild walks &amp; <em>hidden</em> Norfolk</h1>
+  <p class="hero-sub">From the salt marshes of Blakeney to the ancient pines of Thetford — your independent guide to exploring Norfolk's great outdoors.</p>
+  <div class="hero-cta">
+    <a href="#featured" class="btn-primary">Start Exploring</a>
+    <a href="#newsletter" class="btn-outline">Get Weekly Walks</a>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="strip-item">
+    <span class="strip-icon">🥾</span>
+    <div>
+      <div class="strip-label">Walking Routes</div>
+      <div class="strip-val">50+ Trails Covered</div>
+    </div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">🦭</span>
+    <div>
+      <div class="strip-label">Wildlife Guides</div>
+      <div class="strip-val">Seasonal Updates</div>
+    </div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">🌊</span>
+    <div>
+      <div class="strip-label">Coastline</div>
+      <div class="strip-val">90 Miles of Coast</div>
+    </div>
+  </div>
+  <div class="strip-item">
+    <span class="strip-icon">📍</span>
+    <div>
+      <div class="strip-label">Local Knowledge</div>
+      <div class="strip-val">Written from Norfolk</div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED ARTICLES -->
+<section class="featured" id="featured">
+  <p class="section-label reveal">Latest Guides</p>
+  <h2 class="section-title reveal">Featured <em>stories</em></h2>
+
+  <div class="featured-grid reveal">
+    <!-- Large card -->
+    <div class="card large">
+      <img class="card-img" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=800&q=80" alt="Norfolk Coast Walk">
+      <div class="card-body">
+        <span class="card-tag">🌊 Coastal Walks</span>
+        <h3 class="card-title">The Blakeney Point Walk: Seals, Salt Marshes and Solitude</h3>
+        <p class="card-excerpt">Follow the shingle spit out to Blakeney Point where hundreds of grey seals haul out within touching distance. One of England's truly unmissable walks.</p>
+        <div class="card-meta"><span>📍 North Norfolk Coast</span><span>⏱ 3–4 hours</span><span>🟢 Easy</span></div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div style="display:flex;flex-direction:column;gap:1.5px;background:var(--marsh);">
+      <div class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=600&q=80" alt="Norfolk Woods">
+        <div class="card-body">
+          <span class="card-tag">🌳 Woodland</span>
+          <h3 class="card-title">Ancient Oaks of Felbrigg: A Walk Through Living History</h3>
+          <p class="card-excerpt">Felbrigg's estate woods hide trees over 400 years old. A magical autumn or spring walk close to Cromer.</p>
+          <div class="card-meta"><span>⏱ 1.5 hours</span><span>🟢 Easy</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=600&q=80" alt="Norfolk Wildlife">
+        <div class="card-body">
+          <span class="card-tag">🦅 Wildlife</span>
+          <h3 class="card-title">Where to See Marsh Harriers in Norfolk This Spring</h3>
+          <p class="card-excerpt">Norfolk holds the largest UK population of marsh harriers. Here's exactly where to go and when.</p>
+          <div class="card-meta"><span>📍 Cley & Titchwell</span><span>🌿 Spring Guide</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom wide card -->
+    <div class="card span2" style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
+      <img class="card-img" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=800&q=80" alt="Norfolk Sunrise" style="height:100%;aspect-ratio:unset;">
+      <div class="card-body" style="display:flex;flex-direction:column;justify-content:center;padding:2.5rem;">
+        <span class="card-tag">⭐ Essential Guide</span>
+        <h3 class="card-title">The Ultimate Norfolk Outdoor Gear Guide: What You Actually Need</h3>
+        <p class="card-excerpt">From waterproof boots that handle coastal mud to binoculars for birdwatching — The kit has been reviewed so you don't have to. Our honest, no-fluff recommendations for every budget.</p>
+        <div class="card-meta" style="margin-top:1.5rem;"><span>🛒 Gear Reviews</span><span>💰 All Budgets</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+  <p class="section-label reveal">Browse by Topic</p>
+  <h2 class="section-title reveal">What are you <em>looking for?</em></h2>
+  <div class="cat-grid reveal">
+    <a class="cat-card" href="#walks" id="walks">
+      <span class="cat-icon">🥾</span>
+      <div class="cat-name">Walks & Trails</div>
+      <div class="cat-count">24 guides</div>
+    </a>
+    <a class="cat-card" href="#wildlife" id="wildlife">
+      <span class="cat-icon">🦅</span>
+      <div class="cat-name">Wildlife</div>
+      <div class="cat-count">18 guides</div>
+    </a>
+    <a class="cat-card" href="#coast" id="coast">
+      <span class="cat-icon">🌊</span>
+      <div class="cat-name">Coast & Beaches</div>
+      <div class="cat-count">15 guides</div>
+    </a>
+    <a class="cat-card" href="#villages" id="villages">
+      <span class="cat-icon">🏡</span>
+      <div class="cat-name">Villages</div>
+      <div class="cat-count">12 guides</div>
+    </a>
+    <a class="cat-card" href="#gear" id="gear">
+      <span class="cat-icon">🎒</span>
+      <div class="cat-name">Gear Reviews</div>
+      <div class="cat-count">10 reviews</div>
+    </a>
+    <a class="cat-card" href="#">
+      <span class="cat-icon">📅</span>
+      <div class="cat-name">Seasonal</div>
+      <div class="cat-count">8 guides</div>
+    </a>
+  </div>
+</section>
+
+<!-- LATEST ARTICLES -->
+<section class="latest">
+  <p class="section-label reveal">Just Published</p>
+  <h2 class="section-title reveal">More from <em>Norfolk Wild</em></h2>
+
+  <div class="latest-list reveal">
+    <div class="article-row">
+      <img class="article-thumb" src="https://images.unsplash.com/photo-1557869240-c53059f36611?w=200&q=70" alt="">
+      <div>
+        <span class="article-tag">🌅 Coast</span>
+        <div class="article-title">Holkham Beach at Dawn: Why Norfolk's Most Famous Beach is Best Before 8am</div>
+        <div class="article-meta">10 min read · Coastal Walks</div>
+      </div>
+      <span class="article-arrow">→</span>
+    </div>
+    <div class="article-row">
+      <img class="article-thumb" src="https://images.unsplash.com/photo-1557869240-c53059f36611?w=200&q=70" alt="">
+      <div>
+        <span class="article-tag">🌳 Woodland</span>
+        <div class="article-title">Thetford Forest: The Best MTB Trails and Family Cycling Routes</div>
+        <div class="article-meta">8 min read · Cycling</div>
+      </div>
+      <span class="article-arrow">→</span>
+    </div>
+    <div class="article-row">
+      <img class="article-thumb" src="https://images.unsplash.com/photo-1575571991314-295b0809f460?w=200&q=70" alt="">
+      <div>
+        <span class="article-tag">🦭 Wildlife</span>
+        <div class="article-title">Grey Seal Pup Season at Horsey Gap: Everything You Need to Know</div>
+        <div class="article-meta">6 min read · Wildlife Watching</div>
+      </div>
+      <span class="article-arrow">→</span>
+    </div>
+    <div class="article-row">
+      <img class="article-thumb" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=200&q=70" alt="">
+      <div>
+        <span class="article-tag">🥾 Walking</span>
+        <div class="article-title">The Peddars Way: A Complete Guide to Walking Norfolk's Ancient Roman Road</div>
+        <div class="article-meta">15 min read · Long Distance</div>
+      </div>
+      <span class="article-arrow">→</span>
+    </div>
+    <div class="article-row">
+      <img class="article-thumb" src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?w=200&q=70" alt="">
+      <div>
+        <span class="article-tag">🎒 Gear</span>
+        <div class="article-title">Best Waterproof Boots for Norfolk's Coastal Paths: assessed for muddy Norfolk paths</div>
+        <div class="article-meta">7 min read · Gear Reviews</div>
+      </div>
+      <span class="article-arrow">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <p class="section-label reveal">Free Weekly Guide</p>
+  <h2 class="section-title reveal">Never miss a <em>Norfolk adventure</em></h2>
+  <p class="reveal">Every Friday — one new walk, one wildlife tip, one local secret. Written by someone who actually lives here.</p>
+  <div class="email-form reveal">
+    <input class="email-input" type="email" placeholder="your@email.com">
+    <button class="email-btn">Subscribe Free</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="nav-logo">Norfolk<span>Wild</span></div>
+    <p>An independent guide to the outdoors, wildlife and countryside of Norfolk. Written from North Norfolk.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <ul>
+      <li><a href="#">Coastal Walks</a></li>
+      <li><a href="#">Woodland Trails</a></li>
+      <li><a href="#">Wildlife Watching</a></li>
+      <li><a href="#">Villages & Pubs</a></li>
+      <li><a href="#">Cycling Routes</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Guides</h4>
+    <ul>
+      <li><a href="#">Gear Reviews</a></li>
+      <li><a href="#">Seasonal Guides</a></li>
+      <li><a href="#">Dog-Friendly Walks</a></li>
+      <li><a href="#">Family Days Out</a></li>
+      <li><a href="#">Photography Spots</a></li>
+    </ul>
+  </div>
+      <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Walking Boots</a>
+    <a href="shop.html#optics">Binoculars</a>
+    <a href="shop.html#wildlife-tech">Trail Cams</a>
+    <a href="shop.html#nature-garden">Wildflower Seeds</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <ul>
+      <li><a href="norfolk-wild-legal.html#affiliate">About NorfolkWild</a></li>
+      <li><a href="mailto:hello@norfolkwild.co.uk">Contact</a></li>
+      <li><a href="norfolk-wild-legal.html#privacy">Privacy Policy</a></li>
+      <li><a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 NorfolkWild.co.uk — Independent & Norfolk-based</span>
+  <span>Made with ♥ in North Norfolk</span>
+</div>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => obs.observe(el));
+
+  // Newsletter
+  document.querySelector('.email-btn').addEventListener('click', () => {
+    const input = document.querySelector('.email-input');
+    if (input.value.includes('@')) {
+      input.value = '✓ You\'re on the list!';
+      input.style.background = '#e8f5e9';
+    }
+  });
+</script>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

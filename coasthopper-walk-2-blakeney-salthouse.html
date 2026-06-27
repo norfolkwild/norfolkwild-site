@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blakeney to Cley to Salthouse: Coasthopper Walk 2 | NorfolkWild</title>
+<meta name="description" content="Walk the Norfolk Coast Path from Blakeney through Cley-next-the-Sea to Salthouse using the CH1 Coasthopper. Cley windmill, Reed beds, Blakeney Point views and the Dun Cow pub.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;--dusk:#c4956a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1rem;align-items:center;}
+.nav-back{font-size:0.65rem;font-weight:500;letter-spacing:0.06em;color:var(--reed);text-decoration:none;}
+.nav-series{font-size:0.62rem;color:var(--sage);}
+.art-hero{position:relative;height:65vh;min-height:420px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=1600&q=85&auto=format&fit=crop') center 40%/cover no-repeat;filter:brightness(0.52);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.88));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.series-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--marsh2);padding:0.3rem 0.8rem;margin-bottom:0.8rem;}
+.sb-route{font-size:0.57rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);}
+.sb-sep{color:rgba(255,255,255,0.2);}
+.sb-num{font-size:0.57rem;font-weight:500;color:rgba(255,255,255,0.6);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.9rem);font-weight:900;color:#fff;line-height:1.05;max-width:700px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-h1 em{color:var(--gold2);font-style:italic;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+.art-layout{display:grid;grid-template-columns:1fr 270px;gap:2.5rem;max-width:1020px;margin:0 auto;padding:2.5rem 2rem;}
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(30,53,40,0.08);margin-bottom:2rem;}
+.info-cell{background:var(--paper);padding:0.9rem;text-align:center;}
+.info-icon{font-size:1.2rem;display:block;}
+.info-label{font-size:0.52rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.1rem;}
+.info-val{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);margin-top:0.1rem;}
+.map-wrap{margin:2rem 0;}
+.map-title{font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.6rem;}
+.map-title::after{content:'';flex:1;height:1px;background:rgba(30,53,40,0.12);}
+.map-container{width:100%;border:1px solid rgba(30,53,40,0.12);overflow:hidden;}
+.map-legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:0.8rem;padding:0.8rem;background:rgba(30,53,40,0.03);border:1px solid rgba(30,53,40,0.08);}
+.legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.68rem;color:var(--ink2);}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.legend-line{width:20px;height:3px;flex-shrink:0;}
+.art-h2{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--marsh);margin:2.2rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.5rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--reed);margin:1.5rem 0 0.4rem;font-style:italic;}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.92rem;line-height:1.88;color:var(--ink2);margin-bottom:1rem;font-weight:300;}
+.stage{border-left:3px solid var(--gold2);padding:1rem 1.2rem;margin:1.2rem 0;background:rgba(30,53,40,0.02);}
+.stage-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;flex-wrap:wrap;gap:0.5rem;}
+.stage-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--marsh);}
+.stage-dist{font-size:0.7rem;font-weight:600;color:var(--sage);background:var(--mist);padding:0.2rem 0.5rem;}
+.stage-desc{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--ink2);line-height:1.7;font-weight:300;}
+.poi-list{margin:1.5rem 0;}
+.poi-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(30,53,40,0.08);}
+.poi-item:last-child{border-bottom:none;}
+.poi-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:rgba(30,53,40,0.08);line-height:1;flex-shrink:0;min-width:32px;}
+.poi-icon{font-size:1.2rem;flex-shrink:0;margin-top:0.1rem;}
+.poi-name{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--marsh);margin-bottom:0.25rem;}
+.poi-desc{font-family:'Source Serif 4',serif;font-size:0.8rem;color:var(--ink2);line-height:1.65;font-weight:300;}
+.poi-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.3rem;}
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.2rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.82rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+.warning-block{background:#fffbf2;border-left:3px solid var(--dusk);padding:1rem 1.2rem;margin:1.2rem 0;}
+.warning-block p{font-size:0.82rem;color:#5a4a20;line-height:1.65;margin:0;font-family:'Source Serif 4',serif;}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin:1.2rem 0;}
+.food-card{background:var(--paper);padding:0.9rem;}
+.food-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.food-type{font-size:0.58rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin:0.2rem 0 0.3rem;}
+.food-desc{font-size:0.75rem;color:var(--reed);line-height:1.5;font-family:'Source Serif 4',serif;font-weight:300;}
+.food-loc{font-size:0.65rem;color:var(--sage);margin-top:0.3rem;}
+.bus-info{background:var(--marsh);padding:1.2rem 1.4rem;margin:1.5rem 0;}
+.bi-title{font-size:0.6rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+.bi-row{display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.78rem;}
+.bi-row:last-child{border-bottom:none;}
+.bi-label{color:rgba(255,255,255,0.55);font-family:'Source Serif 4',serif;}
+.bi-val{color:#fff;font-weight:500;}
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:0.9rem 1rem;margin:0.7rem 0;display:flex;gap:0.8rem;align-items:flex-start;}
+.gear-icon{font-size:1.4rem;flex-shrink:0;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.gear-desc{font-size:0.73rem;color:var(--reed);line-height:1.5;margin:0.15rem 0 0.4rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.25rem 0.75rem;font-size:0.62rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-block;}
+.walk-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin-top:2rem;}
+.wn-link{background:var(--paper);padding:1rem 1.1rem;text-decoration:none;transition:background 0.15s;display:block;}
+.wn-link:hover{background:var(--cream2);}
+.wn-dir{font-size:0.52rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.25rem;}
+.wn-title{font-family:'Playfair Display',serif;font-size:0.82rem;font-weight:700;color:var(--marsh);line-height:1.3;}
+.art-author{background:var(--cream2);padding:1.1rem 1.3rem;display:flex;gap:0.8rem;align-items:center;margin-top:2rem;border-top:2px solid var(--marsh);}
+.author-av{width:38px;height:38px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.7rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+.aside-sticky{position:sticky;top:68px;}
+.aside-map-mini{background:var(--marsh);padding:1rem;margin-bottom:1rem;}
+.aside-map-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;}
+.aside-stops{display:flex;flex-direction:column;gap:0;}
+.aside-stop{display:flex;align-items:center;gap:0.6rem;padding:0.35rem 0;position:relative;}
+.aside-stop::before{content:'';position:absolute;left:7px;top:50%;bottom:-50%;width:1px;background:rgba(255,255,255,0.1);}
+.aside-stop:last-child::before{display:none;}
+.as-dot{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);background:var(--marsh);flex-shrink:0;z-index:1;}
+.as-dot.start{background:var(--gold2);border-color:var(--gold2);}
+.as-dot.end{background:#fff;border-color:#fff;}
+.as-dot.poi{background:var(--reed);border-color:var(--reed);}
+.as-name{font-size:0.72rem;color:rgba(255,255,255,0.7);}
+.as-name.bold{color:#fff;font-weight:500;}
+.aside-widget{background:var(--marsh);padding:1.1rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.7rem;}
+.aside-link{display:flex;gap:0.5rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.04);text-decoration:none;align-items:center;cursor:pointer;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:44px;height:32px;object-fit:cover;flex-shrink:0;}
+.aside-link-title{font-size:0.68rem;color:rgba(255,255,255,0.7);line-height:1.35;}
+.aside-nl{background:var(--gold2);padding:1.1rem;}
+.aside-nl-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.2;}
+.aside-nl-input{width:100%;padding:0.45rem 0.6rem;font-size:0.7rem;border:none;margin-bottom:0.35rem;display:block;font-family:'DM Sans',sans-serif;}
+.aside-nl-btn{width:100%;background:var(--marsh);color:#fff;padding:0.45rem;border:none;font-size:0.65rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.art-layout{grid-template-columns:1fr;}.art-aside{display:none;}.info-grid{grid-template-columns:repeat(2,1fr);}.food-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.art-hero{height:55vh;}.art-layout{padding:1.5rem;}.walk-nav{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;padding:1.5rem;}}
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/coasthopper-walk-2-blakeney-salthouse.html">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="series-badge">
+      <span class="sb-route">🚌 CH1 Coasthopper</span>
+      <span class="sb-sep">·</span>
+      <span class="sb-num">Walk 2 of 8</span>
+    </div>
+    <h1 class="art-h1">Blakeney to Cley to Salthouse:<br><em>The Heart of the Norfolk Coast</em></h1>
+    <div class="art-pills">
+      <span class="art-pill">📍 Blakeney → Salthouse</span>
+      <span class="art-pill">📏 6 miles</span>
+      <span class="art-pill">⏱ 2.5–3 hours</span>
+      <span class="art-pill">🟢 Easy</span>
+      <span class="art-pill">🚌 Bus back from Salthouse</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-layout">
+  <div class="art-main">
+
+        <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24 / OL25 for North Norfolk)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before any coastal or salt marsh walk</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Verify <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:#c9a84c;">bus timetables</a> directly with Sanders Coaches before travel</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, cliff erosion, tidal changes and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside and on coastal cliff paths involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong> — for coastal emergencies ask for the Coastguard.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+<div class="pull-intro">
+      <p>This short section of the Norfolk Coast Path packs more in than walks three times its length. Blakeney's medieval quay, the River Glaven at Cley, the most famous windmill in Norfolk, one of the finest birdwatching reserves in Britain and a long shingle bank with big sea views — all in six miles. The Dun Cow in Salthouse at the end is one of the best pubs on the coast.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-cell"><span class="info-icon">📏</span><div class="info-label">Distance</div><div class="info-val">6 miles</div></div>
+      <div class="info-cell"><span class="info-icon">⏱</span><div class="info-label">Walking time</div><div class="info-val">2.5–3 hrs</div></div>
+      <div class="info-cell"><span class="info-icon">🟢</span><div class="info-label">Difficulty</div><div class="info-val">Easy</div></div>
+      <div class="info-cell"><span class="info-icon">🚌</span><div class="info-label">Bus back</div><div class="info-val">CH1 from Salthouse</div></div>
+    </div>
+
+    <!-- SVG MAP -->
+    <div class="map-wrap">
+      <div class="map-title">Route map — Blakeney to Cley to Salthouse</div>
+      <div class="map-container">
+        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;background:#e8ede6;">
+
+          <!-- Sea background -->
+          <rect x="0" y="0" width="760" height="95" fill="#b8d4e0" opacity="0.6"/>
+          <path d="M0 30 Q50 20 100 30 Q150 40 200 30 Q250 20 300 30 Q350 40 400 30 Q450 20 500 30 Q550 40 600 30 Q650 20 700 30 Q730 35 760 30" fill="none" stroke="#9abbc8" stroke-width="1" opacity="0.5"/>
+          <path d="M0 50 Q50 42 100 50 Q150 58 200 50 Q250 42 300 50 Q350 58 400 50 Q450 42 500 50 Q550 58 600 50 Q650 42 700 50 Q730 55 760 50" fill="none" stroke="#9abbc8" stroke-width="0.8" opacity="0.4"/>
+          <text x="380" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6a9aac" opacity="0.8">NORTH SEA</text>
+
+          <!-- Blakeney Point shingle spit -->
+          <path d="M 80 75 Q 200 60 350 55 Q 500 52 620 58 Q 680 62 720 70" fill="none" stroke="#c8b896" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+          <text x="350" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#7a6a4a" opacity="0.9">Blakeney Point (shingle spit)</text>
+
+          <!-- Salt marsh / reed bed areas -->
+          <ellipse cx="120" cy="145" rx="65" ry="30" fill="#8aaa72" opacity="0.3"/>
+          <ellipse cx="310" cy="148" rx="80" ry="28" fill="#8aaa72" opacity="0.35"/>
+          <ellipse cx="500" cy="145" rx="70" ry="25" fill="#8aaa72" opacity="0.3"/>
+          <text x="310" y="150" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#3a6a2a" opacity="0.8">Cley Marshes NWT</text>
+
+          <!-- River Glaven -->
+          <path d="M 380 180 Q 370 165 365 152 Q 360 140 355 125" fill="none" stroke="#6aaac8" stroke-width="2.5" opacity="0.7"/>
+          <text x="395" y="168" font-family="DM Sans,sans-serif" font-size="7" fill="#3a7a9a" opacity="0.8">R. Glaven</text>
+
+          <!-- Land -->
+          <rect x="0" y="185" width="760" height="115" fill="#d4c9a8" opacity="0.35"/>
+
+          <!-- THE ROUTE -->
+          <path d="M 80 168 Q 130 162 175 158 Q 220 154 265 150 Q 310 146 345 148 Q 365 150 380 155 Q 390 158 400 162 Q 430 168 470 165 Q 520 162 570 158 Q 620 154 670 152"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 80 168 Q 130 162 175 158 Q 220 154 265 150 Q 310 146 345 148 Q 365 150 380 155 Q 390 158 400 162 Q 430 168 470 165 Q 520 162 570 158 Q 620 154 670 152"
+            fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.6"/>
+
+          <!-- Bus road -->
+          <path d="M 80 240 L 200 238 L 380 235 L 500 234 L 670 232" fill="none" stroke="#c4956a" stroke-width="2" stroke-dasharray="6 3" opacity="0.7"/>
+          <text x="380" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#8a6030" opacity="0.9">🚌 CH1 Coasthopper (A149)</text>
+
+          <!-- BLAKENEY START -->
+          <circle cx="80" cy="168" r="9" fill="#c9a84c" stroke="#1e3528" stroke-width="2"/>
+          <text x="80" y="171" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1e3528">S</text>
+          <text x="80" y="190" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Blakeney</text>
+          <!-- Church tower -->
+          <rect x="52" y="118" width="8" height="14" fill="#8a7a6a" opacity="0.8"/>
+          <rect x="55" y="113" width="2" height="6" fill="#6a5a4a" opacity="0.8"/>
+          <text x="65" y="126" font-family="DM Sans,sans-serif" font-size="6.5" fill="#5a4a3a">St Nicholas</text>
+
+          <!-- POI 1: Blakeney Guildhall -->
+          <circle cx="90" cy="178" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="90" y="181" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">1</text>
+          <text x="105" y="188" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">Guildhall</text>
+
+          <!-- POI 2: Blakeney Eye / marshes -->
+          <circle cx="200" cy="152" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="200" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">2</text>
+          <text x="185" y="142" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">Blakeney</text>
+          <text x="185" y="150" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">Freshes</text>
+
+          <!-- POI 3: Cley Windmill -->
+          <!-- Windmill icon -->
+          <rect x="356" y="125" width="8" height="18" fill="#c8b896" stroke="#8a7a6a" stroke-width="1" opacity="0.9"/>
+          <circle cx="360" cy="124" r="4" fill="#c8b896" stroke="#8a7a6a" stroke-width="1" opacity="0.9"/>
+          <line x1="360" y1="120" x2="354" y2="112" stroke="#8a7a6a" stroke-width="1.5"/>
+          <line x1="360" y1="120" x2="366" y2="112" stroke="#8a7a6a" stroke-width="1.5"/>
+          <line x1="360" y1="120" x2="352" y2="124" stroke="#8a7a6a" stroke-width="1.5"/>
+          <line x1="360" y1="120" x2="368" y2="124" stroke="#8a7a6a" stroke-width="1.5"/>
+          <circle cx="360" cy="148" r="6" fill="#4a6b5a" stroke="#fff" stroke-width="1.5"/>
+          <text x="360" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#fff">3</text>
+          <text x="375" y="132" font-family="DM Sans,sans-serif" font-size="8" font-weight="600" fill="#1e3528">Cley</text>
+          <text x="375" y="141" font-family="DM Sans,sans-serif" font-size="7" fill="#4a6b5a">Windmill</text>
+
+          <!-- POI 4: Cley Marshes visitor centre -->
+          <circle cx="420" cy="162" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="420" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">4</text>
+          <text x="432" y="170" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">NWT Visitor</text>
+          <text x="432" y="178" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">Centre</text>
+
+          <!-- Cley Deli label -->
+          <text x="348" y="195" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a20">🧀 Picnic Fayre deli</text>
+
+          <!-- Shingle bank section -->
+          <path d="M 460 100 Q 540 95 620 98 Q 660 100 680 105" fill="none" stroke="#c8b896" stroke-width="7" stroke-linecap="round" opacity="0.5"/>
+          <text x="560" y="92" font-family="DM Sans,sans-serif" font-size="7" fill="#7a6a4a">Shingle bank</text>
+
+          <!-- POI 5: Salthouse Church -->
+          <rect x="646" y="125" width="7" height="12" fill="#8a7a6a" opacity="0.8"/>
+          <polygon points="650,123 644,128 656,128" fill="#6a5a4a" opacity="0.8"/>
+          <rect x="649" y="119" width="2" height="5" fill="#6a5a4a" opacity="0.8"/>
+          <text x="658" y="132" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">St Nicholas</text>
+          <text x="658" y="140" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">Church</text>
+
+          <!-- SALTHOUSE END -->
+          <circle cx="670" cy="152" r="9" fill="#fff" stroke="#1e3528" stroke-width="2.5"/>
+          <text x="670" y="155" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1e3528">F</text>
+          <text x="670" y="174" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Salthouse</text>
+          <!-- Dun Cow pub -->
+          <text x="650" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a20">🍺 Dun Cow</text>
+
+          <!-- Wildlife icons -->
+          <text x="300" y="128" font-family="DM Sans,sans-serif" font-size="12">🦅</text>
+          <text x="460" y="140" font-family="DM Sans,sans-serif" font-size="11">🐦</text>
+
+          <!-- COMPASS -->
+          <g transform="translate(720,268)">
+            <circle cx="0" cy="0" r="14" fill="rgba(250,246,239,0.9)" stroke="#2d4a3e" stroke-width="1"/>
+            <text x="0" y="-6" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" font-weight="700" fill="#1e3528">N</text>
+            <line x1="0" y1="-4" x2="0" y2="-10" stroke="#1e3528" stroke-width="1.5"/>
+            <line x1="0" y1="2" x2="0" y2="8" stroke="#8a8a7a" stroke-width="1"/>
+            <text x="0" y="11" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#8a8a7a">S</text>
+          </g>
+
+          <!-- Scale -->
+          <g transform="translate(30,278)">
+            <line x1="0" y1="0" x2="40" y2="0" stroke="#2d4a3e" stroke-width="1.5"/>
+            <line x1="0" y1="-3" x2="0" y2="3" stroke="#2d4a3e" stroke-width="1.5"/>
+            <line x1="40" y1="-3" x2="40" y2="3" stroke="#2d4a3e" stroke-width="1.5"/>
+            <text x="20" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#2d4a3e">1.5 miles</text>
+          </g>
+
+          <!-- Legend -->
+          <circle cx="30" cy="292" r="4" fill="#c9a84c"/>
+          <text x="38" y="296" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Start (Blakeney)</text>
+          <circle cx="130" cy="292" r="4" fill="#fff" stroke="#1e3528" stroke-width="1.5"/>
+          <text x="138" y="296" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Finish (Salthouse)</text>
+          <circle cx="235" cy="292" r="4" fill="#4a6b5a"/>
+          <text x="243" y="296" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Point of interest</text>
+
+        </svg>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#c9a84c;"></div>Start (Blakeney)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#fff;border:1.5px solid #1e3528;"></div>Finish / bus stop (Salthouse)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4a6b5a;"></div>Point of interest</div>
+        <div class="legend-item"><div class="legend-line" style="background:#1e3528;"></div>Walking route</div>
+      </div>
+    </div>
+
+    <!-- BUS INFO -->
+    <div class="bus-info">
+      <div class="bi-title">🚌 Coasthopper CH1 — Practical Information</div>
+      <div class="bi-row"><span class="bi-label">Start point</span><span class="bi-val">Blakeney Village stop (The Quay)</span></div>
+      <div class="bi-row"><span class="bi-label">Finish point</span><span class="bi-val">Salthouse village stop (Purdy Street)</span></div>
+      <div class="bi-row"><span class="bi-label">Bus back</span><span class="bi-val">CH1 Salthouse → Blakeney, approx every 60 mins</span></div>
+      <div class="bi-row"><span class="bi-label">Journey time by bus</span><span class="bi-val">~12 minutes</span></div>
+      <div class="bi-row"><span class="bi-label">Timetables & tickets</span><span class="bi-val"><a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:var(--gold2);">sanderscoaches.com/coasthopper ↗</a></span></div>
+      <div class="bi-row"><span class="bi-label">Combine with Walk 1</span><span class="bi-val">Walk Wells → Blakeney, then Blakeney → Salthouse for a full 14-mile day</span></div>
+    </div>
+
+    <!-- ROUTE DESCRIPTION -->
+    <h2 class="art-h2">The Route</h2>
+
+    <div class="stage">
+      <div class="stage-header">
+        <div class="stage-name">Stage 1 — Blakeney Quay to Blakeney Eye</div>
+        <span class="stage-dist">1.5 miles · 30 mins</span>
+      </div>
+      <p class="stage-desc">Start at Blakeney Quay — one of the most characterful spots on the Norfolk coast. Take a moment before setting off to look around the village: the 14th-century Guildhall down by the quay, the flint-fronted cottages, the boats moored in the channel at high tide. The walk starts north from the quay along the flood bank, following the Peddars Way and Norfolk Coast Path waymarks east. The path follows the marsh edge through Blakeney Freshes — a large area of grazing marsh and reed bed to the north of the village. Blakeney Eye is the point where the path turns south towards the River Glaven — a beautiful open viewpoint with Blakeney Point visible to the north and the church tower of St Nicholas behind you.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header">
+        <div class="stage-name">Stage 2 — Blakeney Eye to Cley-next-the-Sea</div>
+        <span class="stage-dist">1.5 miles · 30 mins</span>
+      </div>
+      <p class="stage-desc">From Blakeney Eye the path turns south and follows the channel of the River Glaven into Cley. The Glaven is a small but beautiful river — look for kingfishers darting along the bank and little egrets standing motionless in the shallows. The path arrives at Cley from the north, passing the famous Cley windmill on your right. The windmill is a 19th-century tower mill, beautifully restored and now operating as a holiday let and B&B. Stop in Cley to explore — the village has the excellent Picnic Fayre deli for supplies, the Cley Smokehouse for kippers and smoked fish, and the Norfolk Wildlife Trust visitor centre a short distance east on the A149.</p>
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">Cley deli tip</div>
+      <p><strong>Picnic Fayre</strong> in Cley is one of the finest delis on the Norfolk coast — extraordinary cheese, local meats, homemade pies and bread. Stock up here for a proper picnic on the shingle bank at Salthouse. The Cley Smokehouse next door does the best smoked salmon and kippers in Norfolk — worth buying to take home even if you don't open them until you're back.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header">
+        <div class="stage-name">Stage 3 — Cley to Salthouse along the Shingle Bank</div>
+        <span class="stage-dist">3 miles · 1.5 hours</span>
+      </div>
+      <p class="stage-desc">From Cley, the Coast Path crosses the A149 and heads north to the beach, then turns east along the shingle bank towards Salthouse. This is the most dramatic section of the walk — the shingle bank is exposed, wide and utterly open, with the North Sea on one side and the internationally important Cley and Salthouse Marshes on the other. The shingle ridge which begins at Weybourne is 8 miles long and has grown westwards over time, forming Blakeney Point spit. Vegetated shingle is a rare habitat, home to scarce plants such as horned sea poppy, sea pea and shrubby sea blight. Walking on shingle is slower than it looks — allow more time than the distance suggests. The views are extraordinary in every direction. Salthouse village appears behind the shingle after about 3 miles — descend from the bank and cross the marsh path into the village.</p>
+    </div>
+
+    <div class="warning-block">
+      <p>⚠️ <strong>Shingle walking:</strong> The shingle bank section is completely exposed to the North Sea wind. Even on warm days bring a windproof layer. Walking on shingle is hard on the ankles — boots with good ankle support make a real difference. In rough weather the sea can wash over the lower sections of the bank — check the forecast before setting out.</p>
+    </div>
+
+    <!-- POINTS OF INTEREST -->
+    <h2 class="art-h2">Points of Interest</h2>
+
+    <div class="poi-list">
+
+      <div class="poi-item">
+        <div class="poi-num">1</div>
+        <div class="poi-icon">🏛</div>
+        <div>
+          <div class="poi-name">Blakeney Guildhall</div>
+          <div class="poi-desc">A 14th-century brick undercroft right on Blakeney Quay — one of the oldest buildings in Norfolk. According to local legend it was connected by tunnels to the church and the quay, used by medieval merchants and later by smugglers. The Guildhall is listed by Historic England and is open to the public. The story of the Blakeney Fiddler — a musician who went into the tunnels and was never seen again, heard only as a faint melody beneath the streets — is depicted on the village sign.</div>
+          <div class="poi-tag">📍 Blakeney Quay · English Heritage</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">2</div>
+        <div class="poi-icon">🌊</div>
+        <div>
+          <div class="poi-name">Blakeney Freshes</div>
+          <div class="poi-desc">The extensive area of marsh and grazing meadow between Blakeney village and the River Glaven. A decaying boat stuck in the mudflats has been there for years — abandoned but now possessing a certain aesthetic beauty that has made it one of the most photographed spots on the walk. The Freshes are managed as grazing marsh, and the combination of wet grassland and reed bed edges attracts snipe, redshank and yellow wagtails in season.</div>
+          <div class="poi-tag">📍 Between Blakeney and Blakeney Eye on the Coast Path</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">3</div>
+        <div class="poi-icon">🏗</div>
+        <div>
+          <div class="poi-name">Cley Windmill</div>
+          <div class="poi-desc">The most photographed windmill in Norfolk — and probably in England. A 19th-century tower mill standing on the edge of the village, perfectly reflected in the river channel at high water. The mill is now a B&B and holiday accommodation — staying in it is on the bucket list of many Norfolk visitors. Even if you're not staying, the view from the road is extraordinary and it's worth a brief detour to see it close up. Viewed from the end of the 17th-century deep water quay it's particularly fine.</div>
+          <div class="poi-tag">📍 Cley-next-the-Sea NR25 7RN · B&B: cleywindmill.co.uk</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">4</div>
+        <div class="poi-icon">🦅</div>
+        <div>
+          <div class="poi-name">Cley Marshes NWT Visitor Centre</div>
+          <div class="poi-desc">Norfolk Wildlife Trust's flagship reserve — one of the most important birdwatching sites in Britain. The striking eco-friendly visitor centre sits on the A149 at the eastern edge of Cley and is worth a stop even if you don't go into the reserve. The staff are brilliant, the information is excellent, and the hides overlook lagoons where avocets, marsh harriers and a rotating cast of rare waders can be seen year-round. Entry to the reserve requires an NWT membership or day ticket.</div>
+          <div class="poi-tag">📍 Cley NR25 7SA · nwt.org.uk · Entry charge or NWT membership</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">5</div>
+        <div class="poi-icon">⛪</div>
+        <div>
+          <div class="poi-name">St Nicholas Church, Salthouse</div>
+          <div class="poi-desc">The medieval church dates to the 1200s and sits in a fine location on a hill, offering splendid views along the coast and out to sea. It's one of the finest churches on the Norfolk coast — built with the wealth of the medieval wool trade that made this coastline prosperous. The churchyard has some remarkable old gravestones and the view from the south porch across the marshes to the sea is one of the best in Norfolk. The church is usually open.</div>
+          <div class="poi-tag">📍 Salthouse, NR25 7XB · Usually open daily</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WILDLIFE -->
+    <h2 class="art-h2">Wildlife on This Walk</h2>
+    <p class="art-p">This is genuinely one of the finest short birdwatching walks in Britain. The combination of freshwater marsh, reed bed, river, shingle and saltmarsh habitat in a single 6-mile route is extraordinary.</p>
+    <ul style="padding-left:0;list-style:none;margin-bottom:1rem;">
+      <li style="display:flex;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid rgba(30,53,40,0.07);font-family:'Source Serif 4',serif;font-size:0.88rem;color:var(--ink2);font-weight:300;"><span>🦅</span><div><strong style="color:var(--marsh);font-weight:600;">Marsh Harriers</strong> — hunt over the Cley and Salthouse marshes throughout the year. Multiple pairs breed at Cley. The sky above the reed beds in spring can have four or five birds visible simultaneously.</div></li>
+      <li style="display:flex;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid rgba(30,53,40,0.07);font-family:'Source Serif 4',serif;font-size:0.88rem;color:var(--ink2);font-weight:300;"><span>🐦</span><div><strong style="color:var(--marsh);font-weight:600;">Avocets</strong> — the iconic black and white wader breeds on the Cley lagoons. Elegant and unmistakable, sweeping their upturned bills through the water. Best seen from the NWT hides.</div></li>
+      <li style="display:flex;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid rgba(30,53,40,0.07);font-family:'Source Serif 4',serif;font-size:0.88rem;color:var(--ink2);font-weight:300;"><span>🦢</span><div><strong style="color:var(--marsh);font-weight:600;">Bearded Tits</strong> — tiny, acrobatic reed bed specialists that ping across the tops of the phragmites at Cley. Easy to hear, harder to see well — patience rewarded.</div></li>
+      <li style="display:flex;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid rgba(30,53,40,0.07);font-family:'Source Serif 4',serif;font-size:0.88rem;color:var(--ink2);font-weight:300;"><span>🌸</span><div><strong style="color:var(--marsh);font-weight:600;">Horned Sea Poppy</strong> — bright yellow flowers on the shingle bank between Cley and Salthouse, typically June–August. One of the most striking wildflowers on the Norfolk coast.</div></li>
+      <li style="display:flex;gap:0.8rem;padding:0.5rem 0;font-family:'Source Serif 4',serif;font-size:0.88rem;color:var(--ink2);font-weight:300;"><span>🦦</span><div><strong style="color:var(--marsh);font-weight:600;">Otters</strong> — occasionally seen on the River Glaven near Cley, particularly at dawn and dusk. Look for spraint (droppings) on exposed rocks in the channel as evidence of their presence.</div></li>
+    </ul>
+
+    <!-- FOOD AND DRINK -->
+    <h2 class="art-h2">Food and Drink</h2>
+
+    <div class="food-grid">
+      <div class="food-card">
+        <div class="food-name">Picnic Fayre, Cley</div>
+        <div class="food-type">Deli · Midway</div>
+        <div class="food-desc">One of the finest delis on the Norfolk coast. Exceptional cheese, local produce, homemade pies, excellent bread. Stock up here for a picnic on the shingle bank — far better than any pub lunch.</div>
+        <div class="food-loc">📍 High Street, Cley NR25 7RF</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">Cley Smokehouse</div>
+        <div class="food-type">Specialist food shop · Cley</div>
+        <div class="food-desc">Kippers, salmon, smoked prawns and more — smoked in traditional oak kilns. The smoked salmon is extraordinary. Even if you only buy something to take home, it's worth the detour.</div>
+        <div class="food-loc">📍 High Street, Cley NR25 7RF</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">The Three Swallows, Cley</div>
+        <div class="food-type">Pub · Cley</div>
+        <div class="food-desc">The village pub at Cley — good simple food, reliable ales and a friendly atmosphere. Handy for a midpoint break before continuing to Salthouse.</div>
+        <div class="food-loc">📍 High Street, Cley NR25 7RG</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">The Dun Cow, Salthouse</div>
+        <div class="food-type">Pub · End of walk</div>
+        <div class="food-desc">They do good food and have an interesting interior with wood beams and an exposed brick fireplace. Outside there's a lovely garden area with fine views over the Salthouse Marshes. Dog friendly. One of our favourite post-walk pubs on the entire Norfolk coast.</div>
+        <div class="food-loc">📍 Purdy Street, Salthouse NR25 7XA</div>
+      </div>
+    </div>
+
+    <!-- GEAR -->
+    <h2 class="art-h2">What to Bring</h2>
+
+    <div class="gear-item">
+      <span class="gear-icon">🥾</span>
+      <div>
+        <div class="gear-name">Waterproof Walking Boots</div>
+        <div class="gear-desc">Essential for the marsh-edge sections around Blakeney and the River Glaven. The shingle bank section is fine in most footwear but ankle support helps significantly on loose shingle.</div>
+        <a class="gear-btn" href="article-2-walking-boots.html">Read Our Boots Guide →</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🔭</span>
+      <div>
+        <div class="gear-name">Binoculars — Essential for Cley Marshes</div>
+        <div class="gear-desc">Cley is one of the finest birdwatching sites in Britain. Without binoculars you'll see birds — with them you'll identify them. If you ever invest in binoculars for Norfolk walking, do it before this walk.</div>
+        <a class="gear-btn" href="article-5-binoculars.html">Read Our Binoculars Guide →</a>
+      </div>
+    </div>
+
+    <div class="art-author">
+      <div class="author-av">🌿</div>
+      <div>
+        <div class="author-name">NorfolkWild</div>
+        <div class="author-bio">Written in North Norfolk. Cley Marshes is one of Norfolk's most important reserves. Updated May 2026.</div>
+      </div>
+    </div>
+
+    <div class="walk-nav">
+      <a class="wn-link" href="coasthopper-walk-1-wells-blakeney.html">
+        <div class="wn-dir">← Previous walk</div>
+        <div class="wn-title">Walk 1: Wells to Blakeney</div>
+      </a>
+      <a class="wn-link" href="coasthopper-hub.html" style="text-align:right;">
+        <div class="wn-dir">Next walk →</div>
+        <div class="wn-title">Walk 3: Salthouse to Sheringham</div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ASIDE -->
+  <div class="art-aside">
+    <div class="aside-sticky">
+      <div class="aside-map-mini">
+        <div class="aside-map-label">Route stops</div>
+        <div class="aside-stops">
+          <div class="aside-stop"><div class="as-dot start"></div><span class="as-name bold">🚌 Blakeney Quay</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Blakeney Guildhall 🏛</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Blakeney Freshes ⛵</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Blakeney Eye viewpoint</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">River Glaven 🦦</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name bold">Cley windmill 🏗</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Picnic Fayre deli 🧀</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">NWT Visitor Centre 🦅</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Shingle bank walk</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">St Nicholas Church ⛪</span></div>
+          <div class="aside-stop"><div class="as-dot end"></div><span class="as-name bold">🚌 Salthouse + Dun Cow 🍺</span></div>
+        </div>
+      </div>
+      <div class="aside-widget">
+        <div class="aside-label">More Coasthopper walks</div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-1-wells-blakeney.html'">
+          <img class="aside-thumb" src="https://images.unsplash.com/photo-1621532076337-db3b804ee109?w=90&q=60" alt="">
+          <div class="aside-link-title">Walk 1: Wells to Blakeney</div>
+        </div>
+        <div class="aside-link" onclick="window.location='coasthopper-hub.html'">
+          <img class="aside-thumb" src="https://images.unsplash.com/photo-1557869240-c53059f36611?w=90&q=60" alt="">
+          <div class="aside-link-title">Walk 3: Salthouse to Sheringham</div>
+        </div>
+        <div class="aside-link" onclick="window.location='coasthopper-hub.html'">
+          <img class="aside-thumb" src="https://images.unsplash.com/photo-1624866181865-91b01ff7400a?w=90&q=60" alt="">
+          <div class="aside-link-title">Walk 4: Sheringham to Cromer</div>
+        </div>
+        <div class="aside-link" onclick="window.location='coasthopper-hub.html'">
+          <img class="aside-thumb" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=90&q=60" alt="">
+          <div class="aside-link-title">All 8 Coasthopper Walks →</div>
+        </div>
+      </div>
+      <div class="aside-nl">
+        <div class="aside-nl-title">New walks every week — free.</div>
+        <a href="https://norfolkwild.substack.com" target="_blank" style="display:block;width:100%;background:var(--marsh);color:#fff;padding:0.5rem;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.06em;text-align:center;text-decoration:none;">Subscribe free on Substack →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div><div class="footer-wm">Norfolk<em>Wild</em></div><div class="footer-tag">Independent outdoor guides from North Norfolk.</div></div>
+  <div class="footer-col">
+    <h4>CH1 Walks</h4>
+    <a href="coasthopper-walk-1-wells-blakeney.html">Walk 1: Wells to Blakeney</a>
+    <a href="coasthopper-walk-2-blakeney-salthouse.html">Walk 2: Blakeney to Salthouse</a>
+    <a href="coasthopper-hub.html">Walk 3: Salthouse to Sheringham</a>
+    <a href="coasthopper-hub.html">Walk 4: Sheringham to Cromer</a>
+  </div>
+  <div class="footer-col">
+    <h4>CH2 Walks</h4>
+    <a href="coasthopper-hub.html">Walk 5: Cromer to Overstrand</a>
+    <a href="coasthopper-hub.html">Walk 6: Overstrand to Trimingham</a>
+    <a href="coasthopper-hub.html">Walk 7: Trimingham to Mundesley</a>
+    <a href="coasthopper-hub.html">Walk 8: Mundesley to Walcott</a>
+  </div>
+      <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Walking Boots</a>
+    <a href="shop.html#optics">Binoculars</a>
+    <a href="shop.html#wildlife-tech">Trail Cams</a>
+    <a href="shop.html#nature-garden">Wildflower Seeds</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="mailto:hello@norfolkwild.co.uk">Contact</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 NorfolkWild.co.uk</span>
+  <span>Written in North Norfolk</span>
+</div>
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

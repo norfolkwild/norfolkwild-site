@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norwich City Centre Walking Guide — NorfolkWild</title>
+<meta name="description" content="Discover the historic heart of Norwich. Explore the medieval Lanes, the scenic Riverside Walk along the Wensum, and the hidden gems of England's most complete medieval city.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--sky:#a8c4b8;--mist:#e4ede6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.topnav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wordmark{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;line-height:1;}
+.nav-wordmark em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1.4rem;align-items:center;}
+.nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--marsh);color:#fff;padding:0.38rem 0.9rem;font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--marsh2);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink2);margin:5px 0;transition:0.3s;}
+.hamburger.active span:nth-child(1){transform:rotate(-45deg) translate(-5px, 6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(45deg) translate(-5px, -6px);}
+@media(max-width:600px){.hamburger{display:block;}.nav-links{position:fixed;top:52px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;display:none;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}.nav-links.active{display:flex;}.nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);}.topnav{padding:0 1rem;}}
+.article-hero{background:linear-gradient(160deg,rgba(22,28,24,0.72) 0%,rgba(22,28,24,0.1) 50%,rgba(22,28,24,0.7) 100%),url('https://images.unsplash.com/photo-1543833333-25a1bf042967?w=1600&q=85&auto=format&fit=crop') center 60%/cover no-repeat;min-height:50vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 2rem 3rem;padding-top:52px;position:relative;}
+.hero-content{max-width:900px;margin:0 auto;width:100%;}
+.hero-eyebrow{font-size:0.6rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:0.8rem;margin-bottom:0.9rem;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold2);}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1px;margin-bottom:1rem;}
+.hero-title em{color:var(--gold2);font-style:italic;}
+.article-body{max-width:900px;margin:0 auto;padding:3rem 2rem;}
+.article-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(30,53,40,0.08);font-size:0.8rem;color:var(--sage);}
+.meta-item{display:flex;gap:0.4rem;align-items:center;}
+.article-section{margin-bottom:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--marsh);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gold);}
+.article-text{font-size:0.95rem;line-height:1.8;color:var(--ink);margin-bottom:1.2rem;}
+.article-text strong{color:var(--marsh);}
+.walk-details{background:var(--cream2);padding:1.5rem;border-left:4px solid var(--gold);margin:1.5rem 0;}
+.walk-details h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.walk-details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;}
+.detail-item{font-size:0.8rem;}
+.detail-label{font-weight:600;color:var(--marsh);margin-bottom:0.2rem;}
+.detail-value{color:var(--reed);}
+.affiliate-box{background:#fff;border:1px solid rgba(30,53,40,0.08);padding:1.5rem;margin:2rem 0;border-radius:4px;}
+.affiliate-box h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:1rem;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
+.product-card{text-align:center;}
+.product-card img{width:100%;height:150px;object-fit:cover;margin-bottom:0.8rem;background:#eee;}
+.product-name{font-size:0.8rem;font-weight:600;color:var(--marsh);margin-bottom:0.5rem;line-height:1.3;}
+.product-link{background:var(--gold2);color:var(--ink);padding:0.5rem 1rem;font-size:0.65rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;transition:background 0.2s;display:inline-block;}
+.product-link:hover{background:var(--gold);}
+.safety-warning{background:rgba(184,146,58,0.1);border-left:4px solid var(--gold);padding:1.5rem;margin:2rem 0;border-radius:2px;}
+.safety-warning h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.safety-warning p{font-size:0.9rem;line-height:1.6;color:var(--reed);}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;transition:color 0.15s;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.walk-details-grid{grid-template-columns:repeat(2,1fr);}.product-grid{grid-template-columns:repeat(2,1fr);}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.walk-details-grid{grid-template-columns:1fr;}.product-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;}.article-body{padding:2rem 1rem;}}
+
+  .page-hero{background:#1e3528;padding:3.5rem max(2rem,calc(50% - 620px + 2rem)) 3rem;}
+  .page-hero .eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+  .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1px;}
+  .page-hero h1 em{color:var(--gold2);font-style:italic;}
+  .page-hero p{color:rgba(255,255,255,0.6);font-size:0.95rem;margin-top:0.8rem;max-width:520px;}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span class="nav-wordmark">Norfolk<em>Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="page-hero" style="background:linear-gradient(to bottom,rgba(30,53,40,0.5),rgba(30,53,40,0.85)),url('https://images.unsplash.com/photo-1577811971829-dc7a6e8a1a47?w=1600&q=85') center/cover;">
+  <div class="eyebrow">🏙️ City Walk — Norwich</div>
+  <h1>Norwich: England's<br><em>finest medieval city</em></h1>
+  <p>Cathedral Close to Elm Hill, the River Wensum to hidden gardens — Norwich rewards the walker like nowhere else in Norfolk.</p>
+</div>
+<div class="article-hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Medieval Heart & Riverside Paths</div>
+    <h1 class="hero-title">Norwich: <em>The Fine City on the Wensum</em></h1>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="article-meta">
+    <div class="meta-item">📍 Norwich, Norfolk</div>
+    <div class="meta-item">📏 2.5-5 miles (various routes)</div>
+    <div class="meta-item">⏱️ 1-3 hours</div>
+    <div class="meta-item">🟢 Easy</div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">England's Most Complete Medieval City</h2>
+    <p class="article-text">Norwich is a city that is best discovered on foot. Often described as England's most complete medieval city, it boasts a stunning array of historic architecture, from the mighty hill-topping Norman Castle to the winding cobblestone lanes of the Lanes and Elm Hill. But Norwich is also a city of water, defined by the winding River Wensum that meanders through its heart.</p>
+    <p class="article-text">Walking in Norwich is a journey through centuries of history, where every corner reveals a new story—from the mystical anchorite Julian of Norwich to the city's prosperous textile past. This guide explores the most scenic and historic routes through the city centre, combining urban charm with peaceful riverside escapes.</p>
+  </div>
+
+  <div class="walk-details">
+    <h4>Quick Facts</h4>
+    <div class="walk-details-grid">
+      <div class="detail-item">
+        <div class="detail-label">Parking</div>
+        <div class="detail-value">St Andrews Car Park or Rose Lane</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Best Season</div>
+        <div class="detail-value">Year-round (Spring for riverside blossoms)</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Terrain</div>
+        <div class="detail-value">Flat riverside paths and historic cobbled streets</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Accessibility</div>
+        <div class="detail-value">Excellent—riverside walk is mostly level and paved</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Riverside Walk (2.5 miles)</h2>
+    <p class="article-text">The <strong>Norwich Riverside Walk</strong> is a peaceful, concrete path that follows the River Wensum through the city centre. It offers a unique perspective on the city's most iconic landmarks, far removed from the noise of the traffic. Starting near the railway station, the walk takes you past the magical <strong>Pull's Ferry</strong>, a medieval watergate that was once the entrance to the canal used to transport stone for the Cathedral.</p>
+    <p class="article-text">As you continue, you'll pass the 14th-century <strong>Cow Tower</strong>, one of England's earliest purpose-built artillery blockhouses, and <strong>Bishop Bridge</strong>, the city's only surviving medieval bridge. The route also takes you past the historic <strong>St James Mill</strong> and through the colorful <strong>Quayside</strong> area. It's a gentle, scenic stroll that can be completed in about an hour, with plenty of opportunities for photos of the Cathedral's soaring spire.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Medieval Heart: Elm Hill & The Lanes (1-2 miles)</h2>
+    <p class="article-text">For a true step back in time, head to <strong>Elm Hill</strong>, arguably the most famous street in Norwich. This stunning cobblestone lane is lined with Tudor merchant's houses and specialty shops, and has been the backdrop for numerous films. It's the perfect starting point for exploring the <strong>Norwich Lanes</strong>, a series of historic alleys and passages filled with independent boutiques, cafes, and pubs.</p>
+    <p class="article-text">This area was once the hub of the city's prosperous textile industry. As you wander, look out for the <strong>Guildhall</strong>, a 15th-century masterpiece of flint-work, and the massive <strong>St Peter Mancroft Church</strong>, which stands as a testament to the city's medieval wealth. Don't miss the <strong>Royal Arcade</strong>, a beautiful Art Nouveau shopping gallery designed by George Skipper.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Hidden Gems & Secret Gardens</h2>
+    <p class="article-text">Norwich is full of hidden corners. <strong>St Julian's Church and Shrine</strong> is a quiet sanctuary dedicated to Julian of Norwich, the first woman to write a book in English. You can visit the recreated cell where she lived as an anchoress in the 14th century. For a bit of greenery, seek out the <strong>Plantation Garden</strong> (often called the "Secret Garden"), a restored Victorian garden tucked away behind the Roman Catholic Cathedral.</p>
+    <p class="article-text">The city's many "Nooks and Crannies"—historic passageways and yards—are also worth exploring. Many of these lead to small courtyards or hidden views of the river and the city's 31 surviving medieval churches.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Wildlife in the City</h2>
+    <p class="article-text">Despite being an urban walk, the Riverside Walk is a great place to spot wildlife. Swans, geese, and mallards are constant companions on the Wensum, and if you're lucky, you might spot a kingfisher darting along the banks near Cow Tower. At dusk, Pipistrelle bats can often be seen feeding over the river near Bishop Bridge. The city's many churchyards also provide vital green corridors for birds and insects.</p>
+  </div>
+
+  <div class="safety-warning">
+    <h4>⚠️ Safety & Practical Information</h4>
+    <p>Walking in Norwich is generally very safe and easy, but keep the following in mind:</p>
+    <ul style="margin-left:1.5rem;margin-top:0.8rem;line-height:1.8;font-size:0.9rem;">
+      <li>Cobblestone streets like Elm Hill can be slippery when wet—wear shoes with good grip.</li>
+      <li>The Riverside Walk is mostly level, but take care near the water's edge, especially with children.</li>
+      <li>Public toilets are available at The Forum and in the city's main shopping centres.</li>
+      <li>Norwich is a "city of hills"—be prepared for some gentle gradients when moving between the river and the city centre.</li>
+      <li>The city centre can be busy on market days (Monday-Saturday), so plan accordingly.</li>
+    </ul>
+  </div>
+
+  <div class="affiliate-box">
+    <h4>Recommended Gear for Norwich City Walks</h4>
+    <p style="font-size:0.85rem;margin-bottom:1.2rem;color:var(--reed);">Comfort is key for exploring the city's historic streets and riverside paths:</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-name">Comfortable City Walking Shoes</div>
+        <a href="https://www.amazon.co.uk/s?k=comfortable+city+walking+shoes&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">Norwich & Norfolk Guidebook</div>
+        <a href="https://www.amazon.co.uk/s?k=Norwich+Norfolk+Guidebook&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">Compact Binoculars for Architecture & Wildlife</div>
+        <a href="https://www.amazon.co.uk/s?k=compact+binoculars+city&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">Stylish Lightweight Daypack</div>
+        <a href="https://www.amazon.co.uk/s?k=stylish+lightweight+daypack&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Getting There</h2>
+    <p class="article-text"><strong>By Car:</strong> Norwich is well-connected by the A47 and A11. Use St Andrews Car Park for central access or Rose Lane for the Riverside area.</p>
+    <p class="article-text"><strong>By Public Transport:</strong> Norwich Railway Station is a major hub with direct links to London, Cambridge, and the rest of Norfolk. The city's bus station is also centrally located, serving local and national routes.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-col">
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Exploring the wild beauty and hidden gems of North Norfolk.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="index.html">Home</a>
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Footwear</a>
+    <a href="shop.html#optics">Optics</a>
+    <a href="shop.html#wildlife-tech">Wildlife Tech</a>
+    <a href="shop.html#nature-garden">Nature & Garden</a>
+    <a href="shop.html#walking-aids">Walking Aids</a>
+    <a href="shop.html#foot-care">Foot Care</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#about">About NorfolkWild</a>
+    <a href="norfolk-wild-legal.html#contact">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://norfolkwild.substack.com" target="_blank">Newsletter</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>&copy; 2026 NorfolkWild. All rights reserved.</span>
+  <span>Written in North Norfolk</span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+  
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

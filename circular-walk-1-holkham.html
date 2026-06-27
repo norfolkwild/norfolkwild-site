@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holkham Circular Walk: Beach, Pinewoods and Lady Anne's Drive | NorfolkWild</title>
+<meta name="description" content="A 5-mile circular walk through Holkham's pinewoods, along the famous beach, and back through the National Nature Reserve. Norfolk's most popular circular walk, fully described with map.">
+<link rel="canonical" href="https://www.norfolkwild.co.uk/circular-walk-1-holkham.html">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;--dusk:#c4956a;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-back{font-size:0.65rem;font-weight:500;color:var(--reed);text-decoration:none;}
+.nav-series{font-size:0.62rem;color:var(--sage);}
+.art-hero{position:relative;height:65vh;min-height:420px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1621532076337-db3b804ee109?w=1600&q=85&auto=format&fit=crop') center 40%/cover no-repeat;filter:brightness(0.52);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.88));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.series-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--gold2);padding:0.3rem 0.8rem;margin-bottom:0.8rem;}
+.sb-route{font-size:0.57rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.9rem);font-weight:900;color:#fff;line-height:1.05;max-width:700px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-h1 em{color:var(--gold2);font-style:italic;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+.art-layout{display:grid;grid-template-columns:1fr 270px;gap:2.5rem;max-width:1020px;margin:0 auto;padding:2.5rem 2rem;}
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(30,53,40,0.08);margin-bottom:2rem;}
+.info-cell{background:var(--paper);padding:0.9rem;text-align:center;}
+.info-icon{font-size:1.2rem;display:block;}
+.info-label{font-size:0.52rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.1rem;}
+.info-val{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);margin-top:0.1rem;}
+.map-wrap{margin:2rem 0;}
+.map-title{font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.6rem;}
+.map-title::after{content:'';flex:1;height:1px;background:rgba(30,53,40,0.12);}
+.map-container{width:100%;border:1px solid rgba(30,53,40,0.12);overflow:hidden;}
+.map-legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:0.8rem;padding:0.8rem;background:rgba(30,53,40,0.03);border:1px solid rgba(30,53,40,0.08);}
+.legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.68rem;color:var(--ink2);}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.legend-line{width:20px;height:3px;flex-shrink:0;}
+.art-h2{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--marsh);margin:2.2rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.5rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.92rem;line-height:1.88;color:var(--ink2);margin-bottom:1rem;font-weight:300;}
+.stage{border-left:3px solid var(--gold2);padding:1rem 1.2rem;margin:1.2rem 0;background:rgba(30,53,40,0.02);}
+.stage-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;flex-wrap:wrap;gap:0.5rem;}
+.stage-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--marsh);}
+.stage-dist{font-size:0.7rem;font-weight:600;color:var(--sage);background:var(--mist);padding:0.2rem 0.5rem;}
+.stage-desc{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--ink2);line-height:1.7;font-weight:300;}
+.poi-list{margin:1.5rem 0;}
+.poi-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(30,53,40,0.08);}
+.poi-item:last-child{border-bottom:none;}
+.poi-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:rgba(30,53,40,0.08);line-height:1;flex-shrink:0;min-width:32px;}
+.poi-icon{font-size:1.2rem;flex-shrink:0;margin-top:0.1rem;}
+.poi-name{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--marsh);margin-bottom:0.25rem;}
+.poi-desc{font-family:'Source Serif 4',serif;font-size:0.8rem;color:var(--ink2);line-height:1.65;font-weight:300;}
+.poi-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.3rem;}
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.2rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.82rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+.warning-block{background:#fffbf2;border-left:3px solid var(--dusk);padding:1rem 1.2rem;margin:1.2rem 0;}
+.warning-block p{font-size:0.82rem;color:#5a4a20;line-height:1.65;margin:0;font-family:'Source Serif 4',serif;}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin:1.2rem 0;}
+.food-card{background:var(--paper);padding:0.9rem;}
+.food-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.food-type{font-size:0.58rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin:0.2rem 0 0.3rem;}
+.food-desc{font-size:0.75rem;color:var(--reed);line-height:1.5;font-family:'Source Serif 4',serif;font-weight:300;}
+.food-loc{font-size:0.65rem;color:var(--sage);margin-top:0.3rem;}
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:0.9rem 1rem;margin:0.7rem 0;display:flex;gap:0.8rem;align-items:flex-start;}
+.gear-icon{font-size:1.4rem;flex-shrink:0;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.gear-desc{font-size:0.73rem;color:var(--reed);line-height:1.5;margin:0.15rem 0 0.4rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.25rem 0.75rem;font-size:0.62rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-block;}
+.art-author{background:var(--cream2);padding:1.1rem 1.3rem;display:flex;gap:0.8rem;align-items:center;margin-top:2rem;border-top:2px solid var(--marsh);}
+.author-av{width:38px;height:38px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.7rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+.aside-sticky{position:sticky;top:68px;}
+.aside-map-mini{background:var(--marsh);padding:1rem;margin-bottom:1rem;}
+.aside-map-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;}
+.aside-stops{display:flex;flex-direction:column;gap:0;}
+.aside-stop{display:flex;align-items:center;gap:0.6rem;padding:0.35rem 0;position:relative;}
+.aside-stop::before{content:'';position:absolute;left:7px;top:50%;bottom:-50%;width:1px;background:rgba(255,255,255,0.1);}
+.aside-stop:last-child::before{display:none;}
+.as-dot{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);background:var(--marsh);flex-shrink:0;z-index:1;}
+.as-dot.start{background:var(--gold2);border-color:var(--gold2);}
+.as-dot.poi{background:var(--reed);border-color:var(--reed);}
+.as-name{font-size:0.72rem;color:rgba(255,255,255,0.7);}
+.as-name.bold{color:#fff;font-weight:500;}
+.aside-widget{background:var(--marsh);padding:1.1rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.7rem;}
+.aside-link{display:flex;gap:0.5rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.04);text-decoration:none;align-items:center;cursor:pointer;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:44px;height:32px;object-fit:cover;flex-shrink:0;}
+.aside-link-title{font-size:0.68rem;color:rgba(255,255,255,0.7);line-height:1.35;}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.art-layout{grid-template-columns:1fr;}.art-aside{display:none;}.info-grid{grid-template-columns:repeat(2,1fr);}.food-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.art-hero{height:55vh;}.art-layout{padding:1.5rem;}.footer{grid-template-columns:1fr;padding:1.5rem;}}
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="series-badge"><span class="sb-route">🔄 Circular Walk</span></div>
+    <h1 class="art-h1">Holkham Circular:<br><em>Beach, Pinewoods and Lady Anne's Drive</em></h1>
+    <div class="art-pills">
+      <span class="art-pill">📍 Holkham, North Norfolk</span>
+      <span class="art-pill">📏 5 miles</span>
+      <span class="art-pill">⏱ 2.5 hours</span>
+      <span class="art-pill">🟢 Easy</span>
+      <span class="art-pill">🐕 Dog friendly</span>
+      <span class="art-pill">🅿 Single car park</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-layout">
+  <div class="art-main">
+
+    <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin-bottom:2rem;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before walking the beach section</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Keep dogs under control near nesting birds and livestock</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures and tidal changes may differ from those described. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong>.
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-intro">
+      <p>This is the most popular circular walk in Norfolk — and for good reason. Ancient pinewoods, one of England's finest beaches, a tidal lagoon alive with birds, and the option to extend through Holkham Park past the great house and lake. A single car park serves the whole route, making it ideal for a relaxed half-day out.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-cell"><span class="info-icon">📏</span><div class="info-label">Distance</div><div class="info-val">5 miles</div></div>
+      <div class="info-cell"><span class="info-icon">⏱</span><div class="info-label">Duration</div><div class="info-val">2.5 hours</div></div>
+      <div class="info-cell"><span class="info-icon">🟢</span><div class="info-label">Difficulty</div><div class="info-val">Easy</div></div>
+      <div class="info-cell"><span class="info-icon">🅿</span><div class="info-label">Parking</div><div class="info-val">NR23 1RG</div></div>
+    </div>
+
+    <div class="map-wrap">
+      <div class="map-title">Route map — Holkham Circular</div>
+      <div class="map-container">
+        <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;background:#e8ede6;">
+          <!-- Sea at top -->
+          <rect x="0" y="0" width="760" height="70" fill="#b8d4e0" opacity="0.6"/>
+          <path d="M0 25 Q100 15 200 25 Q300 35 400 25 Q500 15 600 25 Q700 35 760 28" fill="none" stroke="#9abbc8" stroke-width="1" opacity="0.5"/>
+          <text x="380" y="18" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6a9aac" opacity="0.8">NORTH SEA</text>
+
+          <!-- Beach sand area -->
+          <ellipse cx="380" cy="85" rx="280" ry="22" fill="#e8d8a0" opacity="0.55"/>
+          <text x="380" y="88" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#7a6a30">Holkham Beach</text>
+
+          <!-- Dunes -->
+          <path d="M120 105 Q200 98 280 105 Q360 112 440 105 Q520 98 600 105 Q650 109 680 106" fill="none" stroke="#d4c498" stroke-width="9" stroke-linecap="round" opacity="0.5"/>
+
+          <!-- Pinewoods - green band -->
+          <rect x="100" y="115" width="560" height="55" fill="#3a5a3a" opacity="0.25"/>
+          <text x="380" y="145" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" fill="#1a4a1a" font-weight="600">Holkham Pinewoods</text>
+
+          <!-- Abraham's Bosom lake -->
+          <ellipse cx="190" cy="148" rx="38" ry="16" fill="#7ab0c8" opacity="0.5"/>
+          <text x="190" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#2a5a6a">Abraham's Bosom</text>
+
+          <!-- Salts Hole lagoon -->
+          <ellipse cx="450" cy="155" rx="32" ry="14" fill="#7ab0c8" opacity="0.5"/>
+          <text x="450" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#2a5a6a">Salts Hole</text>
+
+          <!-- Farmland / park -->
+          <rect x="0" y="195" width="760" height="185" fill="#d4c9a8" opacity="0.3"/>
+
+          <!-- Holkham Park area -->
+          <ellipse cx="280" cy="310" rx="90" ry="50" fill="#7a9a5a" opacity="0.2"/>
+          <text x="280" y="315" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#3a6a1a">Holkham Park (extension)</text>
+
+          <!-- Lake in park -->
+          <ellipse cx="260" cy="335" rx="35" ry="14" fill="#7ab0c8" opacity="0.45"/>
+
+          <!-- ROUTE LINE - circular -->
+          <!-- Outbound: car park up to beach via pinewoods -->
+          <path d="M 380 270 L 380 230 Q 378 200 375 175 Q 372 155 370 135 L 380 95"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Along beach -->
+          <path d="M 380 95 Q 280 90 190 95"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Return via pinewoods west side -->
+          <path d="M 190 95 Q 195 115 195 135 Q 200 160 210 185 Q 230 220 260 250 Q 290 265 320 270 L 380 270"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="none"/>
+          
+          <!-- Gold dashed overlay -->
+          <path d="M 380 270 L 380 230 Q 378 200 375 175 Q 372 155 370 135 L 380 95 Q 280 90 190 95 Q 195 115 195 135 Q 200 160 210 185 Q 230 220 260 250 Q 290 265 320 270 L 380 270"
+            fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.6"/>
+
+          <!-- Arrow indicating direction -->
+          <text x="270" y="93" font-family="DM Sans,sans-serif" font-size="11" fill="#1e3528">→</text>
+          <text x="395" y="180" font-family="DM Sans,sans-serif" font-size="11" fill="#1e3528">↑</text>
+
+          <!-- START/CAR PARK -->
+          <circle cx="380" cy="270" r="10" fill="#c9a84c" stroke="#1e3528" stroke-width="2"/>
+          <text x="380" y="273" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" font-weight="700" fill="#1e3528">S</text>
+          <text x="380" y="293" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Car park</text>
+          <text x="380" y="304" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#4a6b5a">Lady Anne's Drive</text>
+
+          <!-- POI 1: Lookout café -->
+          <circle cx="400" cy="120" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="400" y="123" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">1</text>
+          <text x="415" y="124" font-family="DM Sans,sans-serif" font-size="7" fill="#1e3528">The Lookout</text>
+
+          <!-- POI 2: George Washington Hide -->
+          <circle cx="450" cy="148" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="450" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">2</text>
+          <text x="463" y="153" font-family="DM Sans,sans-serif" font-size="6.5" fill="#1e3528">GW Hide</text>
+
+          <!-- POI 3: Beach huts direction (Wells) -->
+          <text x="620" y="90" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5a4a3a">→ Wells beach huts</text>
+
+          <!-- POI 4: Abraham's Bosom -->
+          <circle cx="190" cy="148" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="190" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">3</text>
+
+          <!-- POI 5: Orchid Valley -->
+          <text x="130" y="103" font-family="DM Sans,sans-serif" font-size="7" fill="#7a4a8a">🌸 Orchid Valley</text>
+
+          <!-- Extension path to park -->
+          <path d="M 320 270 Q 300 285 280 300" fill="none" stroke="#c4956a" stroke-width="2" stroke-dasharray="5 3" opacity="0.7"/>
+          <text x="250" y="290" font-family="DM Sans,sans-serif" font-size="6.5" fill="#8a6030">Extension →</text>
+
+          <!-- Holkham Hall marker (extension) -->
+          <rect x="265" y="312" width="14" height="10" fill="#c8a870" opacity="0.7" rx="1"/>
+          <text x="272" y="335" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#5a4020">Holkham Hall</text>
+
+          <!-- Compass -->
+          <g transform="translate(720,348)"><circle cx="0" cy="0" r="12" fill="rgba(250,246,239,0.9)" stroke="#2d4a3e" stroke-width="1"/><text x="0" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" font-weight="700" fill="#1e3528">N</text><line x1="0" y1="-3" x2="0" y2="-8" stroke="#1e3528" stroke-width="1.5"/></g>
+          <g transform="translate(30,355)"><line x1="0" y1="0" x2="40" y2="0" stroke="#2d4a3e" stroke-width="1.5"/><line x1="0" y1="-3" x2="0" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><line x1="40" y1="-3" x2="40" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><text x="20" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#2d4a3e">0.5 miles approx</text></g>
+
+          <!-- Legend -->
+          <circle cx="30" cy="368" r="4" fill="#c9a84c"/><text x="38" y="372" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Start/finish (car park)</text>
+          <circle cx="180" cy="368" r="4" fill="#4a6b5a"/><text x="188" y="372" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Point of interest</text>
+        </svg>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#c9a84c;"></div>Start/finish — Lady Anne's Drive car park</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4a6b5a;"></div>Point of interest</div>
+        <div class="legend-item"><div class="legend-line" style="background:#1e3528;"></div>Walking route (circular)</div>
+      </div>
+    </div>
+
+    <h2 class="art-h2">The Route</h2>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 1 — Car Park to the Beach</div><span class="stage-dist">1 mile · 25 mins</span></div>
+      <p class="stage-desc">From the car park at the end of Lady Anne's Drive, head to the north-west corner and follow the Peddars Way and Norfolk Coast Path waymarks through a kissing gate. The footpath hugs the edge of Holkham Pinewoods — ancient Corsican pines planted in the 19th century to stabilise the dunes. On your left you'll pass Abraham's Bosom, a lake that once opened directly out to sea before the dunes built up around it. The path continues through the trees, with the unmistakable scent of pine resin on a warm day. After about 600 metres you reach Salts Hole, a saltwater lagoon, and the George Washington Hide a little further on — an excellent spot to look for lapwings, redshanks, marsh harriers and various ducks.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 2 — Through the Pines to the Beach</div><span class="stage-dist">0.5 miles · 15 mins</span></div>
+      <p class="stage-desc">Continue west through the pinewoods until you emerge through a gap in the dunes onto Holkham Beach itself. The transition is dramatic — dense pine shade gives way suddenly to enormous open sky and an almost impossibly wide beach. At low tide the sand stretches out for what feels like half a mile before reaching the water. This is one of England's finest beaches by any measure — vast, clean and rarely crowded even in summer, simply because of its sheer scale.</p>
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">Tide timing matters</div>
+      <p>Holkham Beach is at its most spectacular at low tide, when the full width of sand is exposed. At high tide the beach narrows considerably. Check tide times at bbc.co.uk/weather/coast-and-sea before you go — the difference in experience is significant.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 3 — Along the Beach</div><span class="stage-dist">1.5 miles · 40 mins</span></div>
+      <p class="stage-desc">Turn and walk along the beach in either direction — east towards Wells brings you eventually to the famous painted beach huts, while staying closer to the Holkham Gap area lets you explore the dunes (highly recommended — Orchid Valley, a sheltered dune slack rich in wildflowers and orchids in late spring and early summer, lies just west of the main beach access). For this circular route, walk roughly a mile and a half west along the beach before cutting back into the pinewoods, watching for the waymarked path back through the trees.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 4 — Return Through the Pinewoods</div><span class="stage-dist">2 miles · 50 mins</span></div>
+      <p class="stage-desc">The return route follows tracks through the pinewoods back towards Lady Anne's Drive and the car park. This stretch is quieter and more sheltered than the outbound route, with dappled light through the pines and a good chance of spotting roe deer, which are common throughout the Holkham estate. If you have energy and time remaining, the optional extension into Holkham Park (described below) adds further interest before returning to the car park.</p>
+    </div>
+
+    <h2 class="art-h2">Optional Extension: Holkham Park</h2>
+    <p class="art-p">For a longer day, cross Lady Anne's Drive and follow paths into Holkham Park itself — nearly 5,000 acres of parkland surrounding the magnificent Palladian Holkham Hall. A circular two-mile route around the lake gives fine views of the Jacobean-style hall, while longer paths take in mature woodland, spectacular in spring for bluebells and in autumn for golden leaf colour. Fallow deer roam the park in large numbers. Entry to the park itself is free on foot; entry to the hall and walled garden requires a ticket.</p>
+
+    <h2 class="art-h2">Points of Interest</h2>
+    <div class="poi-list">
+
+      <div class="poi-item">
+        <div class="poi-num">1</div><div class="poi-icon">☕</div>
+        <div>
+          <div class="poi-name">The Lookout</div>
+          <div class="poi-desc">The Lookout is the National Nature Reserve's visitor centre and café, positioned right where the pinewoods meet the beach. A good spot to check current wildlife sightings, borrow binoculars, and refuel with a coffee and sausage roll before or after the beach section.</div>
+          <div class="poi-tag">📍 Holkham NNR, NR23 1RG</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">2</div><div class="poi-icon">🦅</div>
+        <div>
+          <div class="poi-name">George Washington Hide</div>
+          <div class="poi-desc">A birdwatching hide overlooking Salts Hole, named — slightly mysteriously — after the American president, though the connection is local folklore rather than documented history. Lapwings, redshanks, marsh harriers and several duck species are regularly seen from here.</div>
+          <div class="poi-tag">📍 Holkham Pinewoods, free access</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">3</div><div class="poi-icon">💧</div>
+        <div>
+          <div class="poi-name">Abraham's Bosom</div>
+          <div class="poi-desc">A lake just inside the pinewoods that was once open to the sea before sand accumulation closed it off — now a freshwater lagoon and a designated Site of Special Scientific Interest. The unusual name has uncertain origins but has stuck for generations.</div>
+          <div class="poi-tag">📍 Holkham Pinewoods, visible from the path</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">4</div><div class="poi-icon">🌸</div>
+        <div>
+          <div class="poi-name">Orchid Valley</div>
+          <div class="poi-desc">A sheltered dune slack west of the main beach access, known locally as Orchid Valley for the variety of orchid species that flower here in late spring and early summer. Walking west through the dunes from the pines brings you to this quiet, botanically rich corner of the reserve.</div>
+          <div class="poi-tag">📍 West of Holkham Gap · Best: May–June</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="art-h2">Wildlife on This Walk</h2>
+    <p class="art-p">Holkham National Nature Reserve is the largest in England, covering around 3,900 hectares. It is managed in partnership by Natural England and the Holkham Estate, which since 2017 has held Approved Body Status — making it one of only a small number of privately-owned estates permitted to manage their own National Nature Reserve. Cattle egrets, spoonbills and oystercatchers are among the notable successes of the reserve's conservation work in recent years. Marsh harriers hunt over the grazing marsh and reed fringes throughout the year, and the pinewoods support a healthy population of roe deer. A live webcam at the heronry in Decoy Wood monitors breeding spoonbills, cattle egrets, little egrets, cormorants and grey herons.</p>
+
+    <div class="warning-block">
+      <p>⚠️ <strong>Nesting season:</strong> Sections of the beach are cordoned off by wardens during ground-nesting bird season (spring and early summer). Please respect any fencing or signage — these closures protect vulnerable nesting species.</p>
+    </div>
+
+    <h2 class="art-h2">Food and Drink</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <div class="food-name">The Lookout</div>
+        <div class="food-type">Café · On route</div>
+        <div class="food-desc">Coffee, sausage rolls and light snacks right where the pines meet the beach. The most convenient stop on the route itself.</div>
+        <div class="food-loc">📍 Holkham NNR, NR23 1RG</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">The Victoria, Holkham</div>
+        <div class="food-type">Pub · Near car park</div>
+        <div class="food-desc">A stylish inn opposite the entrance to Holkham Park, with a cosy fire in colder months and seasonal small plates and larger mains. A short walk from the main car park.</div>
+        <div class="food-loc">📍 Park Road, Holkham NR23 1RG</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">Holkham Courtyard Café</div>
+        <div class="food-type">Café · In the park (extension)</div>
+        <div class="food-desc">Hot and cold food including a popular salad bar, cakes, traybakes and children's lunchboxes. Located in the historic stable courtyard near Holkham Hall.</div>
+        <div class="food-loc">📍 Holkham Park, NR23 1AB</div>
+      </div>
+    </div>
+
+    <h2 class="art-h2">What to Bring</h2>
+
+    <div class="gear-item">
+      <span class="gear-icon">🥾</span>
+      <div>
+        <div class="gear-name">Waterproof Walking Boots</div>
+        <div class="gear-desc">The pinewood paths are well drained but the beach sand and any wet dune slacks benefit from a supportive, waterproof boot. See our full Norfolk boots guide for specific recommendations.</div>
+        <a class="gear-btn" href="article-2-walking-boots.html">Read Our Boots Guide →</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🔭</span>
+      <div>
+        <div class="gear-name">Binoculars</div>
+        <div class="gear-desc">The George Washington Hide and the wider reserve reward anyone carrying binoculars — marsh harriers, waders and the famous spoonbill colony are all worth a closer look.</div>
+        <a class="gear-btn" href="article-5-binoculars.html">Read Our Binoculars Guide →</a>
+      </div>
+    </div>
+
+    <div class="art-author">
+      <div class="author-av">🌿</div>
+      <div>
+        <div class="author-name">NorfolkWild</div>
+        <div class="author-bio">Independent guide to walking in North Norfolk. Updated June 2026.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="art-aside">
+    <div class="aside-sticky">
+      <div class="aside-map-mini">
+        <div class="aside-map-label">Route stops</div>
+        <div class="aside-stops">
+          <div class="aside-stop"><div class="as-dot start"></div><span class="as-name bold">Car park — Lady Anne's Drive</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Abraham's Bosom 💧</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">George Washington Hide 🦅</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name bold">The Lookout café ☕</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name bold">Holkham Beach 🏖</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Orchid Valley 🌸</span></div>
+          <div class="aside-stop"><div class="as-dot start"></div><span class="as-name bold">Return to car park</span></div>
+        </div>
+      </div>
+      <div class="aside-widget">
+        <div class="aside-label">Related guides</div>
+        <div class="aside-link" onclick="window.location='article-4-holkham-beach.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1621532076337-db3b804ee109?w=90&q=60" alt=""><div class="aside-link-title">Holkham Beach: The Complete Guide</div></div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-1-wells-blakeney.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=90&q=60" alt=""><div class="aside-link-title">Wells to Blakeney Walk</div></div>
+        <div class="aside-link" onclick="window.location='circular-walk-2-blakeney-friary.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=90&q=60" alt=""><div class="aside-link-title">Blakeney Circular Walk</div></div>
+        <div class="aside-link" onclick="window.location='index.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=90&q=60" alt=""><div class="aside-link-title">All NorfolkWild Guides →</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div><div class="footer-wm">Norfolk<em>Wild</em></div><div class="footer-tag">Independent outdoor guides from North Norfolk.</div></div>
+  <div class="footer-col"><h4>Walks</h4><a href="article-1-blakeney-point.html">Blakeney Point</a><a href="article-4-holkham-beach.html">Holkham Beach</a><a href="coasthopper-hub.html">Coasthopper Series</a></div>
+  <div class="footer-col"><h4>Gear</h4><a href="article-2-walking-boots.html">Walking Boots</a><a href="article-5-binoculars.html">Binoculars</a></div>
+  <div class="footer-col"><h4>About</h4><a href="norfolk-wild-legal.html#privacy">Privacy Policy</a><a href="mailto:hello@norfolkwild.co.uk">Contact</a></div>
+</footer>
+<div class="footer-bottom"><span>© 2026 NorfolkWild.co.uk</span><span>Written in North Norfolk</span></div>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

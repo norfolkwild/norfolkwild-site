@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outdoor Gear Shop — NorfolkWild</title>
+<meta name="description" content="Curated outdoor gear for North Norfolk — from walking boots and binoculars to essential OS maps. Tested and recommended by NorfolkWild.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --marsh: #1e3528;
+  --marsh2: #2d4a3e;
+  --reed: #4a6b5a;
+  --gold: #b8923a;
+  --gold2: #c9a84c;
+  --cream: #f4ede0;
+  --cream2: #ede4d4;
+  --paper: #faf6ef;
+  --ink: #161c18;
+  --ink2: #2a332d;
+  --sage: #7a9a82;
+  --sky: #a8c4b8;
+  --mist: #e4ede6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+
+/* ─── TOP NAV ─── */
+.topnav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(250,246,239,0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(30,53,40,0.08);
+  height: 52px;
+  display: flex; align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+.nav-brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.nav-wordmark { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 900; color: var(--marsh); letter-spacing: -0.5px; line-height: 1; }
+.nav-wordmark em { color: var(--gold); font-style: italic; }
+.nav-links { display: flex; gap: 1.4rem; align-items: center; }
+.nav-links a { font-size: 0.67rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink2); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--marsh); color: #fff; padding: 0.38rem 0.9rem; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: var(--marsh2); }
+
+/* ─── MOBILE HAMBURGER MENU ─── */
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--ink2); margin: 5px 0; transition: 0.3s; }
+.hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+@media (max-width: 600px) {
+  .hamburger { display: block; }
+  .nav-links { position: fixed; top: 52px; left: 0; right: 0; background: var(--paper); flex-direction: column; gap: 0; display: none; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+  .nav-links.active { display: flex; }
+  .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); }
+  .topnav { padding: 0 1rem; }
+}
+
+/* ─── SHOP HERO ─── */
+.shop-hero {
+  background: var(--marsh);
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  color: #fff;
+}
+.shop-eyebrow { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold2); margin-bottom: 1rem; }
+.shop-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1rem; }
+.shop-title em { font-style: italic; color: var(--gold2); }
+.shop-desc { font-size: 0.9rem; font-weight: 300; color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+/* ─── SHOP CATEGORIES ─── */
+.shop-cats { padding: 3rem 2rem; max-width: 1200px; margin: 0 auto; }
+.cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 4rem; }
+.cat-card { background: #fff; border: 1px solid rgba(30,53,40,0.06); padding: 1.2rem 1rem; text-align: center; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+.cat-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(30,53,40,0.05); }
+.cat-icon { font-size: 1.8rem; display: block; margin-bottom: 0.6rem; }
+.cat-name { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; color: var(--marsh); margin-bottom: 0.3rem; }
+.cat-desc { font-size: 0.68rem; color: var(--reed); line-height: 1.4; }
+
+@media (max-width: 900px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .cat-grid { grid-template-columns: 1fr; } }
+
+/* ─── PRODUCT GRID ─── */
+.product-sec { padding-bottom: 4rem; scroll-margin-top: 80px; }
+.sec-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--marsh); margin-bottom: 1.8rem; text-align: center; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.product-card { background: #fff; border: 1px solid rgba(30,53,40,0.06); overflow: hidden; display: flex; flex-direction: column; }
+.product-img { width: 100%; height: 220px; object-fit: cover; background: #eee; }
+.product-body { padding: 1.2rem; flex-grow: 1; display: flex; flex-direction: column; }
+.product-cat { font-size: 0.52rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+.product-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--marsh); margin-bottom: 0.5rem; line-height: 1.2; }
+.product-desc { font-size: 0.78rem; color: var(--reed); line-height: 1.5; margin-bottom: 1rem; flex-grow: 1; }
+.product-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+.product-price { font-weight: 600; color: var(--marsh); font-size: 0.85rem; }
+.product-btn { background: var(--gold2); color: var(--ink); padding: 0.5rem 0.8rem; font-size: 0.65rem; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.2s; }
+.product-btn:hover { background: var(--gold); }
+
+
+/* ─── GETTING STARTED SECTION ─── */
+.gs-section { background: linear-gradient(to bottom, #f0ebe0, var(--paper)); padding: 2.5rem 0 4rem; margin: 0 -2rem 2rem; padding-left: 2rem; padding-right: 2rem; border-top: 3px solid var(--gold2); }
+.gs-header { text-align: center; max-width: 680px; margin: 0 auto 2.5rem; }
+.gs-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--reed); margin-bottom: 0.8rem; }
+.gs-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; color: var(--marsh); line-height: 1.2; margin-bottom: 0.9rem; }
+.gs-title em { color: var(--gold); font-style: italic; }
+.gs-intro { font-size: 0.88rem; color: var(--reed); line-height: 1.7; margin-bottom: 1.2rem; }
+.gs-budget-badge { display: inline-block; background: var(--marsh); color: var(--gold2); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.4rem 1rem; }
+.gs-card { position: relative; border-top: 3px solid var(--gold2); }
+.gs-card-label { position: absolute; top: 0; right: 0; background: var(--gold2); color: var(--ink); font-size: 0.5rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.22rem 0.55rem; }
+.gs-price { color: var(--gold); }
+.gs-footer-note { background: var(--marsh); color: rgba(255,255,255,0.75); font-size: 0.82rem; padding: 1.2rem 1.8rem; margin-top: 2.5rem; line-height: 1.6; }
+.gs-footer-note strong { color: #fff; }
+
+  .product-icon-img {
+    width: 100%; height: 220px;
+    background: var(--marsh);
+    display: flex; align-items: center; justify-content: center;
+    padding: 1rem;
+  }
+  .pi-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem; font-weight: 700;
+    color: rgba(255,255,255,0.4);
+    text-align: center; line-height: 1.4;
+  }
+
+/* ─── FOOTER ─── */
+.footer { background: #0d1410; padding: 4rem 2rem; display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr; gap: 1.5rem; }
+.footer-wm { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 900; color: #fff; }
+.footer-wm em { color: var(--gold2); font-style: italic; }
+.footer-tag { font-size: 0.67rem; color: rgba(255,255,255,0.15); margin-top: 0.5rem; line-height: 1.6; max-width: 160px; }
+.footer-col h4 { font-size: 0.55rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.18); margin-bottom: 0.7rem; }
+.footer-col a { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.22); text-decoration: none; margin-bottom: 0.3rem; transition: color 0.15s; }
+.footer-col a:hover { color: rgba(255,255,255,0.55); }
+.footer-bottom { background: #07100a; padding: 1rem 2rem; display: flex; justify-content: space-between; font-size: 0.57rem; color: rgba(255,255,255,0.1); }
+
+@media (max-width: 1100px) { .footer { grid-template-columns: 1.3fr 1fr 1fr; } }
+@media (max-width: 700px) { .footer { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html">
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span class="nav-wordmark">Norfolk<em>Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html" style="color:var(--gold);">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<section class="shop-hero">
+  <div class="shop-eyebrow">The NorfolkWild Gear Shop</div>
+  <h1 class="shop-title">Curated gear for <em>coastal adventures</em></h1>
+  <p class="shop-desc">We only recommend gear we've tested on the paths and marshes of North Norfolk. Every purchase helps support our independent guides.</p>
+</section>
+
+<div class="shop-cats">
+  <div class="cat-grid">
+
+    <a href="#getting-started" class="cat-card" style="padding-top:0;" style="border:2px solid var(--gold2);position:relative;">
+      <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--gold2);color:var(--ink);font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.6rem;white-space:nowrap;">Start here</span>
+      <span class="cat-icon">🌿</span>
+      <h3 class="cat-name">Getting Started</h3>
+      <p class="cat-desc">Budget-friendly picks to get you out on the Norfolk paths without spending a fortune.</p>
+    </a>
+    <a href="#footwear" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">🥾</span>
+      <h3 class="cat-name">Footwear</h3>
+      <p class="cat-desc">Tested walking boots and wellies for Norfolk's unique terrain.</p>
+    </a>
+    <a href="#optics" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">🔭</span>
+      <h3 class="cat-name">Optics</h3>
+      <p class="cat-desc">Binoculars and spotting scopes for world-class birdwatching.</p>
+    </a>
+    <a href="#wildlife-tech" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">📸</span>
+      <h3 class="cat-name">Wildlife Tech</h3>
+      <p class="cat-desc">Trail cams and monitoring gear to see what visits your garden.</p>
+    </a>
+    <a href="#nature-garden" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">🌱</span>
+      <h3 class="cat-name">Nature & Garden</h3>
+      <p class="cat-desc">Wildflower seeds and habitat boxes for Norfolk wildlife.</p>
+    </a>
+    <a href="#walking-aids" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">🦯</span>
+      <h3 class="cat-name">Walking Aids</h3>
+      <p class="cat-desc">Poles and support for tackling the Norfolk Coast Path.</p>
+    </a>
+    <a href="#foot-care" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">🩹</span>
+      <h3 class="cat-name">Foot Care</h3>
+      <p class="cat-desc">Blister plasters and care for happy miles on the trail.</p>
+    </a>
+    <a href="#navigation" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">🗺️</span>
+      <h3 class="cat-name">Navigation</h3>
+      <p class="cat-desc">Essential OS maps and guides for the Norfolk Coast Path.</p>
+    </a>
+    <a href="#essentials" class="cat-card" style="padding-top:0;">
+      <span class="cat-icon">🎒</span>
+      <h3 class="cat-name">Essentials</h3>
+      <p class="cat-desc">Daypacks, flasks, and head torches for long days on the coast.</p>
+    </a>
+  </div>
+  <!-- ═══ GETTING STARTED ═══ -->
+  <section id="getting-started" class="product-sec gs-section">
+    <div class="gs-header">
+      <div class="gs-eyebrow">🌿 New to North Norfolk walking & wildlife?</div>
+      <h2 class="gs-title">Getting started — <em>without breaking the bank</em></h2>
+      <p class="gs-intro">You don't need expensive kit to enjoy the coast path or spot your first marsh harrier. These are our picks for beginners: reliable, affordable, and actually worth buying. Upgrade later when you know what you love.</p>
+      <div class="gs-budget-badge">All under £40</div>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card gs-card">
+        <div class="gs-card-label">Walking</div>
+        <div class="product-icon-img"><span class="pi-label">Hi-Gear Coburn Walking Boots</span></div>
+        <div class="product-body">
+          <div class="product-cat">Footwear — Entry Level</div>
+          <h3 class="product-name">Hi-Gear Coburn Walking Boots</h3>
+          <p class="product-desc">A solid first walking boot — waterproof, supportive, and comfortable enough for a full day on the coast path. Perfect for occasional walkers before committing to a premium pair.</p>
+          <div class="product-footer">
+            <span class="product-price gs-price">~£35–£50</span>
+            <a href="https://www.amazon.co.uk/s?k=hi-gear+coburn+walking+boots+waterproof&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card gs-card">
+        <div class="gs-card-label">Birdwatching</div>
+        <div class="product-icon-img"><span class="pi-label">Opticron Traveller BGA ED 8x32</span></div>
+        <div class="product-body">
+          <div class="product-cat">Optics — Entry Level</div>
+          <h3 class="product-name">Opticron Traveller BGA ED 8x32</h3>
+          <p class="product-desc">The most recommended beginner binoculars in the UK birding community. Bright, clear, and compact enough for a coat pocket. Brilliant value for Cley and Titchwell.</p>
+          <div class="product-footer">
+            <span class="product-price gs-price">~£90–£120</span>
+            <a href="https://www.amazon.co.uk/s?k=opticron+traveller+BGA+ED+8x32+binoculars&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card gs-card">
+        <div class="gs-card-label">Navigation</div>
+        <div class="product-icon-img"><span class="pi-label">OS Explorer Map OL24 — Norfolk Coast West</span></div>
+        <div class="product-body">
+          <div class="product-cat">Navigation — Essential</div>
+          <h3 class="product-name">OS Explorer Map OL24 — Norfolk Coast West</h3>
+          <p class="product-desc">The one map every Norfolk walker needs. Covers Wells, Holkham, Blakeney and the western coast path in full 1:25,000 detail. Buy this before anything else.</p>
+          <div class="product-footer">
+            <span class="product-price gs-price">~£9–£12</span>
+            <a href="https://www.amazon.co.uk/s?k=OS+Explorer+OL24+Norfolk+Coast+West+map&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card gs-card">
+        <div class="gs-card-label">Waterproofs</div>
+        <div class="product-icon-img"><span class="pi-label">Regatta Packaway Waterproof Jacket</span></div>
+        <div class="product-body">
+          <div class="product-cat">Clothing — Entry Level</div>
+          <h3 class="product-name">Regatta Packaway Waterproof Jacket</h3>
+          <p class="product-desc">Norfolk weather is unpredictable — a decent packaway jacket is non-negotiable. Regatta's entry-level waterproofs punch well above their price on the coast path.</p>
+          <div class="product-footer">
+            <span class="product-price gs-price">~£25–£45</span>
+            <a href="https://www.amazon.co.uk/s?k=regatta+packaway+waterproof+jacket+walking&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card gs-card">
+        <div class="gs-card-label">Wildlife ID</div>
+        <div class="product-icon-img"><span class="pi-label">Collins Bird Guide — 2nd Edition</span></div>
+        <div class="product-body">
+          <div class="product-cat">Books — Essential</div>
+          <h3 class="product-name">Collins Bird Guide — 2nd Edition</h3>
+          <p class="product-desc">The definitive field guide used by every serious birder in Britain. If you're heading to Cley, Titchwell or Snettisham, bring this. Compact enough to fit in a jacket pocket.</p>
+          <div class="product-footer">
+            <span class="product-price gs-price">~£20–£28</span>
+            <a href="https://www.amazon.co.uk/s?k=collins+bird+guide+2nd+edition+svensson&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card gs-card">
+        <div class="gs-card-label">Comfort</div>
+        <div class="product-icon-img"><span class="pi-label">Compeed Blister Plasters Mixed</span></div>
+        <div class="product-body">
+          <div class="product-cat">Foot Care — Essential</div>
+          <h3 class="product-name">Compeed Blister Plasters Mixed</h3>
+          <p class="product-desc">New boots + shingle beaches = blisters. Compeed are in a different league to ordinary plasters — they stay on, cushion instantly, and let you finish the walk. Never leave home without them.</p>
+          <div class="product-footer">
+            <span class="product-price gs-price">~£5–£8</span>
+            <a href="https://www.amazon.co.uk/s?k=compeed+blister+plasters+mixed+size&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="gs-footer-note">
+      <strong>Already walked a few times and ready to upgrade?</strong> Browse our full categories below — we explain exactly what's worth spending more on and what isn't.
+    </div>
+  </section>
+
+  <section id="footwear" class="product-sec">
+    <h2 class="sec-title">Footwear</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Meindl Bhutan MFS Walking Boots</span></div>
+        <div class="product-body">
+          <div class="product-cat">Footwear</div>
+          <h3 class="product-name">Meindl Bhutan MFS Walking Boots</h3>
+          <p class="product-desc">A classic, award-winning trekking boot, perfect for challenging terrain and long-distance walks. Waterproof and breathable GORE-TEX lining.</p>
+          <div class="product-footer">
+            <span class="product-price">£180-£220</span>
+            <a href="https://www.amazon.co.uk/s?k=meindl+bhutan+MFS+walking+boots&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Salomon Quest 4D 3 GTX Hiking Boots</span></div>
+        <div class="product-body">
+          <div class="product-cat">Footwear</div>
+          <h3 class="product-name">Salomon Quest 4D 3 GTX Hiking Boots</h3>
+          <p class="product-desc">Lightweight and flexible hiking boot offering excellent support and grip for varied trails. Ideal for day hikes and multi-day treks.</p>
+          <div class="product-footer">
+            <span class="product-price">£150-£190</span>
+            <a href="https://www.amazon.co.uk/s?k=salomon+quest+4D+3+GTX+hiking+boots&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Scarpa Rush Trek GTX Walking Boots</span></div>
+        <div class="product-body">
+          <div class="product-cat">Footwear</div>
+          <h3 class="product-name">Scarpa Rush Trek GTX Walking Boots</h3>
+          <p class="product-desc">Modern and agile boot designed for fast-paced hiking and scrambling. Offers a blend of comfort, protection, and performance.</p>
+          <div class="product-footer">
+            <span class="product-price">£160-£200</span>
+            <a href="https://www.amazon.co.uk/s?k=scarpa+rush+trek+GTX+walking+boots&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Hunter Original Tall Wellington Boots</span></div>
+        <div class="product-body">
+          <div class="product-cat">Footwear</div>
+          <h3 class="product-name">Hunter Original Tall Wellington Boots</h3>
+          <p class="product-desc">Iconic waterproof wellington boots, handcrafted from natural rubber. Perfect for muddy walks and wet weather.</p>
+          <div class="product-footer">
+            <span class="product-price">£90-£120</span>
+            <a href="https://www.amazon.co.uk/s?k=hunter+original+tall+wellington+boots&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Aigle Parcours 2 ISO Wellington Boots</span></div>
+        <div class="product-body">
+          <div class="product-cat">Footwear</div>
+          <h3 class="product-name">Aigle Parcours 2 ISO Wellington Boots</h3>
+          <p class="product-desc">Anti-fatigue wellington boots with a tri-density rubber sole and neoprene lining for insulation. Ideal for long days outdoors.</p>
+          <div class="product-footer">
+            <span class="product-price">£150-£180</span>
+            <a href="https://www.amazon.co.uk/s?k=aigle+parcours+2+iso+wellington+boots&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="optics" class="product-sec">
+    <h2 class="sec-title">Optics</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Nikon Prostaff P3 10x42 Binoculars</span></div>
+        <div class="product-body">
+          <div class="product-cat">Optics</div>
+          <h3 class="product-name">Nikon Prostaff P3 10x42 Binoculars</h3>
+          <p class="product-desc">Lightweight and durable binoculars with multi-layer coated lenses for bright, clear images. Perfect for birdwatching and wildlife observation.</p>
+          <div class="product-footer">
+            <span class="product-price">£130-£160</span>
+            <a href="https://www.amazon.co.uk/s?k=nikon+prostaff+P3+10x42+binoculars&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Celestron Nature DX ED 8x42 Binoculars</span></div>
+        <div class="product-body">
+          <div class="product-cat">Optics</div>
+          <h3 class="product-name">Celestron Nature DX ED 8x42 Binoculars</h3>
+          <p class="product-desc">High-performance binoculars with ED glass for sharp, color-accurate views. Waterproof and fogproof, ideal for all weather conditions.</p>
+          <div class="product-footer">
+            <span class="product-price">£170-£200</span>
+            <a href="https://www.amazon.co.uk/s?k=celestron+nature+DX+ED+8x42+binoculars&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Vortex Optics Diamondback HD 10x42 Binoculars</span></div>
+        <div class="product-body">
+          <div class="product-cat">Optics</div>
+          <h3 class="product-name">Vortex Optics Diamondback HD 10x42 Binoculars</h3>
+          <p class="product-desc">Feature-rich binoculars with HD optical system for stunning resolution and color fidelity. Robust and reliable for serious outdoor enthusiasts.</p>
+          <div class="product-footer">
+            <span class="product-price">£220-£260</span>
+            <a href="https://www.amazon.co.uk/s?k=vortex+diamondback+HD+10x42+binoculars&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="wildlife-tech" class="product-sec">
+    <h2 class="sec-title">Wildlife Tech</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Browning Strike Force Pro X 1080 Trail Camera</span></div>
+        <div class="product-body">
+          <div class="product-cat">Wildlife Tech</div>
+          <h3 class="product-name">Browning Strike Force Pro X 1080 Trail Camera</h3>
+          <p class="product-desc">High-performance trail camera with 20MP images and 1080p video. Fast trigger speed and invisible infrared illumination for discreet wildlife monitoring.</p>
+          <div class="product-footer">
+            <span class="product-price">£140-£170</span>
+            <a href="https://www.amazon.co.uk/s?k=browning+strike+force+pro+X+1080+trail+camera&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Bushnell Core DS-4K Trail Camera</span></div>
+        <div class="product-body">
+          <div class="product-cat">Wildlife Tech</div>
+          <h3 class="product-name">Bushnell Core DS-4K Trail Camera</h3>
+          <p class="product-desc">Dual sensor trail camera for optimal day and night image quality. Captures stunning 30MP photos and 4K video.</p>
+          <div class="product-footer">
+            <span class="product-price">£200-£250</span>
+            <a href="https://www.amazon.co.uk/s?k=bushnell+core+DS-4K+trail+camera&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Reolink Go PT Plus 4G LTE Camera</span></div>
+        <div class="product-body">
+          <div class="product-cat">Wildlife Tech</div>
+          <h3 class="product-name">Reolink Go PT Plus 4G LTE Camera</h3>
+          <p class="product-desc">Wire-free 4G LTE security camera with pan & tilt, ideal for remote wildlife observation where Wi-Fi is unavailable. Solar panel compatible.</p>
+          <div class="product-footer">
+            <span class="product-price">£180-£220</span>
+            <a href="https://www.amazon.co.uk/s?k=reolink+go+PT+plus+4G+trail+camera&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="nature-garden" class="product-sec">
+    <h2 class="sec-title">Nature & Garden</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">UK Native Wildflower Seed Mix (25m²)</span></div>
+        <div class="product-body">
+          <div class="product-cat">Nature & Garden</div>
+          <h3 class="product-name">UK Native Wildflower Seed Mix (25m²)</h3>
+          <p class="product-desc">A diverse mix of native British wildflowers to attract bees, butterflies, and other pollinators. Perfect for creating a vibrant meadow.</p>
+          <div class="product-footer">
+            <span class="product-price">£10-£20</span>
+            <a href="https://www.amazon.co.uk/s?k=UK+native+wildflower+seed+mix&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Butterfly & Bee Attracting Seed Mix</span></div>
+        <div class="product-body">
+          <div class="product-cat">Nature & Garden</div>
+          <h3 class="product-name">Butterfly & Bee Attracting Seed Mix</h3>
+          <p class="product-desc">Specifically blended seeds to create a haven for butterflies and bees. Easy to grow and suitable for various soil types.</p>
+          <div class="product-footer">
+            <span class="product-price">£8-£15</span>
+            <a href="https://www.amazon.co.uk/s?k=butterfly+bee+wildflower+seed+mix&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Shade Tolerant Wildflower Seeds</span></div>
+        <div class="product-body">
+          <div class="product-cat">Nature & Garden</div>
+          <h3 class="product-name">Shade Tolerant Wildflower Seeds</h3>
+          <p class="product-desc">A special mix designed to thrive in shaded areas, bringing color and wildlife to less sunny spots in your garden.</p>
+          <div class="product-footer">
+            <span class="product-price">£12-£22</span>
+            <a href="https://www.amazon.co.uk/s?k=shade+tolerant+wildflower+seeds+UK+native&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="walking-aids" class="product-sec">
+    <h2 class="sec-title">Walking Aids</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Black Diamond Trail Trekking Poles</span></div>
+        <div class="product-body">
+          <div class="product-cat">Walking Aids</div>
+          <h3 class="product-name">Black Diamond Trail Trekking Poles</h3>
+          <p class="product-desc">Durable and adjustable trekking poles offering stability and support on varied terrain. Essential for long walks and challenging paths.</p>
+          <div class="product-footer">
+            <span class="product-price">£70-£90</span>
+            <a href="https://www.amazon.co.uk/s?k=black+diamond+trail+trekking+poles&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Leki Makalu Lite Trekking Poles</span></div>
+        <div class="product-body">
+          <div class="product-cat">Walking Aids</div>
+          <h3 class="product-name">Leki Makalu Lite Trekking Poles</h3>
+          <p class="product-desc">Lightweight and robust aluminum trekking poles with comfortable Aergon Air grips. Ideal for reducing strain on joints.</p>
+          <div class="product-footer">
+            <span class="product-price">£100-£130</span>
+            <a href="https://www.amazon.co.uk/s?k=leki+makalu+lite+trekking+poles&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Fizan Compact 3 Trekking Poles</span></div>
+        <div class="product-body">
+          <div class="product-cat">Walking Aids</div>
+          <h3 class="product-name">Fizan Compact 3 Trekking Poles</h3>
+          <p class="product-desc">Ultra-lightweight and compact trekking poles, perfect for travelers and those who prioritize minimal pack weight. Made in Italy.</p>
+          <div class="product-footer">
+            <span class="product-price">£60-£80</span>
+            <a href="https://www.amazon.co.uk/s?k=fizan+compact+3+trekking+poles&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="foot-care" class="product-sec">
+    <h2 class="sec-title">Foot Care</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Compeed Blister Plasters Mixed Size</span></div>
+        <div class="product-body">
+          <div class="product-cat">Foot Care</div>
+          <h3 class="product-name">Compeed Blister Plasters Mixed Size</h3>
+          <p class="product-desc">Hydrocolloid plasters that provide instant pain relief and faster healing for blisters. Mixed sizes for different areas of the foot.</p>
+          <div class="product-footer">
+            <span class="product-price">£5-£8</span>
+            <a href="https://www.amazon.co.uk/s?k=compeed+blister+plasters+mixed+size&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Gehwol Foot Cream for Hard Skin</span></div>
+        <div class="product-body">
+          <div class="product-cat">Foot Care</div>
+          <h3 class="product-name">Gehwol Foot Cream for Hard Skin</h3>
+          <p class="product-desc">Intensive foot cream designed to soften and remove hard skin, calluses, and cracks. Contains natural essential oils.</p>
+          <div class="product-footer">
+            <span class="product-price">£8-£12</span>
+            <a href="https://www.amazon.co.uk/s?k=gehwol+extra+foot+cream&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Scholl Fungal Nail Treatment</span></div>
+        <div class="product-body">
+          <div class="product-cat">Foot Care</div>
+          <h3 class="product-name">Scholl Fungal Nail Treatment</h3>
+          <p class="product-desc">An effective and easy-to-use treatment for fungal nail infections. Helps to improve the appearance of infected nails.</p>
+          <div class="product-footer">
+            <span class="product-price">£15-£20</span>
+            <a href="https://www.amazon.co.uk/s?k=scholl+fungal+nail+treatment&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="navigation" class="product-sec">
+    <h2 class="sec-title">Navigation</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">OS Explorer Map OL40 The Broads</span></div>
+        <div class="product-body">
+          <div class="product-cat">Navigation</div>
+          <h3 class="product-name">OS Explorer Map OL40 The Broads</h3>
+          <p class="product-desc">The essential map for exploring the Norfolk Broads, showing footpaths, bridleways, and tourist information. Waterproof and tear-resistant.</p>
+          <div class="product-footer">
+            <span class="product-price">£8-£12</span>
+            <a href="https://www.amazon.co.uk/s?k=OS+Explorer+OL40+Norfolk+Broads+map&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Garmin eTrex SE Handheld GPS</span></div>
+        <div class="product-body">
+          <div class="product-cat">Navigation</div>
+          <h3 class="product-name">Garmin eTrex SE Handheld GPS</h3>
+          <p class="product-desc">Easy-to-use handheld GPS device with long battery life and multi-GNSS support. Ideal for reliable navigation in remote areas.</p>
+          <div class="product-footer">
+            <span class="product-price">£100-£130</span>
+            <a href="https://www.amazon.co.uk/s?k=garmin+etrex+SE+handheld+GPS&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Silva Ranger S Compass</span></div>
+        <div class="product-body">
+          <div class="product-cat">Navigation</div>
+          <h3 class="product-name">Silva Ranger S Compass</h3>
+          <p class="product-desc">Robust and accurate compass with a magnifying lens and detachable lanyard. A reliable tool for traditional navigation.</p>
+          <div class="product-footer">
+            <span class="product-price">£25-£40</span>
+            <a href="https://www.amazon.co.uk/s?k=silva+ranger+S+compass&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="essentials" class="product-sec">
+    <h2 class="sec-title">Essentials</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Stanley Classic Insulated Flask</span></div>
+        <div class="product-body">
+          <div class="product-cat">Essentials</div>
+          <h3 class="product-name">Stanley Classic Insulated Flask</h3>
+          <p class="product-desc">Keeps your tea hot for 24 hours on the windiest coastal walks.</p>
+          <div class="product-footer">
+            <span class="product-price">£30-£45</span>
+            <a href="https://www.amazon.co.uk/s?k=stanley+classic+insulated+flask+stainless&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Osprey Talon 22 Hiking Backpack</span></div>
+        <div class="product-body">
+          <div class="product-cat">Essentials</div>
+          <h3 class="product-name">Osprey Talon 22 Hiking Backpack</h3>
+          <p class="product-desc">Lightweight and comfortable daypack with excellent ventilation. Ideal for day hikes and short excursions.</p>
+          <div class="product-footer">
+            <span class="product-price">£90-£120</span>
+            <a href="https://www.amazon.co.uk/s?k=osprey+talon+22+hiking+backpack&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-img"><span class="pi-label">Petzl Actik Core Headlamp</span></div>
+        <div class="product-body">
+          <div class="product-cat">Essentials</div>
+          <h3 class="product-name">Petzl Actik Core Headlamp</h3>
+          <p class="product-desc">Rechargeable and powerful headlamp for early morning starts or late finishes. Multiple lighting modes and red light option.</p>
+          <div class="product-footer">
+            <span class="product-price">£50-£70</span>
+            <a href="https://www.amazon.co.uk/s?k=petzl+actik+core+headlamp+rechargeable&tag=norfolkwild-21" target="_blank" class="product-btn">View on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div>
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Independent outdoor guides written from North Norfolk. No advertisers. Just honest local knowledge.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="article-1-blakeney-point.html">Coastal Walks</a>
+    <a href="article-7-marsh-harriers.html">Wildlife Guides</a>
+    <a href="article-8-peddars-way.html">Norfolk Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+  </div>
+  <div class="footer-col">
+    <h4>Seasons</h4>
+    <a href="article-7-marsh-harriers.html">Spring Wildlife</a>
+    <a href="article-4-holkham-beach.html">Summer Beaches</a>
+    <a href="article-1-blakeney-point.html">Autumn Walks</a>
+    <a href="article-3-horsey-seals.html">Winter Seals</a>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#getting-started">Getting Started</a>
+    <a href="shop.html#footwear">Walking Boots</a>
+    <a href="shop.html#optics">Binoculars</a>
+    <a href="shop.html#wildlife-tech">Trail Cams</a>
+    <a href="shop.html#nature-garden">Wildflower Seeds</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#affiliate">About NorfolkWild</a>
+    <a href="mailto:hello@norfolkwild.co.uk">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <span>© 2026 NorfolkWild.co.uk — Independent & Norfolk-based</span>
+  <span>Written with care from North Norfolk</span>
+</div>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+}
+</script>
+</body>
+</html>

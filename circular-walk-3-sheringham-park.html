@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheringham Park Circular Walk: Repton's Route and the Gazebo | NorfolkWild</title>
+<meta name="description" content="A 2.5-mile circular walk through Sheringham Park's parkland and rhododendron gardens, taking in the treetop Gazebo viewpoint, Repton's Temple and the finest sea views in inland Norfolk.">
+<link rel="canonical" href="https://www.norfolkwild.co.uk/circular-walk-3-sheringham-park.html">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;--dusk:#c4956a;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-back{font-size:0.65rem;font-weight:500;color:var(--reed);text-decoration:none;}
+.nav-series{font-size:0.62rem;color:var(--sage);}
+.art-hero{position:relative;height:65vh;min-height:420px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1607111038703-db2a17830751?w=1600&q=85&auto=format&fit=crop') center 40%/cover no-repeat;filter:brightness(0.52);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.88));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.series-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--gold2);padding:0.3rem 0.8rem;margin-bottom:0.8rem;}
+.sb-route{font-size:0.57rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--ink);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.9rem);font-weight:900;color:#fff;line-height:1.05;max-width:700px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-h1 em{color:var(--gold2);font-style:italic;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+.art-layout{display:grid;grid-template-columns:1fr 270px;gap:2.5rem;max-width:1020px;margin:0 auto;padding:2.5rem 2rem;}
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(30,53,40,0.08);margin-bottom:2rem;}
+.info-cell{background:var(--paper);padding:0.9rem;text-align:center;}
+.info-icon{font-size:1.2rem;display:block;}
+.info-label{font-size:0.52rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.1rem;}
+.info-val{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);margin-top:0.1rem;}
+.map-wrap{margin:2rem 0;}
+.map-title{font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.6rem;}
+.map-title::after{content:'';flex:1;height:1px;background:rgba(30,53,40,0.12);}
+.map-container{width:100%;border:1px solid rgba(30,53,40,0.12);overflow:hidden;}
+.map-legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:0.8rem;padding:0.8rem;background:rgba(30,53,40,0.03);border:1px solid rgba(30,53,40,0.08);}
+.legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.68rem;color:var(--ink2);}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.legend-line{width:20px;height:3px;flex-shrink:0;}
+.art-h2{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--marsh);margin:2.2rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.5rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.92rem;line-height:1.88;color:var(--ink2);margin-bottom:1rem;font-weight:300;}
+.stage{border-left:3px solid var(--gold2);padding:1rem 1.2rem;margin:1.2rem 0;background:rgba(30,53,40,0.02);}
+.stage-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;flex-wrap:wrap;gap:0.5rem;}
+.stage-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--marsh);}
+.stage-dist{font-size:0.7rem;font-weight:600;color:var(--sage);background:var(--mist);padding:0.2rem 0.5rem;}
+.stage-desc{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--ink2);line-height:1.7;font-weight:300;}
+.poi-list{margin:1.5rem 0;}
+.poi-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(30,53,40,0.08);}
+.poi-item:last-child{border-bottom:none;}
+.poi-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:rgba(30,53,40,0.08);line-height:1;flex-shrink:0;min-width:32px;}
+.poi-icon{font-size:1.2rem;flex-shrink:0;margin-top:0.1rem;}
+.poi-name{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--marsh);margin-bottom:0.25rem;}
+.poi-desc{font-family:'Source Serif 4',serif;font-size:0.8rem;color:var(--ink2);line-height:1.65;font-weight:300;}
+.poi-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.3rem;}
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.2rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.82rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+.warning-block{background:#fffbf2;border-left:3px solid var(--dusk);padding:1rem 1.2rem;margin:1.2rem 0;}
+.warning-block p{font-size:0.82rem;color:#5a4a20;line-height:1.65;margin:0;font-family:'Source Serif 4',serif;}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin:1.2rem 0;}
+.food-card{background:var(--paper);padding:0.9rem;}
+.food-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.food-type{font-size:0.58rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin:0.2rem 0 0.3rem;}
+.food-desc{font-size:0.75rem;color:var(--reed);line-height:1.5;font-family:'Source Serif 4',serif;font-weight:300;}
+.food-loc{font-size:0.65rem;color:var(--sage);margin-top:0.3rem;}
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:0.9rem 1rem;margin:0.7rem 0;display:flex;gap:0.8rem;align-items:flex-start;}
+.gear-icon{font-size:1.4rem;flex-shrink:0;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.gear-desc{font-size:0.73rem;color:var(--reed);line-height:1.5;margin:0.15rem 0 0.4rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.25rem 0.75rem;font-size:0.62rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-block;}
+.art-author{background:var(--cream2);padding:1.1rem 1.3rem;display:flex;gap:0.8rem;align-items:center;margin-top:2rem;border-top:2px solid var(--marsh);}
+.author-av{width:38px;height:38px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.7rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+.aside-sticky{position:sticky;top:68px;}
+.aside-map-mini{background:var(--marsh);padding:1rem;margin-bottom:1rem;}
+.aside-map-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;}
+.aside-stops{display:flex;flex-direction:column;gap:0;}
+.aside-stop{display:flex;align-items:center;gap:0.6rem;padding:0.35rem 0;position:relative;}
+.aside-stop::before{content:'';position:absolute;left:7px;top:50%;bottom:-50%;width:1px;background:rgba(255,255,255,0.1);}
+.aside-stop:last-child::before{display:none;}
+.as-dot{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);background:var(--marsh);flex-shrink:0;z-index:1;}
+.as-dot.start{background:var(--gold2);border-color:var(--gold2);}
+.as-dot.poi{background:var(--reed);border-color:var(--reed);}
+.as-name{font-size:0.72rem;color:rgba(255,255,255,0.7);}
+.as-name.bold{color:#fff;font-weight:500;}
+.aside-widget{background:var(--marsh);padding:1.1rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.7rem;}
+.aside-link{display:flex;gap:0.5rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.04);text-decoration:none;align-items:center;cursor:pointer;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:44px;height:32px;object-fit:cover;flex-shrink:0;}
+.aside-link-title{font-size:0.68rem;color:rgba(255,255,255,0.7);line-height:1.35;}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.art-layout{grid-template-columns:1fr;}.art-aside{display:none;}.info-grid{grid-template-columns:repeat(2,1fr);}.food-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.art-hero{height:55vh;}.art-layout{padding:1.5rem;}.footer{grid-template-columns:1fr;padding:1.5rem;}}
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="series-badge"><span class="sb-route">🔄 Circular Walk</span></div>
+    <h1 class="art-h1">Sheringham Park Circular:<br><em>Repton's Route and the Gazebo</em></h1>
+    <div class="art-pills">
+      <span class="art-pill">📍 Sheringham Park, NR26 8TL</span>
+      <span class="art-pill">📏 2.5 miles</span>
+      <span class="art-pill">⏱ 1–1.5 hours</span>
+      <span class="art-pill">🟡 Easy/Moderate</span>
+      <span class="art-pill">🐕 Dog friendly</span>
+      <span class="art-pill">🅿 National Trust car park</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-layout">
+  <div class="art-main">
+
+    <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin-bottom:2rem;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24)</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Confirm current opening times and entry fees with the <a href="https://www.nationaltrust.org.uk/visit/norfolk/sheringham-park" target="_blank" style="color:#c9a84c;">National Trust website</a></div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Wear footwear suited to slopes and steps, which can be slippery when wet</div>
+          <div>✓ Keep dogs on leads near livestock and deep ponds</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, opening times and access arrangements may differ from those described. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong>.
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-intro">
+      <p>Humphry Repton called Sheringham Park his "most favourite work" among all the landscapes he ever designed — and walking it, it's easy to see why. This short circular route climbs through rolling parkland and rhododendron gardens to a treetop gazebo with views stretching to the sea, then loops back past Sheringham Hall and Repton's Temple. A single National Trust car park serves the whole route.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-cell"><span class="info-icon">📏</span><div class="info-label">Distance</div><div class="info-val">2.5 miles</div></div>
+      <div class="info-cell"><span class="info-icon">⏱</span><div class="info-label">Duration</div><div class="info-val">1–1.5 hrs</div></div>
+      <div class="info-cell"><span class="info-icon">🟡</span><div class="info-label">Difficulty</div><div class="info-val">Easy/Mod</div></div>
+      <div class="info-cell"><span class="info-icon">🅿</span><div class="info-label">Parking</div><div class="info-val">NR26 8TL</div></div>
+    </div>
+
+    <div class="map-wrap">
+      <div class="map-title">Route map — Sheringham Park (Repton's Walk)</div>
+      <div class="map-container">
+        <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;background:#e8ede6;">
+          <!-- Sea glimpse top right -->
+          <rect x="550" y="0" width="210" height="50" fill="#b8d4e0" opacity="0.5"/>
+          <text x="655" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#6a9aac" opacity="0.8">SEA VIEWS</text>
+          <text x="655" y="32" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#6a9aac" opacity="0.8">FROM GAZEBO</text>
+
+          <!-- Woodland background -->
+          <rect x="0" y="50" width="760" height="330" fill="#5a7a4a" opacity="0.18"/>
+
+          <!-- Rhododendron / Wild Garden area -->
+          <ellipse cx="180" cy="130" rx="90" ry="45" fill="#9a5a8a" opacity="0.25"/>
+          <text x="180" y="128" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" font-weight="600" fill="#6a2a5a">Wild Garden</text>
+          <text x="180" y="139" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#8a4a7a">rhododendrons & azaleas</text>
+
+          <!-- Open parkland -->
+          <ellipse cx="420" cy="240" rx="140" ry="60" fill="#9ab07a" opacity="0.25"/>
+          <text x="420" y="245" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#3a6a1a">Open Parkland</text>
+
+          <!-- Cracking Park / hill area -->
+          <ellipse cx="500" cy="135" rx="70" ry="40" fill="#7a9a5a" opacity="0.2"/>
+          <text x="500" y="133" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#3a6a1a">Cracking Park</text>
+
+          <!-- ROUTE - circular, climbing to gazebo and back -->
+          <path d="M 280 300 Q 250 280 220 255 Q 195 230 175 200 Q 160 170 165 140 Q 175 115 200 100 Q 230 88 265 85 Q 320 80 380 85 Q 440 92 490 110 Q 530 125 555 110 Q 575 95 590 75"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round" fill-opacity="0"/>
+          <!-- Return path -->
+          <path d="M 590 75 Q 565 110 540 150 Q 510 195 470 230 Q 430 260 380 280 Q 330 298 280 300"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round"/>
+
+          <!-- Gold overlay -->
+          <path d="M 280 300 Q 250 280 220 255 Q 195 230 175 200 Q 160 170 165 140 Q 175 115 200 100 Q 230 88 265 85 Q 320 80 380 85 Q 440 92 490 110 Q 530 125 555 110 Q 575 95 590 75 Q 565 110 540 150 Q 510 195 470 230 Q 430 260 380 280 Q 330 298 280 300"
+            fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.6"/>
+
+          <!-- Direction arrows -->
+          <text x="195" y="175" font-family="DM Sans,sans-serif" font-size="11" fill="#1e3528">↑</text>
+          <text x="370" y="83" font-family="DM Sans,sans-serif" font-size="11" fill="#1e3528">→</text>
+          <text x="490" y="200" font-family="DM Sans,sans-serif" font-size="11" fill="#1e3528">↓</text>
+
+          <!-- START -->
+          <circle cx="280" cy="300" r="10" fill="#c9a84c" stroke="#1e3528" stroke-width="2"/>
+          <text x="280" y="303" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" font-weight="700" fill="#1e3528">S</text>
+          <text x="280" y="322" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Visitor Centre</text>
+          <text x="280" y="333" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#4a6b5a">& car park</text>
+
+          <!-- POI 1: Bower -->
+          <circle cx="240" cy="270" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="240" y="273" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">1</text>
+          <text x="222" y="280" font-family="DM Sans,sans-serif" font-size="6.5" fill="#1e3528">The Bower</text>
+
+          <!-- POI 2: Repton's Temple -->
+          <circle cx="195" cy="195" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="195" y="198" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">2</text>
+          <text x="155" y="200" font-family="DM Sans,sans-serif" font-size="6.5" fill="#1e3528">Repton's Temple</text>
+
+          <!-- POI 3: Sheringham Hall -->
+          <rect x="225" y="98" width="16" height="11" fill="#c8a870" opacity="0.7" rx="1"/>
+          <text x="233" y="120" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#5a4020">Sheringham Hall</text>
+
+          <!-- POI 4: The Gazebo -->
+          <circle cx="385" cy="83" r="7" fill="#b8923a" stroke="#fff" stroke-width="1.5"/>
+          <text x="385" y="86" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#fff">★</text>
+          <text x="385" y="65" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" font-weight="700" fill="#b8923a">The Gazebo</text>
+          <text x="385" y="74" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#8a6020">Treetop sea views</text>
+
+          <!-- POI 5: Coastal watch tower -->
+          <circle cx="500" cy="108" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="500" y="111" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">3</text>
+          <text x="520" y="105" font-family="DM Sans,sans-serif" font-size="6.5" fill="#1e3528">Coastal viewpoint</text>
+
+          <!-- Deer icons -->
+          <text x="450" y="245" font-family="DM Sans,sans-serif" font-size="11">🦌</text>
+
+          <!-- Compass -->
+          <g transform="translate(720,348)"><circle cx="0" cy="0" r="12" fill="rgba(250,246,239,0.9)" stroke="#2d4a3e" stroke-width="1"/><text x="0" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" font-weight="700" fill="#1e3528">N</text><line x1="0" y1="-3" x2="0" y2="-8" stroke="#1e3528" stroke-width="1.5"/></g>
+          <g transform="translate(30,355)"><line x1="0" y1="0" x2="35" y2="0" stroke="#2d4a3e" stroke-width="1.5"/><line x1="0" y1="-3" x2="0" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><line x1="35" y1="-3" x2="35" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><text x="17" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#2d4a3e">0.3 miles approx</text></g>
+
+          <circle cx="30" cy="368" r="4" fill="#c9a84c"/><text x="38" y="372" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Start/finish — Visitor Centre</text>
+          <circle cx="240" cy="368" r="4" fill="#b8923a"/><text x="248" y="372" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">The Gazebo (highlight)</text>
+        </svg>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#c9a84c;"></div>Start/finish — Visitor Centre car park</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#b8923a;"></div>The Gazebo (route highlight)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4a6b5a;"></div>Point of interest</div>
+        <div class="legend-item"><div class="legend-line" style="background:#1e3528;"></div>Walking route (circular)</div>
+      </div>
+    </div>
+
+    <h2 class="art-h2">The Route</h2>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 1 — Visitor Centre Through the Wild Garden</div><span class="stage-dist">0.5 miles · 15 mins</span></div>
+      <p class="stage-desc">From the visitor centre, head left past the Bower and follow the red arrow waymarkers — this route is officially known as Repton's Walk. The path leads through the Wild Garden, a nationally important collection of rhododendrons and azaleas planted from the early 1900s onwards by the Upcher family, who have owned Sheringham Park for generations. The garden is genuinely spectacular in May and June when the rhododendrons bloom, but has year-round interest thanks to the mix of mature trees and shrubs. Keep an eye out in May for the unusual handkerchief tree, with its distinctive white bracts.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 2 — Past Sheringham Hall to the Gazebo</div><span class="stage-dist">0.5 miles · 15 mins</span></div>
+      <p class="stage-desc">As you approach Sheringham Hall — a handsome early 19th-century house, privately occupied and not open to the public — take the path to the left. Continue along this route and you'll arrive at one of Humphry Repton's celebrated set-piece views, known in his original Red Book sketches as "The Turn." From here the path climbs gently to the Gazebo, a treetop viewing platform that is the undisputed highlight of the walk. Climb the steps to the top for a 360-degree panorama: Sheringham Hall below, the wooded parkland in every direction, and on a clear day, the North Sea glinting on the horizon.</p>
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">The best photo on the walk</div>
+      <p>The view from the Gazebo looking back towards Sheringham Hall, framed by the descending slope of "The Turn," is the single most photographed scene in the park — and the one Humphry Repton himself considered his finest achievement here. Visit in late afternoon for the best light.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 3 — Cracking Park and the Coastal Watch Tower</div><span class="stage-dist">0.75 miles · 20 mins</span></div>
+      <p class="stage-desc">From the Gazebo, continue along the path through Cracking Park, an area of mixed woodland with some of the park's oldest trees. A second viewpoint — a coastal watch tower offering further sea views — sits a short distance further on, giving an excellent vantage point over Sheringham golf course and the coastline beyond. This stretch is good for wildlife: muntjac and other deer species are common throughout the park, and in summer white admiral butterflies are sometimes seen along the woodland rides.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 4 — Through Open Parkland Back to the Start</div><span class="stage-dist">0.75 miles · 20 mins</span></div>
+      <p class="stage-desc">The final stretch descends through open parkland, crossing a cattle grid as you re-enter the more formally landscaped grounds near the visitor centre. This last section gives a real sense of Repton's original design — rolling grassland framed by mature specimen trees, designed to look natural while being entirely composed. Near the end of the trail you pass an impressive Japanese maple and a cluster of silver birch and younger acers outside the Bower garden, before arriving back at the visitor centre and Courtyard Café.</p>
+    </div>
+
+    <h2 class="art-h2">Extending the Walk</h2>
+    <p class="art-p">For a longer day, the National Trust's full Woodland and Coastal Walk extends this route to around 5 miles, continuing beyond Cracking Park down to the cliff edge and the sea, crossing the North Norfolk Steam Railway line at Weybourne village, then joining the Norfolk Coast Path back along the clifftop before re-entering the park. This extended route includes a stretch of the historic Peddars Way National Trail and passes close to Repton's Temple, a Greek-style folly added to the grounds in the 1970s in keeping with Repton's original classical vision.</p>
+
+    <h2 class="art-h2">Points of Interest</h2>
+    <div class="poi-list">
+
+      <div class="poi-item">
+        <div class="poi-num">★</div><div class="poi-icon">🏗</div>
+        <div>
+          <div class="poi-name">The Gazebo</div>
+          <div class="poi-desc">A treetop viewing tower built near the site of Repton's original gazebo, giving genuinely panoramic views in every direction — Sheringham Hall, the rolling parkland, the woods of Cracking Park and, on a clear day, the North Sea on the horizon. Universally agreed by visitors to be the highlight of the walk.</div>
+          <div class="poi-tag">📍 Sheringham Park, steps required to climb</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">1</div><div class="poi-icon">🌸</div>
+        <div>
+          <div class="poi-name">The Wild Garden</div>
+          <div class="poi-desc">A nationally important rhododendron and azalea collection begun by the Upcher family in the early 1900s, with plant-collecting expeditions sponsored between 1900 and the 1930s adding rare specimens to what has become one of the finest woodland gardens in Norfolk. At its spectacular best in May and June.</div>
+          <div class="poi-tag">📍 Sheringham Park · Best: May–June</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">2</div><div class="poi-icon">🏛</div>
+        <div>
+          <div class="poi-name">Repton's Temple</div>
+          <div class="poi-desc">A classical temple added to the park in 1975 — long after Repton's death — but designed in keeping with the spirit of his original 1812 landscape. The National Trust notes this as the most recent major Repton-inspired intervention in the park. A peaceful spot on the longer route variant, with views across the parkland.</div>
+          <div class="poi-tag">📍 Sheringham Park, on the extended route</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">3</div><div class="poi-icon">🏠</div>
+        <div>
+          <div class="poi-name">Sheringham Hall</div>
+          <div class="poi-desc">Repton presented his designs in 1812 for Abbot Upcher, who sadly died before the house was completed. His son carried on the work, finally moving into the finished house in the 1830s. The hall remains privately occupied today and is not open to the public, but the view of it from the descending parkland path — exactly as Repton intended it to be seen — is one of the finest moments of the walk.</div>
+          <div class="poi-tag">📍 Sheringham Park · Private, viewed from path only</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="art-h2">Wildlife on This Walk</h2>
+    <p class="art-p">Sheringham Park supports three species of deer — fallow, roe and muntjac — along with a wide variety of birds and butterflies across its nearly 1,000 acres. Skylarks sing overhead in the open parkland through spring and summer, and great spotted woodpeckers are a regular and unmistakable sound in the older woodland. In winter, squadrons of pink-footed geese are sometimes seen passing overhead on their way between feeding and roosting sites along the coast. White admiral butterflies favour the woodland rides in high summer.</p>
+
+    <h2 class="art-h2">Food and Drink</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <div class="food-name">Courtyard Café</div>
+        <div class="food-type">Café · Start/end of walk</div>
+        <div class="food-desc">Right by the visitor centre, serving sandwiches, soups, cakes, scones and hot and cold drinks. The obvious spot for refreshments before or after the route.</div>
+        <div class="food-loc">📍 Sheringham Park visitor centre, NR26 8TL</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">Sheringham Town</div>
+        <div class="food-type">Various · 1.5 miles away</div>
+        <div class="food-desc">If you fancy a wider choice, Sheringham's independent shops, cafés and excellent fish and chips are a short drive or a pleasant additional walk from the park entrance.</div>
+        <div class="food-loc">📍 Sheringham town centre, NR26</div>
+      </div>
+    </div>
+
+    <h2 class="art-h2">What to Bring</h2>
+
+    <div class="gear-item">
+      <span class="gear-icon">🥾</span>
+      <div>
+        <div class="gear-name">Walking Boots or Sturdy Trainers</div>
+        <div class="gear-desc">The parkland paths are generally well maintained but the climb to the Gazebo includes steps, which can be slippery when wet. Decent grip footwear is worthwhile.</div>
+        <a class="gear-btn" href="article-2-walking-boots.html">Read Our Boots Guide →</a>
+      </div>
+    </div>
+
+    <div class="art-author">
+      <div class="author-av">🌿</div>
+      <div>
+        <div class="author-name">NorfolkWild</div>
+        <div class="author-bio">Independent guide to walking in North Norfolk. Updated June 2026.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="art-aside">
+    <div class="aside-sticky">
+      <div class="aside-map-mini">
+        <div class="aside-map-label">Route stops</div>
+        <div class="aside-stops">
+          <div class="aside-stop"><div class="as-dot start"></div><span class="as-name bold">Visitor Centre & car park</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name bold">Wild Garden 🌸</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Sheringham Hall 🏠</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name bold">★ The Gazebo 🏗</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Coastal watch tower</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Cracking Park 🦌</span></div>
+          <div class="aside-stop"><div class="as-dot start"></div><span class="as-name bold">Return to Visitor Centre</span></div>
+        </div>
+      </div>
+      <div class="aside-widget">
+        <div class="aside-label">Related guides</div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-3-salthouse-sheringham.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1557869240-c53059f36611?w=90&q=60" alt=""><div class="aside-link-title">Salthouse to Sheringham Walk</div></div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-4-sheringham-cromer.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1624866181865-91b01ff7400a?w=90&q=60" alt=""><div class="aside-link-title">Sheringham to Cromer Walk</div></div>
+        <div class="aside-link" onclick="window.location='circular-walk-2-blakeney-friary.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=90&q=60" alt=""><div class="aside-link-title">Blakeney Circular Walk</div></div>
+        <div class="aside-link" onclick="window.location='index.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=90&q=60" alt=""><div class="aside-link-title">All NorfolkWild Guides →</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div><div class="footer-wm">Norfolk<em>Wild</em></div><div class="footer-tag">Independent outdoor guides from North Norfolk.</div></div>
+  <div class="footer-col"><h4>Walks</h4><a href="circular-walk-1-holkham.html">Holkham Circular</a><a href="circular-walk-2-blakeney-friary.html">Blakeney Circular</a><a href="coasthopper-hub.html">Coasthopper Series</a></div>
+  <div class="footer-col"><h4>Gear</h4><a href="article-2-walking-boots.html">Walking Boots</a><a href="article-5-binoculars.html">Binoculars</a></div>
+  <div class="footer-col"><h4>About</h4><a href="norfolk-wild-legal.html#privacy">Privacy Policy</a><a href="mailto:hello@norfolkwild.co.uk">Contact</a></div>
+</footer>
+<div class="footer-bottom"><span>© 2026 NorfolkWild.co.uk</span><span>Written in North Norfolk</span></div>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

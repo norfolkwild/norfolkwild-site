@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holkham Beach: The Complete Visitor Guide | NorfolkWild</title>
+<meta name="description" content="Everything you need to know about visiting Holkham Beach — parking, best times, walks, what to see, and why early morning is the best kept secret on the Norfolk coast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --marsh: #2d4a3e; --reed: #5a7a5f; --sky: #b8cfd4; --cream: #f7f2eb; --ink: #1a2420; --mist: #e2eaec; --gold: #c9a84c; --dusk: #c4956a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--ink); }
+  nav { background: rgba(247,242,235,0.97); border-bottom: 1px solid rgba(45,74,62,0.15); padding: 0 3rem; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; color: var(--marsh); text-decoration: none; }
+  .nav-logo span { color: var(--gold); font-style: italic; }
+  .nav-back { color: var(--reed); font-size: 0.82rem; text-decoration: none; }
+  .hero-article { height: 60vh; min-height: 400px; background: linear-gradient(to bottom, rgba(26,36,32,0.1), rgba(26,36,32,0.65)), url('https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=1400&q=80') center 40%/cover; display: flex; align-items: flex-end; padding: 3rem; }
+  .article-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+  .article-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin: 0.5rem 0 1rem; max-width: 720px; }
+  .meta-pill { background: rgba(255,255,255,0.15); color: #fff; padding: 0.3rem 0.8rem; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.3); margin-right: 0.5rem; display: inline-block; margin-bottom: 0.4rem; }
+  .article-body { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .intro-box { background: var(--marsh); color: var(--cream); padding: 1.5rem 2rem; margin-bottom: 2.5rem; border-left: 4px solid var(--gold); }
+  .intro-box p { color: var(--cream); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--marsh); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(45,74,62,0.15); }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--reed); margin: 1.5rem 0 0.5rem; }
+  p { font-size: 1rem; line-height: 1.85; color: #2a3a34; margin-bottom: 1.2rem; }
+  ul, ol { padding-left: 1.5rem; margin-bottom: 1.2rem; }
+  li { font-size: 0.97rem; line-height: 1.8; color: #2a3a34; margin-bottom: 0.3rem; }
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--marsh); margin: 2rem 0; }
+  .info-cell { background: var(--cream); padding: 1.2rem; text-align: center; }
+  .info-icon { font-size: 1.5rem; display: block; margin-bottom: 0.3rem; }
+  .info-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .info-val { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; color: var(--marsh); margin-top: 0.2rem; }
+  .tip-box { background: #f0f7f4; border-left: 4px solid var(--reed); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+  .tip-box strong { color: var(--marsh); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 0.4rem; }
+  .tip-box p { margin: 0; font-size: 0.92rem; }
+  .warning-box { background: #fffbf0; border-left: 4px solid var(--dusk); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+  .warning-box p { margin: 0; font-size: 0.92rem; color: #5a4020; }
+  .season-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--marsh); margin: 1.5rem 0; }
+  .season-cell { background: var(--cream); padding: 1rem; text-align: center; }
+  .season-name { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+  .season-rating { font-size: 1.3rem; margin: 0.3rem 0; }
+  .season-note { font-size: 0.78rem; color: #5a6a5a; line-height: 1.4; }
+  .walk-card { border: 1px solid rgba(45,74,62,0.2); margin: 1.2rem 0; overflow: hidden; }
+  .walk-header { background: var(--marsh); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+  .walk-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: #fff; }
+  .walk-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .badge { background: rgba(255,255,255,0.15); color: var(--sky); font-size: 0.72rem; padding: 0.2rem 0.6rem; }
+  .walk-body { padding: 1.2rem 1.5rem; font-size: 0.93rem; line-height: 1.7; color: #2a3a34; }
+  .gear-card { border: 1px solid rgba(45,74,62,0.2); padding: 1.2rem 1.5rem; margin: 1rem 0; display: flex; gap: 1rem; align-items: flex-start; }
+  .gear-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .gear-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--marsh); }
+  .gear-desc { font-size: 0.88rem; color: #5a6a5a; line-height: 1.6; margin: 0.3rem 0 0.5rem; }
+  .gear-link { display: inline-block; background: var(--gold); color: var(--ink); padding: 0.35rem 0.9rem; font-size: 0.78rem; font-weight: 700; text-decoration: none; }
+  .author-box { background: var(--mist); padding: 1.5rem 2rem; display: flex; gap: 1.2rem; align-items: center; margin-top: 3rem; border-top: 2px solid var(--marsh); }
+  .author-avatar { width: 52px; height: 52px; background: var(--marsh); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .author-name { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--marsh); }
+  .author-bio { font-size: 0.85rem; color: #5a6a5a; line-height: 1.5; margin-top: 0.2rem; }
+  footer { background: var(--ink); color: #5a6a64; text-align: center; padding: 2rem; font-size: 0.78rem; }
+  footer a { color: var(--sky); text-decoration: none; }
+  @media(max-width:600px) { nav { padding: 0 1rem; } .hero-article { padding: 1.5rem; } .article-body { padding: 2rem 1.2rem 4rem; } .season-grid { grid-template-columns: repeat(2,1fr); } }
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/article-4-holkham-beach.html">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="hero-article">
+  <div>
+    <span class="article-tag">🌅 Coast & Beaches</span>
+    <h1 class="article-hero-title">Holkham Beach: The Complete Guide to Norfolk's Most Iconic Beach</h1>
+    <div>
+      <span class="meta-pill">📍 Holkham, North Norfolk</span>
+      <span class="meta-pill">🚶 Multiple walks</span>
+      <span class="meta-pill">👨‍👩‍👧 Family friendly</span>
+      <span class="meta-pill">🐕 Dogs welcome</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="intro-box">
+    <p>Holkham Beach is regularly voted one of the finest beaches in England — and for once, the hype is entirely justified. Miles of golden sand backed by ancient pinewoods, a vast National Nature Reserve, and a beach so wide that even on a August bank holiday you can find solitude. Here's how to make the most of it.</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-cell"><span class="info-icon">🏖</span><div class="info-label">Beach length</div><div class="info-val">3+ miles</div></div>
+    <div class="info-cell"><span class="info-icon">🅿</span><div class="info-label">Parking</div><div class="info-val">Lady Anne's Drive</div></div>
+    <div class="info-cell"><span class="info-icon">💷</span><div class="info-label">Parking cost</div><div class="info-val">~£5–8/day</div></div>
+    <div class="info-cell"><span class="info-icon">🚶</span><div class="info-label">Walk to beach</div><div class="info-val">15–20 mins</div></div>
+    <div class="info-cell"><span class="info-icon">🐕</span><div class="info-label">Dogs</div><div class="info-val">Year round</div></div>
+    <div class="info-cell"><span class="info-icon">🏄</span><div class="info-label">Swimming</div><div class="info-val">Yes (no lifeguard)</div></div>
+  </div>
+
+      <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:\'Source Serif 4\',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24 / OL25 for North Norfolk)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before any coastal or salt marsh walk</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Verify <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:#c9a84c;">bus timetables</a> directly with Sanders Coaches before travel</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, cliff erosion, tidal changes and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside and on coastal cliff paths involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong> — for coastal emergencies ask for the Coastguard.
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:1rem;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">Wildlife Disturbance</strong> — Holkham is a National Nature Reserve. Always keep a respectful distance from all wildlife, especially seals on sandbanks and nesting birds in the dunes. Dogs must be kept under close control, and on leads in designated areas. Never approach or feed wild animals.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+<h2>What Makes Holkham Special</h2>
+  <p>Most famous beaches in England are famous despite their crowds. Holkham is different — it's famous because of its sheer scale. The beach stretches for miles and the approach through the pinewood is genuinely theatrical: you walk through cool, dark trees and then suddenly emerge onto one of the widest, most open stretches of sand in Britain.</p>
+  <p>The beach sits within the Holkham National Nature Reserve, one of the largest in England. The pinewoods were planted in the 19th century to stabilise the dunes; the salt marshes to the east host some of the best wading bird populations on the Norfolk coast; and the beach itself is backed by dunes that offer shelter from even the fiercest north wind.</p>
+  <p>It was used as the beach scene in Shakespeare in Love (1998) — you'll recognise it immediately if you've seen the film.</p>
+
+  <h2>Getting There</h2>
+  <h3>By Car</h3>
+  <p>The main car park is at the end of <strong>Lady Anne's Drive</strong> in Holkham village (postcode NR23 1RG), managed by the Holkham Estate. The walk from the car park to the beach through the pinewoods takes around 15–20 minutes and is flat and easy. There is a second smaller car park at Burnham Overy Staithe to the west for those approaching from that direction.</p>
+
+  <div class="warning-box">
+    <p>⚠️ <strong>Summer parking:</strong> The Lady Anne's Drive car park fills completely by 10am on sunny summer weekends. Arrive before 9am, or visit on a weekday. Alternatively, park in Wells-next-the-Sea (10 mins east by road) and walk along the beach or coastal path to Holkham — adds a beautiful 2-mile walk each way.</p>
+  </div>
+
+  <h3>By Bus</h3>
+  <p>The Coasthopper bus stops in Holkham village, a short walk from the car park. It runs between Kings Lynn and Cromer and is a great option in summer when driving is stressful. Check coasthopper.co.uk for timetables.</p>
+
+  <h3>By Bike</h3>
+  <p>Holkham is excellent by bicycle. The North Norfolk Cycling Route passes through the estate, and you can lock bikes at the car park. Wells, Burnham Market and Burnham Overy are all lovely cycling destinations from Holkham.</p>
+
+  <h2>The Best Walks from Holkham</h2>
+
+  <div class="walk-card">
+    <div class="walk-header">
+      <div class="walk-name">The Classic Beach Walk</div>
+      <div class="walk-badges"><span class="badge">2 miles</span><span class="badge">1 hour</span><span class="badge">🟢 Easy</span></div>
+    </div>
+    <div class="walk-body">Park at Lady Anne's Drive, walk through the pines to the beach, turn either east towards Wells or west towards Burnham Overy. The beach is wide enough to walk on the firm sand at the waterline. Return the same way or loop back through the dunes and salt marshes.</div>
+  </div>
+
+  <div class="walk-card">
+    <div class="walk-header">
+      <div class="walk-name">Holkham to Wells Circular</div>
+      <div class="walk-badges"><span class="badge">5.5 miles</span><span class="badge">2.5 hours</span><span class="badge">🟡 Moderate</span></div>
+    </div>
+    <div class="walk-body">Walk east along the beach to Wells-next-the-Sea, then return inland via the coastal path through the salt marshes and pines. Ends with a well-earned coffee or ice cream in Wells. One of the finest half-day walks in North Norfolk.</div>
+  </div>
+
+  <div class="walk-card">
+    <div class="walk-header">
+      <div class="walk-name">Holkham to Burnham Overy Staithe</div>
+      <div class="walk-badges"><span class="badge">4 miles</span><span class="badge">2 hours</span><span class="badge">🟢 Easy</span></div>
+    </div>
+    <div class="walk-body">Walk west along the beach to the mouth of Burnham Overy creek, then return via the coastal path past the salt marshes. Outstanding birdwatching along the inland return — marsh harriers, curlews and redshanks year-round.</div>
+  </div>
+
+  <h2>Best Time to Visit</h2>
+
+  <div class="season-grid">
+    <div class="season-cell"><div class="season-name">Spring</div><div class="season-rating">⭐⭐⭐⭐⭐</div><div class="season-note">Quiet, birds arriving, pines smelling incredible</div></div>
+    <div class="season-cell"><div class="season-name">Summer</div><div class="season-rating">⭐⭐⭐</div><div class="season-note">Busy but beach big enough to absorb crowds</div></div>
+    <div class="season-cell"><div class="season-name">Autumn</div><div class="season-rating">⭐⭐⭐⭐⭐</div><div class="season-note">Golden light, migrating birds, empty beach</div></div>
+    <div class="season-cell"><div class="season-name">Winter</div><div class="season-rating">⭐⭐⭐⭐</div><div class="season-note">Wild and dramatic, pink-footed geese overhead</div></div>
+  </div>
+
+  <div class="tip-box">
+    <strong>The Dawn Secret</strong>
+    <p>Holkham at dawn in autumn is one of the great free experiences in Norfolk. Arrive at first light — the beach is completely empty, the light on the sand is extraordinary, and you'll often hear (and sometimes see) skeins of pink-footed geese flying in off the sea to roost inland. Bring a flask of tea.</p>
+  </div>
+
+  <h2>Wildlife at Holkham</h2>
+  <p>The Holkham National Nature Reserve is one of the most important wildlife sites on the Norfolk coast. Here's what to look for:</p>
+  <ul>
+    <li><strong>Pink-footed geese</strong> — thousands roost on the beach in winter, spectacular at dawn and dusk</li>
+    <li><strong>Marsh harriers</strong> — hunt over the salt marshes year-round</li>
+    <li><strong>Little egrets</strong> — common in the creeks east of the beach</li>
+    <li><strong>Oystercatchers, curlews and redshanks</strong> — on the salt marshes</li>
+    <li><strong>Common seals</strong> — haul out on the sandbanks at low tide</li>
+    <li><strong>Red deer</strong> — on the Holkham Estate, sometimes visible from the coastal path</li>
+  </ul>
+
+  <h2>What to Bring</h2>
+
+  <div class="gear-card">
+    <span class="gear-icon">🔭</span>
+    <div>
+      <div class="gear-name">Binoculars</div>
+      <div class="gear-desc">Essential for the wildlife — geese flocks, distant waders and seals on the sandbanks are all transformed by a decent pair. 8x42 is the ideal all-round choice for this kind of coastal walking.</div>
+      <a class="gear-link" href="https://www.amazon.co.uk/s?k=binoculars+8x42+birdwatching&tag=norfolkwild-21" target="_blank">★ See on Amazon</a>
+    </div>
+  </div>
+
+  <div class="gear-card">
+    <span class="gear-icon">🥾</span>
+    <div>
+      <div class="gear-name">Walking Boots or Wellies</div>
+      <div class="gear-desc">The beach itself is fine in trainers, but if you're taking the salt marsh return route, waterproof footwear is essential. The creeks and marsh paths flood regularly and the mud is deep.</div>
+      <a class="gear-link" href="https://www.amazon.co.uk/s?k=waterproof+walking+boots&tag=norfolkwild-21" target="_blank">★ See on Amazon</a>
+    </div>
+  </div>
+
+  <h2>Nearby: Food & Drink</h2>
+  <ul>
+    <li><strong>The Victoria at Holkham</strong> — the estate pub, excellent food, right by the car park. Book ahead in summer</li>
+    <li><strong>Wells-next-the-Sea</strong> — 10 mins east, great fish and chips, good cafés on the quay</li>
+    <li><strong>Burnham Market</strong> — 10 mins west, Norfolk's most upmarket village, excellent delis and cafés</li>
+    <li><strong>The Hero, Burnham Overy Staithe</strong> — remote and wonderful pub with views over the creek</li>
+  </ul>
+
+  <div class="tip-box">
+    <strong>Local Knowledge</strong>
+    <p>The beach café at the end of Lady Anne's Drive is decent for hot drinks and simple food, but the Victoria pub at the car park end is far better and worth the slight extra cost. In summer, the queue for the beach café can be extraordinary — the pub rarely has a wait.</p>
+  </div>
+
+  <h2>Final Thoughts</h2>
+  <p>Holkham is one of those rare places that actually lives up to its reputation. The combination of pinewood, vast beach, salt marsh and wildlife reserve creates something genuinely special — an experience that's different every season and in every light.</p>
+  <p>If you only visit one beach in Norfolk, make it this one. And go early.</p>
+
+  <div class="author-box">
+    <div class="author-avatar">🌿</div>
+    <div>
+      <div class="author-name">NorfolkWild</div>
+      <div class="author-bio">Written from North Norfolk. Holkham is 25 minutes from our door and we visit in every season. Updated May 2026.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 NorfolkWild.co.uk — Independent guides written from North Norfolk<br>
+  <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a> · <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a> · <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+</footer>
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

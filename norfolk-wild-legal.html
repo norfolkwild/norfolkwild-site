@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Pages – NorfolkWild.co.uk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --marsh: #2d4a3e;
+    --reed: #5a7a5f;
+    --sky: #b8cfd4;
+    --sand: #e8d9c0;
+    --dusk: #c4956a;
+    --cream: #f7f2eb;
+    --ink: #1a2420;
+    --mist: #e2eaec;
+    --gold: #c9a84c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  /* NAV */
+  nav {
+    background: var(--marsh);
+    padding: 0 3rem;
+    height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; font-weight: 900;
+    color: #fff; text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); font-style: italic; }
+  .nav-back { color: var(--sky); font-size: 0.82rem; text-decoration: none; letter-spacing: 0.05em; }
+  .nav-back:hover { color: #fff; }
+
+  /* TAB BAR */
+  .tab-bar {
+    background: var(--ink);
+    padding: 0 3rem;
+    display: flex; gap: 0; overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab {
+    padding: 1rem 1.5rem;
+    color: #8a9a94; font-size: 0.8rem;
+    font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+    background: none; border-top: none; border-left: none; border-right: none;
+    font-family: 'Source Serif 4', serif;
+  }
+  .tab:hover { color: var(--sky); }
+  .tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* PAGES */
+  .page { display: none; max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+  .page.active { display: block; }
+
+  /* TYPOGRAPHY */
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 900;
+    color: var(--marsh); margin-bottom: 0.4rem;
+    line-height: 1.1;
+  }
+  .page-title em { font-style: italic; color: var(--reed); }
+  .updated {
+    font-size: 0.78rem; color: #8a8a7a;
+    letter-spacing: 0.05em; margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--marsh);
+  }
+  .updated span { font-weight: 600; color: var(--marsh); }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--marsh); margin: 2.5rem 0 0.8rem;
+  }
+  h2::before {
+    content: '§';
+    color: var(--gold); margin-right: 0.5rem;
+    font-style: italic;
+  }
+
+  p { font-size: 0.95rem; line-height: 1.8; color: #2a3a34; margin-bottom: 1rem; }
+  ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+  li { font-size: 0.95rem; line-height: 1.8; color: #2a3a34; margin-bottom: 0.3rem; }
+  a { color: var(--reed); }
+  a:hover { color: var(--marsh); }
+
+  .highlight-box {
+    background: var(--marsh);
+    color: var(--cream);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid var(--gold);
+  }
+  .highlight-box p { color: var(--cream); margin: 0; font-size: 0.9rem; line-height: 1.7; }
+  .highlight-box strong { color: var(--gold); }
+
+  .warning-box {
+    background: #fff8ec;
+    border: 1px solid var(--gold);
+    border-left: 4px solid var(--dusk);
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .warning-box p { margin: 0; font-size: 0.88rem; color: #5a4020; }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 1.5rem 0; font-size: 0.88rem;
+  }
+  th {
+    background: var(--marsh); color: var(--cream);
+    padding: 0.7rem 1rem; text-align: left;
+    font-weight: 600; font-size: 0.8rem;
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  td {
+    padding: 0.7rem 1rem; border-bottom: 1px solid rgba(45,74,62,0.12);
+    color: #2a3a34; vertical-align: top;
+  }
+  tr:nth-child(even) td { background: rgba(45,74,62,0.04); }
+
+  .contact-block {
+    background: var(--mist);
+    padding: 1.5rem 2rem; margin: 2rem 0;
+    border-left: 3px solid var(--sky);
+  }
+  .contact-block p { margin: 0.2rem 0; font-size: 0.9rem; }
+
+  footer-legal {
+    display: block;
+    background: var(--ink); color: #5a6a64;
+    text-align: center; padding: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="tab-bar">
+  <button class="tab active" onclick="showPage('affiliate')">Affiliate Disclosure</button>
+  <button class="tab" onclick="showPage('privacy')">Privacy Policy</button>
+  <button class="tab" onclick="showPage('disclaimer')">Disclaimer</button>
+  <button class="tab" onclick="showPage('cookies')">Cookie Policy</button>
+  <button class="tab" onclick="showPage('terms')">Terms of Use</button>
+</div>
+
+<!-- ══════════════════════════════════════════
+     1. AFFILIATE DISCLOSURE
+══════════════════════════════════════════ -->
+<div class="page active" id="affiliate">
+  <h1 class="page-title">Affiliate <em>Disclosure</em></h1>
+  <p class="updated">Last updated: <span>May 2026</span> &nbsp;·&nbsp; NorfolkWild.co.uk</p>
+
+  <div class="highlight-box">
+    <p><strong>Plain English summary:</strong> Some links on this site earn us a small commission if you buy something — at no extra cost to you. This never influences what we recommend. We only link to products we'd genuinely suggest to a friend.</p>
+  </div>
+
+  <h2>What is an affiliate link?</h2>
+  <p>NorfolkWild.co.uk participates in affiliate advertising programmes designed to provide a means for sites to earn advertising fees by linking to retailers and brands. When you click a link marked with a small ★ symbol, or any product link in our gear guides and reviews, and subsequently make a purchase, we may receive a small commission from the retailer.</p>
+  <p>This commission comes at <strong>no additional cost to you</strong> — the price you pay is exactly the same whether you use our link or visit the site directly.</p>
+
+  <h2>Which programmes do we use?</h2>
+  <table>
+    <tr><th>Programme</th><th>What we link to</th><th>Typical commission</th></tr>
+    <tr><td>Amazon Associates (UK)</td><td>Outdoor gear, books, equipment</td><td>1–5% depending on category</td></tr>
+    <tr><td>Awin / Affiliate Window</td><td>Outdoor clothing, footwear brands</td><td>Varies by advertiser</td></tr>
+    <tr><td>Direct brand partnerships</td><td>Occasionally negotiated directly</td><td>Varies</td></tr>
+  </table>
+
+  <h2>Our editorial independence</h2>
+  <p>Affiliate relationships do not influence our editorial content. We do not accept payment for positive reviews, and we do not write reviews of products we haven't researched thoroughly. Where we link to products, it is because we genuinely believe they represent good value and quality for the activity described.</p>
+  <p>If we receive a product for free to review, we will always disclose this clearly within that article.</p>
+
+  <h2>FTC &amp; ASA Compliance</h2>
+  <p>This disclosure is made in compliance with the UK Advertising Standards Authority (ASA) guidelines and the US Federal Trade Commission (FTC) guidelines on endorsements and testimonials. Affiliate links within articles are identified where practical.</p>
+
+  <h2>Questions?</h2>
+  <p>If you have any questions about our affiliate relationships, please contact us at <a href="mailto:hello@norfolkwild.co.uk">hello@norfolkwild.co.uk</a>.</p>
+</div>
+
+<!-- ══════════════════════════════════════════
+     2. PRIVACY POLICY
+══════════════════════════════════════════ -->
+<div class="page" id="privacy">
+  <h1 class="page-title">Privacy <em>Policy</em></h1>
+  <p class="updated">Last updated: <span>May 2026</span> &nbsp;·&nbsp; NorfolkWild.co.uk</p>
+
+  <div class="highlight-box">
+    <p><strong>Plain English summary:</strong> We collect minimal data. We only use your email if you sign up to our newsletter. We don't sell your data. We use Google Analytics to see how many people visit. That's about it.</p>
+  </div>
+
+  <h2>Who we are</h2>
+  <p>NorfolkWild.co.uk is an independent website operated from Norfolk, United Kingdom. For the purposes of UK data protection law (UK GDPR and the Data Protection Act 2018), the data controller is the owner of NorfolkWild.co.uk.</p>
+  <p>Contact: <a href="mailto:hello@norfolkwild.co.uk">hello@norfolkwild.co.uk</a></p>
+
+  <h2>What data we collect</h2>
+  <table>
+    <tr><th>Data type</th><th>Why we collect it</th><th>Legal basis</th></tr>
+    <tr><td>Email address</td><td>To send our newsletter (only if you sign up)</td><td>Consent</td></tr>
+    <tr><td>IP address / device data</td><td>Analytics (anonymised via Google Analytics)</td><td>Legitimate interest</td></tr>
+    <tr><td>Cookies</td><td>Site functionality and analytics</td><td>Consent (via cookie banner)</td></tr>
+    <tr><td>Contact form data</td><td>To respond to your enquiry</td><td>Consent</td></tr>
+  </table>
+
+  <h2>Newsletter</h2>
+  <p>If you subscribe to our newsletter, your email address is stored securely with our email provider (Mailchimp). You can unsubscribe at any time using the link at the bottom of every email. We will never share your email address with third parties for marketing purposes.</p>
+
+  <h2>Google Analytics</h2>
+  <p>We use Google Analytics to understand how visitors use our site (page views, traffic sources, device types). This data is anonymised and aggregated — we cannot identify individual visitors. You can opt out of Google Analytics tracking using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+  <h2>Cookies</h2>
+  <p>Please see our <a href="norfolk-wild-legal.html" onclick="showPage('cookies');return false;">Cookie Policy</a> for full details of the cookies we use.</p>
+
+  <h2>Your rights under UK GDPR</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Access the personal data we hold about you</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request deletion of your data ("right to be forgotten")</li>
+    <li>Object to processing based on legitimate interests</li>
+    <li>Withdraw consent at any time</li>
+    <li>Lodge a complaint with the ICO (ico.org.uk)</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:hello@norfolkwild.co.uk">hello@norfolkwild.co.uk</a>.</p>
+
+  <h2>Data retention</h2>
+  <p>Newsletter subscriber data is retained until you unsubscribe. Analytics data is retained for 26 months. Contact form submissions are deleted within 12 months unless ongoing correspondence requires otherwise.</p>
+
+  <h2>Third-party links</h2>
+  <p>Our website contains links to external sites (including affiliate partners). We are not responsible for the privacy practices of those sites. We recommend reviewing the privacy policy of any site you visit.</p>
+
+  <div class="contact-block">
+    <p><strong>Data Controller:</strong> NorfolkWild.co.uk</p>
+    <p><strong>Email:</strong> hello@norfolkwild.co.uk</p>
+    <p><strong>Supervisory Authority:</strong> Information Commissioner's Office (ICO) — ico.org.uk</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     3. DISCLAIMER
+══════════════════════════════════════════ -->
+<div class="page" id="disclaimer">
+  <h1 class="page-title">Site <em>Disclaimer</em></h1>
+  <p class="updated">Last updated: <span>June 2026</span> &nbsp;·&nbsp; NorfolkWild.co.uk</p>
+  <div class="warning-box" style="background:#fff5f5; border:1px solid #feb2b2; padding:1.5rem; margin-bottom:2rem; border-radius:4px;">
+    <p style="color:#c53030; font-weight:700; margin-bottom:0.5rem;">⚠️ IMPORTANT SAFETY WARNING</p>
+    <p style="font-size:0.85rem; line-height:1.6; color:#2d3748;">Outdoor activities in Norfolk, particularly coastal walking, carry inherent risks. Conditions can change rapidly. <strong>Always check tide times, weather forecasts, and local signage before setting out.</strong> We accept no liability for any injury, loss, or damage arising from the use of information on this website.</p>
+  </div>
+  <h2>Tidal & Coastal Risks</h2>
+  <p>Many of the walks described on this site, including Blakeney Point and Snettisham, are highly dependent on tide times. <strong>Getting cut off by the tide is a real and life-threatening danger.</strong> You must consult official tide tables (such as those provided by the BBC or local harbor masters) before attempting these routes.</p>
+  <h2>Terrain & Difficulty</h2>
+  <p>While Norfolk is relatively flat, terrain such as loose shingle (Blakeney Point) and soft mud (The Wash) is physically demanding and can be hazardous. Ensure you have appropriate footwear, sufficient water, and a means of communication. Do not rely solely on mobile phone GPS as signal can be intermittent in remote coastal areas.</p>
+
+  <div class="highlight-box">
+    <p><strong>Plain English summary:</strong> Our walking and outdoor guides are for information only. Conditions change. Always check local conditions, use proper equipment, and take personal responsibility for your safety outdoors.</p>
+  </div>
+
+  <h2>General information only</h2>
+  <p>The content published on NorfolkWild.co.uk is intended for general informational and entertainment purposes only. While we make every effort to ensure accuracy, we make no warranties or representations of any kind regarding the completeness, accuracy, reliability, suitability, or availability of any information on this website.</p>
+
+  <h2>Outdoor activities disclaimer</h2>
+  <div class="warning-box">
+    <p>⚠️ <strong>Important:</strong> Outdoor activities including walking, hiking, cycling and wildlife watching carry inherent risks. Conditions on the ground change frequently due to weather, tides, erosion, and seasonal factors. Always check current conditions before setting out.</p>
+  </div>
+  <p>NorfolkWild.co.uk accepts no liability for:</p>
+  <ul>
+    <li>Injury, illness or death arising from following routes or advice described on this site</li>
+    <li>Changes to paths, access rights, or terrain since publication</li>
+    <li>Tidal or weather conditions affecting coastal routes</li>
+    <li>Inaccuracies in distances, timings or difficulty ratings</li>
+    <li>Closure of paths, nature reserves, or facilities mentioned</li>
+  </ul>
+
+  <h2>Wildlife and nature information</h2>
+  <p>Species sightings, seasonal information and location guides are based on general knowledge and reader contributions. Wildlife presence cannot be guaranteed. Always observe wildlife responsibly and follow current guidelines from Natural England, the RSPB, and Norfolk Wildlife Trust.</p>
+
+  <h2>Gear and product information</h2>
+  <p>Product reviews and recommendations represent our honest opinion at the time of writing. Product specifications, prices, and availability change. Always verify current product details with the retailer before purchasing. We accept no liability for purchases made based on our recommendations.</p>
+
+  <h2>External links</h2>
+  <p>This website contains links to external websites. These links are provided for convenience and informational purposes only. NorfolkWild.co.uk has no control over the content of those sites and accepts no responsibility for them or for any loss or damage arising from your use of them.</p>
+
+  <h2>Changes to this disclaimer</h2>
+  <p>We reserve the right to update this disclaimer at any time. Changes will be reflected by the "Last updated" date at the top of this page.</p>
+  <p>This disclaimer should be read in conjunction with our full <a href="#affiliate">Affiliate Disclosure</a>, <a href="#privacy">Privacy Policy</a>, <a href="#cookies">Cookie Policy</a>, and <a href="#terms">Terms of Use</a>.</p>
+</div>
+
+<!-- ══════════════════════════════════════════
+     4. COOKIE POLICY
+══════════════════════════════════════════ -->
+<div class="page" id="cookies">
+  <h1 class="page-title">Cookie <em>Policy</em></h1>
+  <p class="updated">Last updated: <span>May 2026</span> &nbsp;·&nbsp; NorfolkWild.co.uk</p>
+
+  <div class="highlight-box">
+    <p><strong>Plain English summary:</strong> We use a small number of cookies — some essential for the site to work, some to understand visitor numbers. You can control non-essential cookies via our cookie banner.</p>
+  </div>
+
+  <h2>What are cookies?</h2>
+  <p>Cookies are small text files placed on your device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owner.</p>
+
+  <h2>Cookies we use</h2>
+  <table>
+    <tr><th>Cookie name</th><th>Type</th><th>Purpose</th><th>Duration</th></tr>
+    <tr><td>_ga, _ga_*</td><td>Analytics</td><td>Google Analytics — counts visitors and measures site usage</td><td>2 years</td></tr>
+    <tr><td>cookieconsent</td><td>Essential</td><td>Stores your cookie consent preference</td><td>1 year</td></tr>
+    <tr><td>mc_cid, mc_eid</td><td>Marketing</td><td>Mailchimp — tracks newsletter clicks (only if you're a subscriber)</td><td>Session</td></tr>
+  </table>
+
+  <h2>Essential cookies</h2>
+  <p>Essential cookies are necessary for the website to function and cannot be switched off. They do not store any personally identifiable information.</p>
+
+  <h2>Analytics cookies</h2>
+  <p>We use Google Analytics to understand how visitors interact with our website. All data collected is anonymised. These cookies are only set with your consent.</p>
+
+  <h2>How to control cookies</h2>
+  <p>You can control and manage cookies in several ways:</p>
+  <ul>
+    <li><strong>Cookie banner:</strong> When you first visit our site, you can accept or decline non-essential cookies</li>
+    <li><strong>Browser settings:</strong> Most browsers allow you to refuse cookies or delete existing ones. Check your browser's help section for instructions</li>
+    <li><strong>Google Analytics opt-out:</strong> Install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics opt-out add-on</a></li>
+  </ul>
+  <p>Note: Blocking essential cookies may affect how the website functions.</p>
+
+  <h2>UK PECR compliance</h2>
+  <p>This cookie policy is compliant with the UK Privacy and Electronic Communications Regulations (PECR) and UK GDPR. We obtain consent before placing non-essential cookies on your device.</p>
+</div>
+
+<!-- ══════════════════════════════════════════
+     5. TERMS OF USE
+══════════════════════════════════════════ -->
+<div class="page" id="terms">
+  <h1 class="page-title">Terms <em>of Use</em></h1>
+  <p class="updated">Last updated: <span>May 2026</span> &nbsp;·&nbsp; NorfolkWild.co.uk</p>
+
+  <div class="highlight-box">
+    <p><strong>Plain English summary:</strong> Use the site for personal, non-commercial purposes. Don't copy our content without permission. Don't do anything illegal. That's the gist.</p>
+  </div>
+
+  <h2>Acceptance of terms</h2>
+  <p>By accessing and using NorfolkWild.co.uk, you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use this website.</p>
+
+  <h2>Permitted use</h2>
+  <p>You may access and use this website for personal, non-commercial purposes. You may:</p>
+  <ul>
+    <li>Read and print content for personal use</li>
+    <li>Share links to our articles on social media</li>
+    <li>Quote brief extracts (no more than 50 words) with a clear link back to the original article</li>
+  </ul>
+
+  <h2>Prohibited use</h2>
+  <p>You may not:</p>
+  <ul>
+    <li>Copy, reproduce or republish our content without written permission</li>
+    <li>Use our content for commercial purposes without a licence</li>
+    <li>Scrape, crawl or use automated tools to extract content</li>
+    <li>Use our site in any way that is unlawful or harmful</li>
+    <li>Attempt to gain unauthorised access to any part of our systems</li>
+    <li>Transmit spam, viruses, or any other harmful material</li>
+  </ul>
+
+  <h2>Intellectual property</h2>
+  <p>All content on NorfolkWild.co.uk — including text, images, graphics, logos and design — is owned by or licensed to NorfolkWild.co.uk and is protected by UK and international copyright law. Unauthorised use may result in legal action.</p>
+  <p>If you would like to use our content, please contact <a href="mailto:hello@norfolkwild.co.uk">hello@norfolkwild.co.uk</a> to discuss licensing.</p>
+
+  <h2>User-generated content</h2>
+  <p>If you submit comments, photos, or other content to our website or social media channels, you grant us a non-exclusive, royalty-free licence to use, publish and display that content in connection with our website and social media. You confirm that you own or have the right to submit such content.</p>
+
+  <h2>Limitation of liability</h2>
+  <p>To the fullest extent permitted by law, NorfolkWild.co.uk shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of, or inability to use, this website or its content.</p>
+
+  <h2>Governing law</h2>
+  <p>These Terms of Use are governed by and construed in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+  <h2>Changes to these terms</h2>
+  <p>We reserve the right to amend these terms at any time. Continued use of the website following any changes constitutes acceptance of the new terms. The "Last updated" date at the top of this page will reflect any changes.</p>
+
+  <div class="contact-block">
+    <p><strong>Questions about these terms?</strong></p>
+    <p>Email: <a href="mailto:hello@norfolkwild.co.uk">hello@norfolkwild.co.uk</a></p>
+    <p>NorfolkWild.co.uk — Norfolk, United Kingdom</p>
+  </div>
+</div>
+
+<footer-legal>
+  © 2026 NorfolkWild.co.uk — All rights reserved &nbsp;·&nbsp; Registered in England &nbsp;·&nbsp; <a href="mailto:hello@norfolkwild.co.uk" style="color:#8a9a94;">hello@norfolkwild.co.uk</a>
+</footer-legal>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const tabs = document.querySelectorAll('.tab');
+    const map = { affiliate: 0, privacy: 1, disclaimer: 2, cookies: 3, terms: 4 };
+    tabs[map[id]].classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

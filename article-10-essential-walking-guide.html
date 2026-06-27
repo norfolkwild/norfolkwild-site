@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Essential Norfolk Walking Guide: What to Wear, Take and Know | NorfolkWild</title>
+<meta name="description" content="Everything you need to know before walking in Norfolk — what to wear, what to pack, the Countryside Code, first aid essentials, and how to stay safe on coastal paths.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;
+  --gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;
+  --cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;
+  --ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;
+  --dusk:#c4956a;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-back{font-size:0.65rem;font-weight:500;letter-spacing:0.06em;color:var(--reed);text-decoration:none;}
+
+.art-hero{position:relative;height:65vh;min-height:420px;overflow:hidden;padding-top:52px;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=1600&q=85&auto=format&fit=crop') center 40%/cover no-repeat;filter:brightness(0.55);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.85));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.breadcrumb{font-size:0.57rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.6rem;}
+.art-tag{font-size:0.57rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+.art-tag::before{content:'';width:16px;height:1px;background:var(--gold2);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.05;max-width:700px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+
+.art-layout{display:grid;grid-template-columns:1fr 256px;gap:3rem;max-width:1000px;margin:0 auto;padding:2.5rem 2rem;}
+
+/* TOC */
+.toc{background:var(--marsh);padding:1.4rem;margin-bottom:2rem;}
+.toc-title{font-size:0.6rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+.toc-list{list-style:none;padding:0;}
+.toc-list li{border-bottom:1px solid rgba(255,255,255,0.05);padding:0.4rem 0;}
+.toc-list li:last-child{border-bottom:none;}
+.toc-list a{font-size:0.78rem;color:rgba(255,255,255,0.65);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.15s;}
+.toc-list a:hover{color:var(--gold2);}
+.toc-num{font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--gold2);min-width:20px;}
+
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2.2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+
+.art-h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--marsh);margin:2.5rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.6rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--reed);margin:1.5rem 0 0.5rem;font-style:italic;}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.93rem;line-height:1.88;color:var(--ink2);margin-bottom:1.1rem;font-weight:300;}
+.art-ul{padding-left:0;margin-bottom:1.1rem;list-style:none;}
+.art-ul li{font-family:'Source Serif 4',serif;font-size:0.9rem;line-height:1.8;color:var(--ink2);margin-bottom:0.5rem;font-weight:300;display:flex;gap:0.6rem;align-items:flex-start;}
+.art-ul li::before{content:'—';color:var(--gold);flex-shrink:0;margin-top:0.1rem;}
+
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.4rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.83rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+
+.warning-block{background:#fffbf2;border-left:3px solid var(--dusk);padding:1rem 1.2rem;margin:1.4rem 0;}
+.warning-block p{font-size:0.83rem;color:#5a4a20;line-height:1.65;margin:0;font-family:'Source Serif 4',serif;}
+
+.code-block{background:var(--marsh);padding:1.5rem 1.8rem;margin:1.5rem 0;}
+.code-block-title{font-size:0.6rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem;}
+.code-item{display:flex;gap:0.8rem;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.05);align-items:flex-start;}
+.code-item:last-child{border-bottom:none;}
+.code-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.1rem;}
+.code-text{font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.55;font-family:'Source Serif 4',serif;font-weight:300;}
+.code-text strong{color:#fff;font-weight:600;}
+
+.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.1);margin:1.5rem 0;}
+.kit-cell{background:var(--paper);padding:1rem;}
+.kit-cell-title{font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;}
+.kit-item{font-size:0.8rem;color:var(--ink2);padding:0.25rem 0;border-bottom:1px solid rgba(30,53,40,0.06);display:flex;align-items:center;gap:0.5rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.kit-item:last-child{border-bottom:none;}
+.kit-item::before{content:'□';color:var(--gold);font-size:0.9rem;}
+
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:1rem 1.1rem;margin:0.8rem 0;display:flex;gap:0.9rem;align-items:flex-start;}
+.gear-icon{font-size:1.5rem;flex-shrink:0;margin-top:0.1rem;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.93rem;font-weight:700;color:var(--marsh);}
+.gear-why{font-size:0.72rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);margin:0.1rem 0 0.2rem;}
+.gear-desc{font-size:0.75rem;color:var(--reed);line-height:1.55;margin:0 0 0.5rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.28rem 0.85rem;font-size:0.65rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.05em;text-decoration:none;display:inline-block;}
+
+.first-aid-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.1);margin:1.5rem 0;}
+.fa-cell{background:var(--paper);padding:1rem;}
+.fa-category{font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.fa-item{font-size:0.78rem;color:var(--ink2);padding:0.2rem 0;font-family:'Source Serif 4',serif;font-weight:300;display:flex;align-items:flex-start;gap:0.4rem;}
+.fa-item::before{content:'·';color:var(--gold);font-weight:900;}
+
+.emergency-box{background:#1a0a0a;border-left:4px solid #c0392b;padding:1.2rem 1.4rem;margin:1.5rem 0;}
+.emergency-title{font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#e74c3c;margin-bottom:0.8rem;}
+.emergency-item{display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.emergency-item:last-child{border-bottom:none;}
+.em-label{font-size:0.78rem;color:rgba(255,255,255,0.6);font-family:'Source Serif 4',serif;}
+.em-number{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;}
+
+.layer-system{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(30,53,40,0.1);margin:1.5rem 0;}
+.layer{background:var(--paper);padding:1rem;}
+.layer-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:rgba(30,53,40,0.07);line-height:1;}
+.layer-name{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin:0.2rem 0 0.4rem;}
+.layer-desc{font-size:0.78rem;color:var(--ink2);line-height:1.55;font-family:'Source Serif 4',serif;font-weight:300;}
+.layer-eg{font-size:0.7rem;color:var(--sage);margin-top:0.4rem;font-style:italic;}
+
+.pull-quote{padding:1.4rem 0;margin:2rem 0;border-top:2px solid var(--gold);border-bottom:1px solid rgba(30,53,40,0.08);}
+.pull-quote p{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--marsh);line-height:1.5;margin:0;}
+
+.art-author{background:var(--cream2);padding:1.2rem 1.4rem;display:flex;gap:0.9rem;align-items:center;margin-top:2.5rem;border-top:2px solid var(--marsh);}
+.author-av{width:40px;height:40px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.72rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+
+.art-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin-top:2rem;}
+.art-nav-link{background:var(--paper);padding:1.1rem 1.2rem;cursor:pointer;transition:background 0.15s;text-decoration:none;display:block;}
+.art-nav-link:hover{background:var(--cream2);}
+.anl-dir{font-size:0.55rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.3rem;}
+.anl-title{font-family:'Playfair Display',serif;font-size:0.85rem;font-weight:700;color:var(--marsh);line-height:1.3;}
+
+.aside-widget{background:var(--marsh);padding:1.2rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+.aside-link{display:flex;gap:0.6rem;padding:0.55rem 0;border-bottom:1px solid rgba(255,255,255,0.04);text-decoration:none;align-items:center;}
+.aside-link:hover{opacity:0.75;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:50px;height:36px;object-fit:cover;flex-shrink:0;}
+.aside-title{font-size:0.7rem;color:rgba(255,255,255,0.72);line-height:1.35;}
+.aside-nl{background:var(--gold2);padding:1.2rem;}
+.aside-nl-title{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--ink);margin-bottom:0.6rem;line-height:1.2;}
+.aside-nl-input{width:100%;padding:0.5rem 0.65rem;font-size:0.72rem;border:none;margin-bottom:0.4rem;display:block;font-family:'DM Sans',sans-serif;}
+.aside-nl-btn{width:100%;background:var(--marsh);color:#fff;padding:0.5rem;border:none;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.06em;}
+
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+
+@media(max-width:900px){
+  .art-layout{grid-template-columns:1fr;}
+  .art-aside{display:none;}
+  .kit-grid,.first-aid-grid,.layer-system{grid-template-columns:1fr;}
+  .footer{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .art-hero{height:55vh;}
+  .art-layout{padding:1.5rem;}
+  .art-nav{grid-template-columns:1fr;}
+  .footer{grid-template-columns:1fr;padding:1.5rem;}
+}
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/article-10-essential-walking-guide.html">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">NorfolkWild / Essential Guides</div>
+    <div class="art-tag">Essential Guide</div>
+    <h1 class="art-h1">The Essential Norfolk Walking Guide: What to Wear, Take and Know</h1>
+    <div class="art-pills">
+      <span class="art-pill">All walks</span>
+      <span class="art-pill">All seasons</span>
+      <span class="art-pill">Beginners & experienced</span>
+      <span class="art-pill">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-layout">
+  <div class="art-main">
+
+        <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24 / OL25 for North Norfolk)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before any coastal or salt marsh walk</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Verify <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:#c9a84c;">bus timetables</a> directly with Sanders Coaches before travel</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, cliff erosion, tidal changes and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside and on coastal cliff paths involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong> — for coastal emergencies ask for the Coastguard.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+<div class="pull-intro">
+      <p>Norfolk's coastal paths, salt marshes and countryside are wonderful — but they can catch the unprepared walker off guard. This is our complete guide to everything you need before heading out: the right clothing system, essential kit, the Countryside Code, first aid basics, and what to do in an emergency.</p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <div class="toc-title">In this guide</div>
+      <ul class="toc-list">
+        <li><a href="#clothing"><span class="toc-num">01</span> The Clothing System — Layering for Norfolk</a></li>
+        <li><a href="#footwear"><span class="toc-num">02</span> Footwear — Boots, Wellies and Socks</a></li>
+        <li><a href="#daypack"><span class="toc-num">03</span> What to Pack — The Day Walk Kit List</a></li>
+        <li><a href="#staying-dry"><span class="toc-num">04</span> Staying Dry — Norfolk Weather Explained</a></li>
+        <li><a href="#firstaid"><span class="toc-num">05</span> First Aid — What to Carry and When to Use It</a></li>
+        <li><a href="#countryside-code"><span class="toc-num">06</span> The Countryside Code</a></li>
+        <li><a href="#coastal"><span class="toc-num">07</span> Coastal Safety — Tides, Mud and the Sea</a></li>
+        <li><a href="#emergency"><span class="toc-num">08</span> Emergency Contacts and What to Do</a></li>
+      </ul>
+    </div>
+
+    <!-- CLOTHING -->
+    <h2 class="art-h2" id="clothing">01 — The Clothing System: Layering for Norfolk</h2>
+    <p class="art-p">Norfolk's weather is famously changeable. A clear morning on the coast can turn cold and blustery within an hour. The solution isn't one heavy jacket — it's a three-layer system that you can adjust as conditions change.</p>
+
+    <div class="layer-system">
+      <div class="layer">
+        <div class="layer-num">01</div>
+        <div class="layer-name">Base Layer</div>
+        <div class="layer-desc">Sits against your skin. Its job is to move sweat away from your body and keep you dry from the inside. Merino wool is the gold standard — naturally odour-resistant, warm even when damp.</div>
+        <div class="layer-eg">Icebreaker Merino, Smartwool</div>
+      </div>
+      <div class="layer">
+        <div class="layer-num">02</div>
+        <div class="layer-name">Mid Layer</div>
+        <div class="layer-desc">Provides insulation. A lightweight fleece is ideal for Norfolk — warm enough for cold days, light enough to pack away when you warm up on a longer walk. Zip-neck fleeces let you regulate temperature precisely.</div>
+        <div class="layer-eg">Patagonia Better Sweater, Berghaus Prism</div>
+      </div>
+      <div class="layer">
+        <div class="layer-num">03</div>
+        <div class="layer-name">Outer Layer</div>
+        <div class="layer-desc">Protects against wind and rain. On Norfolk's exposed coast, a windproof outer is as important as a waterproof one. Look for a jacket with pit-zips or mesh lining so you can ventilate on warmer days.</div>
+        <div class="layer-eg">Rab Downpour, Berghaus Stormcloud</div>
+      </div>
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">Norfolk-specific tip</div>
+      <p>The North Sea wind is the main enemy on coastal paths — even in summer. A packable windproof jacket weighs almost nothing and makes an enormous difference. Never leave it in the car.</p>
+    </div>
+
+    <h3 class="art-h3">What to wear on your legs</h3>
+    <p class="art-p">Waterproof trousers are genuinely worth having for Norfolk's muddier paths. Lightweight versions roll up to the size of a fist and can be pulled on over your walking trousers in seconds. On dry days, a pair of comfortable walking trousers with stretch — not jeans, which become cold and heavy when wet — is all you need.</p>
+
+    <div class="gear-item">
+      <span class="gear-icon">🧥</span>
+      <div>
+        <div class="gear-name">Lightweight Merino Base Layer</div>
+        <div class="gear-why">Essential for year-round comfort</div>
+        <div class="gear-desc">Merino wool regulates temperature naturally — warm in winter, cool in summer, and odour-resistant across multi-day trips. The single best investment for any serious walker.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=merino+wool+base+layer+walking&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🌧️</span>
+      <div>
+        <div class="gear-name">Packable Waterproof Jacket</div>
+        <div class="gear-why">Non-negotiable on Norfolk's coast</div>
+        <div class="gear-desc">Look for a jacket with a genuine waterproof rating (20,000mm hydrostatic head or above) and taped seams. The Rab Downpour and Berghaus Stormcloud are consistently excellent at mid-range prices.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=packable+waterproof+jacket+walking+women+men&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">👖</span>
+      <div>
+        <div class="gear-name">Waterproof Overtrousers</div>
+        <div class="gear-why">Vital for salt marsh and winter walks</div>
+        <div class="gear-desc">Side-zip overtrousers that pull on over boots are the most practical option. Lightweight versions (under 300g) take up almost no space in a daypack and transform a wet day walk completely.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=lightweight+waterproof+trousers+walking&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <!-- FOOTWEAR -->
+    <h2 class="art-h2" id="footwear">02 — Footwear: Boots, Wellies and Socks</h2>
+    <p class="art-p">Norfolk's terrain is deceptive. The walks look easy on the map — largely flat, no mountains — but the combination of salt marsh mud, loose shingle and wet coastal grass makes footwear one of the most important decisions you'll make.</p>
+
+    <h3 class="art-h3">Walking boots vs wellies — which to choose?</h3>
+    <p class="art-p">For most Norfolk walks, waterproof walking boots are the better choice. They give ankle support on shingle, they're more comfortable over distance, and they perform better on harder terrain. Wellies are better for shorter walks in deep mud — the salt marshes at low tide, winter field-edge paths — where depth of water rather than distance is the main concern.</p>
+
+    <div class="kit-grid">
+      <div class="kit-cell">
+        <div class="kit-cell-title">Choose Walking Boots when:</div>
+        <div class="kit-item">Walks over 3 miles</div>
+        <div class="kit-item">Shingle beaches (Blakeney, Cley)</div>
+        <div class="kit-item">Mixed terrain — path and marsh</div>
+        <div class="kit-item">Carrying a loaded pack</div>
+        <div class="kit-item">Any long distance route</div>
+      </div>
+      <div class="kit-cell">
+        <div class="kit-cell-title">Choose Wellies when:</div>
+        <div class="kit-item">Short marsh walks (under 2 miles)</div>
+        <div class="kit-item">Samphire picking in summer</div>
+        <div class="kit-item">Winter farm track walks</div>
+        <div class="kit-item">Dog walking in the fields</div>
+        <div class="kit-item">Visiting seal colonies from the car park</div>
+      </div>
+    </div>
+
+    <h3 class="art-h3">The most important thing nobody tells you: socks</h3>
+    <p class="art-p">More blisters are caused by poor socks than by poor boots. A good walking sock is thick enough to cushion your heel, seamless at the toe, and made of a material that manages moisture. Merino wool walking socks are expensive but last for years and genuinely prevent blisters in a way that cotton socks simply cannot.</p>
+
+    <div class="gear-item">
+      <span class="gear-icon">🧦</span>
+      <div>
+        <div class="gear-name">Merino Wool Walking Socks</div>
+        <div class="gear-why">The single most underrated piece of kit</div>
+        <div class="gear-desc">Darn Tough and Bridgedale make the best mid-range merino walking socks. They regulate temperature, resist odour, and — critically — come with a lifetime guarantee. Buy two pairs minimum.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=merino+wool+walking+socks+darn+tough+bridgedale&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🥾</span>
+      <div>
+        <div class="gear-name">Waterproof Walking Boots</div>
+        <div class="gear-why">The most important purchase for Norfolk walking</div>
+        <div class="gear-desc">For a full review of the best options at every price point — from £75 to £220 — assessed for Norfolk's coastal paths and salt marshes, see our dedicated boots guide.</div>
+        <a class="gear-btn" href="article-2-walking-boots.html">Read Our Full Boots Guide →</a>
+      </div>
+    </div>
+
+    <!-- DAYPACK -->
+    <h2 class="art-h2" id="daypack">03 — What to Pack: The Day Walk Kit List</h2>
+    <p class="art-p">The right pack for a Norfolk day walk is a 20–30 litre daypack. Bigger and you'll carry too much — Norfolk walks rarely require overnight kit. Smaller and you'll struggle to fit waterproofs, food and first aid comfortably.</p>
+
+    <div class="kit-grid">
+      <div class="kit-cell">
+        <div class="kit-cell-title">☑ Always carry</div>
+        <div class="kit-item">Waterproof jacket</div>
+        <div class="kit-item">Map or downloaded OS Maps app</div>
+        <div class="kit-item">Water — minimum 1 litre per person</div>
+        <div class="kit-item">Food — more than you think you'll need</div>
+        <div class="kit-item">Phone — fully charged</div>
+        <div class="kit-item">Small first aid kit</div>
+        <div class="kit-item">Emergency contact written down</div>
+        <div class="kit-item">Sunscreen (April–September)</div>
+      </div>
+      <div class="kit-cell">
+        <div class="kit-cell-title">☑ Recommended extras</div>
+        <div class="kit-item">Binoculars — especially for coastal walks</div>
+        <div class="kit-item">Insect repellent (Broads, summer)</div>
+        <div class="kit-item">Spare socks — always</div>
+        <div class="kit-item">Emergency foil blanket (£1, weighs nothing)</div>
+        <div class="kit-item">Waterproof phone case or dry bag</div>
+        <div class="kit-item">Trekking poles for longer routes</div>
+        <div class="kit-item">Head torch for winter walks</div>
+        <div class="kit-item">Dog leads, poo bags if bringing a dog</div>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🎒</span>
+      <div>
+        <div class="gear-name">20–30L Daypack</div>
+        <div class="gear-why">The right size for a Norfolk day walk</div>
+        <div class="gear-desc">Osprey and Deuter make the best mid-range daypacks — excellent hip belt support, comfortable back panels and durable fabrics. For Norfolk's mostly flat terrain a 25L is the sweet spot.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=osprey+daypack+25l+walking&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🔭</span>
+      <div>
+        <div class="gear-name">Binoculars</div>
+        <div class="gear-why">Transforms every Norfolk walk</div>
+        <div class="gear-desc">Norfolk's coast and reserves are extraordinary for wildlife — but only if you can see it. An 8x42 binocular is the ideal all-round choice for coastal and reserve walking. See our full review of 7 pairs tested in Norfolk.</div>
+        <a class="gear-btn" href="article-5-binoculars.html">Read Our Binoculars Guide →</a>
+      </div>
+    </div>
+
+    <!-- STAYING DRY -->
+    <h2 class="art-h2" id="staying-dry">04 — Staying Dry: Norfolk Weather Explained</h2>
+    <p class="art-p">Norfolk has a reputation for being a dry county — and by UK standards it is. The east of England receives less annual rainfall than most of the country. But what it lacks in rain it makes up for in wind, sea fret (coastal fog) and the kind of damp cold that creeps up on you without warning.</p>
+
+    <div class="pull-quote">
+      <p>"In Norfolk you can have four seasons in a single coastal walk. Leave prepared for all of them."</p>
+    </div>
+
+    <h3 class="art-h3">Sea fret — the Norfolk walker's enemy</h3>
+    <p class="art-p">Sea fret is coastal mist that rolls in off the North Sea, often with very little warning. It can reduce visibility to 50 metres on a path that was perfectly clear ten minutes earlier. It also deposits a fine damp on everything — your jacket, your pack, your phone. Waterproofing your kit matters even on days when rain isn't forecast.</p>
+
+    <div class="tip-block">
+      <div class="tip-label">Practical tip</div>
+      <p>Before any coastal walk, check the <strong>Met Office Coastal Weather Forecast</strong> at metoffice.gov.uk — not just the general Norfolk forecast. Sea fret and coastal conditions are specific to the shoreline and won't show up on a general weather app.</p>
+    </div>
+
+    <h3 class="art-h3">Re-proofing your gear</h3>
+    <p class="art-p">Waterproof jackets lose their DWR (Durable Water Repellency) coating over time — usually after 20–30 washes. When your jacket starts to "wet out" (absorbing water rather than shedding it) rather than beading water off, it needs re-proofing. Nikwax Tech Wash and TX.Direct Spray-On is the gold standard — a 15-minute job that restores waterproofing completely.</p>
+
+    <div class="gear-item">
+      <span class="gear-icon">🧴</span>
+      <div>
+        <div class="gear-name">Nikwax Waterproofing Kit</div>
+        <div class="gear-why">Restores DWR coating to any waterproof jacket</div>
+        <div class="gear-desc">Nikwax Tech Wash cleans the jacket without stripping the membrane, then TX.Direct Spray-On restores the DWR coating. Essential maintenance for anyone who walks regularly in Norfolk's damp coastal conditions.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=nikwax+tech+wash+tx+direct&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <!-- FIRST AID -->
+    <h2 class="art-h2" id="firstaid">05 — First Aid: What to Carry and When to Use It</h2>
+    <p class="art-p">A basic first aid kit weighs almost nothing and takes up minimal space. For day walks in Norfolk — relatively gentle terrain, never far from civilisation — you don't need a comprehensive wilderness kit. You need to be able to deal with the most common issues: blisters, cuts, sprains and hypothermia.</p>
+
+    <div class="first-aid-grid">
+      <div class="fa-cell">
+        <div class="fa-category">Wound care</div>
+        <div class="fa-item">Assorted plasters (waterproof)</div>
+        <div class="fa-item">Antiseptic wipes</div>
+        <div class="fa-item">Sterile gauze pads x 4</div>
+        <div class="fa-item">Micropore tape</div>
+        <div class="fa-item">Small scissors</div>
+        <div class="fa-item">Nitrile gloves x 2 pairs</div>
+      </div>
+      <div class="fa-cell">
+        <div class="fa-category">Blister care</div>
+        <div class="fa-item">Compeed blister plasters (large + small)</div>
+        <div class="fa-item">Moleskin padding</div>
+        <div class="fa-item">Sterile needle (to drain blisters)</div>
+        <div class="fa-item">Second skin gel</div>
+      </div>
+      <div class="fa-cell">
+        <div class="fa-category">Sprains & strains</div>
+        <div class="fa-item">Tubular bandage (ankle support)</div>
+        <div class="fa-item">Triangular bandage</div>
+        <div class="fa-item">Safety pins x 6</div>
+        <div class="fa-item">Ibuprofen / paracetamol</div>
+      </div>
+      <div class="fa-cell">
+        <div class="fa-category">Emergency</div>
+        <div class="fa-item">Emergency foil survival blanket</div>
+        <div class="fa-item">Whistle (6 blasts = distress signal)</div>
+        <div class="fa-item">Small torch or head torch</div>
+        <div class="fa-item">Written emergency contacts</div>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🩺</span>
+      <div>
+        <div class="gear-name">Compact Walking First Aid Kit</div>
+        <div class="gear-why">Essential for any day walk</div>
+        <div class="gear-desc">Lifesystems and Reliance Medical make the best compact kits specifically designed for walking. Look for waterproof pouches and kits that include blister care as standard — it's what you'll actually use most.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=compact+walking+first+aid+kit+lifesystems&tag=norfolkwild-21" target="_blank">★ Check price on Amazon</a>
+      </div>
+    </div>
+
+    <h3 class="art-h3">Treating blisters properly</h3>
+    <p class="art-p">Blisters are the most common walking injury and the most preventable. Compeed blister plasters — applied at the first sign of hotspot rubbing, before the blister forms — are genuinely miraculous. Keep them in an accessible pocket, not buried in the bottom of your pack, so you use them at the right moment.</p>
+
+    <div class="tip-block">
+      <div class="tip-label">Blister prevention rule</div>
+      <p>The moment you feel a hotspot developing — stop. Remove your boot. Apply Compeed directly to the skin. Put your boot back on. Don't wait until the blister has formed. Prevention takes 30 seconds; treatment takes days.</p>
+    </div>
+
+    <h3 class="art-h3">Signs of hypothermia on the Norfolk coast</h3>
+    <p class="art-p">Hypothermia is rare but possible on exposed coastal walks in winter, particularly if someone gets wet and the wind picks up. Early signs are shivering, confusion, slurred speech and stumbling. Treatment: get out of the wind, add insulation layers, give warm sweet drinks, wrap in an emergency foil blanket, and call 999 if symptoms don't improve rapidly.</p>
+
+    <!-- COUNTRYSIDE CODE -->
+    <h2 class="art-h2" id="countryside-code">06 — The Countryside Code</h2>
+    <p class="art-p">The Countryside Code is the set of guidelines for responsible behaviour in the countryside. Following it protects both wildlife and the landscape — and ensures the paths and open spaces we walk remain accessible to everyone.</p>
+
+    <div class="code-block">
+      <div class="code-block-title">The Countryside Code — Key Points</div>
+      <div class="code-item">
+        <span class="code-icon">🐄</span>
+        <div class="code-text"><strong>Respect farmers and landowners.</strong> Follow footpath signs. Don't cross fields of crops. Close all gates behind you. Use stiles where provided.</div>
+      </div>
+      <div class="code-item">
+        <span class="code-icon">🔥</span>
+        <div class="code-text"><strong>Do not light fires.</strong> Never light fires on open land. Use designated barbecue areas only. Even in dry summers, a single spark in Norfolk's reed beds can cause devastating fires.</div>
+      </div>
+      <div class="code-item">
+        <span class="code-icon">🐕</span>
+        <div class="code-text"><strong>Keep dogs under effective control.</strong> On leads near livestock and ground-nesting birds (April–July especially). Always clean up after your dog. On open access land, dogs must be on leads near farm animals.</div>
+      </div>
+      <div class="code-item">
+        <span class="code-icon">🌿</span>
+        <div class="code-text"><strong>Leave no trace.</strong> Take all litter home. Don't pick wildflowers or disturb plants. Leave rocks, logs and wildlife undisturbed. What you take in, take out.</div>
+      </div>
+      <div class="code-item">
+        <span class="code-icon">🦅</span>
+        <div class="code-text"><strong>Protect wildlife.</strong> Never disturb nesting birds. Keep at least 100 metres distance from seal colonies. Don't feed wild animals. Report injured wildlife to the RSPCA (0300 1234 999).</div>
+      </div>
+      <div class="code-item">
+        <span class="code-icon">🚶</span>
+        <div class="code-text"><strong>Keep to public paths.</strong> Stick to marked footpaths and bridleways unless on open access land. The Countryside and Rights of Way Act gives you the right to walk on designated paths — not across private land.</div>
+      </div>
+      <div class="code-item">
+        <span class="code-icon">💧</span>
+        <div class="code-text"><strong>Safeguard water sources.</strong> Don't wash in streams or rivers. Carry out human waste where facilities are not available. Never contaminate water sources used by livestock.</div>
+      </div>
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">Norfolk-specific note on birds</div>
+      <p>Between April and July, ground-nesting birds — lapwings, skylarks, curlews and little ringed plovers — nest on the open ground of Norfolk's coastal heath and marshes. Keep dogs on leads and stick to marked paths during this period. A dog running freely through nesting habitat can destroy an entire season's breeding in minutes.</p>
+    </div>
+
+    <!-- COASTAL SAFETY -->
+    <h2 class="art-h2" id="coastal">07 — Coastal Safety: Tides, Mud and the Sea</h2>
+    <p class="art-p">Norfolk's coast has specific hazards that inland walkers may not be aware of. The tidal salt marshes between Blakeney and Wells are particularly important to understand before visiting.</p>
+
+    <h3 class="art-h3">Tidal salt marshes</h3>
+    <p class="art-p">The salt marshes on the North Norfolk coast flood twice daily with the tide. Paths that are walkable at low tide can be submerged — or cut off — within an hour as the tide comes in. The tidal range on the North Norfolk coast is significant: up to 4 metres in places.</p>
+
+    <div class="warning-block">
+      <p>⚠️ <strong>Always check tide times</strong> before walking on or near salt marshes. The National Coastwatch Institution and the BBC both publish tide times. The rule: if in doubt, don't go out. The mud in Norfolk's salt marshes is exceptionally deep and sticky — getting stuck is a genuine risk. If you do get stuck, call 999 and don't struggle, as movement makes the situation worse.</p>
+    </div>
+
+    <h3 class="art-h3">Shingle beaches</h3>
+    <p class="art-p">Blakeney Point and Cley beach are shingle. Walking on shingle is slower and more energy-intensive than it appears — expect to walk at roughly two-thirds your normal pace. The shingle also shifts and rolls underfoot, which is hard on ankles. Boots with ankle support make a significant difference.</p>
+
+    <h3 class="art-h3">Cliff paths</h3>
+    <p class="art-p">The East Norfolk coast between Cromer and Happisburgh has chalk and clay cliffs that are actively eroding. Never stand near the cliff edge, even on what appears to be stable ground. The cliffs at Happisburgh in particular are among the fastest-eroding in Europe. Keep well back from the edge at all times.</p>
+
+    <div class="tip-block">
+      <div class="tip-label">Useful resources</div>
+      <p>
+        <strong>Tide times:</strong> bbc.co.uk/weather/coast-and-sea<br>
+        <strong>HM Coastguard:</strong> gov.uk/coastguard<br>
+        <strong>Norfolk Coast AONB:</strong> norfolkcoastaonb.org.uk<br>
+        <strong>Natural England access maps:</strong> naturalengland.org.uk
+      </p>
+    </div>
+
+    <!-- EMERGENCY -->
+    <h2 class="art-h2" id="emergency">08 — Emergency Contacts and What to Do</h2>
+    <p class="art-p">In a genuine outdoor emergency in Norfolk, here is what to do and who to call:</p>
+
+    <div class="emergency-box">
+      <div class="emergency-title">⚠ Emergency Contacts</div>
+      <div class="emergency-item"><span class="em-label">Emergency services (police/ambulance/fire)</span><span class="em-number">999</span></div>
+      <div class="emergency-item"><span class="em-label">Coastguard (coastal emergencies)</span><span class="em-number">999 → ask for Coastguard</span></div>
+      <div class="emergency-item"><span class="em-label">Non-emergency police (Norfolk)</span><span class="em-number">101</span></div>
+      <div class="emergency-item"><span class="em-label">NHS non-emergency</span><span class="em-number">111</span></div>
+      <div class="emergency-item"><span class="em-label">RSPCA (injured wildlife)</span><span class="em-number">0300 1234 999</span></div>
+      <div class="emergency-item"><span class="em-label">Norfolk Wildlife Trust</span><span class="em-number">01603 625540</span></div>
+    </div>
+
+    <h3 class="art-h3">What to tell emergency services</h3>
+    <ul class="art-ul">
+      <li>Your exact location — what3words app (free) gives a precise 3-word location anywhere in the world. Download it before you go</li>
+      <li>The nature of the emergency and number of people affected</li>
+      <li>Your phone number in case the call drops</li>
+      <li>Any relevant medical information</li>
+    </ul>
+
+    <div class="gear-item">
+      <span class="gear-icon">📱</span>
+      <div>
+        <div class="gear-name">what3words App</div>
+        <div class="gear-why">Free and potentially life-saving</div>
+        <div class="gear-desc">Divides the entire world into 3m x 3m squares, each with a unique three-word address. Emergency services across the UK now accept what3words locations. Download it free and it works offline once installed.</div>
+        <a class="gear-btn" href="https://www.amazon.co.uk/s?k=what3words+app+emergency&tag=norfolkwild-21" target="_blank">★ Get the App</a>
+      </div>
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">Tell someone where you're going</div>
+      <p>Before any walk, tell someone who isn't coming with you your planned route, start time and expected return. If they haven't heard from you by a set time, they know to raise the alarm. This simple habit has saved many lives.</p>
+    </div>
+
+    <div class="art-author">
+      <div class="author-av">🌿</div>
+      <div>
+        <div class="author-name">NorfolkWild</div>
+        <div class="author-bio">Written from North Norfolk. Independent guides to Norfolk walks and wildlife. Updated May 2026.</div>
+      </div>
+    </div>
+
+    <div class="art-nav">
+      <a class="art-nav-link" href="article-1-blakeney-point.html">
+        <div class="anl-dir">← Next walk</div>
+        <div class="anl-title">Blakeney Point: The Complete Walk Guide</div>
+      </a>
+      <a class="art-nav-link" href="article-2-walking-boots.html" style="text-align:right;">
+        <div class="anl-dir">Gear guide →</div>
+        <div class="anl-title">Best Walking Boots for Norfolk: 6 Tested</div>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ASIDE -->
+  <div class="art-aside">
+    <div class="aside-widget">
+      <div class="aside-label">Popular guides</div>
+      <div class="aside-link" onclick="window.location='article-1-blakeney-point.html'" style="cursor:pointer;">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=100&q=60" alt="">
+        <div class="aside-title">Blakeney Point Walk Guide</div>
+      </div>
+      <div class="aside-link" onclick="window.location='article-2-walking-boots.html'" style="cursor:pointer;">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1602582617658-61a46232ed54?w=100&q=60" alt="">
+        <div class="aside-title">Best Walking Boots for Norfolk</div>
+      </div>
+      <div class="aside-link" onclick="window.location='article-5-binoculars.html'" style="cursor:pointer;">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1607111038703-db2a17830751?w=100&q=60" alt="">
+        <div class="aside-title">Best Binoculars for Birdwatching</div>
+      </div>
+      <div class="aside-link" onclick="window.location='article-9-best-wellies.html'" style="cursor:pointer;">
+        <img class="aside-thumb" src="https://images.unsplash.com/photo-1624866181865-91b01ff7400a?w=100&q=60" alt="">
+        <div class="aside-title">Best Wellies for Dog Walking</div>
+      </div>
+    </div>
+    <div class="aside-nl">
+      <div class="aside-nl-title">One walk. One wildlife tip. Every Friday.</div>
+      <a href="https://norfolkwild.substack.com" target="_blank" style="display:block;width:100%;background:var(--marsh);color:#fff;padding:0.5rem;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.06em;text-align:center;text-decoration:none;">Subscribe free on Substack →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div>
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Independent outdoor guides from North Norfolk.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Walks</h4>
+    <a href="article-1-blakeney-point.html">Blakeney Point</a>
+    <a href="article-4-holkham-beach.html">Holkham Beach</a>
+    <a href="article-8-peddars-way.html">Peddars Way</a>
+  </div>
+  <div class="footer-col">
+    <h4>Gear</h4>
+    <a href="article-2-walking-boots.html">Walking Boots</a>
+    <a href="article-5-binoculars.html">Binoculars</a>
+    <a href="article-9-best-wellies.html">Wellies</a>
+  </div>
+      <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Walking Boots</a>
+    <a href="shop.html#optics">Binoculars</a>
+    <a href="shop.html#wildlife-tech">Trail Cams</a>
+    <a href="shop.html#nature-garden">Wildflower Seeds</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="mailto:hello@norfolkwild.co.uk">Contact</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 NorfolkWild.co.uk</span>
+  <span>Written from North Norfolk</span>
+</div>
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

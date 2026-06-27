@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Peddars Way: A Complete Walking Guide | NorfolkWild</title>
+<meta name="description" content="The complete guide to walking the Peddars Way — Norfolk's ancient Roman road from Knettishall Heath to Holme-next-the-Sea. Stages, maps, accommodation and what to expect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --marsh: #2d4a3e; --reed: #5a7a5f; --sky: #b8cfd4; --cream: #f7f2eb; --ink: #1a2420; --mist: #e2eaec; --gold: #c9a84c; --dusk: #c4956a; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--ink); }
+  nav { background: rgba(247,242,235,0.97); border-bottom: 1px solid rgba(45,74,62,0.15); padding: 0 3rem; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; color: var(--marsh); text-decoration: none; }
+  .nav-logo span { color: var(--gold); font-style: italic; }
+  .nav-back { color: var(--reed); font-size: 0.82rem; text-decoration: none; }
+  .hero-article { height: 58vh; min-height: 400px; background: linear-gradient(to bottom, rgba(26,36,32,0.1), rgba(26,36,32,0.65)), url('https://images.unsplash.com/photo-1604075903199-a78a45751d53?w=1400&q=80') center/cover; display: flex; align-items: flex-end; padding: 3rem; }
+  .article-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+  .article-hero-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; margin: 0.5rem 0 1rem; max-width: 700px; }
+  .meta-pill { background: rgba(255,255,255,0.15); color: #fff; padding: 0.3rem 0.8rem; font-size: 0.78rem; border: 1px solid rgba(255,255,255,0.3); margin-right: 0.5rem; display: inline-block; margin-bottom: 0.4rem; }
+  .article-body { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+  .intro-box { background: var(--marsh); color: var(--cream); padding: 1.5rem 2rem; margin-bottom: 2.5rem; border-left: 4px solid var(--gold); }
+  .intro-box p { color: var(--cream); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--marsh); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(45,74,62,0.15); }
+  h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--reed); margin: 1.5rem 0 0.5rem; }
+  p { font-size: 1rem; line-height: 1.85; color: #2a3a34; margin-bottom: 1.2rem; }
+  ul, ol { padding-left: 1.5rem; margin-bottom: 1.2rem; }
+  li { font-size: 0.97rem; line-height: 1.8; color: #2a3a34; margin-bottom: 0.3rem; }
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--marsh); margin: 2rem 0; }
+  .info-cell { background: var(--cream); padding: 1.2rem; text-align: center; }
+  .info-icon { font-size: 1.5rem; display: block; margin-bottom: 0.3rem; }
+  .info-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
+  .info-val { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; color: var(--marsh); margin-top: 0.2rem; }
+  .tip-box { background: #f0f7f4; border-left: 4px solid var(--reed); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+  .tip-box strong { color: var(--marsh); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 0.4rem; }
+  .tip-box p { margin: 0; font-size: 0.92rem; }
+  .stage-card { border: 1px solid rgba(45,74,62,0.2); margin: 1.5rem 0; overflow: hidden; }
+  .stage-header { background: var(--marsh); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .stage-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sky); }
+  .stage-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: #fff; }
+  .stage-dist { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 900; color: var(--gold); }
+  .stage-body { padding: 1.2rem 1.5rem; }
+  .stage-meta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+  .stage-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--reed); background: var(--mist); padding: 0.2rem 0.6rem; }
+  .stage-desc { font-size: 0.95rem; line-height: 1.75; color: #2a3a34; }
+  .gear-card { border: 1px solid rgba(45,74,62,0.2); padding: 1.2rem 1.5rem; margin: 1rem 0; display: flex; gap: 1rem; align-items: flex-start; }
+  .gear-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .gear-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--marsh); }
+  .gear-desc { font-size: 0.88rem; color: #5a6a5a; line-height: 1.6; margin: 0.3rem 0 0.5rem; }
+  .gear-link { display: inline-block; background: var(--gold); color: var(--ink); padding: 0.35rem 0.9rem; font-size: 0.78rem; font-weight: 700; text-decoration: none; }
+  .author-box { background: var(--mist); padding: 1.5rem 2rem; display: flex; gap: 1.2rem; align-items: center; margin-top: 3rem; border-top: 2px solid var(--marsh); }
+  .author-avatar { width: 52px; height: 52px; background: var(--marsh); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .author-name { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--marsh); }
+  .author-bio { font-size: 0.85rem; color: #5a6a5a; line-height: 1.5; margin-top: 0.2rem; }
+  footer { background: var(--ink); color: #5a6a64; text-align: center; padding: 2rem; font-size: 0.78rem; }
+  footer a { color: var(--sky); text-decoration: none; }
+  @media(max-width:600px) { nav { padding: 0 1rem; } .hero-article { padding: 1.5rem; } .article-body { padding: 2rem 1.2rem 4rem; } }
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/article-8-peddars-way.html">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="hero-article">
+  <div>
+    <span class="article-tag">🥾 Long Distance Walks</span>
+    <h1 class="article-hero-title">The Peddars Way: Complete Walking Guide — Ancient Rome to the Norfolk Coast</h1>
+    <div>
+      <span class="meta-pill">📏 46 miles total</span>
+      <span class="meta-pill">⏱ 3–4 days</span>
+      <span class="meta-pill">🟡 Moderate</span>
+      <span class="meta-pill">📍 Knettishall to Holme</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="intro-box">
+    <p>The Peddars Way is one of England's great forgotten long-distance walks — an ancient Roman road running arrow-straight for 46 miles from the Suffolk border to the Norfolk coast. It's quiet, uncrowded, and walks through a landscape that feels genuinely unchanged. This is the complete guide to walking it.</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-cell"><span class="info-icon">📏</span><div class="info-label">Total distance</div><div class="info-val">46 miles</div></div>
+    <div class="info-cell"><span class="info-icon">⏱</span><div class="info-label">Days needed</div><div class="info-val">3–4 days</div></div>
+    <div class="info-cell"><span class="info-icon">🏔</span><div class="info-label">Difficulty</div><div class="info-val">Moderate</div></div>
+    <div class="info-cell"><span class="info-icon">🚂</span><div class="info-label">Start access</div><div class="info-val">Train to Thetford</div></div>
+    <div class="info-cell"><span class="info-icon">🚌</span><div class="info-label">End access</div><div class="info-val">Bus from Hunstanton</div></div>
+    <div class="info-cell"><span class="info-icon">🗓</span><div class="info-label">Best season</div><div class="info-val">April–Oct</div></div>
+  </div>
+
+      <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24 / OL25 for North Norfolk)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before any coastal or salt marsh walk</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Verify <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:#c9a84c;">bus timetables</a> directly with Sanders Coaches before travel</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, cliff erosion, tidal changes and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside and on coastal cliff paths involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong> — for coastal emergencies ask for the Coastguard.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+<h2>What is the Peddars Way?</h2>
+  <p>The Peddars Way follows the course of a Roman road built around 60 AD, probably in the aftermath of Boudicca's revolt to allow rapid military movement through the East Anglian interior. For much of its length, the original agger (raised road surface) is still visible as a slight ridge in the fields.</p>
+  <p>It's a National Trail — one of England's 16 official long-distance routes — managed by Natural England. At Holme-next-the-Sea it joins the Norfolk Coast Path, which continues east along the entire North Norfolk coast. Together they form a 130-mile route from Suffolk to Cromer.</p>
+  <p>Unlike the Peddars Way's more famous cousin routes, you'll rarely share it with more than a handful of other walkers. On some sections you can walk for an entire day without seeing another soul. This is part of its considerable appeal.</p>
+
+  <h2>The Route: Overview</h2>
+  <p>The Way runs almost dead straight from Knettishall Heath Country Park in Suffolk (near Thetford) to Holme-next-the-Sea on the Norfolk coast. The straightness is Roman — they didn't deviate for hills, rivers or villages. The landscape transitions from Breckland heath and forest in the south, through rolling chalk farmland in the middle, to the open skies and coastal heath of North Norfolk at the finish.</p>
+
+  <div class="tip-box">
+    <strong>Which direction?</strong>
+    <p>Most walkers go south to north — starting at Knettishall Heath and finishing at the sea. This means you're always walking towards the coast, with the reward of the sea at journey's end. The wind also tends to be kinder walking north in spring and summer.</p>
+  </div>
+
+  <h2>The Four Stages</h2>
+
+  <div class="stage-card">
+    <div class="stage-header">
+      <div>
+        <div class="stage-num">Stage 1</div>
+        <div class="stage-name">Knettishall Heath to Castle Acre</div>
+      </div>
+      <div class="stage-dist">14 miles</div>
+    </div>
+    <div class="stage-body">
+      <div class="stage-meta"><span class="stage-tag">⏱ 5–6 hours</span><span class="stage-tag">🟢 Easy</span><span class="stage-tag">🏨 Castle Acre B&Bs</span></div>
+      <p class="stage-desc">The walk begins at the car park at Knettishall Heath, one of the finest fragments of Breckland heath left in England. The first miles pass through Thetford Forest — the largest lowland pine forest in Britain — before emerging onto open heath and farmland. The Roman straightness becomes apparent quickly. Castle Acre makes an excellent overnight stop — a remarkable Norman village with a ruined priory and castle, and a good pub (The Ostrich Inn).</p>
+    </div>
+  </div>
+
+  <div class="stage-card">
+    <div class="stage-header">
+      <div>
+        <div class="stage-num">Stage 2</div>
+        <div class="stage-name">Castle Acre to Great Massingham</div>
+      </div>
+      <div class="stage-dist">12 miles</div>
+    </div>
+    <div class="stage-body">
+      <div class="stage-meta"><span class="stage-tag">⏱ 4–5 hours</span><span class="stage-tag">🟡 Moderate</span><span class="stage-tag">🏨 Great Massingham pub rooms</span></div>
+      <p class="stage-desc">The longest undisturbed stretch of original Roman road — the agger is clearly visible as a raised causeway across fields in several places. The landscape is chalk farmland with big skies and ancient hedgerows. This is the most "Roman" feeling section of the walk. Great Massingham has a beautiful village green with large duck ponds and The Dabbling Duck pub for the night.</p>
+    </div>
+  </div>
+
+  <div class="stage-card">
+    <div class="stage-header">
+      <div>
+        <div class="stage-num">Stage 3</div>
+        <div class="stage-name">Great Massingham to Ringstead</div>
+      </div>
+      <div class="stage-dist">11 miles</div>
+    </div>
+    <div class="stage-body">
+      <div class="stage-meta"><span class="stage-tag">⏱ 4–5 hours</span><span class="stage-tag">🟡 Moderate</span><span class="stage-tag">🏨 Ringstead / Hunstanton</span></div>
+      <p class="stage-desc">The route climbs gently onto the chalk hills around Harpley — the highest ground on the walk — with views opening across the Wash on clear days. The descent to Ringstead passes through some of the finest chalk downland in Norfolk, rich with wildflowers in summer. The Gin Trap Inn at Ringstead is one of the finest pubs on the entire route.</p>
+    </div>
+  </div>
+
+  <div class="stage-card">
+    <div class="stage-header">
+      <div>
+        <div class="stage-num">Stage 4</div>
+        <div class="stage-name">Ringstead to Holme-next-the-Sea</div>
+      </div>
+      <div class="stage-dist">9 miles</div>
+    </div>
+    <div class="stage-body">
+      <div class="stage-meta"><span class="stage-tag">⏱ 3–4 hours</span><span class="stage-tag">🟢 Easy</span><span class="stage-tag">🏁 Finish at the sea</span></div>
+      <p class="stage-desc">The final stage descends from the chalk hills to the coast through Holme village, with the North Sea visible ahead for the last couple of miles. The Peddars Way ends at the beach at Holme-next-the-Sea — a beautiful, remote stretch of coast where you can walk into the waves and feel justifiably triumphant. The Norfolk Coast Path continues east from here to Cromer if you want to keep going.</p>
+    </div>
+  </div>
+
+  <h2>Getting There and Back</h2>
+  <h3>Getting to the Start</h3>
+  <p>The nearest train station to Knettishall Heath is <strong>Thetford</strong> (served by Greater Anglia from Norwich and Cambridge/London). From Thetford station it's a 6-mile taxi or bus ride to Knettishall. Several walking holiday companies also offer luggage transfer services.</p>
+
+  <h3>Getting Home from the Finish</h3>
+  <p>From Holme-next-the-Sea, take the Coasthopper bus to Hunstanton, then the bus or train back to your starting point. Alternatively, arrange a pickup — Holme is only 40 minutes from Norwich by car.</p>
+
+  <h2>Accommodation</h2>
+  <p>The Peddars Way passes through or near several good overnight stops. Unlike more crowded national trails, you rarely need to book far ahead except in peak summer:</p>
+  <ul>
+    <li><strong>Night 1:</strong> Castle Acre — The Ostrich Inn, several B&Bs</li>
+    <li><strong>Night 2:</strong> Great Massingham or Harpley — The Dabbling Duck, local B&Bs</li>
+    <li><strong>Night 3:</strong> Ringstead or Hunstanton — The Gin Trap Inn (book ahead), Hunstanton has many options</li>
+  </ul>
+
+  <h2>Essential Gear</h2>
+
+  <div class="gear-card">
+    <span class="gear-icon">🥾</span>
+    <div>
+      <div class="gear-name">Waterproof Walking Boots</div>
+      <div class="gear-desc">The Peddars Way can be muddy after rain, particularly in the Breckland section and on field-edge paths. Waterproof ankle boots are essential for a multi-day walk. See our full boots guide for recommendations.</div>
+      <a class="gear-link" href="article-2-walking-boots.html">Read Our Boots Guide →</a>
+    </div>
+  </div>
+
+  <div class="gear-card">
+    <span class="gear-icon">🎒</span>
+    <div>
+      <div class="gear-name">Comfortable Daypack (25–35L)</div>
+      <div class="gear-desc">For a luggage-transferred walk, a 25-35L daypack is ideal — enough for waterproofs, food, water and a layer, without being heavy. Choose one with good hip belt support for long days.</div>
+      <a class="gear-link" href="https://www.amazon.co.uk/s?k=walking+daypack+30l&tag=norfolkwild-21" target="_blank">★ See on Amazon</a>
+    </div>
+  </div>
+
+  <div class="gear-card">
+    <span class="gear-icon">🗺</span>
+    <div>
+      <div class="gear-name">OS Explorer Maps</div>
+      <div class="gear-desc">You'll need OS Explorer maps 229, 236 and 250 to cover the full route, or the dedicated Harvey Peddars Way strip map which covers the whole trail on one sheet — much easier to carry.</div>
+      <a class="gear-link" href="https://www.amazon.co.uk/s?k=Harvey+Peddars+Way+map&tag=norfolkwild-21" target="_blank">★ See on Amazon</a>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <strong>Day Sections</strong>
+    <p>You don't need to walk the whole thing. Each stage works well as a day walk with a car shuttle or using the Coasthopper bus. Stage 4 from Ringstead to the sea is particularly recommended as a standalone day walk — parking at Ringstead and finishing at Holme, then getting the Coasthopper back to Hunstanton and a taxi to your car.</p>
+  </div>
+
+  <h2>Why Walk the Peddars Way?</h2>
+  <p>The Peddars Way isn't dramatic in the way of Hadrian's Wall or the South West Coast Path. There are no cliff edges or mountain passes. What it has instead is something rarer — a profound sense of age and continuity. You are walking the same road that Roman legionaries marched along two thousand years ago, through a landscape that has changed slowly and gently rather than dramatically.</p>
+  <p>It ends at the sea. That matters. The moment the path crests the final dune and you see the North Sea is one of the small but genuine rewards of walking in England.</p>
+
+  <div class="author-box">
+    <div class="author-avatar">🌿</div>
+    <div>
+      <div class="author-name">NorfolkWild</div>
+      <div class="author-bio">Written from North Norfolk — 12 miles from where the Peddars Way meets the coast. This route is researched from North Norfolk and update the guide annually.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 NorfolkWild.co.uk — Independent guides written from North Norfolk<br>
+  <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a> · <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a> · <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+</footer>
+
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

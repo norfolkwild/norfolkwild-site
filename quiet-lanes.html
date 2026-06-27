@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norfolk Quiet Lanes: Walking the Hidden Back Roads | NorfolkWild</title>
+  <meta name="description" content="North Norfolk's designated Quiet Lanes offer walkers peaceful back roads through villages, farmland and coast with minimal traffic. A guide to walking them.">
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/quiet-lanes.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --marsh: #1e3528; --marsh2: #2d4a3e; --gold: #b8923a; --gold2: #c9a84c;
+      --paper: #faf6ef; --ink: #1a2018; --reed: #4a6358;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.7; }
+
+    /* NAV */
+    .topnav { background: rgba(250,246,239,0.97); border-bottom: 1px solid rgba(30,53,40,0.12); padding: 0 2.5rem; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+    .nav-links { display: flex; gap: 1.4rem; align-items: center; list-style: none; }
+    .nav-links a { font-size: 0.67rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #4a6358; text-decoration: none; transition: color 0.15s; }
+    .nav-links a:hover { color: #b8923a; }
+    .nav-cta { background: #1e3528 !important; color: #fff !important; padding: 0.38rem 0.9rem !important; }
+    .nav-cta:hover { background: #2d4a3e !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #1e3528; }
+
+    /* HERO */
+    .hero { background: var(--marsh); color: var(--paper); padding: 3.5rem max(2rem,calc(50% - 580px + 2rem)) 3rem; }
+    .hero-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold2); margin-bottom: 0.8rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem,5vw,3rem); line-height: 1.2; max-width: 680px; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--gold2); font-style: italic; }
+    .hero p { font-family: 'Source Serif 4', serif; font-size: 1.05rem; max-width: 560px; opacity: 0.85; font-style: italic; }
+
+    /* LAYOUT */
+    .container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+    /* PROSE */
+    .prose h2 { font-family: 'Playfair Display', serif; font-size: 1.55rem; color: var(--marsh); margin: 2.2rem 0 0.75rem; line-height: 1.3; padding-bottom: 0.4rem; border-bottom: 2px solid var(--gold2); }
+    .prose h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--marsh2); margin: 1.8rem 0 0.5rem; }
+    .prose p { font-family: 'Source Serif 4', serif; font-size: 1.05rem; margin-bottom: 1.15rem; color: var(--ink); }
+    .prose ul, .prose ol { font-family: 'Source Serif 4', serif; font-size: 1.05rem; margin: 0.5rem 0 1.2rem 1.4rem; }
+    .prose li { margin-bottom: 0.4rem; }
+    .prose strong { font-weight: 700; color: var(--marsh); }
+    .prose a { color: var(--marsh2); text-decoration: underline; }
+    .prose a:hover { color: var(--gold); }
+
+    /* INFO BOX */
+    .info-box { background: white; border-left: 4px solid var(--gold2); border-radius: 6px; padding: 1.2rem 1.4rem; margin: 1.8rem 0; }
+    .info-box .info-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.5rem; }
+    .info-box p { font-family: 'DM Sans', sans-serif; font-size: 0.97rem; margin: 0; color: var(--ink); }
+
+    /* AREA CARDS */
+    .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap: 1rem; margin: 1.5rem 0 2rem; }
+    .area-card { background: white; border-radius: 8px; padding: 1.2rem 1.2rem 1rem; border-top: 3px solid var(--marsh); }
+    .area-card .area-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .area-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--marsh); margin: 0 0 0.4rem; }
+    .area-card p { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--reed); margin: 0; line-height: 1.5; }
+
+    /* AFFILIATE PRODUCTS */
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 1rem; margin: 1.5rem 0 2rem; }
+    .product-card { background: white; border-radius: 8px; overflow: hidden; border: 1px solid rgba(30,53,40,0.1); }
+    .product-icon { height: 120px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.4rem; }
+    .product-icon span:first-child { font-size: 2.2rem; }
+    .product-icon span:last-child { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .product-body { padding: 0.9rem; }
+    .product-name { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--marsh); margin-bottom: 0.3rem; line-height: 1.3; }
+    .product-desc { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--reed); margin-bottom: 0.7rem; line-height: 1.4; }
+    .product-link { display: inline-block; background: var(--marsh); color: var(--gold2); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.38rem 0.8rem; text-decoration: none; transition: background 0.15s; }
+    .product-link:hover { background: var(--marsh2); }
+
+    /* SAFETY BOX */
+    .safety-box { background: #f0f4f1; border: 1px solid #c5d5cc; border-radius: 8px; padding: 1.3rem 1.5rem; margin: 2.5rem 0 1.5rem; }
+    .safety-box h3 { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--marsh); margin-bottom: 0.6rem; }
+    .safety-box ul { font-family: 'DM Sans', sans-serif; font-size: 0.93rem; margin-left: 1.2rem; color: var(--ink); }
+    .safety-box li { margin-bottom: 0.35rem; }
+    .safety-box p { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: var(--reed); margin-top: 0.7rem; }
+
+    /* AFFILIATE NOTE */
+    .affiliate-note { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--reed); border-top: 1px solid #ddd; padding-top: 1.2rem; margin-top: 2.5rem; }
+
+    /* FOOTER */
+    footer { background: var(--marsh); color: rgba(250,246,239,0.7); padding: 2.5rem 2rem; font-size: 0.85rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+    .footer-col h4 { font-family: 'Playfair Display', serif; color: var(--paper); font-size: 0.95rem; margin-bottom: 0.8rem; }
+    .footer-col a { display: block; color: rgba(250,246,239,0.6); text-decoration: none; font-size: 0.82rem; margin-bottom: 0.4rem; }
+    .footer-col a:hover { color: var(--gold2); }
+    .footer-bottom { max-width: 1100px; margin: 1.5rem auto 0; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem; color: rgba(250,246,239,0.4); }
+
+    @media(max-width:700px) {
+      .topnav { padding: 0 1rem; }
+      .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+      .nav-links.active { display: flex !important; }
+      .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; letter-spacing: 0; text-transform: none; }
+      .hamburger { display: flex; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/><path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/><path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/></svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="walks.html">Walks</a></li>
+    <li><a href="wildlife.html">Wildlife</a></li>
+    <li><a href="coasthopper-hub.html">Coast Path</a></li>
+    <li><a href="article-2-walking-boots.html">Gear</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="https://norfolkwild.substack.com" target="_blank" rel="noopener" class="nav-cta">Newsletter</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-tag">🌿 Walking in North Norfolk</div>
+  <h1>Norfolk Quiet Lanes:<br><em>the hidden back roads</em></h1>
+  <p>The lanes that slow you down — in the very best way</p>
+</header>
+
+<main class="container">
+  <article class="prose">
+
+    <p>North Norfolk has a secret that the coast path crowds rarely discover. Tucked inland from the cliffs and marshes, a network of narrow country lanes winds through farming villages and ancient hedgerows, carrying almost no traffic and rewarding those on foot with the kind of unhurried quiet that is increasingly hard to find.</p>
+
+    <p>These are Norfolk's designated Quiet Lanes — a scheme that began here as one of the earliest of its kind in the country.</p>
+
+    <h2>What Are Quiet Lanes?</h2>
+
+    <p>Quiet Lanes are officially designated minor rural roads where motorists are encouraged to take particular care around walkers, cyclists and horse riders. The concept was an initiative of the Countryside Agency, supported by the Department for Transport, and Norfolk was among the first counties in Britain to introduce the scheme.</p>
+
+    <p>The lanes are not closed to vehicles — they remain shared roads — but their designation shifts the balance back in favour of people on foot. Entry and exit points are clearly signed, and the routes link with footpaths, bridleways and long-distance trails across the area.</p>
+
+    <div class="info-box">
+      <div class="info-label">Key Fact</div>
+      <p>Norfolk was one of the first counties in Britain to run a Quiet Lanes pilot. The scheme has its roots in the late 1990s and was formalised under the Transport Act 2000.</p>
+    </div>
+
+    <h2>Where Are the Quiet Lanes in North Norfolk?</h2>
+
+    <p>The main concentration of designated Quiet Lanes forms a rough triangle of North East Norfolk — from Cromer down along the coast to Bacton, then inland to North Walsham. Around 36 miles of lanes in total, they are not a single continuous route but a network of connected roads that walkers can string together into their own circuits.</p>
+
+    <p>The area around Knapton, Northrepps, Southrepps, Trunch and Gimingham sits at the heart of this network — a gently rolling inland landscape of arable fields, old churchyards and brick-and-flint villages that feels entirely removed from the busier coastal roads nearby.</p>
+
+    <div class="area-grid">
+      <div class="area-card">
+        <div class="area-icon">🌊</div>
+        <h3>Cromer to Bacton Coastal Strip</h3>
+        <p>Lanes linking coastal villages above the cliffs, with frequent access down to the beach and coast path.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">⛪</div>
+        <h3>The Inland Village Triangle</h3>
+        <p>Knapton, Trunch, Gimingham, Southrepps — quiet farming villages connected by little-used back lanes.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">🌳</div>
+        <h3>North Walsham Fringe</h3>
+        <p>Lanes east of North Walsham running toward Bacton Woods, with links to the Weavers' Way.</p>
+      </div>
+    </div>
+
+    <h2>Walking the Lanes</h2>
+
+    <p>The Quiet Lanes suit walkers looking for something different from the coast path. On the Norfolk Coast Path you share the route with dozens of others; on the quiet lanes, you may walk for an hour and see only a tractor and a dog walker.</p>
+
+    <p>The terrain is gently undulating — this part of Norfolk sits on low chalk ridges and the lanes rise and dip between hedged field edges and open farm tracks. Walking is easy underfoot on made road surfaces, though lanes can be muddy at field gateways in wet weather.</p>
+
+    <h3>Linking the Quiet Lanes to Longer Routes</h3>
+
+    <p>The Paston Way — a 32-kilometre trail linking Cromer with North Walsham through a chain of medieval churches — passes through the heart of Quiet Lanes country. It follows many of the same back roads between Northrepps, Southrepps, Trunch, Gimingham and Mundesley, making it the most logical ready-made itinerary for the area.</p>
+
+    <p>The Quiet Lanes also connect with Bacton Woods to the south, where waymarked woodland trails offer a contrast to open lane walking. Bittern Line stations at North Walsham, Gunton and Cromer provide useful start and finish points, allowing you to walk one way and take the train back.</p>
+
+    <h2>What to Look For Along the Way</h2>
+
+    <p>The hedgerows in this part of Norfolk are old — in some cases centuries old — and support rich wildlife through the seasons. In spring the verges are thick with cow parsley and red campion; in summer look for yellowhammers and whitethroats singing from the top of the hedges. Autumn brings fieldfares and redwings moving through berry-laden hawthorns.</p>
+
+    <h3>Churches on the Route</h3>
+
+    <p>The Paston Way was designed around the medieval parish churches of the area. Trunch has one of the finest font canopies in England. Knapton's church contains an extraordinary double hammerbeam roof with 160 carved angels. These are not tourist attractions in the usual sense — they are quietly magnificent, and often unlocked during daylight hours.</p>
+
+    <div class="info-box">
+      <div class="info-label">Practical Note</div>
+      <p>The Quiet Lanes are shared roads. Walk in single file on bends, wear something visible in low light, and give way to farm vehicles. In harvest season (July–September) expect occasional waits at field gateways.</p>
+    </div>
+
+    <h2>Planning a Quiet Lanes Walk</h2>
+
+    <p>The OS Explorer map sheet 252 (Norfolk Coast East) covers the core Quiet Lanes area and is the most useful paper map for the zone. The Paston Way leaflet — available from local tourist offices and as a download from Norfolk County Council — provides a ready-made signed itinerary using many of the same lanes.</p>
+
+    <p>For a straightforward introduction, a linear walk from North Walsham station to Mundesley using the Paston Way — roughly 8 miles — takes in the best of the inland lanes before finishing at the coast. The Coasthopper bus provides a simple return.</p>
+
+    <h3>Getting There Without a Car</h3>
+
+    <p>The Bittern Line runs from Norwich to Sheringham via North Walsham, Gunton and Cromer — all useful access points. The Coasthopper bus connects Cromer and the coastal villages. Using public transport to reach the lanes is genuinely practical and avoids the problem of returning to a parked car.</p>
+
+    <h2>Quiet Lanes Beyond the Triangle</h2>
+
+    <p>While the designated Quiet Lanes are concentrated in the North Walsham–Cromer–Bacton triangle, North Norfolk has lanes throughout the area that carry minimal traffic and offer equally rewarding walking — particularly the network of back roads between Burnham Market, Burnham Thorpe and the coastal villages to the north, and the lanes around Stiffkey and Cockthorpe further west.</p>
+
+    <h2>Recommended Kit for Lane Walking</h2>
+
+    <p>Lane walking is easy-going compared to coastal walking, but the right kit still makes the difference between a great day and a damp one.</p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-icon" style="background:#1e3528;">
+          <span>🗺️</span><span>Navigation</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">OS Explorer 252 — Norfolk Coast East</div>
+          <div class="product-desc">The essential map for the Quiet Lanes network. Covers Cromer, Bacton, North Walsham and all the inland villages.</div>
+          <a href="https://www.amazon.co.uk/s?k=OS+Explorer+252+Norfolk+Coast+East+map&tag=norfolkwild-21" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#2d4a3e;">
+          <span>🥾</span><span>Footwear</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Lightweight Walking Shoes</div>
+          <div class="product-desc">Lanes are made road surfaces — full hiking boots are overkill. A good lightweight walking shoe with grip is ideal.</div>
+          <a href="https://www.amazon.co.uk/s?k=lightweight+walking+shoes+waterproof+mens+womens&tag=norfolkwild-21" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#1e3528;">
+          <span>🧥</span><span>Clothing</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Packaway Waterproof Jacket</div>
+          <div class="product-desc">Norfolk weather changes fast. A packaway jacket weighs nothing and saves the day when a shower arrives over open fields.</div>
+          <a href="https://www.amazon.co.uk/s?k=packaway+waterproof+jacket+walking+lightweight&tag=norfolkwild-21" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#2d4a3e;">
+          <span>🎒</span><span>Essentials</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Lightweight Daypack 20L</div>
+          <div class="product-desc">Enough for lunch, a layer, water and binoculars. Lane walking rarely needs more than this.</div>
+          <a href="https://www.amazon.co.uk/s?k=lightweight+daypack+20L+walking&tag=norfolkwild-21" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#1e3528;">
+          <span>🔭</span><span>Optics</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Compact Binoculars 8x32</div>
+          <div class="product-desc">The hedgerows and churchyards of the Quiet Lanes hold yellowhammers, whitethroats and more — a compact pair earns its weight.</div>
+          <a href="https://www.amazon.co.uk/s?k=compact+binoculars+8x32+birdwatching&tag=norfolkwild-21" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#2d4a3e;">
+          <span>🦺</span><span>Safety</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Reflective Running Vest or Sash</div>
+          <div class="product-desc">Essential for walking near dusk or in low autumn light on narrow lanes. Inexpensive and could save your life.</div>
+          <a href="https://www.amazon.co.uk/s?k=reflective+vest+walking+high+visibility&tag=norfolkwild-21" target="_blank" rel="noopener" class="product-link">View on Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="safety-box">
+      <h3>Safety on Country Lanes</h3>
+      <ul>
+        <li>Walk facing oncoming traffic on single-track roads (right-hand side in the UK)</li>
+        <li>Move to the verge on bends and at pinch points — give farm vehicles room to pass</li>
+        <li>Wear bright or reflective clothing, especially on overcast days or near dusk</li>
+        <li>Tell someone your planned route if walking alone in remote areas</li>
+        <li>Check the OS map before you go — some lanes connect to busy A or B roads</li>
+        <li>In summer, grass verges can conceal deep drainage ditches — step carefully off the tarmac</li>
+      </ul>
+      <p>Lane conditions vary with season and weather. NorfolkWild accepts no liability for conditions encountered on the routes described.</p>
+    </div>
+
+    <h2>Related Walks and Guides</h2>
+    <ul>
+      <li><a href="worstead-walk.html">Worstead Village Walk</a> — another glimpse of Norfolk's inland villages</li>
+      <li><a href="north-walsham-walk.html">North Walsham Town Walk</a> — a good base for Quiet Lanes exploration</li>
+      <li><a href="article-8-peddars-way.html">The Peddars Way</a> — Norfolk's other great walking trail</li>
+      <li><a href="article-10-essential-walking-guide.html">Essential Walking Guide to North Norfolk</a> — kit, planning and advice</li>
+    </ul>
+
+    <div class="affiliate-note">
+      <p>Some links on NorfolkWild are affiliate links. If you buy through them we may earn a small commission at no extra cost to you. This helps keep the site free. Written in North Norfolk.</p>
+    </div>
+
+  </article>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>NorfolkWild</h4>
+      <a href="index.html">Home</a>
+      <a href="walks.html">All Walks</a>
+      <a href="wildlife.html">Wildlife</a>
+      <a href="shop.html">Shop</a>
+    </div>
+    <div class="footer-col">
+      <h4>Walks</h4>
+      <a href="coasthopper-hub.html">Coasthopper Series</a>
+      <a href="circular-walk-1-holkham.html">Holkham Circular</a>
+      <a href="worstead-walk.html">Worstead</a>
+      <a href="quiet-lanes.html">Quiet Lanes</a>
+    </div>
+    <div class="footer-col">
+      <h4>Info</h4>
+      <a href="norfolk-wild-legal.html">Privacy & Affiliates</a>
+      <a href="https://norfolkwild.substack.com" target="_blank">Newsletter</a>
+      <a href="mailto:hello@norfolkwild.co.uk">hello@norfolkwild.co.uk</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 NorfolkWild.co.uk</span>
+    <span>Written in North Norfolk</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+  if(hamburger && navLinks){
+    hamburger.addEventListener('click', function(){ navLinks.classList.toggle('active'); });
+    navLinks.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ navLinks.classList.remove('active'); });
+    });
+  }
+})();
+</script>
+</body>
+</html>

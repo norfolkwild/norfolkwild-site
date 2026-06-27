@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salthouse to Weybourne to Sheringham: Coasthopper Walk 3 | NorfolkWild</title>
+<meta name="description" content="Walk the Norfolk Coast Path from Salthouse through Weybourne to Sheringham on the CH1 Coasthopper. Shingle banks, chalk cliffs, Weybourne Priory and the Muckleburgh Collection. Full guide with map.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--mist:#e4ede6;--dusk:#c4956a;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wm{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;}
+.nav-wm em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1rem;align-items:center;}
+.nav-back{font-size:0.65rem;font-weight:500;color:var(--reed);text-decoration:none;}
+.nav-series{font-size:0.62rem;color:var(--sage);}
+.art-hero{position:relative;height:65vh;min-height:420px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1557869240-c53059f36611?w=1600&q=85&auto=format&fit=crop') center 40%/cover no-repeat;filter:brightness(0.52);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,22,16,0.05),rgba(14,22,16,0.88));}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;}
+.series-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--marsh2);padding:0.3rem 0.8rem;margin-bottom:0.8rem;}
+.sb-route{font-size:0.57rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);}
+.sb-num{font-size:0.57rem;font-weight:500;color:rgba(255,255,255,0.6);}
+.art-h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.9rem);font-weight:900;color:#fff;line-height:1.05;max-width:700px;letter-spacing:-0.8px;margin-bottom:1rem;}
+.art-h1 em{color:var(--gold2);font-style:italic;}
+.art-pills{display:flex;gap:0.4rem;flex-wrap:wrap;}
+.art-pill{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:0.22rem 0.7rem;font-size:0.6rem;}
+.art-layout{display:grid;grid-template-columns:1fr 270px;gap:2.5rem;max-width:1020px;margin:0 auto;padding:2.5rem 2rem;}
+.pull-intro{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;background:rgba(30,53,40,0.04);margin-bottom:2rem;}
+.pull-intro p{font-family:'Source Serif 4',serif;font-size:1rem;color:var(--marsh);line-height:1.8;font-style:italic;margin:0;font-weight:300;}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(30,53,40,0.08);margin-bottom:2rem;}
+.info-cell{background:var(--paper);padding:0.9rem;text-align:center;}
+.info-icon{font-size:1.2rem;display:block;}
+.info-label{font-size:0.52rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.1rem;}
+.info-val{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);margin-top:0.1rem;}
+.map-wrap{margin:2rem 0;}
+.map-title{font-size:0.6rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:flex;align-items:center;gap:0.6rem;}
+.map-title::after{content:'';flex:1;height:1px;background:rgba(30,53,40,0.12);}
+.map-container{width:100%;border:1px solid rgba(30,53,40,0.12);overflow:hidden;}
+.map-legend{display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:0.8rem;padding:0.8rem;background:rgba(30,53,40,0.03);border:1px solid rgba(30,53,40,0.08);}
+.legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.68rem;color:var(--ink2);}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.legend-line{width:20px;height:3px;flex-shrink:0;}
+.art-h2{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--marsh);margin:2.2rem 0 0.8rem;letter-spacing:-0.3px;position:relative;padding-bottom:0.5rem;}
+.art-h2::after{content:'';position:absolute;bottom:0;left:0;width:20px;height:2px;background:var(--gold);}
+.art-p{font-family:'Source Serif 4',serif;font-size:0.92rem;line-height:1.88;color:var(--ink2);margin-bottom:1rem;font-weight:300;}
+.stage{border-left:3px solid var(--gold2);padding:1rem 1.2rem;margin:1.2rem 0;background:rgba(30,53,40,0.02);}
+.stage-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;flex-wrap:wrap;gap:0.5rem;}
+.stage-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--marsh);}
+.stage-dist{font-size:0.7rem;font-weight:600;color:var(--sage);background:var(--mist);padding:0.2rem 0.5rem;}
+.stage-desc{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--ink2);line-height:1.7;font-weight:300;}
+.poi-list{margin:1.5rem 0;}
+.poi-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(30,53,40,0.08);}
+.poi-item:last-child{border-bottom:none;}
+.poi-num{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:rgba(30,53,40,0.08);line-height:1;flex-shrink:0;min-width:32px;}
+.poi-icon{font-size:1.2rem;flex-shrink:0;margin-top:0.1rem;}
+.poi-name{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--marsh);margin-bottom:0.25rem;}
+.poi-desc{font-family:'Source Serif 4',serif;font-size:0.8rem;color:var(--ink2);line-height:1.65;font-weight:300;}
+.poi-tag{font-size:0.6rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-top:0.3rem;}
+.tip-block{background:var(--mist);border-left:3px solid var(--reed);padding:1rem 1.2rem;margin:1.2rem 0;}
+.tip-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--reed);margin-bottom:0.35rem;}
+.tip-block p{font-size:0.82rem;color:var(--ink2);line-height:1.65;margin:0;font-family:'Source Serif 4',serif;font-weight:300;}
+.warning-block{background:#fffbf2;border-left:3px solid var(--dusk);padding:1rem 1.2rem;margin:1.2rem 0;}
+.warning-block p{font-size:0.82rem;color:#5a4a20;line-height:1.65;margin:0;font-family:'Source Serif 4',serif;}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin:1.2rem 0;}
+.food-card{background:var(--paper);padding:0.9rem;}
+.food-name{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--marsh);}
+.food-type{font-size:0.58rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin:0.2rem 0 0.3rem;}
+.food-desc{font-size:0.75rem;color:var(--reed);line-height:1.5;font-family:'Source Serif 4',serif;font-weight:300;}
+.food-loc{font-size:0.65rem;color:var(--sage);margin-top:0.3rem;}
+.bus-info{background:var(--marsh);padding:1.2rem 1.4rem;margin:1.5rem 0;}
+.bi-title{font-size:0.6rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+.bi-row{display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:0.78rem;}
+.bi-row:last-child{border-bottom:none;}
+.bi-label{color:rgba(255,255,255,0.55);font-family:'Source Serif 4',serif;}
+.bi-val{color:#fff;font-weight:500;}
+.gear-item{border:1px solid rgba(30,53,40,0.1);padding:0.9rem 1rem;margin:0.7rem 0;display:flex;gap:0.8rem;align-items:flex-start;}
+.gear-icon{font-size:1.4rem;flex-shrink:0;}
+.gear-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.gear-desc{font-size:0.73rem;color:var(--reed);line-height:1.5;margin:0.15rem 0 0.4rem;font-family:'Source Serif 4',serif;font-weight:300;}
+.gear-btn{background:var(--gold2);color:var(--ink);padding:0.25rem 0.75rem;font-size:0.62rem;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-block;}
+.walk-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(30,53,40,0.08);margin-top:2rem;}
+.wn-link{background:var(--paper);padding:1rem 1.1rem;text-decoration:none;transition:background 0.15s;display:block;}
+.wn-link:hover{background:var(--cream2);}
+.wn-dir{font-size:0.52rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.25rem;}
+.wn-title{font-family:'Playfair Display',serif;font-size:0.82rem;font-weight:700;color:var(--marsh);line-height:1.3;}
+.art-author{background:var(--cream2);padding:1.1rem 1.3rem;display:flex;gap:0.8rem;align-items:center;margin-top:2rem;border-top:2px solid var(--marsh);}
+.author-av{width:38px;height:38px;background:var(--marsh);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;}
+.author-name{font-family:'Playfair Display',serif;font-size:0.88rem;font-weight:700;color:var(--marsh);}
+.author-bio{font-size:0.7rem;color:var(--reed);line-height:1.5;margin-top:0.1rem;}
+.aside-sticky{position:sticky;top:68px;}
+.aside-map-mini{background:var(--marsh);padding:1rem;margin-bottom:1rem;}
+.aside-map-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.6rem;}
+.aside-stops{display:flex;flex-direction:column;gap:0;}
+.aside-stop{display:flex;align-items:center;gap:0.6rem;padding:0.35rem 0;position:relative;}
+.aside-stop::before{content:'';position:absolute;left:7px;top:50%;bottom:-50%;width:1px;background:rgba(255,255,255,0.1);}
+.aside-stop:last-child::before{display:none;}
+.as-dot{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);background:var(--marsh);flex-shrink:0;z-index:1;}
+.as-dot.start{background:var(--gold2);border-color:var(--gold2);}
+.as-dot.end{background:#fff;border-color:#fff;}
+.as-dot.poi{background:var(--reed);border-color:var(--reed);}
+.as-name{font-size:0.72rem;color:rgba(255,255,255,0.7);}
+.as-name.bold{color:#fff;font-weight:500;}
+.aside-widget{background:var(--marsh);padding:1.1rem;margin-bottom:1rem;}
+.aside-label{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.7rem;}
+.aside-link{display:flex;gap:0.5rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.04);text-decoration:none;align-items:center;cursor:pointer;}
+.aside-link:last-child{border-bottom:none;}
+.aside-thumb{width:44px;height:32px;object-fit:cover;flex-shrink:0;}
+.aside-link-title{font-size:0.68rem;color:rgba(255,255,255,0.7);line-height:1.35;}
+.aside-nl{background:var(--gold2);padding:1.1rem;}
+.aside-nl-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.2;}
+.aside-nl-input{width:100%;padding:0.45rem 0.6rem;font-size:0.7rem;border:none;margin-bottom:0.35rem;display:block;font-family:'DM Sans',sans-serif;}
+.aside-nl-btn{width:100%;background:var(--marsh);color:#fff;padding:0.45rem;border:none;font-size:0.65rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.art-layout{grid-template-columns:1fr;}.art-aside{display:none;}.info-grid{grid-template-columns:repeat(2,1fr);}.food-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.art-hero{height:55vh;}.art-layout{padding:1.5rem;}.walk-nav{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;padding:1.5rem;}}
+
+  /* === TOPNAV === */
+  .topnav {
+    background: rgba(250,246,239,0.97);
+    border-bottom: 1px solid rgba(30,53,40,0.12);
+    padding: 0 2.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .topnav .nav-links {
+    display: flex;
+    gap: 1.4rem;
+    align-items: center;
+  }
+  .topnav .nav-links a {
+    font-size: 0.67rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #4a6358;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .topnav .nav-links a:hover { color: #b8923a; }
+  .topnav .nav-cta {
+    background: #1e3528;
+    color: #fff !important;
+    padding: 0.38rem 0.9rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .topnav .nav-cta:hover { background: #2d4a3e !important; }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1e3528;
+    transition: all 0.2s;
+  }
+  @media (max-width: 700px) {
+    .topnav { padding: 0 1rem; }
+    .topnav .nav-links { display: none; flex-direction: column; gap: 0; position: fixed; top: 56px; left: 0; right: 0; background: #faf6ef; padding: 1rem; border-bottom: 1px solid rgba(30,53,40,0.08); z-index: 99; }
+    .topnav .nav-links.active { display: flex !important; }
+    .topnav .nav-links a { padding: 0.8rem 0; border-bottom: 1px solid rgba(30,53,40,0.05); font-size: 0.75rem; }
+    .hamburger { display: flex; }
+  }
+  /* === END TOPNAV === */
+
+  </style>
+  <link rel="canonical" href="https://www.norfolkwild.co.uk/coasthopper-walk-3-salthouse-sheringham.html">
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:#1e3528;letter-spacing:-0.5px;">Norfolk<em style="color:#b8923a;font-style:italic;">Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="article-10-essential-walking-guide.html">Essentials</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="art-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="series-badge"><span class="sb-route">🚌 CH1 Coasthopper</span> · <span class="sb-num">Walk 3 of 8</span></div>
+    <h1 class="art-h1">Salthouse to Weybourne to Sheringham:<br><em>Shingle, Cliffs and the Steam Railway</em></h1>
+    <div class="art-pills">
+      <span class="art-pill">📍 Salthouse → Sheringham</span>
+      <span class="art-pill">📏 7 miles</span>
+      <span class="art-pill">⏱ 3–3.5 hours</span>
+      <span class="art-pill">🟡 Moderate</span>
+      <span class="art-pill">🚌 Bus back from Sheringham</span>
+    </div>
+  </div>
+</div>
+
+<div class="art-layout">
+  <div class="art-main">
+
+        <!-- SAFETY DISCLAIMER -->
+    <div style="background:#1e3528;border-left:4px solid #c9a84c;padding:1.4rem 1.6rem;margin:2rem 0;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:0.8rem;">⚠ Important — Please Read Before Setting Off</div>
+      <div style="font-family:'Source Serif 4',serif;font-size:0.83rem;color:rgba(255,255,255,0.85);line-height:1.8;font-weight:300;">
+        <p style="margin-bottom:0.8rem;color:#fff;font-weight:400;">NorfolkWild guides are provided for general information only. <strong>You are solely responsible for your own safety and the safety of anyone in your group.</strong> Always carry out your own research before setting off on any route described on this site.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 2rem;margin-bottom:0.9rem;font-size:0.78rem;color:rgba(255,255,255,0.8);">
+          <div>✓ Study a current <a href="https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21" target="_blank" style="color:#c9a84c;">OS Explorer map</a> before every walk (OL24 / OL25 for North Norfolk)</div>
+          <div>✓ Check <a href="https://www.bbc.co.uk/weather/coast-and-sea" target="_blank" style="color:#c9a84c;">tide times</a> before any coastal or salt marsh walk</div>
+          <div>✓ Check the <a href="https://www.metoffice.gov.uk" target="_blank" style="color:#c9a84c;">Met Office coastal forecast</a> on the day</div>
+          <div>✓ Verify <a href="https://www.sanderscoaches.com/coasthopper" target="_blank" style="color:#c9a84c;">bus timetables</a> directly with Sanders Coaches before travel</div>
+          <div>✓ Tell someone your route and expected return time</div>
+          <div>✓ Carry a charged phone, paper map, food and water</div>
+          <div>✓ Wear appropriate clothing and footwear for conditions</div>
+          <div>✓ Assess whether the route suits your fitness and experience</div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);padding:0.9rem 1.1rem;font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7;">
+          <strong style="color:rgba(255,255,255,0.65);letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;">No Liability</strong> — NorfolkWild and its authors accept no responsibility or liability whatsoever for any loss, injury, accident, death, damage, delay or inconvenience suffered by any person as a result of following any guide, route, advice or information published on this website. Route conditions, path closures, cliff erosion, tidal changes and transport timetables may differ from those described. All information is provided in good faith but without warranty of any kind. Walking in the countryside and on coastal cliff paths involves inherent risks. By following any route on this site you acknowledge that you do so entirely at your own risk. In an emergency dial <strong style="color:#fff;">999</strong> — for coastal emergencies ask for the Coastguard.
+        </div>
+      </div>
+    </div>
+    <!-- END DISCLAIMER -->
+<div class="pull-intro">
+      <p>This is the walk where the North Norfolk coast begins to change character. The flat salt marshes and reed beds of the west give way to something altogether more dramatic — shingle banks, chalk cliffs, ancient military history and the chalk heath above Weybourne. The reward at the end is Sheringham: excellent fish and chips, independent shops and the North Norfolk Steam Railway.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-cell"><span class="info-icon">📏</span><div class="info-label">Distance</div><div class="info-val">7 miles</div></div>
+      <div class="info-cell"><span class="info-icon">⏱</span><div class="info-label">Walking time</div><div class="info-val">3–3.5 hrs</div></div>
+      <div class="info-cell"><span class="info-icon">🟡</span><div class="info-label">Difficulty</div><div class="info-val">Moderate</div></div>
+      <div class="info-cell"><span class="info-icon">🚌</span><div class="info-label">Bus back</div><div class="info-val">CH1 from Sheringham</div></div>
+    </div>
+
+    <div class="map-wrap">
+      <div class="map-title">Route map — Salthouse to Weybourne to Sheringham</div>
+      <div class="map-container">
+        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;background:#e8ede6;">
+          <!-- Sea -->
+          <rect x="0" y="0" width="760" height="90" fill="#b8d4e0" opacity="0.6"/>
+          <path d="M0 30 Q60 20 120 30 Q180 40 240 30 Q300 20 360 30 Q420 40 480 30 Q540 20 600 30 Q660 40 720 30 Q745 25 760 30" fill="none" stroke="#9abbc8" stroke-width="1" opacity="0.5"/>
+          <text x="380" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6a9aac" opacity="0.8">NORTH SEA</text>
+
+          <!-- Shingle bank -->
+          <path d="M 60 78 Q 200 70 340 68 Q 440 67 520 72" fill="none" stroke="#c8b896" stroke-width="10" stroke-linecap="round" opacity="0.55"/>
+          <text x="280" y="62" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#7a6a4a">Shingle bank</text>
+
+          <!-- Chalk cliffs area (Weybourne onwards) -->
+          <path d="M 380 88 L 540 85 L 680 80" fill="none" stroke="#c8c0a8" stroke-width="18" stroke-linecap="round" opacity="0.5"/>
+          <text x="540" y="76" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#6a5a3a">Chalk cliffs (SSSI)</text>
+
+          <!-- Marshes -->
+          <ellipse cx="100" cy="145" rx="70" ry="28" fill="#8aaa72" opacity="0.3"/>
+          <text x="100" y="148" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#3a6a2a" opacity="0.8">Salthouse Marshes</text>
+
+          <!-- Sheringham Park (inland) -->
+          <ellipse cx="580" cy="210" rx="55" ry="30" fill="#5a8a5a" opacity="0.25"/>
+          <text x="580" y="213" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#2a5a2a">Sheringham Park (NT)</text>
+
+          <!-- Land -->
+          <rect x="0" y="185" width="760" height="115" fill="#d4c9a8" opacity="0.35"/>
+
+          <!-- ROUTE LINE -->
+          <path d="M 70 162 Q 130 155 185 150 Q 240 145 290 142 Q 340 140 380 138 Q 420 137 460 138 Q 500 140 540 142 Q 580 145 620 148 Q 660 152 700 155"
+            fill="none" stroke="#1e3528" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 70 162 Q 130 155 185 150 Q 240 145 290 142 Q 340 140 380 138 Q 420 137 460 138 Q 500 140 540 142 Q 580 145 620 148 Q 660 152 700 155"
+            fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="8 4" opacity="0.6"/>
+
+          <!-- Bus road -->
+          <path d="M 70 240 L 250 238 L 450 236 L 700 234" fill="none" stroke="#c4956a" stroke-width="2" stroke-dasharray="6 3" opacity="0.7"/>
+          <text x="380" y="250" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#8a6030" opacity="0.9">🚌 CH1 Coasthopper (A149)</text>
+
+          <!-- SALTHOUSE START -->
+          <circle cx="70" cy="162" r="9" fill="#c9a84c" stroke="#1e3528" stroke-width="2"/>
+          <text x="70" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1e3528">S</text>
+          <text x="70" y="182" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Salthouse</text>
+          <!-- Dun Cow -->
+          <text x="50" y="195" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a20">🍺 Dun Cow</text>
+          <!-- Church -->
+          <rect x="48" y="120" width="7" height="12" fill="#8a7a6a" opacity="0.8"/>
+          <polygon points="51,118 46,123 57,123" fill="#6a5a4a" opacity="0.8"/>
+          <rect x="50" y="114" width="2" height="5" fill="#6a5a4a" opacity="0.8"/>
+          <text x="60" y="126" font-family="DM Sans,sans-serif" font-size="6.5" fill="#5a4a3a">St Nicholas</text>
+
+          <!-- POI 1: Kelling Heath -->
+          <circle cx="210" cy="148" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="210" y="151" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">1</text>
+          <text x="210" y="168" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Kelling</text>
+          <text x="210" y="176" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#4a6b5a">Heath/Beach</text>
+
+          <!-- POI 2: Weybourne Hope / Military -->
+          <circle cx="380" cy="138" r="6" fill="#4a6b5a" stroke="#fff" stroke-width="1.5"/>
+          <text x="380" y="141" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6.5" fill="#fff">2</text>
+          <text x="380" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" font-weight="600" fill="#1e3528">Weybourne</text>
+          <!-- Muckleburgh tank icon suggestion -->
+          <text x="350" y="115" font-family="DM Sans,sans-serif" font-size="10">🏛</text>
+          <text x="362" y="112" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a3a">Muckleburgh</text>
+
+          <!-- POI 3: Weybourne Priory ruins -->
+          <circle cx="410" cy="140" r="5" fill="#4a6b5a" stroke="#fff" stroke-width="1.2"/>
+          <text x="410" y="143" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#fff">3</text>
+          <text x="425" y="135" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a3a">Priory</text>
+          <text x="425" y="143" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a3a">ruins</text>
+
+          <!-- Cliff path section indicator -->
+          <text x="510" y="128" font-family="DM Sans,sans-serif" font-size="7.5" fill="#5a4a3a">Clifftop path begins ↗</text>
+
+          <!-- POI 4: Steam railway -->
+          <!-- Train icon -->
+          <text x="590" y="188" font-family="DM Sans,sans-serif" font-size="14">🚂</text>
+          <text x="608" y="192" font-family="DM Sans,sans-serif" font-size="7" fill="#5a4a3a">Poppy Line</text>
+          <!-- Railway line suggestion -->
+          <path d="M 560 205 Q 620 202 680 200" fill="none" stroke="#8a5a3a" stroke-width="3" stroke-dasharray="5 3" opacity="0.5"/>
+
+          <!-- SHERINGHAM END -->
+          <circle cx="700" cy="155" r="9" fill="#fff" stroke="#1e3528" stroke-width="2.5"/>
+          <text x="700" y="158" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="#1e3528">F</text>
+          <text x="700" y="176" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" font-weight="700" fill="#1e3528">Sheringham</text>
+          <text x="700" y="188" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#4a6b5a">🐟 Fish & chips</text>
+
+          <!-- Compass -->
+          <g transform="translate(720,268)"><circle cx="0" cy="0" r="14" fill="rgba(250,246,239,0.9)" stroke="#2d4a3e" stroke-width="1"/><text x="0" y="-6" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" font-weight="700" fill="#1e3528">N</text><line x1="0" y1="-4" x2="0" y2="-10" stroke="#1e3528" stroke-width="1.5"/><line x1="0" y1="2" x2="0" y2="8" stroke="#8a8a7a" stroke-width="1"/><text x="0" y="11" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="6" fill="#8a8a7a">S</text></g>
+
+          <!-- Scale -->
+          <g transform="translate(30,278)"><line x1="0" y1="0" x2="45" y2="0" stroke="#2d4a3e" stroke-width="1.5"/><line x1="0" y1="-3" x2="0" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><line x1="45" y1="-3" x2="45" y2="3" stroke="#2d4a3e" stroke-width="1.5"/><text x="22" y="-5" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#2d4a3e">2 miles approx</text></g>
+
+          <!-- Legend -->
+          <circle cx="30" cy="292" r="4" fill="#c9a84c"/><text x="38" y="296" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Start (Salthouse)</text>
+          <circle cx="125" cy="292" r="4" fill="#fff" stroke="#1e3528" stroke-width="1.5"/><text x="133" y="296" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Finish (Sheringham)</text>
+          <circle cx="230" cy="292" r="4" fill="#4a6b5a"/><text x="238" y="296" font-family="DM Sans,sans-serif" font-size="7.5" fill="#1e3528">Point of interest</text>
+        </svg>
+      </div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#c9a84c;"></div>Start (Salthouse)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#fff;border:1.5px solid #1e3528;"></div>Finish (Sheringham)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4a6b5a;"></div>Point of interest</div>
+        <div class="legend-item"><div class="legend-line" style="background:#1e3528;"></div>Walking route</div>
+      </div>
+    </div>
+
+    <div class="bus-info">
+      <div class="bi-title">🚌 Coasthopper CH1 — Practical Information</div>
+      <div class="bi-row"><span class="bi-label">Start point</span><span class="bi-val">Salthouse village stop (Purdy Street, by Dun Cow)</span></div>
+      <div class="bi-row"><span class="bi-label">Finish point</span><span class="bi-val">Sheringham Bus Station (Station Approach)</span></div>
+      <div class="bi-row"><span class="bi-label">Bus back</span><span class="bi-val">CH1 Sheringham → Salthouse, approx every 60 mins</span></div>
+      <div class="bi-row"><span class="bi-label">Journey time by bus</span><span class="bi-val">~18 minutes</span></div>
+      <div class="bi-row"><span class="bi-label">Combine with</span><span class="bi-val">Walk 2 (Blakeney to Salthouse) for a 13-mile day</span></div>
+      <div class="bi-row"><span class="bi-label">Train option</span><span class="bi-val">Sheringham is on the Bittern Line from Norwich</span></div>
+    </div>
+
+    <h2 class="art-h2">The Route</h2>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 1 — Salthouse to Kelling Beach</div><span class="stage-dist">2.5 miles · 1 hour</span></div>
+      <p class="stage-desc">From the Dun Cow pub in Salthouse, join the Coast Path heading east. The path initially follows the edge of the village before joining the shingle bank — a wide, exposed ridge of flint and pebble that stretches east towards Weybourne. The opening stretch runs along a seemingly endless length of shingle beach with birds to spot and coastal flowers, and the timeless sounds of the sea. Look for yellow horned poppies growing from the shingle in summer — bright splashes of colour on an otherwise monochrome landscape. Kelling Beach is a quiet spot about halfway along the shingle — a good place to stop, eat and look out to sea before the path begins to change character.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 2 — Kelling Beach to Weybourne</div><span class="stage-dist">2 miles · 45 mins</span></div>
+      <p class="stage-desc">Beyond Kelling the shingle continues but the landscape begins to rise. Behind the beach is Weybourne Cliffs, a designated Site of Special Scientific Interest, important for its geology. The remains of a wide variety of marine molluscs have been found here along with both small and large animal fossils. The village of Weybourne comes into view as the path descends to Weybourne Hope — a natural harbour where the deep water comes unusually close to shore. This geographical quirk made Weybourne strategically important for centuries; as an old verse noted, "He who would Old England win, Must at Weybourne Hope begin." The Muckleburgh Military Collection is signposted from the beach — well worth a detour if military history interests you.</p>
+    </div>
+
+    <div class="tip-block">
+      <div class="tip-label">Local pronunciation</div>
+      <p>Weybourne is pronounced locally as "Webbun" — dropping the middle syllable entirely. Salthouse is "Sal'ouse" (dropping the h). If you want to sound like a local rather than a tourist, these details matter more than you might think.</p>
+    </div>
+
+    <div class="stage">
+      <div class="stage-header"><div class="stage-name">Stage 3 — Weybourne to Sheringham</div><span class="stage-dist">2.5 miles · 1 hour</span></div>
+      <p class="stage-desc">The reward is the cliff walk from Weybourne to Sheringham which is stunning. From Weybourne the Coast Path climbs onto the chalk cliffs and follows the clifftop east. Halfway between Weybourne and Sheringham, a little way inland on high ground, is Sheringham Park, landscaped in the early 19th century by Humphry Repton, who considered it his favourite work in Norfolk. The clifftop path offers wide views across the North Sea, and on a clear day you can see the wind farms far offshore. The path skirts along the edge of Sheringham golf course — some sections are close to the cliff edge, so take care — and descends into Sheringham along the promenade past the famous beach huts. Sheringham's seafront promenade has the early 20th-century gardens of The Lees, and the Boulevard was constructed in 1887 to link the seafront with the newly built railway station.</p>
+    </div>
+
+    <h2 class="art-h2">Points of Interest</h2>
+    <div class="poi-list">
+
+      <div class="poi-item">
+        <div class="poi-num">1</div><div class="poi-icon">🏛</div>
+        <div>
+          <div class="poi-name">Muckleburgh Military Collection</div>
+          <div class="poi-desc">One of the largest privately owned military collections in Britain, housed in the former NAAFI building of a wartime camp just inland from Weybourne Beach. Tanks, guns, military vehicles and extensive exhibits covering conflicts from the Second World War to the present day. A stroll along the seafront at Weybourne leads to the nearby Muckleburgh Military Collection. Worth at least an hour if military history is of interest — particularly good for families.</div>
+          <div class="poi-tag">📍 Weybourne NR25 7EG · Entry charge · muckleburgh.co.uk</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">2</div><div class="poi-icon">🏚</div>
+        <div>
+          <div class="poi-name">Weybourne Priory Ruins</div>
+          <div class="poi-desc">The walk takes in the Weybourne Priory ruins as a diversion from the official route of the North Norfolk Coast Path. The remains of an Augustinian priory founded in the 12th century, standing in the village just behind the beach. The flint walls are largely intact and give a vivid impression of the scale of the original buildings. Free to view from the exterior — a quiet, atmospheric spot.</div>
+          <div class="poi-tag">📍 Weybourne village, NR25 7SY · Free, exterior viewing</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">3</div><div class="poi-icon">🏖</div>
+        <div>
+          <div class="poi-name">Weybourne Hope — The Strategic Beach</div>
+          <div class="poi-desc">The beach at Weybourne Hope has strategic significance stretching back centuries. Deep water unusually close to shore meant large vessels could land troops here without needing a harbour — a fact that concerned English defenders from the time of the Spanish Armada onwards. The beach was heavily fortified during both World Wars; the remains of some military structures are visible in the cliff face. Nowadays it's a quiet, undeveloped beach — one of the least crowded on this stretch of coast.</div>
+          <div class="poi-tag">📍 Weybourne Beach, NR25 7SZ · Free access</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">4</div><div class="poi-icon">🌿</div>
+        <div>
+          <div class="poi-name">Weybourne Cliffs SSSI</div>
+          <div class="poi-desc">Weybourne Cliffs is a designated Site of Special Scientific Interest, important for its geology. The remains of a wide variety of marine molluscs have been found here along with both small and large animal fossils. The chalk and flint cliffs between Weybourne and Sheringham are actively eroding, which means fresh fossil-bearing material is regularly exposed. Look along the beach at the cliff base for fossils — particularly after storms when new material has fallen.</div>
+          <div class="poi-tag">📍 Between Weybourne and Sheringham · SSSI protected</div>
+        </div>
+      </div>
+
+      <div class="poi-item">
+        <div class="poi-num">5</div><div class="poi-icon">🚂</div>
+        <div>
+          <div class="poi-name">North Norfolk Railway — the Poppy Line</div>
+          <div class="poi-desc">The North Norfolk Railway runs steam trains between Sheringham and Holt through some of the most beautiful countryside in the county. From the coast path it is possible to see the steam trains of the North Norfolk Steam Railway chugging in and out of Sheringham. The station at Sheringham is where the heritage railway meets the national network — you can arrive by train from Norwich and leave on a steam train to Holt (or vice versa). The railway runs year-round with a seasonal timetable.</div>
+          <div class="poi-tag">📍 Sheringham Station NR26 8RA · nnrailway.co.uk</div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="art-h2">Food and Drink</h2>
+    <div class="food-grid">
+      <div class="food-card">
+        <div class="food-name">The Dun Cow, Salthouse</div>
+        <div class="food-type">Pub · Start of walk</div>
+        <div class="food-desc">Start (or end) your walk here. Good food, fine garden views over the marshes, dog friendly. One of the best pubs on the North Norfolk coast.</div>
+        <div class="food-loc">📍 Purdy Street, Salthouse NR25 7XA</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">The Ship, Weybourne</div>
+        <div class="food-type">Pub · Midway</div>
+        <div class="food-desc">Traditional Norfolk pub in Weybourne village, a short detour from the coast path. Good for a midpoint pint and lunch before the cliff walk section.</div>
+        <div class="food-loc">📍 The Street, Weybourne NR25 7SY</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">Sheringham Fish & Chips</div>
+        <div class="food-type">Takeaway · End of walk</div>
+        <div class="food-desc">Sheringham has several excellent fish and chip shops on the high street. The No. 1 Cromer Crab on Church Street is consistently outstanding. Eat on the promenade.</div>
+        <div class="food-loc">📍 Sheringham town centre</div>
+      </div>
+      <div class="food-card">
+        <div class="food-name">Woodfields Cafe, Sheringham</div>
+        <div class="food-type">Café · End of walk</div>
+        <div class="food-desc">Friendly café on the high street — good coffee, cake and full breakfasts. A warm, welcoming place to sit after a long walk before catching the bus back.</div>
+        <div class="food-loc">📍 High Street, Sheringham NR26 8DS</div>
+      </div>
+    </div>
+
+    <div class="gear-item">
+      <span class="gear-icon">🥾</span>
+      <div>
+        <div class="gear-name">Waterproof Walking Boots</div>
+        <div class="gear-desc">Essential for the shingle bank section — the loose stones are hard on ankles without proper support. The cliff path is well-drained but can be muddy near Weybourne after rain.</div>
+        <a class="gear-btn" href="article-2-walking-boots.html">Read Our Boots Guide →</a>
+      </div>
+    </div>
+
+    <div class="warning-block">
+      <p>⚠️ <strong>Cliff edge warning:</strong> The clifftop path near Sheringham golf course passes close to actively eroding cliff edges. Never approach the edge and keep dogs on leads. The cliffs can collapse without warning.</p>
+    </div>
+
+    <div class="art-author">
+      <div class="author-av">🌿</div>
+      <div>
+        <div class="author-name">NorfolkWild</div>
+        <div class="author-bio">Independent guide to this section of the Norfolk Coast Path. Updated May 2026.</div>
+      </div>
+    </div>
+
+    <div class="walk-nav">
+      <a class="wn-link" href="coasthopper-walk-2-blakeney-salthouse.html"><div class="wn-dir">← Previous walk</div><div class="wn-title">Walk 2: Blakeney to Salthouse</div></a>
+      <a class="wn-link" href="coasthopper-walk-4-sheringham-cromer.html" style="text-align:right;"><div class="wn-dir">Next walk →</div><div class="wn-title">Walk 4: Sheringham to Cromer</div></a>
+    </div>
+
+  </div>
+
+  <div class="art-aside">
+    <div class="aside-sticky">
+      <div class="aside-map-mini">
+        <div class="aside-map-label">Route stops</div>
+        <div class="aside-stops">
+          <div class="aside-stop"><div class="as-dot start"></div><span class="as-name bold">🚌 Salthouse (Dun Cow)</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">St Nicholas Church ⛪</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Shingle bank walk</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Kelling Beach</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name bold">Weybourne Hope 🏖</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Muckleburgh Collection 🏛</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Weybourne Priory ruins</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Chalk cliffs SSSI 🌿</span></div>
+          <div class="aside-stop"><div class="as-dot poi"></div><span class="as-name">Clifftop path</span></div>
+          <div class="aside-stop"><div class="as-dot end"></div><span class="as-name bold">🚌 Sheringham 🚂</span></div>
+        </div>
+      </div>
+      <div class="aside-widget">
+        <div class="aside-label">More Coasthopper walks</div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-2-blakeney-salthouse.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1603264376906-7303588baa4a?w=90&q=60" alt=""><div class="aside-link-title">Walk 2: Blakeney to Salthouse</div></div>
+        <div class="aside-link" onclick="window.location='coasthopper-walk-4-sheringham-cromer.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1624866181865-91b01ff7400a?w=90&q=60" alt=""><div class="aside-link-title">Walk 4: Sheringham to Cromer</div></div>
+        <div class="aside-link" onclick="window.location='coasthopper-hub.html'"><img class="aside-thumb" src="https://images.unsplash.com/photo-1621532076337-db3b804ee109?w=90&q=60" alt=""><div class="aside-link-title">All 8 Coasthopper Walks →</div></div>
+      </div>
+      <div class="aside-nl">
+        <div class="aside-nl-title">New walks every week — free.</div>
+        <a href="https://norfolkwild.substack.com" target="_blank" style="display:block;width:100%;background:var(--marsh);color:#fff;padding:0.5rem;font-size:0.68rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:0.06em;text-align:center;text-decoration:none;">Subscribe free on Substack →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div><div class="footer-wm">Norfolk<em>Wild</em></div><div class="footer-tag">Independent outdoor guides from North Norfolk.</div></div>
+  <div class="footer-col"><h4>CH1 Walks</h4><a href="coasthopper-walk-1-wells-blakeney.html">Walk 1: Wells to Blakeney</a><a href="coasthopper-walk-2-blakeney-salthouse.html">Walk 2: Blakeney to Salthouse</a><a href="coasthopper-walk-3-salthouse-sheringham.html">Walk 3: Salthouse to Sheringham</a><a href="coasthopper-walk-4-sheringham-cromer.html">Walk 4: Sheringham to Cromer</a></div>
+  <div class="footer-col"><h4>CH2 Walks</h4><a href="coasthopper-walk-5-cromer-overstrand.html">Walk 5: Cromer to Overstrand</a><a href="coasthopper-walk-6-overstrand-trimingham.html">Walk 6: Overstrand to Trimingham</a><a href="coasthopper-walk-7-trimingham-mundesley.html">Walk 7: Trimingham to Mundesley</a><a href="coasthopper-walk-8-mundesley-walcott.html">Walk 8: Mundesley to Walcott</a></div>
+  <div class="footer-col"><h4>About</h4><a href="norfolk-wild-legal.html#privacy">Privacy Policy</a><a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a><a href="mailto:hello@norfolkwild.co.uk">Contact</a></div>
+</footer>
+<div class="footer-bottom"><span>© 2026 NorfolkWild.co.uk</span><span>Written in North Norfolk</span></div>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+}
+</script>
+
+</body>
+</html>

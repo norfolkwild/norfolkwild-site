@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holt Walking Guide — NorfolkWild</title>
+<meta name="description" content="Discover the best walks around the Georgian town of Holt, Norfolk. Explore Holt Country Park, the magical Spout Hills, and the historic Owl Trail.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--sky:#a8c4b8;--mist:#e4ede6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.topnav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wordmark{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;line-height:1;}
+.nav-wordmark em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1.4rem;align-items:center;}
+.nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--marsh);color:#fff;padding:0.38rem 0.9rem;font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--marsh2);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink2);margin:5px 0;transition:0.3s;}
+.hamburger.active span:nth-child(1){transform:rotate(-45deg) translate(-5px, 6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(45deg) translate(-5px, -6px);}
+@media(max-width:600px){.hamburger{display:block;}.nav-links{position:fixed;top:52px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;display:none;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}.nav-links.active{display:flex;}.nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);}.topnav{padding:0 1rem;}}
+.article-hero{background:linear-gradient(160deg,rgba(22,28,24,0.72) 0%,rgba(22,28,24,0.1) 50%,rgba(22,28,24,0.7) 100%),url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=85') center 50%/cover no-repeat;min-height:50vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 2rem 3rem;padding-top:52px;position:relative;}
+.hero-content{max-width:900px;margin:0 auto;width:100%;}
+.hero-eyebrow{font-size:0.6rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:0.8rem;margin-bottom:0.9rem;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold2);}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1px;margin-bottom:1rem;}
+.hero-title em{color:var(--gold2);font-style:italic;}
+.article-body{max-width:900px;margin:0 auto;padding:3rem 2rem;}
+.article-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(30,53,40,0.08);font-size:0.8rem;color:var(--sage);}
+.meta-item{display:flex;gap:0.4rem;align-items:center;}
+.article-section{margin-bottom:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--marsh);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gold);}
+.article-text{font-size:0.95rem;line-height:1.8;color:var(--ink);margin-bottom:1.2rem;}
+.article-text strong{color:var(--marsh);}
+.walk-details{background:var(--cream2);padding:1.5rem;border-left:4px solid var(--gold);margin:1.5rem 0;}
+.walk-details h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.walk-details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;}
+.detail-item{font-size:0.8rem;}
+.detail-label{font-weight:600;color:var(--marsh);margin-bottom:0.2rem;}
+.detail-value{color:var(--reed);}
+.affiliate-box{background:#fff;border:1px solid rgba(30,53,40,0.08);padding:1.5rem;margin:2rem 0;border-radius:4px;}
+.affiliate-box h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:1rem;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
+.product-card{text-align:center;}
+.product-card img{width:100%;height:150px;object-fit:cover;margin-bottom:0.8rem;background:#eee;}
+.product-name{font-size:0.8rem;font-weight:600;color:var(--marsh);margin-bottom:0.5rem;line-height:1.3;}
+.product-link{background:var(--gold2);color:var(--ink);padding:0.5rem 1rem;font-size:0.65rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;transition:background 0.2s;display:inline-block;}
+.product-link:hover{background:var(--gold);}
+.safety-warning{background:rgba(184,146,58,0.1);border-left:4px solid var(--gold);padding:1.5rem;margin:2rem 0;border-radius:2px;}
+.safety-warning h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.safety-warning p{font-size:0.9rem;line-height:1.6;color:var(--reed);}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;transition:color 0.15s;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.walk-details-grid{grid-template-columns:repeat(2,1fr);}.product-grid{grid-template-columns:repeat(2,1fr);}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.walk-details-grid{grid-template-columns:1fr;}.product-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;}.article-body{padding:2rem 1rem;}}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span class="nav-wordmark">Norfolk<em>Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Market Towns & Woodland</div>
+    <h1 class="hero-title">Holt: <em>Georgian Charm & Ancient Woods</em></h1>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="article-meta">
+    <div class="meta-item">📍 Holt, Norfolk</div>
+    <div class="meta-item">📏 1-6 miles (various routes)</div>
+    <div class="meta-item">⏱️ 45 mins - 3 hours</div>
+    <div class="meta-item">🟢 Easy to Moderate</div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">About Holt</h2>
+    <p class="article-text">Holt is a stunning Georgian market town in North Norfolk, renowned for its independent shops, charming courtyards, and rich history. But beyond its architectural beauty lies a gateway to some of the most diverse walking landscapes in the county. From ancient woodlands and heathland to magical hidden springs, Holt offers a unique blend of town and country walking.</p>
+    <p class="article-text">The town's history is fascinating—a devastating fire in 1708 destroyed much of the medieval town, leading to the elegant Georgian rebuilding we see today. Walking through Holt is a journey through time, and the surrounding countryside is equally steeped in heritage, from ancient Roman remains to Victorian country parks.</p>
+    <p class="article-text">Whether you're looking for a gentle town stroll, a family-friendly woodland adventure, or a more challenging circular hike, Holt provides the perfect starting point for exploring the "High Norfolk" landscape.</p>
+  </div>
+
+  <div class="walk-details">
+    <h4>Quick Facts</h4>
+    <div class="walk-details-grid">
+      <div class="detail-item">
+        <div class="detail-label">Parking</div>
+        <div class="detail-value">Holt Country Park (NR25 6SP) or Town Centre</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Best Season</div>
+        <div class="detail-value">Year-round (Autumn is spectacular in the woods)</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Terrain</div>
+        <div class="detail-value">Woodland paths, heathland, and town pavements</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Dog Friendly</div>
+        <div class="detail-value">Extremely—Holt Country Park is a doggy favorite</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Holt Country Park (1.5 - 7 miles)</h2>
+    <p class="article-text">Situated on the edge of the town, <strong>Holt Country Park</strong> is an award-winning woodland that offers a variety of waymarked trails. Once used for horse racing and farming, it is now a peaceful haven for wildlife and walkers alike. The park features a mix of Scots pine, oak, and beech trees, creating a stunning backdrop in every season.</p>
+    <p class="article-text">The "Blue Route" is the longest waymarked trail at 1.5 miles, taking you through the heart of the woods and across colorful heathland where heather blooms in late summer. For those seeking a longer adventure, the 7-mile circular route extends beyond the park into the surrounding countryside, offering more challenging terrain and beautiful views.</p>
+    <p class="article-text">Keep an eye out for the wooden sculptures scattered throughout the woods—they add a touch of magic to the walk, especially for children. The park also has a lovely cafe and a play area, making it an ideal destination for a full day out.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Magical Spout Hills (1-2 miles)</h2>
+    <p class="article-text">Just a short walk from the top of Holt's High Street lies <strong>Spout Hills</strong>, one of North Norfolk's true hidden gems. This 14-acre site was once the source of Holt's water supply and is now a serene natural escape featuring a namesake spring, woodland trails, and open fields.</p>
+    <p class="article-text">The area is perfect for a gentle stroll, with a beautiful pond and a stream that's ideal for a bit of paddling in the summer months. It's a "magical little place" with hills for scrambling and ancient trees for climbing. A 2-mile walk can incorporate Common Hill, offering a bit more distance and some lovely views back towards the town.</p>
+    <p class="article-text">Spout Hills is particularly beautiful in spring when wildflowers carpet the ground and the bulrushes sway in the breeze. It's a peaceful spot that feels miles away from the bustle of the market town.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Holt Owl Trail (45 mins)</h2>
+    <p class="article-text">For those who want to combine walking with history, the <strong>Holt Owl Trail</strong> is a must. This circular town walk takes you on a tour of Holt's historic Georgian centre. Simply follow the direction of the owl depicted on each bronze plaque to discover the town's calling points, including the marketplace, the high street, and the historic St Andrew's Church.</p>
+    <p class="article-text">The trail is named after the "Legend of the Holt Owl"—a local story about a mischievous owl that supposedly saved the town from being "blown away" by the wind. It's an easy, accessible walk that takes about 45 minutes and is suitable for all ages. You can pick up a free 32-page guide in many of the town's shops to learn more about the points of interest along the way.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Wildlife & Nature</h2>
+    <p class="article-text">Holt and its surrounding parks are a haven for wildlife. In Holt Country Park, you might spot deer moving silently through the trees, or squirrels busy gathering nuts. The park is also home to a variety of bird species, including woodpeckers and owls. At Spout Hills, the wetland habitat supports frogs, toads, and a wealth of insect life, while the wildflowers attract butterflies and bees throughout the summer.</p>
+    <p class="article-text">The diverse range of habitats—from dense woodland to open heath and wetland—makes Holt a fantastic location for nature lovers and photographers alike.</p>
+  </div>
+
+  <div class="safety-warning">
+    <h4>⚠️ Safety & Practical Information</h4>
+    <p>While the walks around Holt are generally straightforward, please keep the following in mind:</p>
+    <ul style="margin-left:1.5rem;margin-top:0.8rem;line-height:1.8;font-size:0.9rem;">
+      <li>Paths in Holt Country Park can be muddy or boggy after heavy rain—wear waterproof footwear.</li>
+      <li>Spout Hills has some uneven sections that may not be suitable for all pushchairs or wheelchairs.</li>
+      <li>Parking at Holt Country Park is £2.50 for the whole day (price may vary).</li>
+      <li>Always keep dogs under control, especially near wildlife and livestock.</li>
+      <li>Check the weather forecast before heading out on longer circular routes.</li>
+    </ul>
+  </div>
+
+  <div class="affiliate-box">
+    <h4>Recommended Gear for Holt Walks</h4>
+    <p style="font-size:0.85rem;margin-bottom:1.2rem;color:var(--reed);">Enhance your walking experience with these recommended products:</p>
+    <div class="product-grid">
+      <div class="product-card">
+        iv class="product-card">
+        <div style="background:#1e3528;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🥾</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Footwear</span>
+        </div>
+        <div class="product-name">Waterproof Walking Boots</div>
+        <a href="https://www.amazon.co.uk/s?k=waterproof+walking+boots+norfolk&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      </div>
+      <div class="product-card">
+        iv class="product-card">
+        <div style="background:#2d4a3e;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🗺️</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Navigation</span>
+        </div>
+        <div class="product-name">OS Explorer 251 — Norfolk Coast Central (Cromer & Holt)</div>
+        <a href="https://www.amazon.co.uk/s?k=OS+Explorer+251+Norfolk+Coast+Central+Cromer+Holt&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      </div>
+      <div class="product-card">
+        iv class="product-card">
+        <div style="background:#1e3528;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🔭</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Optics</span>
+        </div>
+        <div class="product-name">Birdwatching Binoculars 8x42</div>
+        <a href="https://www.amazon.co.uk/s?k=birdwatching+binoculars+8x42&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      </div>
+      <div class="product-card">
+        iv class="product-card">
+        <div style="background:#2d4a3e;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:0.8rem;flex-direction:column;gap:0.4rem;">
+          <span style="font-size:2.5rem;">🎒</span>
+          <span style="font-size:0.6rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Essentials</span>
+        </div>
+        <div class="product-name">Osprey Talon 22 Daypack</div>
+        <a href="https://www.amazon.co.uk/s?k=osprey+talon+22+daypack&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Getting There</h2>
+    <p class="article-text"><strong>By Car:</strong> Holt is located on the A148 between Cromer and Fakenham. For Holt Country Park, use postcode NR25 6SP. For town centre parking, follow the signs to the various public car parks.</p>
+    <p class="article-text"><strong>By Public Transport:</strong> Regular buses connect Holt to Sheringham, Cromer, and Norwich. The North Norfolk Railway (The Poppy Line) also runs steam and diesel trains between Sheringham and Holt, providing a nostalgic way to arrive.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-col">
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Exploring the wild beauty and hidden gems of North Norfolk.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="index.html">Home</a>
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Footwear</a>
+    <a href="shop.html#optics">Optics</a>
+    <a href="shop.html#wildlife-tech">Wildlife Tech</a>
+    <a href="shop.html#nature-garden">Nature & Garden</a>
+    <a href="shop.html#walking-aids">Walking Aids</a>
+    <a href="shop.html#foot-care">Foot Care</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#about">About NorfolkWild</a>
+    <a href="norfolk-wild-legal.html#contact">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://norfolkwild.substack.com" target="_blank">Newsletter</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>&copy; 2026 NorfolkWild. All rights reserved.</span>
+  <span>&copy; 2026 NorfolkWild.co.uk</span>
+  <span>Written in North Norfolk</span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+  
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

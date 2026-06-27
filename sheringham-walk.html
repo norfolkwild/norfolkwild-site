@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheringham Walking Guide — NorfolkWild</title>
+<meta name="description" content="Explore the best walks around Sheringham. Discover the stunning Sheringham Park, climb Beeston Bump for panoramic views, and walk the scenic Norfolk Coast Path.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--marsh:#1e3528;--marsh2:#2d4a3e;--reed:#4a6b5a;--gold:#b8923a;--gold2:#c9a84c;--cream:#f4ede0;--cream2:#ede4d4;--paper:#faf6ef;--ink:#161c18;--ink2:#2a332d;--sage:#7a9a82;--sky:#a8c4b8;--mist:#e4ede6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden;}
+.topnav{position:fixed;top:0;width:100%;z-index:100;background:rgba(250,246,239,0.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(30,53,40,0.08);height:52px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none;}
+.nav-wordmark{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900;color:var(--marsh);letter-spacing:-0.5px;line-height:1;}
+.nav-wordmark em{color:var(--gold);font-style:italic;}
+.nav-links{display:flex;gap:1.4rem;align-items:center;}
+.nav-links a{font-size:0.67rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink2);text-decoration:none;transition:color 0.15s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--marsh);color:#fff;padding:0.38rem 0.9rem;font-size:0.65rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s;}
+.nav-cta:hover{background:var(--marsh2);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink2);margin:5px 0;transition:0.3s;}
+.hamburger.active span:nth-child(1){transform:rotate(-45deg) translate(-5px, 6px);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:rotate(45deg) translate(-5px, -6px);}
+@media(max-width:600px){.hamburger{display:block;}.nav-links{position:fixed;top:52px;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;display:none;padding:1rem;border-bottom:1px solid rgba(30,53,40,0.08);z-index:99;}.nav-links.active{display:flex;}.nav-links a{padding:0.8rem 0;border-bottom:1px solid rgba(30,53,40,0.05);}.topnav{padding:0 1rem;}}
+.article-hero{background:linear-gradient(160deg,rgba(22,28,24,0.72) 0%,rgba(22,28,24,0.1) 50%,rgba(22,28,24,0.7) 100%),url('https://images.unsplash.com/photo-1516214626882-f39c27f93be0?w=1600&q=85&auto=format&fit=crop') center 60%/cover no-repeat;min-height:50vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 2rem 3rem;padding-top:52px;position:relative;}
+.hero-content{max-width:900px;margin:0 auto;width:100%;}
+.hero-eyebrow{font-size:0.6rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold2);display:flex;align-items:center;gap:0.8rem;margin-bottom:0.9rem;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold2);}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1px;margin-bottom:1rem;}
+.hero-title em{color:var(--gold2);font-style:italic;}
+.article-body{max-width:900px;margin:0 auto;padding:3rem 2rem;}
+.article-meta{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(30,53,40,0.08);font-size:0.8rem;color:var(--sage);}
+.meta-item{display:flex;gap:0.4rem;align-items:center;}
+.article-section{margin-bottom:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--marsh);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid var(--gold);}
+.article-text{font-size:0.95rem;line-height:1.8;color:var(--ink);margin-bottom:1.2rem;}
+.article-text strong{color:var(--marsh);}
+.walk-details{background:var(--cream2);padding:1.5rem;border-left:4px solid var(--gold);margin:1.5rem 0;}
+.walk-details h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.walk-details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;}
+.detail-item{font-size:0.8rem;}
+.detail-label{font-weight:600;color:var(--marsh);margin-bottom:0.2rem;}
+.detail-value{color:var(--reed);}
+.affiliate-box{background:#fff;border:1px solid rgba(30,53,40,0.08);padding:1.5rem;margin:2rem 0;border-radius:4px;}
+.affiliate-box h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:1rem;}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
+.product-card{text-align:center;}
+.product-card img{width:100%;height:150px;object-fit:cover;margin-bottom:0.8rem;background:#eee;}
+.product-name{font-size:0.8rem;font-weight:600;color:var(--marsh);margin-bottom:0.5rem;line-height:1.3;}
+.product-link{background:var(--gold2);color:var(--ink);padding:0.5rem 1rem;font-size:0.65rem;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;transition:background 0.2s;display:inline-block;}
+.product-link:hover{background:var(--gold);}
+.safety-warning{background:rgba(184,146,58,0.1);border-left:4px solid var(--gold);padding:1.5rem;margin:2rem 0;border-radius:2px;}
+.safety-warning h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--marsh);margin-bottom:0.8rem;}
+.safety-warning p{font-size:0.9rem;line-height:1.6;color:var(--reed);}
+.footer{background:#0d1410;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:2rem;}
+.footer-wm{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:900;color:#fff;}
+.footer-wm em{color:var(--gold2);font-style:italic;}
+.footer-tag{font-size:0.67rem;color:rgba(255,255,255,0.15);margin-top:0.5rem;line-height:1.6;max-width:160px;}
+.footer-col h4{font-size:0.55rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.18);margin-bottom:0.7rem;}
+.footer-col a{display:block;font-size:0.68rem;color:rgba(255,255,255,0.22);text-decoration:none;margin-bottom:0.3rem;transition:color 0.15s;}
+.footer-col a:hover{color:rgba(255,255,255,0.55);}
+.footer-bottom{background:#07100a;padding:0.7rem 2rem;display:flex;justify-content:space-between;font-size:0.57rem;color:rgba(255,255,255,0.1);}
+@media(max-width:900px){.walk-details-grid{grid-template-columns:repeat(2,1fr);}.product-grid{grid-template-columns:repeat(2,1fr);}.footer{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.walk-details-grid{grid-template-columns:1fr;}.product-grid{grid-template-columns:1fr;}.footer{grid-template-columns:1fr;}.article-body{padding:2rem 1rem;}}
+
+  .page-hero{background:#1e3528;padding:3.5rem max(2rem,calc(50% - 620px + 2rem)) 3rem;}
+  .page-hero .eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.8rem;}
+  .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-1px;}
+  .page-hero h1 em{color:var(--gold2);font-style:italic;}
+  .page-hero p{color:rgba(255,255,255,0.6);font-size:0.95rem;margin-top:0.8rem;max-width:520px;}
+</style>
+
+  <style>
+    .os-map-section { margin: 2.5rem 0; }
+    .os-map-section .section-title { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:#1e3528; margin-bottom:0.6rem; padding-bottom:0.5rem; border-bottom:2px solid #b8923a; }
+    .os-map-section p { font-size:0.88rem; color:#4a6358; margin-bottom:1rem; line-height:1.6; }
+    #sheringham-map { height: 480px; width: 100%; border: 1px solid rgba(30,53,40,0.12); }
+    .map-legend { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:0.8rem; font-size:0.72rem; color:#4a6358; }
+    .map-legend-item { display:flex; align-items:center; gap:0.4rem; }
+    .legend-line { width:24px; height:3px; background:#b8923a; border-radius:2px; }
+    .legend-dot-start { width:12px; height:12px; border-radius:50%; background:#1e3528; border:2px solid #fff; box-shadow:0 0 0 1px #1e3528; }
+    .legend-dot-end { width:12px; height:12px; border-radius:50%; background:#b8923a; border:2px solid #fff; box-shadow:0 0 0 1px #b8923a; }
+    .os-attrib { font-size:0.65rem; color:#7a9a82; margin-top:0.4rem; }
+    .map-controls { display:flex; gap:0.5rem; margin-bottom:0.6rem; flex-wrap:wrap; }
+    .map-btn { font-size:0.62rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:0.35rem 0.8rem; border:1px solid rgba(30,53,40,0.2); background:none; cursor:pointer; color:#4a6358; transition:all 0.15s; }
+    .map-btn:hover, .map-btn.active { background:#1e3528; color:#fff; border-color:#1e3528; }
+  </style>
+  <link rel="stylesheet" href="leaflet.css"/>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="nav-brand" href="index.html" style="display:flex;align-items:center;gap:0.6rem;text-decoration:none;">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <path d="M14 2C14 2 5 10 5 18C5 22.9 9.1 27 14 27C18.9 27 23 22.9 23 18C23 10 14 2 14 2Z" fill="none" stroke="#b8923a" stroke-width="1.4"/>
+      <path d="M14 6L9 17L14 14L19 17Z" fill="#b8923a"/>
+      <path d="M5 18Q14 14 23 18" stroke="#b8923a" stroke-width="0.8" fill="none" opacity="0.5"/>
+      <circle cx="14" cy="2.5" r="1.5" fill="#b8923a" opacity="0.5"/>
+    </svg>
+    <div style="display:flex;flex-direction:column;line-height:1;">
+      <span class="nav-wordmark">Norfolk<em>Wild</em></span>
+      <span style="font-size:0.5rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:#7a9a82;margin-top:1px;">North Norfolk</span>
+    </div>
+  </a>
+  <button class="hamburger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear</a>
+    <a href="shop.html">Shop</a>
+    <a href="https://norfolkwild.substack.com" target="_blank" class="nav-cta">Newsletter</a>
+  </div>
+</nav>
+
+
+<div class="page-hero" style="background:linear-gradient(to bottom,rgba(30,53,40,0.5),rgba(30,53,40,0.85)),url('https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=1600&q=85') center/cover;">
+  <div class="eyebrow">⛰️ Coastal Walk — Sheringham</div>
+  <h1>Sheringham: cliffs,<br><em>hills and ancient woods</em></h1>
+  <p>Norfolk's highest coastal point, a country park designed by Humphry Repton, and one of the finest cliff-top walks on the east coast.</p>
+</div>
+<div class="article-hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Cliffs, Commons & Country Parks</div>
+    <h1 class="hero-title">Sheringham: <em>The Three Peaks & Coastal Splendour</em></h1>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <div class="article-meta">
+    <div class="meta-item">📍 Sheringham, Norfolk</div>
+    <div class="meta-item">📏 2-7 miles (various routes)</div>
+    <div class="meta-item">⏱️ 1-3.5 hours</div>
+    <div class="meta-item">🟡 Moderate (due to hills)</div>
+  </div>
+
+
+  <div class="os-map-section">
+    <h2 class="section-title">Route Map</h2>
+    <p>The map below shows the <strong>Sheringham Three Peaks</strong> circular route (4.5 miles). Click any marker for information about that point. Click and drag to move the map, use +/- to zoom.</p>
+    <div class="map-controls">
+      <button class="map-btn active" onclick="switchStyle('Outdoor',this)">OS Outdoor</button>
+      <button class="map-btn" onclick="switchStyle('Road_3857',this)">Road</button>
+      <button class="map-btn" onclick="switchStyle('Light_3857',this)">Light</button>
+    </div>
+    <div id="sheringham-map"></div>
+    <div class="map-legend">
+      <div class="map-legend-item"><div class="legend-dot-start"></div> Start / Finish</div>
+      <div class="map-legend-item"><div class="legend-line"></div> Walk route</div>
+      <div class="map-legend-item">📍 Points of interest</div>
+    </div>
+    <p class="os-attrib">Map data © Crown copyright and database rights 2024 OS (100025252). Powered by OS Maps API.</p>
+  </div>
+
+
+
+  <div class="article-section">
+    <h2 class="section-title">A Landscape of Dramatic Contrasts</h2>
+    <p class="article-text">Sheringham offers some of the most dramatic and varied walking in Norfolk. Unlike the flat marshes often associated with the county, Sheringham is defined by its rolling glacial hills, steep cliffs, and expansive country parks. From the panoramic views atop the "Three Peaks" to the ancient woodlands and rhododendron-lined paths of Sheringham Park, this is a walker's paradise.</p>
+    <p class="article-text">Whether you're looking for a challenging cliff-top hike or a gentle woodland stroll, Sheringham delivers. This guide explores the best routes that showcase the area's unique geology, rich natural history, and stunning coastal vistas.</p>
+  </div>
+
+  <div class="walk-details">
+    <h4>Quick Facts</h4>
+    <div class="walk-details-grid">
+      <div class="detail-item">
+        <div class="detail-label">Parking</div>
+        <div class="detail-value">Sheringham Park (NT) or Station Road</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Best Season</div>
+        <div class="detail-value">Spring (Rhododendrons) or Autumn (Foliage)</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Terrain</div>
+        <div class="detail-value">Hilly cliff-top paths and well-surfaced woodland trails</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">Dog Friendly</div>
+        <div class="detail-value">Yes, but keep on leads near cliffs and livestock</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Sheringham's "Three Peaks" Challenge (4.5 miles)</h2>
+    <p class="article-text">For those who enjoy a bit of elevation, the <strong>Sheringham Three Peaks</strong> is a must. This circular walk takes you over the three highest points in the area: <strong>Beeston Bump</strong>, <strong>Incleborough Hill</strong>, and <strong>Skelding Hill</strong>. Each peak offers a different but equally breathtaking panoramic view of the coastline and the surrounding countryside.</p>
+    <p class="article-text">The most iconic of these is Beeston Bump, a "kame" hill formed by glacial activity. The climb is short but steep, rewarding you with a 360-degree view that stretches from the Cromer lighthouse to the Blakeney Point. The route also takes you through the <strong>Beeston Common</strong> nature reserve, a Site of Special Scientific Interest (SSSI) known for its rare orchids and diverse wildlife.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Sheringham Park: Repton's Masterpiece (2-7 miles)</h2>
+    <p class="article-text">Managed by the National Trust, <strong>Sheringham Park</strong> is one of Humphry Repton's most famous landscape designs. The park offers a variety of waymarked trails that take you through ancient woodlands, open parkland, and along the cliff edge. In late spring, the park is transformed by a spectacular display of rhododendrons and azaleas.</p>
+    <p class="article-text">For the best views, head to the <strong>Gazebo</strong>, a viewing tower that offers a bird's-eye view of the entire estate and the coastline. The <strong>Woodland and Coastal Walk</strong> (6 miles) is a popular choice, combining the best of the park's interior with stunning cliff-top vistas. It's a fantastic place for birdwatching, with woodpeckers, nuthatches, and even the occasional red kite often spotted.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">The Coast Path to Cromer (4.5 miles one way)</h2>
+    <p class="article-text">The stretch of the <strong>Norfolk Coast Path</strong> between Sheringham and Cromer is widely considered one of the most scenic in the county. The path follows the cliff-top, offering constant sea views and passing through the dramatic landscape of the <strong>Beeston Regis</strong> cliffs. It's a moderate walk with several ascents and descents, but the views are more than worth the effort.</p>
+    <p class="article-text">A popular option is to walk to Cromer and take the <strong>Bittern Line</strong> train or the <strong>Coasthopper</strong> bus back to Sheringham. Along the way, you'll pass the ruins of the 13th-century Beeston Priory and have plenty of opportunities to spot seals in the waters below.</p>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Wildlife & Nature</h2>
+    <p class="article-text">Sheringham's varied habitats make it a haven for wildlife. <strong>Beeston Common</strong> is home to over 20 species of butterfly and numerous rare plants. In Sheringham Park, look out for <strong>roe deer</strong> and <strong>muntjac</strong> in the early morning. The cliffs are also an important nesting site for seabirds, and the offshore waters are frequently visited by <strong>grey and common seals</strong>.</p>
+  </div>
+
+  <div class="safety-warning">
+    <h4>⚠️ Safety & Practical Information</h4>
+    <p>The hills and cliffs of Sheringham require a bit more caution than other Norfolk walks:</p>
+    <ul style="margin-left:1.5rem;margin-top:0.8rem;line-height:1.8;font-size:0.9rem;">
+      <li><strong>Cliff Safety</strong>: Stay well away from the cliff edges, as they can be unstable and prone to erosion. Always keep dogs on short leads near the cliffs.</li>
+      <li><strong>Footwear</strong>: Sturdy walking boots with good ankle support are recommended for the hilly and uneven terrain.</li>
+      <li><strong>Weather</strong>: The cliff-top paths are very exposed—be prepared for wind and sudden changes in weather.</li>
+      <li><strong>Livestock</strong>: You may encounter grazing livestock in Sheringham Park and on the commons—please keep dogs under close control.</li>
+      <li><strong>Public Toilets</strong>: Available in Sheringham town centre and at the Sheringham Park visitor centre.</li>
+    </ul>
+  </div>
+
+  <div class="affiliate-box">
+    <h4>Recommended Gear for Sheringham Walks</h4>
+    <p style="font-size:0.85rem;margin-bottom:1.2rem;color:var(--reed);">Prepare for the hills and coastal winds with the right equipment:</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-name">Sturdy Hiking Boots with Ankle Support</div>
+        <a href="https://www.amazon.co.uk/s?k=sturdy+hiking+boots+ankle+support&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">OS Explorer 252: Norfolk Coast Central</div>
+        <a href="https://www.amazon.co.uk/s?k=OS+Explorer+252+Norfolk+Coast+Central&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">High-Power Binoculars for Coastal Vistas</div>
+        <a href="https://www.amazon.co.uk/s?k=high+power+birdwatching+binoculars&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+      <div class="product-card">
+        <div class="product-name">20-25L Daypack for Longer Hikes</div>
+        <a href="https://www.amazon.co.uk/s?k=20-25L+hiking+daypack&tag=norfolkwild-21" target="_blank" class="product-link">View on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-section">
+    <h2 class="section-title">Getting There</h2>
+    <p class="article-text"><strong>By Car:</strong> Sheringham is easily reached via the A148 and A1082. Use the National Trust car park for Sheringham Park or the town centre car parks for coastal walks.</p>
+    <p class="article-text"><strong>By Public Transport:</strong> Sheringham Railway Station is the terminus of the Bittern Line from Norwich. The Coasthopper bus service also provides regular links to other coastal towns and villages.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-col">
+    <div class="footer-wm">Norfolk<em>Wild</em></div>
+    <div class="footer-tag">Exploring the wild beauty and hidden gems of North Norfolk.</div>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <a href="index.html">Home</a>
+    <a href="walks.html">Walks</a>
+    <a href="wildlife.html">Wildlife</a>
+    <a href="coasthopper-hub.html">Coast Path</a>
+    <a href="article-2-walking-boots.html">Gear Reviews</a>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <a href="shop.html#footwear">Footwear</a>
+    <a href="shop.html#optics">Optics</a>
+    <a href="shop.html#wildlife-tech">Wildlife Tech</a>
+    <a href="shop.html#nature-garden">Nature & Garden</a>
+    <a href="shop.html#walking-aids">Walking Aids</a>
+    <a href="shop.html#foot-care">Foot Care</a>
+  </div>
+  <div class="footer-col">
+    <h4>About</h4>
+    <a href="norfolk-wild-legal.html#about">About NorfolkWild</a>
+    <a href="norfolk-wild-legal.html#contact">Contact</a>
+    <a href="norfolk-wild-legal.html#privacy">Privacy Policy</a>
+    <a href="norfolk-wild-legal.html#affiliate">Affiliate Disclosure</a>
+    <a href="norfolk-wild-legal.html#terms">Terms of Use</a>
+  </div>
+  <div class="footer-col">
+    <h4>Connect</h4>
+    <a href="https://norfolkwild.substack.com" target="_blank">Newsletter</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <span>&copy; 2026 NorfolkWild. All rights reserved.</span>
+  <span>Written in North Norfolk</span>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+  
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function() {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+});
+</script>
+
+
+<!-- OS Map: Leaflet loaded last so L is always defined -->
+<script src="leaflet.js"></script>
+<script>
+var sherMap;
+
+function NorfolkWildMap(containerId, cfg) {
+  var API_KEY = 'i4QbC3ganhj7geOEoAqC2Lr3Gj7UGdwE';
+  var tileUrl = 'https://api.os.uk/maps/raster/v1/zxy/' + cfg.style + '/{z}/{x}/{y}.png?key=' + API_KEY;
+  var map = L.map(containerId, {
+    center: [cfg.lat, cfg.lng], zoom: cfg.zoom,
+    zoomControl: true, scrollWheelZoom: false
+  });
+  L.tileLayer(tileUrl, {
+    maxZoom: 20,
+    attribution: '&copy; Crown copyright and database rights 2024 OS (100025252)'
+  }).addTo(map);
+  if (cfg.route && cfg.route.length > 1) {
+    L.polyline(cfg.route, { color: '#b8923a', weight: 4, opacity: 0.9 }).addTo(map);
+    L.circleMarker(cfg.route[0], {
+      radius: 8, fillColor: '#1e3528', color: '#fff', weight: 2, fillOpacity: 1
+    }).bindPopup('<strong>Start / Finish</strong>').addTo(map);
+  }
+  var icon = L.divIcon({
+    html: '<div style="background:#1e3528;color:#c9a84c;width:26px;height:26px;border-radius:50%;border:2px solid #c9a84c;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;box-shadow:0 2px 6px rgba(0,0,0,0.3);">&#9679;</div>',
+    className: '', iconSize: [26, 26], iconAnchor: [13, 26]
+  });
+  if (cfg.waypoints) {
+    cfg.waypoints.forEach(function(wp) {
+      L.marker([wp.lat, wp.lng], { icon: icon })
+        .bindPopup('<strong>' + wp.title + '</strong>' + (wp.desc ? '<br><span style="font-size:0.8rem;color:#4a6358;">' + wp.desc + '</span>' : ''))
+        .addTo(map);
+    });
+  }
+  map.on('click', function() { map.scrollWheelZoom.enable(); });
+  map.on('mouseout', function() { map.scrollWheelZoom.disable(); });
+  return map;
+}
+
+function switchStyle(style, btn) {
+  document.querySelectorAll('.map-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  if (sherMap) {
+    sherMap.eachLayer(function(layer) {
+      if (layer instanceof L.TileLayer) { sherMap.removeLayer(layer); }
+    });
+    L.tileLayer(
+      'https://api.os.uk/maps/raster/v1/zxy/' + style + '/{z}/{x}/{y}.png?key=i4QbC3ganhj7geOEoAqC2Lr3Gj7UGdwE',
+      { maxZoom: 20, attribution: '&copy; Crown copyright OS 2024' }
+    ).addTo(sherMap);
+  }
+}
+
+sherMap = NorfolkWildMap('sheringham-map', {
+  lat: 52.9429, lng: 1.2070, zoom: 14, style: 'Outdoor_3857',
+  route: [
+    [52.9430, 1.2077], [52.9445, 1.2120], [52.9460, 1.2190],
+    [52.9468, 1.2245], [52.9455, 1.2310], [52.9442, 1.2350],
+    [52.9430, 1.2290], [52.9415, 1.2220], [52.9408, 1.2150],
+    [52.9430, 1.2077]
+  ],
+  waypoints: [
+    { lat: 52.9468, lng: 1.2245, title: 'Beeston Bump (73m)', desc: "Norfolk's highest coastal point. Views from Cromer to Blakeney Point." },
+    { lat: 52.9442, lng: 1.2350, title: 'Incleborough Hill', desc: 'Second of the three peaks. Iron Age earthworks visible.' },
+    { lat: 52.9430, lng: 1.2290, title: 'Skelding Hill', desc: 'Third peak. Fine views back over Sheringham.' },
+    { lat: 52.9415, lng: 1.2220, title: 'Beeston Common SSSI', desc: 'Rare orchids and over 20 butterfly species.' },
+    { lat: 52.9430, lng: 1.2077, title: 'Start: Sheringham Station', desc: 'Free parking nearby. Coasthopper bus stop adjacent.' }
+  ]
+});
+</script>
+</body>
+</html>

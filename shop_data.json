@@ -1,0 +1,144 @@
+{
+  "categories": [
+    {
+      "id": "footwear",
+      "name": "Footwear",
+      "description": "Tested walking boots and wellies for Norfolk's unique terrain.",
+      "icon": "\ud83e\udd7e"
+    },
+    {
+      "id": "optics",
+      "name": "Optics",
+      "description": "Binoculars and spotting scopes for world-class birdwatching.",
+      "icon": "\ud83d\udd2d"
+    },
+    {
+      "id": "wildlife-tech",
+      "name": "Wildlife Tech",
+      "description": "Trail cams and monitoring gear to see what visits your garden.",
+      "icon": "\ud83d\udcf8"
+    },
+    {
+      "id": "nature-garden",
+      "name": "Nature & Garden",
+      "description": "Wildflower seeds and habitat boxes for Norfolk wildlife.",
+      "icon": "\ud83c\udf31"
+    },
+    {
+      "id": "walking-aids",
+      "name": "Walking Aids",
+      "description": "Poles and support for tackling the Norfolk Coast Path.",
+      "icon": "\ud83e\uddaf"
+    },
+    {
+      "id": "foot-care",
+      "name": "Foot Care",
+      "description": "Blister plasters and care for happy miles on the trail.",
+      "icon": "\ud83e\ude79"
+    },
+    {
+      "id": "navigation",
+      "name": "Navigation",
+      "description": "Essential OS maps and guides for the Norfolk Coast Path.",
+      "icon": "\ud83d\uddfa\ufe0f"
+    },
+    {
+      "id": "essentials",
+      "name": "Essentials",
+      "description": "Daypacks, flasks, and head torches for long days on the coast.",
+      "icon": "\ud83c\udf92"
+    }
+  ],
+  "products": [
+    {
+      "id": "salomon-x-ultra",
+      "category": "footwear",
+      "name": "Salomon X Ultra 4 Mid GTX",
+      "description": "The perfect balance of weight and support for Norfolk's coastal paths.",
+      "url": "https://www.amazon.co.uk/s?k=Salomon+X+Ultra+4+Mid+GTX&tag=norfolkwild-21",
+      "price_range": "\u00a3120-\u00a3150",
+      "image": "https://images.unsplash.com/photo-1464983308776-3c7215084dfe?w=400&q=80"
+    },
+    {
+      "id": "le-chameau-vierzonord",
+      "category": "footwear",
+      "name": "Le Chameau Vierzonord Neoprene",
+      "description": "The gold standard for winter birdwatching and muddy salt marshes.",
+      "url": "https://www.amazon.co.uk/s?k=Le+Chameau+Vierzonord+neoprene&tag=norfolkwild-21",
+      "price_range": "\u00a3180-\u00a3210",
+      "image": "https://images.unsplash.com/photo-1572538907880-8571d50e2a6f?w=400&q=80"
+    },
+    {
+      "id": "kowa-yf-8x30",
+      "category": "optics",
+      "name": "Kowa YF 8x30 Binoculars",
+      "description": "Incredible value for beginners. Bright, clear, and lightweight.",
+      "url": "https://www.amazon.co.uk/s?k=Kowa+YF+8x30+binoculars&tag=norfolkwild-21",
+      "price_range": "\u00a3100-\u00a3130",
+      "image": "https://images.unsplash.com/photo-1531721891531-6f88e7fb2d77?w=400&q=80"
+    },
+    {
+      "id": "browning-trail-cam",
+      "category": "wildlife-tech",
+      "name": "Browning Strike Force HD Pro",
+      "description": "Reliable, high-quality trail cam for capturing Norfolk's nocturnal visitors.",
+      "url": "https://www.amazon.co.uk/s?k=Browning+Strike+Force+HD+Pro+trail+camera&tag=norfolkwild-21",
+      "price_range": "\u00a3140-\u00a3170",
+      "image": "https://images.unsplash.com/photo-1606570753765-e5c8a9f10bc7?w=400&q=80"
+    },
+    {
+      "id": "wildflower-seeds",
+      "category": "nature-garden",
+      "name": "UK Native Wildflower Seed Mix",
+      "description": "Attract bees and butterflies to your Norfolk garden with this native mix.",
+      "url": "https://www.amazon.co.uk/s?k=UK+native+wildflower+seeds+mix&tag=norfolkwild-21",
+      "price_range": "\u00a310-\u00a320",
+      "image": "https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=400&q=80"
+    },
+    {
+      "id": "black-diamond-poles",
+      "category": "walking-aids",
+      "name": "Black Diamond Trail Trekking Poles",
+      "description": "Save your knees on the Norfolk Coast Path's shingle and dunes.",
+      "url": "https://www.amazon.co.uk/s?k=Black+Diamond+Trail+Trekking+Poles&tag=norfolkwild-21",
+      "price_range": "\u00a370-\u00a390",
+      "image": "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=400&q=80"
+    },
+    {
+      "id": "compeed-blister",
+      "category": "foot-care",
+      "name": "Compeed Blister Plasters Mixed",
+      "description": "Don't let a blister ruin your walk. The absolute essential for every pack.",
+      "url": "https://www.amazon.co.uk/s?k=Compeed+blister+plasters+mixed+pack&tag=norfolkwild-21",
+      "price_range": "\u00a35-\u00a38",
+      "image": "https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?w=400&q=80"
+    },
+    {
+      "id": "gehwol-foot-cream",
+      "category": "foot-care",
+      "name": "Gehwol Extra Foot Cream",
+      "description": "Soothes tired feet after a long day on the Peddars Way.",
+      "url": "https://www.amazon.co.uk/s?k=Gehwol+Extra+foot+cream&tag=norfolkwild-21",
+      "price_range": "\u00a38-\u00a312",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&q=80"
+    },
+    {
+      "id": "os-map-norfolk",
+      "category": "navigation",
+      "name": "OS Explorer Map: Norfolk Coast",
+      "description": "Essential for exploring the hidden paths of North Norfolk (OL24/OL25).",
+      "url": "https://www.amazon.co.uk/s?k=OS+Explorer+map+Norfolk+OL24+OL25&tag=norfolkwild-21",
+      "price_range": "\u00a38-\u00a312",
+      "image": "https://images.unsplash.com/photo-1434082033009-b81d41d32e1c?w=400&q=80"
+    },
+    {
+      "id": "stanley-flask",
+      "category": "essentials",
+      "name": "Stanley Classic Insulated Flask",
+      "description": "Keeps your tea hot for 24 hours on the windiest coastal walks.",
+      "url": "https://www.amazon.co.uk/s?k=insulated+flask+stanley+walking&tag=norfolkwild-21",
+      "price_range": "\u00a330-\u00a345",
+      "image": "https://images.unsplash.com/photo-1559827291-72f8b62a5a15?w=400&q=80"
+    }
+  ]
+}
